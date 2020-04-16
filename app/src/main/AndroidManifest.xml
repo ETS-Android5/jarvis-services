@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teslasoft.libraries.support">
+	
+	<uses-permission
+		android:name="com.teslasoft.jarvis.SYSTEM">
+	</uses-permission>
+	<uses-permission
+		android:name="com.android.vending.BILLING">
+	</uses-permission>
+	<uses-permission 
+		android:name="com.android.alarm.permission.SET_ALARM">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CALL_PHONE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.BODY_SENSORS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CAMERA">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_CONTACTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.USE_FINGERPRINT">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SEND_SMS_NO_CONFIRMATION">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.FLASHLIGHT">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.PACKAGE_USAGE_STATS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_CALENDAR">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECEIVE_MMS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_COARSE_LOCATION">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.LOCATION_HARDWARE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_WIFI_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CHANGE_WIFI_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.GET_APP_OPS_STATS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.UPDATE_APP_OPS_STATS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_NOTIFICATION_POLICY">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.PROCESS_OUTGOING_CALLS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SEND_SMS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.BLUETOOTH">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.BLUETOOTH_ADMIN">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CAPTURE_AUDIO_HOTWORD">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_VOICE_KEYPHRASES">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.TETHER_PRIVILEGED">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CONTROL_DISPLAY_SATURATION">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SET_TIME_ZONE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.GET_TASKS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.REAL_GET_TASKS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_CALL_LOG">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_SMS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WRITE_CONTACTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_PROFILE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WRITE_PROFILE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_DEVICE_ADMINS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_OEM_UNLOCK_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_NETWORK_CONDITIONS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SCORE_NETWORKS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.OVERRIDE_WIFI_CONFIG">
+	</uses-permission>
+	<uses-permission 
+		android:name="com.android.vending.CHECK_LICENSE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MODIFY_PHONE_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CONTROL_INCALL_EXPERIENCE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_USB">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CALL_PRIVILEGED">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.BLUETOOTH_PRIVILEGED">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.DISABLE_KEYGUARD">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CHANGE_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.USER_ACTIVITY">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MODIFY_AUDIO_ROUTING">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MODIFY_DAY_NIGHT_MODE">
+	</uses-permission>
+	<uses-permission
+		android:name="com.google.android.permission.ACCESSIBILITY_SCAN_SERVICE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.START_TASKS_FROM_RECENTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_ACTIVITY_STACKS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.REORDER_TASKS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACTIVITY_EMBEDDING">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECORD_AUDIO">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_FINE_LOCATION">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.GET_ACCOUNTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.USE_CREDENTIALS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SYSTEM_ALERT_WINDOW">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.GET_PACKAGE_SIZE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_SOUND_TRIGGER">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.FOREGROUND_SERVICE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.INTERACT_ACROSS_USERS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SUBSCRIBED_FEEDS_READ">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.SUBSCRIBED_FEEDS_WRITE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CAPTURE_VIDEO_OUTPUT">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.REMOTE_DISPLAY_PROVIDER">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECOVERY">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.VIBRATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_DREAM_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_SYNC_SETTINGS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECEIVE_DATA_ACTIVITY_CHANGE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WRITE_SETTINGS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WRITE_SYNC_SETTINGS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.MANAGE_ACCOUNTS">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.NFC">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_PHONE_STATE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.PROVIDE_TRUST_AGENT">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.WAKE_LOCK">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.DISPATCH_PROVISIONING_MESSAGE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECOVER_KEYSTORE">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.PRE_FACTORY_RESET">
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+	</uses-permission>    
+	
+	<uses-feature
+		android:name="android.software.leanback"
+		android:required="true" />
+	
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:usesCleartextTraffic="true"
+		android:name=".CrashHandler"
+		android:icon="@drawable/app_icon"
+		android:largeHeap="true">
+		
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<!--<activity
+            android:name="com.teslasoft.jarvis.Tts"
+            android:label="TTS" 
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>-->
+		
+		<activity
+            android:name=".SettingsActivity"
+            android:label="@string/activity_settings_name" 
+			android:process=":ui"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name=".InitActivity"
+            android:label="@string/activity_init_name"
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.TaskExec"
+            android:label="@string/app_name"
+			android:process=":exec"
+			android:theme="@style/Theme.Home"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.OptIn"
+            android:label="@string/app_name"
+			android:process=":checkin"
+			android:theme="@style/Theme.Transparent.NoAnim"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.JHActivity"
+            android:label="@string/app_name"
+			android:process=":exec"
+			android:theme="@style/Theme.Dialog"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.ads.AdWideActivity"
+            android:label="Ads"
+			android:process=":ads"
+			android:theme="@style/Theme.Dialog"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.TaskExecBackground"
+            android:label="@string/app_name"
+			android:process=":exec"
+			android:theme="@style/Theme.Transparent.Float"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.AutoRunActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.CoreUpdateActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.CoreServiceSettingsActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.ui.DialogConfirm"
+            android:label="UI"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.DialogUIShadowActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.DPSSettingsActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.LCSSettingsActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.NSettingsActivity"
+			android:process=":exec"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.NotificationActivity"
+			android:process=":exec"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.core.ServicesActivity"
+            android:label="Jarvis Core"
+			android:icon="@drawable/app_jarvis"
+			android:process=":core"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!--<category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.Window"
+            android:label="@string/app_name"
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.LoadFullscreen"
+            android:label="@string/app_name"
+			android:process=":fsboot"
+			android:theme="@style/Theme.Transparent.Float.F"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.crashreport.Report"
+            android:label="Jarvis Crash Handler"
+			android:process=":report"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.crashreport.BugReport"
+            android:label="Jarvis Crash Handler"
+			android:process=":report"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.crashreport.Detail"
+            android:label="Jarvis Crash Handler"
+			android:process=":report"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.BootAnimation"
+            android:label="@string/app_name"
+			android:process=":fsboot"
+			android:theme="@style/Theme.Boot"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name=".LoadActivity"
+            android:label="@string/app_name" 
+			android:theme="@style/Theme.Transparent"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!--<category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+            
+        </activity>
+		
+		<!--<activity
+            android:name="com.teslasoft.jarvis.WarningActivity"
+            android:label=" " 
+            android:icon="@drawable/app_jarvis"
+			android:process=":ui"
+			android:theme="@style/Theme.Transparent.Toast">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+        </activity>-->
+		
+		<activity
+            android:name="com.teslasoft.jarvis.DialogLoadingDark"
+            android:label="UI"
+			android:process=":ui"
+			android:theme="@style/Theme.Dialog"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.DialogLoadingLight"
+            android:label="UI"
+			android:process=":ui"
+			android:theme="@style/Theme.Dialog"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
+            android:label="@string/activity_auth_name"
+			android:process=":auth"
+			android:theme="@style/Theme.Transparent.Slide"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.auth.PreAuthActivity"
+            android:label="@string/activity_auth_name"
+			android:process=":auth"
+			android:theme="@style/Theme.Transparent.Slide"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.auth.AuthActivity"
+            android:label="@string/activity_auth_name"
+			android:process=":auth"
+			android:theme="@style/Theme.Transparent.Slide"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.auth.AuthCompleteActivity"
+            android:label="@string/activity_auth_name"
+			android:process=":auth"
+			android:theme="@style/Theme.Transparent.SlideOut"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.auth.AuthCompleteEntryActivity"
+            android:label="@string/activity_auth_name" 
+			android:process=":auth"
+			android:theme="@style/Theme.Transparent.Slide"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>-
+		
+		<activity
+            android:name=".RateActivity"
+            android:label="@string/activity_rate_name" 
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name=".WebActivity"
+            android:label="@string/app_name" 
+			android:process=":web"
+			android:theme="@style/Theme.Transparent.Slide"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name=".AppsActivity"
+            android:label="Jarvis Extensions" 
+			android:process=":main"
+			android:theme="@android:style/Theme.Material.Wallpaper.NoTitleBar"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.ads.InterstitialAdActivity"
+            android:label="@string/app_name"
+			android:process=":ads"
+			android:theme="@style/Theme.Transparent.Ads"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.ads.AdClickerActivity"
+            android:label="@string/app_name"
+			android:process=":adc"
+			android:theme="@style/Theme.Transparent.Ads"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+        </activity>
+		
+		<activity android:name=".Admin"
+			android:label="@string/app_name"
+			android:process=":main"
+			android:theme="@style/Theme.Transparent.Float"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+    		<intent-filter>
+        		<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="com.teslasoft.jarvis.CoreActivity"
+			android:label="@string/app_name"
+			android:process=":exec"
+			android:theme="@style/Theme.Transparent.NoAnim"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+    		<intent-filter>
+	        	<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="com.teslasoft.jarvis.vip.VipPurchaseActivity"
+			android:label="Jarvis VIP"
+			android:process=":billing"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="com.teslasoft.jarvis.vip.VipActivity"
+			android:label="Jarvis VIP"
+			android:process=":main"
+			android:theme="@style/Theme.DarkFull"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.Launcher"
+            android:label="Home"
+			android:process=":main"
+			android:theme="@style/Theme.Home"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!--<category android:name="android.intent.category.HOME" />-->
+				<!--<category android:name="android.intent.category.DEFAULT" />-->
+            </intent-filter>
+        </activity>
+		
+		<activity
+			android:name="com.teslasoft.jarvis.AppsList"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:label="@string/app_name"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+		</activity>
+		
+		<activity
+			android:name="com.teslasoft.jarvis.Jarvis"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:icon="@drawable/app_jarvis"
+			android:label="Jarvis"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+		</activity>
+		
+		<!--<activity
+			android:name="com.teslasoft.jarvis.CalendarActivity"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:icon="@drawable/app_jarvis"
+			android:label="Calendar"
+			android:process=":ui">
+		</activity>-->
+		
+		<activity
+			android:name="com.teslasoft.jarvis.Settings"
+			android:theme="@style/Theme.Transparent"
+			android:label="Settings"
+			android:process=":main">
+		</activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.easter.JarvisPlatLogo"
+			android:process=":egg"
+            android:label="Jarvis Easter Egg" 
+			android:theme="@style/Theme.Transparent.Logo"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:icon="@drawable/ic_egg">
+			
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+		<activity
+            android:name="com.teslasoft.jarvis.easter.EasterEgg"
+			android:process=":egg"
+            android:label="Jarvis Easter Egg" 
+			android:theme="@style/Theme.Transparent.Egg"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:icon="@drawable/ic_egg">
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.easter.LinuxPlatLogo"
+			android:process=":egg"
+            android:label="Jarvis Easter Egg" 
+			android:theme="@style/Theme.Transparent.Logo"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:icon="@drawable/ic_egg">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.easter.NekoPlatLogo"
+			android:process=":egg"
+            android:label="Jarvis Easter Egg" 
+			android:theme="@style/Theme.Transparent.Logo"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:icon="@drawable/ic_egg">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.teslasoft.jarvis.easter.OPlatLogo"
+			android:process=":egg"
+            android:label="Jarvis Easter Egg" 
+			android:theme="@style/Theme.Transparent.Logo"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:icon="@drawable/ic_egg">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.android.jss.Connect"
+			android:process=":main"
+            android:label="@string/app_name"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="com.android.system.SystemRestartActivity"
+			android:process=":sys"
+            android:label="@string/app_name"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name="net.jarvis.engine.TaskCdhActivity"
+			android:process=":exec"
+            android:label="@string/app_name" 
+			android:theme="@style/Theme.Transparent.Float"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		
+		<service android:enabled="true" android:name=".CheckinService" />
+		<service android:enabled="true" android:name=".GetTokenService" /> 
+		<service android:enabled="true" android:name=".UpdateService" />
+		<service android:enabled="true" android:name=".DownloadService" />
+		<service android:enabled="true" android:name=".NotificationService" />
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.auth.AuthService" android:process=":auth"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.auth.AuthBinderService" android:process=":auth"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.TaskExecService" />
+		<service android:enabled="true" android:name=".JarvisService" />
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.AutoRunService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.AutoRunForegroundService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.InitService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.CoreUpdateService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.UpdateCompleteService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.DataProtectorService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.LicenceCheckService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.NotificationStatService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+			
+		<service
+			android:name="com.teslasoft.jarvis.easter.TuxService"
+			android:icon="@drawable/tux_logo"
+			android:label="Easter Egg"
+			android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE"/>
+			</intent-filter>
+		</service>
+		
+		<receiver android:name=".AdminReceiver"
+			android:label="Device Admin"
+			android:description="@string/device_admin_desc"
+			android:permission="android.permission.BIND_DEVICE_ADMIN"
+			android:icon="@drawable/app_jarvis">
+			
+   			<meta-data android:name="android.app.device_admin"
+				android:resource="@xml/admin" />
+    		<intent-filter>
+        		<action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+				<action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
+    		</intent-filter>
+		</receiver>
+		
+		<receiver android:name=".BootCompletedReceiver"
+			android:enabled="true"
+			android:exported="true"
+			android:label="BootCompletedReceiver">
+
+			<intent-filter android:priority="999">
+				<action android:name="android.intent.action.BOOT_COMPLETED"></action>
+				<action android:name="android.intent.action.QUICKBOOT_POWERON"></action>
+				<action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"></action>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED"></action>
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="com.teslasoft.jarvis.core.RestartServiceReceiver" 
+			android:enabled="true"
+			android:exported="true"
+			android:label="RestartServiceReceiver">
+			
+			<intent-filter android:priority="999">
+				<action android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE" >
+				</action>
+			</intent-filter>
+		</receiver>
+    </application>
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AA0027</color>
+    <color name="colorPrimaryDark">#99000000</color>
+	<color name="colorPrimaryLight">#CECECE</color>
+	<color name="colorAccent">#AA0027</color>
+	<color name="colorControlNormal">#FF0037</color>
+	<color name="colorControlHighlight">#FF0037</color>
+	<color name="navigationBarColor">@android:color/transparent</color>
+	<color name="colorError">#FF3D00</color>
+	<color name="BackgroundDarkGrey">#111111</color>
+	<color name="colorOnError">#AA0027</color>
+	<color name="dGreen">#FF2E8B57</color>
+</resources>

@@ -1,0 +1,28 @@
+int notifyID = 1; 
+				String CHANNEL_ID = "CoreDebugServices"; // The id of the channel. 
+				CharSequence name = "Services"; // The user-visible name of the channel.
+				int importance = NotificationManager.IMPORTANCE_HIGH;
+				NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.CoreServiceSettingsActivity.class);
+				Intent alls = new Intent(this, com.teslasoft.jarvis.core.ServicesActivity.class);
+		
+				PendingIntent serv = PendingIntent.getActivity(this, 0, alls, 0);
+        		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+				Notification notification = new Notification.Builder(context)
+					.setContentTitle("Debug")
+					.setVisibility(Notification.VISIBILITY_PUBLIC)
+					.setContentText("Jarvis Core has started")
+					.setSmallIcon(R.drawable.app_icon)
+					.addAction(R.drawable.app_icon, "All services", serv)
+					.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon))
+					.setContentIntent(pendingIntent)
+					.setWhen(System.currentTimeMillis())
+					.setChannelId(CHANNEL_ID)
+					.setSound(null, null)
+					.setVibrate(new long[] {0})
+					.build();
+
+				NotificationManager mNotificationManager =
+					(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+				mNotificationManager.createNotificationChannel(mChannel);
+				startForeground(notifyID, notification);

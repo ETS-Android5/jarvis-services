@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:id="@+id/bubble_out"
+		android:gravity="right">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="right|center"
+			android:layout_marginRight="8dp"
+			android:layout_marginLeft="40dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/chat_bubble_out"
+				android:padding="8dp">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="{USER_NAME}"
+					android:id="@+id/name_out"
+					android:textColor="#6F34C2"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="message"
+					android:id="@+id/message_outb"
+					android:textColor="#A38ED0"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="01.01 00:00"
+					android:gravity="right"
+					android:id="@+id/time_out"
+					android:textColor="#675E91"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="40dp"
+			android:layout_height="40dp">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:id="@+id/avatar_out"
+				android:src="@drawable/ic_launcher_round"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:id="@+id/bubble_in"
+		android:gravity="left">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="40dp"
+			android:layout_height="40dp">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:id="@+id/avatar_in"
+				android:src="@drawable/app_jarvis"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|center_vertical"
+			android:layout_marginLeft="8dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/chat_bubble_in"
+				android:padding="8dp">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="Jarvis"
+					android:id="@+id/name_in"
+					android:textColor="#138A8A"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="message"
+					android:id="@+id/message_inb"
+					android:textColor="#135859"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="01.01 00:00"
+					android:gravity="right"
+					android:id="@+id/time_in"
+					android:textColor="#0E898E"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

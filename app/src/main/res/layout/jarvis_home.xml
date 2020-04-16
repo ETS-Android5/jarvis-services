@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="bottom"
+	android:id="@+id/ui">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.0"
+				android:padding="5dp"
+				android:gravity="center_horizontal">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="170dp"
+					android:layout_height="110dp"
+					android:gravity="center">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="00:00"
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:id="@+id/time"
+						android:textSize="50dp"
+						android:textColor="#D7F8FF"
+						android:shadowColor="#005676"
+						android:shadowRadius="15"
+						android:singleLine="true"
+						android:gravity="center"
+						android:onClick="LaunchClock"
+						android:alpha="0.9"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Monday 01.01"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:id="@+id/date"
+						android:textColor="#68B8C2"
+						android:layout_marginTop="10dp"
+						android:shadowColor="#004348"
+						android:shadowRadius="5"
+						android:alpha="0.8"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.0"
+				android:padding="5dp">
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@drawable/rbg">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:text="Settings"
+						android:background="@drawable/rpb"
+						android:onClick="LaunchSettings"
+						android:textColor="#BBD60032"
+						android:layout_weight="1.0"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:layout_marginTop="10dp"
+					android:background="@drawable/rbg">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:text="Apps"
+						android:background="@drawable/rpb"
+						android:onClick="showApps"
+						android:textColor="#BBFF4016"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="300dip"
+				android:layout_height="300dip"
+				android:gravity="center"
+				android:alpha="0.9">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@drawable/ssp1"
+					android:id="@+id/sp1"
+					android:gravity="center"
+					android:clickable="true">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/sp2"
+						android:gravity="center"
+						android:background="@drawable/ssp2">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/sp3"
+							android:gravity="center"
+							android:background="@drawable/ssp3">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/sp4"
+								android:gravity="center"
+								android:background="@drawable/ssp4">
+
+								<LinearLayout
+									android:orientation="vertical"
+									android:layout_width="match_parent"
+									android:id="@+id/sp5"
+									android:gravity="center"
+									android:layout_height="match_parent"
+									android:background="@drawable/ssp5"
+									android:weightSum="10">
+
+									<ImageView
+										android:layout_width="75dp"
+										android:layout_height="75dp"
+										android:id="@+id/sp6"
+										android:gravity="center"
+										android:onClick="LaunchJarvisNative"
+										android:src="@drawable/app_jarvis"/>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#FF111111">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/scrollview">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="320dp"
+					android:layout_height="200dp"
+					android:layout_margin="20dp"
+					android:background="@drawable/vip"/>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="20dp"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="VIP Features"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:textColor="#FF3D00"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Unlimited access to Jarvis Core"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Support all DarkOS functions and programms without installing"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• No advertisements"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Unlimited licence for Jarvis system"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Teslasoft support"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• VIP rank in account"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Warranty 2 years for Jarvis software"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• VIP include developer's account"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="• Jarvis device certification"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:layout_marginBottom="20dp"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
+					android:gravity="center"
+					android:background="@drawable/ui_rect_round_dark_grey">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:onClick="PurchaseVip"
+						android:background="@drawable/rippple">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Buy VIP for "
+							android:textColor="#2E8B57"
+							android:singleLine="true"
+							android:textSize="20sp"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="27999"
+							android:textAppearance="?android:attr/textAppearanceMedium"
+							android:textColor="#38AA6F"
+							android:singleLine="true"
+							android:textSize="20sp"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:background="@drawable/cred"
+							android:layout_margin="8dp"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+

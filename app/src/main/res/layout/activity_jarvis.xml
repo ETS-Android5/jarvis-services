@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="bottom">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="60dp">
+
+			<ListView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:dividerHeight="0dp"
+				android:id="@+id/chatlist"
+				android:transcriptMode="alwaysScroll"
+				android:stackFromBottom="true"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:background="#55101016"
+		android:gravity="right">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="60dp">
+
+			<EditText
+				android:layout_width="match_parent"
+				android:inputType="textMultiLine"
+				android:layout_height="match_parent"
+				android:ems="10"
+				android:hint="Type a message"
+				android:id="@+id/messag"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="60dp"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:padding="10dp">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/ic_send"
+				android:id="@+id/send"
+				android:onClick="pushMessage"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

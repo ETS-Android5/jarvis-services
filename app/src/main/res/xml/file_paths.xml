@@ -1,0 +1,9 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="my_images" path="images/*"/>
+	<files-path name="execs" path="jarvis/.jca"/>
+	<files-path name="jer" path="jarvis/.jef"/>
+	<files-path name="config" path="jarvis/.jconf"/>
+	<files-path name="syslib" path="jarvis/.jlib"/>
+	<files-path name="ua" path="jarvis/.dab"/>
+	<files-path name="sysdrv" path="jarvis/.sys"/>
+</paths>

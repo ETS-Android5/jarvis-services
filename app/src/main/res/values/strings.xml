@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jarvis Services</string>
+	<string name="activity_main_name">Jarvis Services</string>
+	<string name="activity_settings_name">Settings</string>
+	<string name="activity_init_name">Jarvis Services</string>
+	<string name="activity_load_name">Jarvis</string>
+	<string name="activity_auth_name">Sign In</string>
+	<string name="activity_account_name">Account</string>
+	<string name="activity_rate_name">Rate Jarvis Services</string>
+	<string name="device_admin">Jarvis Services</string>
+	<string name="device_admin_desc">Provide some Jarvis Services</string>
+	<string name="lib_name">Jarvis Library Provider</string>
+</resources>

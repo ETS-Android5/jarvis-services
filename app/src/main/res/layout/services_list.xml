@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal"
+		android:background="#99000000">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal">
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:layout_margin="15dp"
+					android:gravity="center"
+					android:background="@drawable/dialog_dark_r"
+					android:id="@+id/card_service_core"
+					android:translationZ="5dp"
+					android:elevation="10dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@drawable/rippple"
+						android:onClick="CoreService">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="60dp"
+							android:layout_height="60dp"
+							android:padding="10dp"
+							android:gravity="center">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/jarvis2"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:paddingLeft="0dp"
+							android:paddingBottom="5dp"
+							android:paddingTop="5dp"
+							android:paddingRight="5dp">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/button_rpp"
+								android:weightSum="2"
+								android:paddingLeft="5dp"
+								android:paddingRight="5dp">
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:text="Jarvis Core Init Service"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"/>
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:text="State: "
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:layout_height="match_parent"
+										android:gravity="left|center_vertical"/>
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"
+										android:id="@+id/csstate"
+										android:textColor="#2E8B57"
+										android:text="Disabled"/>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:gravity="center"
+					android:background="@drawable/dialog_dark_r"
+					android:id="@+id/card_service_dp"
+					android:translationZ="5dp"
+					android:elevation="10dp"
+					android:layout_marginBottom="15dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginTop="0dp"
+					android:layout_marginRight="15dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@drawable/rippple"
+						android:onClick="DPService">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="60dp"
+							android:layout_height="60dp"
+							android:padding="10dp"
+							android:gravity="center">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/jarvis2"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:paddingLeft="0dp"
+							android:paddingBottom="5dp"
+							android:paddingTop="5dp"
+							android:paddingRight="5dp">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/button_rpp"
+								android:weightSum="2"
+								android:paddingLeft="5dp"
+								android:paddingRight="5dp">
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:text="Data Protector Service"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"/>
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:text="State: "
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:layout_height="match_parent"
+										android:gravity="left|center_vertical"/>
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"
+										android:id="@+id/dpsstate"
+										android:textColor="#2E8B57"
+										android:text="Disabled"/>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:gravity="center"
+					android:background="@drawable/dialog_dark_r"
+					android:id="@+id/card_service_lc"
+					android:translationZ="5dp"
+					android:elevation="10dp"
+					android:layout_marginBottom="15dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginTop="0dp"
+					android:layout_marginRight="15dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@drawable/rippple"
+						android:onClick="LCService">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="60dp"
+							android:layout_height="60dp"
+							android:padding="10dp"
+							android:gravity="center">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/jarvis2"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:paddingLeft="0dp"
+							android:paddingBottom="5dp"
+							android:paddingTop="5dp"
+							android:paddingRight="5dp">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/button_rpp"
+								android:weightSum="2"
+								android:paddingLeft="5dp"
+								android:paddingRight="5dp">
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:text="Licence Check Service"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"/>
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:text="State: "
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:layout_height="match_parent"
+										android:gravity="left|center_vertical"/>
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"
+										android:id="@+id/lcsstate"
+										android:textColor="#2E8B57"
+										android:text="Disabled"/>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:gravity="center"
+					android:background="@drawable/dialog_dark_r"
+					android:id="@+id/card_service_ns"
+					android:translationZ="5dp"
+					android:elevation="10dp"
+					android:layout_marginBottom="15dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginTop="0dp"
+					android:layout_marginRight="15dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@drawable/rippple"
+						android:onClick="NSService">
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="60dp"
+							android:layout_height="60dp"
+							android:padding="10dp"
+							android:gravity="center">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/jarvis2"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:paddingLeft="0dp"
+							android:paddingBottom="5dp"
+							android:paddingTop="5dp"
+							android:paddingRight="5dp">
+
+							<LinearLayout
+								android:orientation="vertical"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@drawable/button_rpp"
+								android:weightSum="2"
+								android:paddingLeft="5dp"
+								android:paddingRight="5dp">
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:text="Notification Stats Service"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"/>
+
+								</LinearLayout>
+
+								<LinearLayout
+									android:orientation="horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="0dp"
+									android:layout_weight="1.0">
+
+									<TextView
+										android:layout_width="wrap_content"
+										android:text="State: "
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:layout_height="match_parent"
+										android:gravity="left|center_vertical"/>
+
+									<TextView
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:textAppearance="?android:attr/textAppearanceMedium"
+										android:gravity="left|center_vertical"
+										android:id="@+id/nsstate"
+										android:textColor="#2E8B57"
+										android:text="Disabled"/>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+
