@@ -31,7 +31,7 @@
 - Licence ckeck added
 - Anti piracy manager added
 
->>>>> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.18.202010282315.1.187) <<<<<
+\>\>\>\>\> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.18.202010282315.1.187) <<<<<
 
 You can see other changelogs in file ***CHANGELOG.md***.
 
