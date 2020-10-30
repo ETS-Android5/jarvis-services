@@ -14,8 +14,7 @@ import android.graphics.*;
 import android.graphics.drawable.*;
 
 public class MainActivity extends Activity 
-{
-	@Override	
+{	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

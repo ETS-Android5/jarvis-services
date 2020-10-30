@@ -19,9 +19,12 @@ import java.util.TimerTask;
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
 import com.teslasoft.jarvis.core.SystemLibrary;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.Builder;
+import androidx.core.content.ContextCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.Builder;
+// import android.support.v4.content.ContextCompat; /* DEPRECATED API */
+// import android.support.v4.app.NotificationCompat; /* DEPRECATED API */
+// import android.support.v4.app.NotificationCompat.Builder; /* DEPRECATED API */
 import android.graphics.BitmapFactory;
 
 public class DataProtectorService extends Service
@@ -39,7 +42,7 @@ public class DataProtectorService extends Service
 	{
 		// startService(new Intent(this, com.teslasoft.jarvis.core.DataProtectorService.class));
 
-		if (android.os.Build.VERSION.SDK_INT >= 21)
+		/*if (android.os.Build.VERSION.SDK_INT >= 21)
 		{
 			if (android.os.Build.VERSION.SDK_INT >= 26)
 			{
@@ -117,7 +120,7 @@ public class DataProtectorService extends Service
 			Log.e("DataProtectorService", "Sorry, but your Android version is not supported. Minimal version android is Android 6.0 (Lolipop) SDK 21. Jarvis Services closed with exit code -1");
 			stopSelf();
 			System.exit(-1);
-		}
+		}*/
 	}
 	
 	

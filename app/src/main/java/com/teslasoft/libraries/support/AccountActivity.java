@@ -12,8 +12,7 @@ import android.net.*;
 import android.support.v7.appcompat.*;
 
 public class AccountActivity extends Activity
-{
-	@Override	
+{	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method	

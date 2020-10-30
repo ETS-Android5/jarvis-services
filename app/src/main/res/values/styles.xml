@@ -3,7 +3,7 @@
     <style name="AppTheme" parent="@android:style/Theme.Material">
 		<item name="android:actionBarStyle">@style/ThemeActionBar</item>
 	</style>
-	<style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+	<style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.NoActionBar">
 		<item name="windowActionBar">false</item>
 		<item name="windowNoTitle">true</item>
 		<item name="colorAccent">#BE0217</item>
@@ -46,11 +46,11 @@
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
 		<item name="colorAccent">#BE0217</item>
-		<item name="colorPrimaryDark">#66000000</item>
+		<item name="colorPrimaryDark">#121212</item>
 		<item name="colorPrimary">#121212</item>
 		<item name="colorControlHighlight">#BE0217</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">#99000000</item>
+        <item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
 		<item name="android:windowContentTransitions">true</item>
 	</style>
@@ -252,7 +252,6 @@
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
 		<item name="colorControlHighlight">#BE0217</item>
-		<item name="android:windowDisablePreview">true</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>

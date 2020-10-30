@@ -9,12 +9,18 @@ import android.widget.Toast;
 import android.widget.TextView;
 import com.teslasoft.libraries.support.R;
 import android.content.ComponentName;
+import android.accounts.AccountManager;
+import android.accounts.AccountManagerCallback;
+import android.widget.SmartToast;
 
 public class PreAuthActivity extends Activity
 {
 	TextView text;
+	private String appId;
 	
-	@Override
+	/*AccountManager am = AccountManager.get(this);
+	Bundle options = new Bundle();*/
+	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method
@@ -26,10 +32,41 @@ public class PreAuthActivity extends Activity
 		super.onCreate(savedInstanceState);
 		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
 		setContentView(R.layout.add_accound_complete);
-		text = (TextView) findViewById(R.id.text);
-		text.setText("Sign in...");
+		// text = (TextView) findViewById(R.id.text);
+		// text.setText("Checking info...");
 		
-		try
+		try {
+			Intent intent = getIntent();
+			Bundle extras = intent.getExtras();
+			appId = extras.getString("appId");
+		} catch (Exception e) {
+			PreAuthActivity.this.setResult(5);
+			finishAndRemoveTask();
+		}
+		
+		final Handler handler = new Handler();
+		handler.postDelayed(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				try {
+					Intent intent = new Intent(PreAuthActivity.this, com.teslasoft.jarvis.auth.AuthActivity.class);
+					Bundle extras = new Bundle();
+					extras.putString("appId", appId);
+					intent.putExtras(extras);
+					startActivityForResult(intent, 1);
+				} catch (Exception j) {
+					PreAuthActivity.this.setResult(4);
+					finishAndRemoveTask();
+				}
+			}
+		}, 3000);
+	}
+	
+	public void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		if (resultCode == RESULT_OK)
 		{
 			final Handler handler = new Handler();
 			handler.postDelayed(new Runnable()
@@ -37,53 +74,30 @@ public class PreAuthActivity extends Activity
 				@Override
 				public void run()
 				{
-					try
-					{
-						Intent i = new Intent(com.teslasoft.jarvis.auth.PreAuthActivity.this, com.teslasoft.jarvis.auth.AuthActivity.class);
-						startActivity(i);
-					}
-					
-					catch (Exception j)
-					{
-						Toast toast = Toast.makeText(getApplicationContext(), "Service unavaliable", Toast.LENGTH_SHORT); 
-						toast.show();
-
-						try
-						{
-							stopService(new Intent(com.teslasoft.jarvis.auth.PreAuthActivity.this, com.teslasoft.jarvis.auth.AuthService.class));
-							finish();
-						}
-
-						catch (Exception er)
-						{
-							finish();
-						}
-					}
+					// SmartToast.create("Credentials created and stored in /mnt/sdcard/jarvis/auth/" + appId + "/credentials.json", PreAuthActivity.this);
+					PreAuthActivity.this.setResult(Activity.RESULT_OK);
+					finishAndRemoveTask();
 				}
-			}, 300);
-		}
-
-		catch (Exception e)
-		{
-			Toast toast = Toast.makeText(getApplicationContext(), "Internal error", Toast.LENGTH_SHORT); 
-			toast.show();
-
-			try
-			{
-				stopService(new Intent(com.teslasoft.jarvis.auth.PreAuthActivity.this, com.teslasoft.jarvis.auth.AuthService.class));
-				finish();
-			}
-
-			catch (Exception er)
-			{
-				finish();
-			}
+			}, 100);
+		} else if (resultCode == 3) {
+			this.setResult(3);
+			finishAndRemoveTask();
+		} else if (resultCode == 4) {
+			this.setResult(4);
+			finishAndRemoveTask();
+		} else if (resultCode == 5) {
+			this.setResult(5);
+			finishAndRemoveTask();
+		} else {
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
 		}
 	}
 
 	public void DismissDialogActivity(View v)
 	{
-		
+		/*this.setResult(Activity.RESULT_CANCELED);
+		finishAndRemoveTask();*/
 	}
 
 	public void Ignore(View v)
@@ -94,8 +108,20 @@ public class PreAuthActivity extends Activity
 	@Override
 	public void onBackPressed()
 	{
-		// TODO: Implement this method
-		// super.onBackPressed();
-		// finishAffinity();
+		this.setResult(Activity.RESULT_CANCELED);
+		finishAndRemoveTask();
 	}
 }
+
+/*private class OnTokenAcquired implements AccountManagerCallback<Bundle> {
+	@Override
+	public void run(AccountManagerFuture<Bundle> result) {
+		// Get the result of the operation from the AccountManagerFuture.
+		Bundle bundle = result.getResult();
+
+		// The token is a named value in the bundle. The name of the value
+		// is stored in the constant AccountManager.KEY_AUTHTOKEN.
+		String token = bundle.getString(AccountManager.KEY_AUTHTOKEN);
+		
+	}
+}*/

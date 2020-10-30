@@ -23,23 +23,13 @@ import android.transition.Scene;
 import android.app.Instrumentation;
 import android.webkit.*;
 import android.annotation.*;
-import android.support.v7.app.*;
 import android.content.pm.*;
 import java.text.*;
-import android.support.v4.*;
-import android.support.v4.view.*;
-import android.support.v4.app.*;
 
 public class WebActivity extends Activity
 {
 	private WebView content;
-
-	@Override
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-
-	}
-
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState)
     {

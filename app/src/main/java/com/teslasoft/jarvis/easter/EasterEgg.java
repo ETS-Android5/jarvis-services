@@ -35,7 +35,6 @@ public class EasterEgg extends Activity
 	private float alph;
 	private Animation mFadeInAnimation, mFadeOutAnimation;
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

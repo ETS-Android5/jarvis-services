@@ -16,8 +16,6 @@ import com.teslasoft.libraries.support.R;
 
 public class ErrorServiceActivity extends Activity
 {
-
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

@@ -18,7 +18,6 @@ import com.teslasoft.libraries.support.R;
 
 public class AutoRunActivity extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method
@@ -60,15 +59,15 @@ public class AutoRunActivity extends Activity
 				.setMessage("Jarvis Core Init doesn't started: Please enable it first")
 				.setIcon(R.drawable.jarvis2)
 				.setCancelable(false)
-				.setNegativeButton("Отмена", new DialogInterface.OnClickListener()
+				.setNegativeButton("Cancel", new DialogInterface.OnClickListener()
 				{
 					public void onClick(DialogInterface dialog, int which)
 					{
-						finish();
+						finishAndRemoveTask();
 					}
 				})
 				
-				.setPositiveButton("Настройки", new DialogInterface.OnClickListener()
+				.setPositiveButton("Settings", new DialogInterface.OnClickListener()
 				{
 					public void onClick(DialogInterface dialog, int which)
 					{

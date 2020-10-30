@@ -5,7 +5,6 @@ import android.app.*;
 
 public class Sandbox extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

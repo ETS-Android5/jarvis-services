@@ -4,8 +4,6 @@ import android.os.*;
 import android.app.*;
 import android.speech.tts.TextToSpeech;
 import com.teslasoft.libraries.support.R;
-import android.support.v7.app.*;
-import android.support.v7.appcompat.*;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +13,6 @@ import java.util.*;
 
 public class Tts extends Activity
 {
-
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

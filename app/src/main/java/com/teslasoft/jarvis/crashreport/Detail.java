@@ -12,7 +12,7 @@ public class Detail extends Activity
 {
 	private Intent intent;
 	private String textdet;
-	@Override
+	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

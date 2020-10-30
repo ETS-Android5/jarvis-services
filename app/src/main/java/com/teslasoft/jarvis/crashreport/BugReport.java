@@ -17,7 +17,6 @@ public class BugReport extends Activity
 	private Intent intent;
 	private TextView tem;
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

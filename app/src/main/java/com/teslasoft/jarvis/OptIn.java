@@ -14,7 +14,6 @@ public class OptIn extends Activity
 	private LinearLayout dialog;
 	private ProgressBar progress;
 
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

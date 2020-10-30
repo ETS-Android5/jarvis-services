@@ -14,7 +14,6 @@ public class BootAnimation extends Activity
 	private LinearLayout layout_main;
 	public int counter;
 
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

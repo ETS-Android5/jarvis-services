@@ -10,7 +10,6 @@ public class CoreActivity extends Activity
 {
 	//AlertDialog alertDialog; // = new AlertDialog.Builder(CoreActivity.this).create();
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		

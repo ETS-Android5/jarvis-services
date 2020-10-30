@@ -12,76 +12,71 @@ import android.content.ComponentName;
 
 public class AuthEntryActivity extends Activity
 {
-	TextView text;
-	
-	@Override
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
+	private String appId;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-		setContentView(R.layout.add_accound_complete);
-		text = (TextView) findViewById(R.id.text);
-		text.setText("Checking info...");
 		
-		try
-		{
-			startService(new Intent(com.teslasoft.jarvis.auth.AuthEntryActivity.this, com.teslasoft.jarvis.auth.AuthService.class));
-			
-			final Handler handler = new Handler();
-			handler.postDelayed(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					try
-					{
-						Intent intent = new Intent(Intent.ACTION_MAIN);
-						intent.setComponent(new ComponentName("com.teslasoft.jarvis.accounts","com.teslasoft.jarvis.accounts.CheckActivity"));
-						intent.addCategory(Intent.CATEGORY_LAUNCHER);
-						startActivity(intent);
-						
-						Intent i = new Intent(com.teslasoft.jarvis.auth.AuthEntryActivity.this, com.teslasoft.jarvis.auth.PreAuthActivity.class);
-						startActivity(i);
-						finish();
-					}
-
-					catch (Exception _e)
-					{
-						Toast toast = Toast.makeText(getApplicationContext(), "Service unavaliable", Toast.LENGTH_SHORT); 
-						toast.show();
-
-						try
-						{
-							stopService(new Intent(com.teslasoft.jarvis.auth.AuthEntryActivity.this, com.teslasoft.jarvis.auth.AuthService.class));
-							finish();
-						}
-
-						catch (Exception er)
-						{
-							finish();
-						}
-					}
-				}
-			}, 4500);
+		try {
+			Intent intent = getIntent();
+			Bundle extras = intent.getExtras();
+			appId = extras.getString("appId");
+		} catch (Exception e) {
+			AuthEntryActivity.this.setResult(5);
+			finishAndRemoveTask();
 		}
 		
-		catch (Exception j)
-		{
-			Toast toast = Toast.makeText(getApplicationContext(), "Internal error", Toast.LENGTH_SHORT); 
-			toast.show();
-			finish();
+		try {
+			if (appId.equals("null")) {
+				this.setResult(5);
+				finishAndRemoveTask();
+			} else {
+				try {
+					Intent intent = new Intent(this, PreAuthActivity.class);
+					Bundle extras = new Bundle();
+					extras.putString("appId", appId);
+					intent.putExtras(extras);
+					startActivityForResult(intent, 1);
+				} catch (Exception e) {
+					this.setResult(4);
+					finishAndRemoveTask();
+				}
+			}
+		} catch (Exception ee) {
+			this.setResult(5);
+			finishAndRemoveTask();
 		}
 	}
 
 	public void DismissDialogActivity(View v)
 	{
 		
+	}
+	
+	public void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		if (resultCode == RESULT_OK) {
+			this.setResult(Activity.RESULT_OK);
+			finishAndRemoveTask();
+		} else if (resultCode == RESULT_CANCELED) {
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		} else if (resultCode == 3) {
+			this.setResult(3);
+			finishAndRemoveTask();
+		} else if (resultCode == 4) {
+			this.setResult(4);
+			finishAndRemoveTask();
+		} else if (resultCode == 5) {
+			this.setResult(5);
+			finishAndRemoveTask();
+		} else {
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
 	}
 
 	public void Ignore(View v)

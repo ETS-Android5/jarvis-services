@@ -20,9 +20,9 @@ import java.util.TimerTask;
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
 import com.teslasoft.jarvis.core.SystemLibrary;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.Builder;
+import androidx.core.content.ContextCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.Builder;
 import android.graphics.BitmapFactory;
 
 

@@ -13,7 +13,7 @@ import android.content.ComponentName;
 public class AuthCompleteEntryActivity extends Activity
 {
 	TextView text;
-	@Override
+	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

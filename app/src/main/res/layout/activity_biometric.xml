@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="#00000000"
+	android:gravity="center">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom|center_horizontal"
+		android:onClick="Cancel">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="240dp"
+			android:gravity="center"
+			android:background="@drawable/ui_rect_round_dark_grey"
+			android:layout_margin="8dp"
+			android:onClick="Empty"
+			android:translationZ="4dp"
+			android:elevation="7dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1.0"
+				android:gravity="top"
+				android:padding="8dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Authentication"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:gravity="center"
+					android:layout_marginLeft="8dp"
+					android:layout_marginRight="8dp"
+					android:layout_marginTop="8dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="To continue please verify your identity"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:layout_margin="8dp"
+					android:gravity="center"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1.0"
+				android:gravity="center"
+				android:padding="8dp">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="48dp"
+					android:layout_height="48dp"
+					android:background="@drawable/ic_fingerprint"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1.0"
+				android:gravity="center"
+				android:padding="8dp">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:id="@+id/fingerprint_error"
+					android:gravity="center"
+					android:text="Touch the fingerprint sensor"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginBottom="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginLeft="8dp"
+			android:gravity="center"
+			android:background="@drawable/ui_rect_round_dark_grey"
+			android:onClick="Empty"
+			android:translationZ="4dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.0"
+				android:gravity="center">
+
+				<Button
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="Cancel"
+					android:singleLine="true"
+					android:background="@drawable/ui_btn_left"
+					android:onClick="Cancel"
+					android:id="@+id/dialog_button_cancel"
+					android:lines="1"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.0"
+				android:gravity="center">
+
+				<Button
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="Use password"
+					android:singleLine="true"
+					android:background="@drawable/ui_btn_right"
+					android:onClick="Password"
+					android:id="@+id/dialog_button_confirm"
+					android:lines="1"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

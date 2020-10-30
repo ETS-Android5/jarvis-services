@@ -52,7 +52,6 @@ public class AdWideActivity extends Activity
 	// "ads" is ad
 	private WebView ads;
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

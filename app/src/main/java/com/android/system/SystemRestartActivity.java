@@ -13,7 +13,6 @@ import java.lang.Runtime;
 
 public class SystemRestartActivity extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method
@@ -24,6 +23,7 @@ public class SystemRestartActivity extends Activity
 	{
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
+		// setContentView(R.layout.restart);
 		ForceRestart();
 	}
 	

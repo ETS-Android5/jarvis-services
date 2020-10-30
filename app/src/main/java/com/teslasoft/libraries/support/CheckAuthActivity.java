@@ -9,16 +9,11 @@ import java.util.*;
 import android.content.*;
 import android.util.*;
 import android.net.*;
-import android.support.v7.appcompat.*;
 import android.graphics.*;
 import android.webkit.*;
 import android.annotation.*;
-import android.support.v7.app.*;
 import android.content.pm.*;
 import java.text.*;
-import android.support.v4.*;
-import android.support.v4.view.*;
-import android.support.v4.app.*;
 
 public class CheckAuthActivity extends Activity
 {
@@ -39,7 +34,6 @@ public class CheckAuthActivity extends Activity
 		}
 	};
 
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 

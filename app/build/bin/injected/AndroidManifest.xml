@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	package="com.teslasoft.libraries.support"
-	android:versionCode="122375"
-	android:versionName="1.12.202001211530.2.375">
+	android:versionCode="127283"
+	android:versionName="1.18.202010282315.1.187">
 
 	<uses-sdk
-		android:minSdkVersion="14"
+		android:minSdkVersion="21"
 		android:targetSdkVersion="29"/>
 
 	<uses-permission
+		android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+
+	</uses-permission>
+
+	<uses-permission
 		android:name="com.teslasoft.jarvis.SYSTEM">
+
+	</uses-permission>
+
+	<uses-permission
+		android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+
+	</uses-permission>
+
+	<uses-permission
+		android:name="android.permission.INSTALL_PACKAGES">
 
 	</uses-permission>
 
@@ -66,6 +82,11 @@
 
 	<uses-permission
 		android:name="android.permission.USE_FINGERPRINT">
+
+	</uses-permission>
+
+	<uses-permission
+		android:name="android.permission.USE_BIOMETRICS">
 
 	</uses-permission>
 
@@ -504,25 +525,10 @@
 		android:theme="@style/AppTheme"
 		android:usesCleartextTraffic="true"
 		android:name=".CrashHandler"
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+		tools:replace="android:appComponentFactory"
 		android:icon="@drawable/app_icon"
-		android:largeHeap="true">
-
-		<activity
-			android:name=".MainActivity"
-			android:label="@string/app_name"
-			android:process=":ui"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
+		android:requestLegacyExternalStorage="true">
 
 		<activity
 			android:name=".SettingsActivity"
@@ -536,6 +542,7 @@
 
 		<activity
 			android:name=".InitActivity"
+			android:exported="true"
 			android:label="@string/activity_init_name"
 			android:process=":ui"
 			android:theme="@style/Theme.Transparent"
@@ -545,10 +552,10 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.TaskExec"
+			android:name="com.teslasoft.jarvis.OptIn"
 			android:label="@string/app_name"
-			android:process=":exec"
-			android:theme="@style/Theme.Home"
+			android:process=":checkin"
+			android:theme="@style/Theme.Transparent.NoAnim"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -562,10 +569,98 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.OptIn"
-			android:label="@string/app_name"
-			android:process=":checkin"
-			android:theme="@style/Theme.Transparent.NoAnim"
+			android:name="android.security.BiometricAuthenticator"
+			android:label="Security"
+			android:process=":security"
+			android:icon="@drawable/ic_fingerprint"
+			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="false">
+
+		</activity>
+
+		<activity
+			android:name="android.security.BiometricAuthenticatorCallback"
+			android:label="Security"
+			android:process=":security"
+			android:icon="@drawable/ic_fingerprint"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
+			android:label="Licence Manager"
+			android:process=":antipiracy"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="android.security.LockScreenActivity"
+			android:label="Security"
+			android:process=":security"
+			android:icon="@drawable/ic_fingerprint"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="android.security.ForceLockActivity"
+			android:label="Security"
+			android:process=":security"
+			android:icon="@drawable/ic_launcher_round"
+			android:theme="@style/Theme.Transparent.Float"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="com.android.phone.GSMDriverRestartActivity"
+			android:label="Phone Services"
+			android:process=":system"
+			android:icon="@drawable/ic_launcher_round"
+			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -597,26 +692,9 @@
 
 		<activity
 			android:name="com.teslasoft.jarvis.ads.AdWideActivity"
-			android:label="Ads"
+			android:label="@string/app_name"
 			android:process=":ads"
 			android:theme="@style/Theme.Dialog"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
-			android:name="com.teslasoft.jarvis.TaskExecBackground"
-			android:label="@string/app_name"
-			android:process=":exec"
-			android:theme="@style/Theme.Transparent.Float"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -701,24 +779,6 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.core.DialogUIShadowActivity"
-			android:label="Jarvis Core"
-			android:icon="@drawable/app_jarvis"
-			android:process=":ui"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
 			android:name="com.teslasoft.jarvis.core.DPSSettingsActivity"
 			android:label="Jarvis Core"
 			android:icon="@drawable/app_jarvis"
@@ -773,24 +833,6 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.core.NotificationActivity"
-			android:process=":exec"
-			android:label="Jarvis Core"
-			android:icon="@drawable/app_jarvis"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
 			android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
 			android:label="Jarvis Core"
 			android:icon="@drawable/app_jarvis"
@@ -827,9 +869,9 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.Window"
-			android:label="@string/app_name"
-			android:process=":ui"
+			android:name="com.teslasoft.jarvis.crashreport.Report"
+			android:label="Jarvis Crash Handler"
+			android:process=":report"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
@@ -844,10 +886,10 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.LoadFullscreen"
-			android:label="@string/app_name"
-			android:process=":fsboot"
-			android:theme="@style/Theme.Transparent.Float.F"
+			android:name="com.teslasoft.jarvis.updater.DownloadUpdateActivity"
+			android:label="System Update"
+			android:process=":updater"
+			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -861,9 +903,26 @@
 		</activity>
 
 		<activity
-			android:name="com.teslasoft.jarvis.crashreport.Report"
-			android:label="Jarvis Crash Handler"
-			android:process=":report"
+			android:name="com.teslasoft.jarvis.updater.InstallUpdateActivity"
+			android:label="System Update"
+			android:process=":updater"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="com.teslasoft.jarvis.corex.Corex"
+			android:label="libjarcorex"
+			android:process=":jarcorex"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
@@ -947,7 +1006,7 @@
 			android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
-			android:theme="@style/Theme.Transparent.Slide"
+			android:theme="@style/Theme.Transparent.Float"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -964,7 +1023,7 @@
 			android:name="com.teslasoft.jarvis.auth.PreAuthActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
-			android:theme="@style/Theme.Transparent.Slide"
+			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -972,33 +1031,6 @@
 
 		<activity
 			android:name="com.teslasoft.jarvis.auth.AuthActivity"
-			android:label="@string/activity_auth_name"
-			android:process=":auth"
-			android:theme="@style/Theme.Transparent.Slide"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-		</activity>
-
-		<activity
-			android:name="com.teslasoft.jarvis.auth.AuthCompleteActivity"
-			android:label="@string/activity_auth_name"
-			android:process=":auth"
-			android:theme="@style/Theme.Transparent.SlideOut"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
-			android:name="com.teslasoft.jarvis.auth.AuthCompleteEntryActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
 			android:theme="@style/Theme.Transparent.Slide"
@@ -1074,23 +1106,6 @@
 			android:theme="@style/Theme.Transparent.Ads"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
-
-		</activity>
-
-		<activity
-			android:name=".Admin"
-			android:label="@string/app_name"
-			android:process=":main"
-			android:theme="@style/Theme.Transparent.Float"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<category
-					android:name="android.intent.category.SAMPLE_CODE"/>
-
-			</intent-filter>
 
 		</activity>
 
@@ -1275,23 +1290,6 @@
 		</activity>
 
 		<activity
-			android:name="com.android.jss.Connect"
-			android:process=":main"
-			android:label="@string/app_name"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.MAIN"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
 			android:name="com.android.system.SystemRestartActivity"
 			android:process=":sys"
 			android:label="@string/app_name"
@@ -1455,8 +1453,7 @@
 			android:exported="true"
 			android:label="BootCompletedReceiver">
 
-			<intent-filter
-				android:priority="999">
+			<intent-filter>
 
 				<action
 					android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -1466,6 +1463,26 @@
 
 				<action
 					android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+
+				<action
+					android:name="android.intent.action.PACKAGE_REPLACED"/>
+
+				<data
+					android:scheme="package"/>
+
+			</intent-filter>
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.PACKAGE_REPLACED"/>
+
+				<data
+					android:scheme="package"/>
+
+			</intent-filter>
+
+			<intent-filter>
 
 				<action
 					android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
@@ -1480,17 +1497,30 @@
 			android:exported="true"
 			android:label="RestartServiceReceiver">
 
-			<intent-filter
-				android:priority="999">
+			<intent-filter>
 
 				<action
-					android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE">
+					android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE"/>
 
-				</action>
+				<data
+					android:scheme="package"/>
 
 			</intent-filter>
 
 		</receiver>
+
+		<provider
+			android:name="com.teslasoft.libraries.support.FileProvider"
+			android:authorities="com.teslasoft.libraries.support.fileprovider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				tools:replace="android:resource"
+				android:resource="@xml/file_paths"/>
+
+		</provider>
 
 	</application>
 

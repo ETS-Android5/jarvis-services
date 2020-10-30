@@ -10,12 +10,9 @@ import java.util.*;
 import android.content.*;
 import android.util.*;
 import android.net.*;
-import android.support.v7.appcompat.*;
-import android.support.v7.app.*;
 
 public class LoadActivity extends Activity
-{
-	@Override	
+{	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

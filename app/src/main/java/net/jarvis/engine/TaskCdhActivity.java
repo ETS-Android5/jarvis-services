@@ -8,8 +8,7 @@ import android.content.Intent;
 import android.content.Context;
 
 public class TaskCdhActivity extends Activity
-{
-	@Override	
+{	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		return;

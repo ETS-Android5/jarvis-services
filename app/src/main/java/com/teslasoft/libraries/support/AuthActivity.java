@@ -13,12 +13,8 @@ import android.support.v7.appcompat.*;
 import android.graphics.*;
 import android.webkit.*;
 import android.annotation.*;
-import android.support.v7.app.*;
 import android.content.pm.*;
 import java.text.*;
-import android.support.v4.*;
-import android.support.v4.view.*;
-import android.support.v4.app.*;
 
 public class AuthActivity extends Activity
 {
@@ -40,7 +36,6 @@ public class AuthActivity extends Activity
 		}
 	};
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		

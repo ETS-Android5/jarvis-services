@@ -19,6 +19,7 @@ import com.teslasoft.libraries.support.R;
 import java.text.SimpleDateFormat;
 import java.util.Timer;
 import java.util.TimerTask;
+import android.widget.SmartToast;
 
 public class Jarvis extends Activity
 {
@@ -30,8 +31,8 @@ public class Jarvis extends Activity
 	private Calendar calend2;
 	private String cp;
 	private Timer timer;
+	
 		
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		
@@ -97,6 +98,8 @@ public class Jarvis extends Activity
 
 		if (cp.equals("/debug-test")) {
 			elem2.message_in = "Debug test completed successfully";
+			toast("Hello");
+			
 		} else {
 			elem2.message_in = "Unrecognized";
 		}

@@ -22,7 +22,6 @@ public class AppsList extends Activity
 	private List<AppDetail> apps;
 	private ListView list;
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		

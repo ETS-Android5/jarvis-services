@@ -9,11 +9,9 @@ import java.util.*;
 import android.content.*;
 import android.util.*;
 import android.net.*;
-import android.support.v7.appcompat.*;
 import android.graphics.*;
 import android.webkit.*;
 import android.annotation.*;
-import android.support.v7.app.*;
 import java.util.*;
 import android.view.animation.Animation.*;
 import android.view.animation.Animation;
@@ -23,7 +21,6 @@ import android.view.animation.Animation.AnimationListener;
 
 public class TaskExecBackground extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

@@ -26,7 +26,6 @@ public class NekoPlatLogo extends Activity
 	private int lu;
 	private Animation mFadeInAnimation, mFadeOutAnimation;
 
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

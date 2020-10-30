@@ -18,27 +18,31 @@ public class BootCompletedReceiver extends BroadcastReceiver
 		{
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
 			{
-				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
-			}
-				
-			else
-			{
-				context.startService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
+				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
+			} else {
+				context.startService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
 				// context.stopService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
 			}
-		}
-		
-		if (intent.getAction().equals(Intent.ACTION_MY_PACKAGE_REPLACED))
+		} else if (intent.getAction().equals(Intent.ACTION_MY_PACKAGE_REPLACED))
 		{
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
 			{
-				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
-			}
-
-			else
-			{
-				context.startService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
+				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
+			} else {
+				context.startService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
 				// context.stopService(new Intent(context, com.teslasoft.jarvis.core.CoreUpdateService.class));
+			}
+		} else if (intent.getAction().equals(Intent.ACTION_PACKAGE_REPLACED))
+		{
+			if(intent.getData().getSchemeSpecificPart().equals(context.getPackageName()))
+			{
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+				{
+					context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
+				} else {
+					context.startService(new Intent(context, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
+					// context.stopService(new Intent(context, com.teslasoft.jarvis.core.CoreUpdateService.class));
+				}
 			}
 		}
     }

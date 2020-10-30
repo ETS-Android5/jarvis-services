@@ -15,21 +15,9 @@
 		android:background="#99000000"
 		android:orientation="vertical">
 
-		<LinearLayout
-			android:orientation="horizontal"
-			android:layout_width="250dp"
-			android:layout_height="250dp"
-			android:background="@drawable/app_jarvis"
-			android:id="@+id/loadLinearLayout1"
-			android:layout_marginTop="90dp"/>
-
-		<LinearLayout
-			android:orientation="vertical"
-			android:layout_width="180dp"
-			android:layout_height="45dp"
-			android:layout_toRightOf="@id/loadLinearLayout1"
-			android:background="@drawable/logo_psd"
-			android:layout_marginTop="90dp"/>
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
 
 	</LinearLayout>
 

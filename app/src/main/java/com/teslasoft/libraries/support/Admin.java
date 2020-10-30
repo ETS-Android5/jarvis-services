@@ -5,7 +5,6 @@ import android.app.Activity;
 
 public class Admin extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

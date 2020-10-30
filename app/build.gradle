@@ -2,28 +2,25 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-	buildToolsVersion "28.0.3"
+	buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.teslasoft.libraries.support"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 29
-        versionCode 122375
-        versionName "1.12.202001211530.2.375"
-		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionCode 127283
+        versionName "1.18.202010282315.1.187"
+		// testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 	
     buildTypes {
         release {
-			minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-	compile 'com.android.support:support-v4:+'
-	compile 'com.android.support:appcompat-v7:+'
-	compile fileTree(dir: 'libs', include: ['*.aar'])
+	api 'com.android.support:appcompat-v7:27.+'
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 }

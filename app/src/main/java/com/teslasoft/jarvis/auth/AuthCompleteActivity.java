@@ -9,11 +9,20 @@ import android.widget.Toast;
 import android.widget.TextView;
 import com.teslasoft.libraries.support.R;
 import android.content.ComponentName;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import android.os.Environment;
+import android.widget.SmartToast;
 
 public class AuthCompleteActivity extends Activity
 {
 	TextView text;
-	@Override
+
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method
@@ -27,6 +36,21 @@ public class AuthCompleteActivity extends Activity
 		setContentView(R.layout.add_accound_complete);
 		text = (TextView) findViewById(R.id.text);
 		text.setText("Checkin info...");
+		
+		/*File root = new File(Environment.getExternalStorageDirectory(), "jarvis/auth");
+		if (!root.exists()) {
+			root.mkdirs();
+		}
+		
+		try {
+			File filepath = new File(root, "config.txt");
+			FileWriter writer = new FileWriter(filepath);
+			writer.append("Text here");
+			writer.flush();
+			writer.close();
+		} catch (Exception e) {
+			SmartToast.create("JavaIOException", this);
+		}*/
 		
 		final Handler handler = new Handler();
 		handler.postDelayed(new Runnable()

@@ -10,14 +10,11 @@ import android.content.*;
 import android.util.*;
 import android.net.*;
 import com.teslasoft.libraries.support.R;
-import android.support.v7.appcompat.*;
-import android.support.v7.app.*;
 
 public class WarningActivity extends Activity
 {
 	private TextView text;
 	
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

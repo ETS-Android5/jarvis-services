@@ -15,7 +15,7 @@
 		android:background="#99000000"
 		android:onClick="DismissDialogActivity">
 
-		<LinearLayout
+		<!--<LinearLayout
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -25,7 +25,8 @@
 			android:background="@drawable/dialog_rounded_dark"
 			android:onClick="Ignore"
 			android:layout_margin="25dp"
-			android:padding="16dp">
+			android:padding="16dp"
+			android:visibility="gone">
 
 			<TextView
 				android:layout_width="wrap_content"
@@ -52,7 +53,11 @@
 
 			</LinearLayout>
 
-		</LinearLayout>
+		</LinearLayout>-->
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
 
 	</LinearLayout>
 

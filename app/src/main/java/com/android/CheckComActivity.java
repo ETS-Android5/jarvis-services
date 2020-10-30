@@ -13,8 +13,7 @@ import android.support.v7.appcompat.*;
 import android.view.SurfaceHolder.*;
 
 public class CheckComActivity extends Activity
-{
-	@Override	
+{	
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		return;

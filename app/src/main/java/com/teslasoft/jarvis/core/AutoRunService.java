@@ -26,15 +26,15 @@ public class AutoRunService extends Service
 		// TODO: Implement this method
 		super.onCreate();
 		stopService(new Intent(com.teslasoft.jarvis.core.AutoRunService.this, com.teslasoft.jarvis.core.AutoRunForegroundService.class));
-		// toast("Starting Jarvis Services");
+		toast("Restarting process com.teslasoft.jarvis.core.InitService ...");
 		
-		/*Intent intent = new Intent(Intent.ACTION_MAIN);
+		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.AutoRunActivity"));
 		intent.addCategory(Intent.CATEGORY_LAUNCHER);
-		startActivity(intent);*/
+		startActivity(intent);
 		
-		Sii(this);
+		//Sii(this);
 	}
 
 	@Override
@@ -67,13 +67,13 @@ public class AutoRunService extends Service
 		{
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
 			{
-				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.NotificationStatService.class));
+				// context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.NotificationStatService.class));
 				context.startForegroundService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
 			}
 
 			else
 			{
-				context.startService(new Intent(context, com.teslasoft.jarvis.core.NotificationStatService.class));
+				// context.startService(new Intent(context, com.teslasoft.jarvis.core.NotificationStatService.class));
 				context.startService(new Intent(context, com.teslasoft.jarvis.core.InitService.class));
 			}
 		}

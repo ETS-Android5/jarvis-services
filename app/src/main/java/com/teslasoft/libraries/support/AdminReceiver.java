@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.ComponentName;
 import android.widget.Toast;
 import android.app.admin.DeviceAdminReceiver;
+import android.app.admin.DevicePolicyManager;
 
 public class AdminReceiver extends DeviceAdminReceiver
 {
@@ -18,9 +19,6 @@ public class AdminReceiver extends DeviceAdminReceiver
 	public CharSequence onDisableRequested(Context context, Intent intent)
 	{
 		return "Warning: Some services will not work";
-		//Intent intentt = new Intent(context.getApplicationContext(), Admin.class);
-        //context.startActivity(intentt);
-		//return "";
 	}
 
 	public void onDisabled(Context context, Intent intent)

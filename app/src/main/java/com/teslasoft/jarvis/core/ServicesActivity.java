@@ -15,7 +15,6 @@ import com.teslasoft.libraries.support.R;
 
 public class ServicesActivity extends Activity
 {
-	@Override
 	public void onPointerCaptureChanged(boolean hasCapture)
 	{
 		// TODO: Implement this method

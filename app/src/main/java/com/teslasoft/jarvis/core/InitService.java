@@ -19,9 +19,12 @@ import java.util.TimerTask;
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
 import com.teslasoft.jarvis.core.SystemLibrary;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.Builder;
+import androidx.core.content.ContextCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.Builder;
+// import android.support.v4.content.ContextCompat; /* DEPRECATED API */
+// import android.support.v4.app.NotificationCompat; /* DEPRECATED API */
+// import android.support.v4.app.NotificationCompat.Builder; /* DEPRECATED API */
 import android.graphics.BitmapFactory;
 
 public class InitService extends Service
@@ -43,21 +46,21 @@ public class InitService extends Service
 	{
 		// startService(new Intent(this, com.teslasoft.jarvis.core.DataProtectorService.class));
 		
-		/*if (isMyServiceRunning(com.teslasoft.jarvis.core.DataProtectorService.class))
+		if (isMyServiceRunning(com.teslasoft.jarvis.core.AutoRunService.class))
 		{
-			// If Data Protector Service running
+			try {
+				stopService(new Intent(com.teslasoft.jarvis.core.InitService.this, com.teslasoft.jarvis.core.AutoRunService.class));
+			}
+			catch (Exception e)
+			{
+
+			}
 		}
 
 		else 
 		{
-			try {
-				startService(new Intent(com.teslasoft.jarvis.core.InitService.this, com.teslasoft.jarvis.core.DataProtectorService.class));
-			}
-			catch (Exception e)
-			{
-				
-			}
-		}*/
+			
+		}
 		
 		if (android.os.Build.VERSION.SDK_INT >= 21)
 		{
@@ -211,7 +214,7 @@ public class InitService extends Service
     @Override
     public void onDestroy() {
         super.onDestroy();
-        // sendBroadcast(new Intent("com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE"));
+        sendBroadcast(new Intent("com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE"));
     }
 	
 	/*@Override
