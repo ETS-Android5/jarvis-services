@@ -120,7 +120,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 - NOTE: For licence check Internet connection is not required (but it may required in future releases)
 
-## These libraries are needed for implement Jarvis API
+## These libraries are required for implement Jarvis API:
 
 ```java
 import android.os.Bundle;
