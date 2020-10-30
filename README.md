@@ -29,7 +29,7 @@
 - Licence ckeck added
 - Anti piracy manager added
 
-WARNING: The signature of apk file was changed. In some cases during installation Google Play Protect may occurs. Click "Install anyway" to complete installation.
+WARNING: ***The signature of apk file was changed. In some cases during installation Google Play Protect may occurs. Click "Install anyway" to complete installation.***
 
 You can see other changelogs in file ***CHANGELOG.md***.
 
