@@ -34,14 +34,14 @@ try {
 	int REQUIRED_RESPONSE = 1;
 	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.auth.AuthEntryActivity"));
 	Bundle extras = new Bundle();
-	extras.putString("appId", thisgetPackageName());
+	extras.putString("appId", this.getPackageName());
 	intent.putExtras(extras);
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
 } catch (Exception e) {
 	// Do something if Jarvis Services is unavaliable
 }
 ```
-And add function ***onActivityResult***
+And add function ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
@@ -71,7 +71,7 @@ try {
 	// Do something if Jarvis Services is unavaliable
 }
 ```
-And add function ***onActivityResult***
+And add function ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
@@ -91,7 +91,7 @@ try {
 	int REQUIRED_RESPONSE = 1;
 	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.licence.PiracyCheckActivity"));
 	Bundle extras = new Bundle();
-	extras.putString("appId", thisgetPackageName());
+	extras.putString("appId", this.getPackageName());
 	extras.putString("isNotif", "false"); // IMPORTANT: this walue is a STRING; If walue is "true" the unlicence notification will be shown
 	intent.putExtras(extras);
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
@@ -99,7 +99,7 @@ try {
 	// Do something if Jarvis Services is unavaliable
 }
 ```
-And add function ***onActivityResult***
+And add function ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
