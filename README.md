@@ -1,7 +1,11 @@
 # Jarvis Services
 ### Jarvis service is application, that contains most of Jarvis and CoreX frameworks and libraries.
 
-## Update 1.18.202010282315.1.187 changelog
+## Info for developers
+
+- WARNING: This is alpha version of Jarvis Services. It may be unstable.
+
+## Latest update (1.18.202010282315.1.187) changelog
 
 - Merging to Jetpack (androidx)
 - Added biometric authentication
@@ -24,6 +28,10 @@
 - Merging to AppCompat
 - Licence ckeck added
 - Anti piracy manager added
+
+WARNING: The signature of apk file was changed. In some cases during installation Google Play Protect may occurs. Click "Install anyway" to complete installation.
+
+You can see other changelogs in file ***CHANGELOG.md***.
 
 ## How to implement Jarvis Account Sign In
 
@@ -122,6 +130,34 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 - NOTE: For licence check Internet connection is not required (but it may required in future releases).
+
+## How to show fullscreen advertisement
+
+```java
+try {
+	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.ads.InterstitialAdActivity"));
+	Bundle extras = new Bundle();
+	extras.putString("adId", "j-ad-XXXXXXXXXXXXXXX"); // Your ad ID
+	intent.putExtras(extras);
+	this.startActivity(intent);
+} catch (Exception e) {
+	// Do something if Jarvis Services is unavaliable
+}
+```
+
+## How to use crash handler
+
+```java
+try {
+	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.crashreport.Report"));
+	Bundle extras = new Bundle();
+	extras.putString("errz", "full stacktrace here"); // you can get it by using printStackTrace() function
+	intent.putExtras(extras);
+	this.startActivity(intent);
+} catch (Exception e) {
+	// Do something if Jarvis Services is unavaliable
+}
+```
 
 ## These libraries are required for implement Jarvis API:
 
