@@ -4,6 +4,8 @@
 ## Info for developers
 
 - WARNING: This is alpha version of Jarvis Services. It may be unstable.
+- Used editor: ***AIDE***
+- Used api: download file ***adnroid-sdk.jar***
 
 ## Latest update (1.18.202010282315.1.187) changelog
 
@@ -28,8 +30,6 @@
 - Merging to AppCompat
 - Licence ckeck added
 - Anti piracy manager added
-
-WARNING: ***The signature of apk file was changed. In some cases during installation Google Play Protect may occurs. Click "Install anyway" to complete installation.***
 
 You can see other changelogs in file ***CHANGELOG.md***.
 
