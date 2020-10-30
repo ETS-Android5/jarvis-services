@@ -29,7 +29,7 @@
 
 For implementation you don't need complie additional libraries.
 
-To implement just paste the next code to your app:
+To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
@@ -63,7 +63,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ## How to implement Biometric Authentication
 For implementation you don't need complie additional libraries.
 
-To implement just paste the next code to your app:
+To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
@@ -88,7 +88,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 For implementation you don't need complie additional libraries.
 
-To implement just paste the next code to your app:
+To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
