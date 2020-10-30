@@ -118,7 +118,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-- NOTE: For licence check Internet connection is not required (but it may required in future releases)
+- NOTE: For licence check Internet connection is not required (but it may required in future releases).
 
 ## These libraries are required for implement Jarvis API:
 
@@ -130,4 +130,4 @@ import android.content.ComponentName;
 import android.content.Context;
 ```
 
-- These imports don't required third-party components or frameworks:
+- These imports don't required third-party components or frameworks.
