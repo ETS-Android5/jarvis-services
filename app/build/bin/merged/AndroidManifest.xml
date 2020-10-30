@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teslasoft.libraries.support"
-    android:versionCode="127283"
+    android:versionCode="181187"
     android:versionName="1.18.202010282315.1.187" >
 
     <uses-sdk

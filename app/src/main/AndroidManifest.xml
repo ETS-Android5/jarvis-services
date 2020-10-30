@@ -335,19 +335,6 @@
             </intent-filter>
         </activity>-->
 
-		<!--<activity
-		android:name="com.teslasoft.jarvis.Tts"
-		android:label="TTS" 
-		android:process=":ui"
-		android:theme="@style/Theme.Transparent"
-		android:launchMode="singleTask"
-		android:stateNotNeeded="true">
-
-		<intent-filter>
-		<action android:name="android.intent.action.MAIN" />
-		</intent-filter>
-        </activity>-->
-
 		<activity
             android:name=".SettingsActivity"
             android:label="@string/activity_settings_name" 
@@ -366,19 +353,6 @@
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
         </activity>
-
-		<!--<activity
-            android:name="com.teslasoft.jarvis.TaskExec"
-            android:label="@string/app_name"
-			android:process=":exec"
-			android:theme="@style/Theme.Home"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-            <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
 
 		<activity
             android:name="com.teslasoft.jarvis.OptIn"
@@ -502,20 +476,7 @@
 				<action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
-		<!--<activity
-            android:name="com.teslasoft.jarvis.TaskExecBackground"
-            android:label="@string/app_name"
-			android:process=":exec"
-			android:theme="@style/Theme.Transparent.Float"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-            <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
-
+		
 		<activity
             android:name="com.teslasoft.jarvis.core.AutoRunActivity"
             android:label="Jarvis Core"
@@ -570,21 +531,7 @@
 				<action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
-		<!--<activity
-            android:name="com.teslasoft.jarvis.core.DialogUIShadowActivity"
-            android:label="Jarvis Core"
-			android:icon="@drawable/app_jarvis"
-			android:process=":ui"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-            <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
-
+		
 		<activity
             android:name="com.teslasoft.jarvis.core.DPSSettingsActivity"
             android:label="Jarvis Core"
@@ -627,20 +574,6 @@
             </intent-filter>
         </activity>
 
-		<!--<activity
-            android:name="com.teslasoft.jarvis.core.NotificationActivity"
-			android:process=":exec"
-            android:label="Jarvis Core"
-			android:icon="@drawable/app_jarvis"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
-
 		<activity
             android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
             android:label="Jarvis Core"
@@ -666,35 +599,8 @@
 
             <intent-filter>
 				<action android:name="android.intent.action.MAIN" />
-				<!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
-
-		<!--<activity
-            android:name="com.teslasoft.jarvis.Window"
-            android:label="@string/app_name"
-			android:process=":ui"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-            <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
-
-		<!--<activity
-            android:name="com.teslasoft.jarvis.LoadFullscreen"
-            android:label="@string/app_name"
-			android:process=":fsboot"
-			android:theme="@style/Theme.Transparent.Float.F"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-            <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
 
 		<activity
             android:name="com.teslasoft.jarvis.crashreport.Report"
@@ -784,22 +690,9 @@
 
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
-				<!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
 
         </activity>
-
-		<!--<activity
-		android:name="com.teslasoft.jarvis.WarningActivity"
-		android:label=" " 
-		android:icon="@drawable/app_jarvis"
-		android:process=":ui"
-		android:theme="@style/Theme.Transparent.Toast">
-
-		<intent-filter>
-		<action android:name="android.intent.action.MAIN" />
-		</intent-filter>
-        </activity>-->
 
 		<activity
             android:name="com.teslasoft.jarvis.DialogLoadingDark"
@@ -928,18 +821,6 @@
 			android:stateNotNeeded="true">
         </activity>
 
-		<!--<activity android:name=".Admin"
-			android:label="@string/app_name"
-			android:process=":main"
-			android:theme="@style/Theme.Transparent.Float"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-				 <category android:name="android.intent.category.SAMPLE_CODE" />
-			</intent-filter>
-		</activity>-->
-
 		<activity android:name="com.teslasoft.jarvis.CoreActivity"
 			android:label="@string/app_name"
 			android:process=":exec"
@@ -1013,11 +894,11 @@
 		</activity>
 
 		<!--<activity
-		android:name="com.teslasoft.jarvis.CalendarActivity"
-		android:theme="@android:style/Theme.Material.Wallpaper"
-		android:icon="@drawable/app_jarvis"
-		android:label="Calendar"
-		android:process=":ui">
+			android:name="com.teslasoft.jarvis.CalendarActivity"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:icon="@drawable/app_jarvis"
+			android:label="Calendar"
+			android:process=":ui">
 		</activity>-->
 
 		<activity
@@ -1093,19 +974,6 @@
             </intent-filter>
         </activity>
 
-		<!--<activity
-            android:name="com.android.jss.Connect"
-			android:process=":main"
-            android:label="@string/app_name"
-			android:theme="@style/Theme.Transparent.S"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>-->
-
 		<activity
             android:name="com.android.system.SystemRestartActivity"
 			android:process=":sys"
@@ -1167,13 +1035,13 @@
 			android:permission="android.permission.BIND_DEVICE_ADMIN"
 			android:icon="@drawable/app_jarvis">
 
-			    <meta-data android:name="android.app.device_admin"
-					android:resource="@xml/admin" />
+			<meta-data android:name="android.app.device_admin"
+				android:resource="@xml/admin" />
 				
-				<intent-filter>
-				    <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-					<action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
-				</intent-filter>
+			<intent-filter>
+				<action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+				<action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
+			</intent-filter>
 		</receiver>
 
 		<receiver android:name=".BootCompletedReceiver"

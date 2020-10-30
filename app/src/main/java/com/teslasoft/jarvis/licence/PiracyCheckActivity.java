@@ -54,7 +54,7 @@ public class PiracyCheckActivity extends Activity
 					Signature sig = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_SIGNATURES).signatures[0];
 					signatureHash = Integer.toString(sig.hashCode());
 					// DEBUG: SmartToast.create(signatureHash + Integer.toString(SELF_SIGNATURE), this);
-					if (signatureHash.equals(Integer.toString(SELF_SIGNATURE))) {
+					if (signatureHash.equals(Integer.toString(DEFAULT_SIGNATURE))) {
 						CheckLicence();
 					} else {
 						sendRequest(4);

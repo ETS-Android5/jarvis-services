@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.teslasoft.libraries.support"
-	android:versionCode="127283"
+	android:versionCode="181187"
 	android:versionName="1.18.202010282315.1.187">
 
 	<uses-sdk
