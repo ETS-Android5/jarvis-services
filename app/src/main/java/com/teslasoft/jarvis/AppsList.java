@@ -36,24 +36,6 @@ public class AppsList extends Activity
 		loadApps();
 		loadListView();
 		addClickListener();
-		
-		/*
-		 Collections.sort(activities, new Comparator<android.content.pm.ResolveInfo>()
-		 {
-			@Override
-			public Comparator<android.content.pm.ResolveInfo> thenComparingDouble(ToDoubleFunction<? super android.content.pm.ResolveInfo> keyExtractor)
-			{
-				return thenComparingDouble(keyExtractor);
-			}
-			
-			public int compare(android.content.pm.ResolveInfo a, android.content.pm.ResolveInfo b)
-			{
-				android.content.pm.PackageManager pm = getPackageManager(); 
-				return String.CASE_INSENSITIVE_ORDER.compare(a.loadLabel(pm).toString(), b.loadLabel(pm).toString());
-			}
-			
-		 });
-		*/
 	}
 	
 	private void loadApps()

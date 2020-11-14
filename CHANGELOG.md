@@ -1,4 +1,15 @@
-## Jarvis Services 1.18.202010282315.1.187
+# Jarvis Services 1.19.202011011345.4.565
+
+- Antivirus issues fixed
+- Removed deprecated components
+- Temporarily removed Jarvis ADs
+- Package size optimized
+- android.support.v4 library completely changet to AndroidX
+
+Release date: ***14/11/2020***.
+NOTE: Github release date may be different.
+
+# Jarvis Services 1.18.202010282315.1.187
 
 - Merging to Jetpack (androidx)
 - Added biometric authentication

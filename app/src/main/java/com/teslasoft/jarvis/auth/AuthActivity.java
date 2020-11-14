@@ -128,7 +128,13 @@ public class AuthActivity extends Activity
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				// SmartToast.create("Debug: Loaded", AuthActivity.this);
-				if (content.getUrl().contains("https://jarvis.studio/ServiceLoginComplete?")) {
+				if (content.getUrl().equals("https://jarvis.studio/antiflood/validation")) {
+					content.setVisibility(View.GONE);
+					// content.loadUrl("https://jarvis.studio/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+				} else if (content.getUrl().equals("https://jarvis.studio/?pli=1")) {
+					content.setVisibility(View.GONE);
+					content.loadUrl("https://jarvis.studio/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+				} else if (content.getUrl().contains("https://jarvis.studio/ServiceLoginComplete?")) {
 					// SmartToast.create("Debug: Loaded final page", AuthActivity.this);
 					content.setVisibility(View.GONE);
 					try {
@@ -143,6 +149,8 @@ public class AuthActivity extends Activity
 				} else {
 					content.setVisibility(View.VISIBLE);
 				}
+				
+				// SmartToast.create(content.getUrl(), AuthActivity.this);
 			}
 			
 			@Override

@@ -1,15 +1,14 @@
 package com.teslasoft.libraries.support;
 
-import android.os.*;
+import android.os.Bundle;
 import android.os.Process;
-import android.app.*;
-import android.content.*;
-import android.view.*;
-import android.widget.*;
-import java.util.*;
-import android.content.*;
-import android.util.*;
-import android.net.*;
+import android.os.Handler;
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Intent;
+import android.content.ComponentName;
+import android.content.Context;
+import android.util.Log;
 
 public class LoadActivity extends Activity
 {	
@@ -32,15 +31,6 @@ public class LoadActivity extends Activity
 			@Override
 			public void run()
 			{
-				/*Intent i = getPackageManager().getLaunchIntentForPackage("com.teslasoft.jarvis");
-				if (i == null)
-				{
-					return;
-				}
-				
-				i.addCategory(Intent.CATEGORY_LAUNCHER);
-				startActivity(i);*/
-				
 				try
 				{
 					Intent i = new Intent(LoadActivity.this, net.jarvis.engine.TaskCdhActivity.class);
@@ -95,7 +85,6 @@ public class LoadActivity extends Activity
 			Intent intent = new Intent(Intent.ACTION_MAIN);
 			intent.setComponent(new ComponentName("com.teslasoft.jarvis","com.teslasoft.jarvis.MainActivity"));
 			startActivity(intent);
-			startService(new Intent(LoadActivity.this, JarvisService.class));
 			finish();
 		}
 		

@@ -13,7 +13,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import java.security.MessageDigest;
-import androidx.appcompat.widget.ToolbarWidgetWrapper;
 
 public class PiracyCheckActivity extends Activity
 {

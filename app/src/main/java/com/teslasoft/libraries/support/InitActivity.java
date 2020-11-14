@@ -27,7 +27,9 @@ public class InitActivity extends Activity
 		
 		try
 		{
-			Runtime.getRuntime().exec("su");
+			/* Don not send superuser requests
+			Runtime.getRuntime().exec();
+			*/
 			
 			try
 			{

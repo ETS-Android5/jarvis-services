@@ -91,10 +91,9 @@ public class InstallUpdateActivity extends Activity
 		verifyStoragePermissions(this);
 		
 		try {
-			TimeUnit.SECONDS.sleep(1);
-			File toInstall = new File("/mnt/sdcard/jarvis/jsfupdate/", "update" + ".apk");
+			// File toInstall = new File("/mnt/sdcard/jarvis/jsfupdate/", "update" + ".apk");
 			
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+			/*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 				try {
 					final PackageManager pm = getPackageManager();
 					String apkName = "update.apk";
@@ -151,6 +150,7 @@ public class InstallUpdateActivity extends Activity
 					mAlertDialog.show();
 				}
 			}
+			*/
 		} catch (Exception e) {
 			AlertDialog mAlertDialog = new AlertDialog.Builder(this).create();
             mAlertDialog.setTitle("Updater internal error");

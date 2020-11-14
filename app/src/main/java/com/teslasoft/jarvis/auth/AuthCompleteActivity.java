@@ -58,8 +58,6 @@ public class AuthCompleteActivity extends Activity
 			@Override
 			public void run()
 			{
-				stopService(new Intent(com.teslasoft.jarvis.auth.AuthCompleteActivity.this, com.teslasoft.jarvis.auth.AuthService.class));
-				stopService(new Intent(com.teslasoft.jarvis.auth.AuthCompleteActivity.this, com.teslasoft.jarvis.auth.AuthBinderService.class));
 				finishAndRemoveTask();
 			}
 		}, 2000);

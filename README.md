@@ -7,31 +7,15 @@
 - Used editor: ***AIDE***
 - Used api: download file ***adnroid-sdk.jar***
 
-## Latest update (1.18.202010282315.1.187) changelog
+## Latest update (1.19.202011011345.4.565) changelog
 
-- Merging to Jetpack (androidx)
-- Added biometric authentication
-- Added android.security component
-- Added com.android.phone component
-- Added jarvis signin page
-- Removed TaskExec component
-- Removed android.support.v4 component (replaced with androidx)
-- Bug fix with crash handler
-- Optimized for API 29 (Android 10)
-- Android 5 or lower is now deprecated
-- Updated AD library
-- Added update component
-- CoreX implementation
-- Removed junk and deprecated code
-- Removed apk minify
-- Added multidex
-- Reworked UI
-- Changed color pallete
-- Merging to AppCompat
-- Licence ckeck added
-- Anti piracy manager added
+- Antivirus issues fixed
+- Removed deprecated components
+- Temporarily removed Jarvis ADs
+- Package size optimized
+- android.support.v4 library completely changet to AndroidX
 
-\>\>\>\>\> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.18.202010282315.1.187) <<<<<
+\>\>\>\>\> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.19.202011011345.4.565) <<<<<
 
 You can see other changelogs in file ***CHANGELOG.md***.
 
@@ -43,7 +27,8 @@ To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
-	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.auth.AuthEntryActivity"));
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.auth.AuthEntryActivity"));
 	Bundle extras = new Bundle();
 	extras.putString("appId", this.getPackageName());
 	intent.putExtras(extras);
@@ -77,7 +62,8 @@ To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
-	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "android.security.BiometricAuthenticatorCallback"));
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "android.security.BiometricAuthenticatorCallback"));
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
 } catch (Exception e) {
 	// Do something if Jarvis Services is unavaliable
@@ -102,7 +88,8 @@ To implement Jarvis API just paste the next code to your app:
 ```java
 try {
 	int REQUIRED_RESPONSE = 1;
-	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.licence.PiracyCheckActivity"));
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.licence.PiracyCheckActivity"));
 	Bundle extras = new Bundle();
 	extras.putString("appId", this.getPackageName());
 	extras.putString("isNotif", "false"); // IMPORTANT: this walue is a STRING; If walue is "true" the unlicence notification will be shown
@@ -135,9 +122,12 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ## How to show fullscreen advertisement
 
+*** This component temporarily removed due antivirus activity. It will be reworked on future releases. ***
+
 ```java
 try {
-	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.ads.InterstitialAdActivity"));
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.ads.InterstitialAdActivity"));
 	Bundle extras = new Bundle();
 	extras.putString("adId", "j-ad-XXXXXXXXXXXXXXX"); // Your ad ID
 	intent.putExtras(extras);
@@ -151,7 +141,8 @@ try {
 
 ```java
 try {
-	Intent intent = new Intent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.crashreport.Report"));
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.crashreport.Report"));
 	Bundle extras = new Bundle();
 	extras.putString("errz", "full stacktrace here"); // you can get it by using printStackTrace() function
 	intent.putExtras(extras);
