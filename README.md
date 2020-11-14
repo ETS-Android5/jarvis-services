@@ -13,7 +13,7 @@
 - Removed deprecated components
 - Temporarily removed Jarvis ADs
 - Package size optimized
-- android.support.v4 library completely changet to AndroidX
+- android.support.v4 library completely changed to AndroidX
 
 \>\>\>\>\> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.19.202011011345.4.565) <<<<<
 
