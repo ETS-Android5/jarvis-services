@@ -143,7 +143,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ## How to show fullscreen advertisement
 
-*** This component temporarily removed due antivirus activity. It will be reworked on future releases. ***
+***This component temporarily removed due antivirus activity. It will be reworked on future releases.***
 
 ```java
 try {
