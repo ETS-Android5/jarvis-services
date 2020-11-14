@@ -20,8 +20,7 @@
 You can see other changelogs in file ***CHANGELOG.md***.
 
 ## How to implement Jarvis Account Sign In
-
-For implementation you don't need complie additional libraries.
+To implement you don't need to complie additional libraries.
 
 To implement Jarvis API just paste the next code to your app:
 ```java
@@ -56,7 +55,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 ## How to implement Biometric Authentication
-For implementation you don't need complie additional libraries.
+To implement you don't need to complie additional libraries.
 
 To implement Jarvis API just paste the next code to your app:
 ```java
@@ -81,8 +80,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 ## How to check licence and integrity for my app
-
-For implementation you don't need complie additional libraries.
+To implement you don't need to complie additional libraries.
 
 To implement Jarvis API just paste the next code to your app:
 ```java
