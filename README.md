@@ -84,12 +84,34 @@ To implement you don't need to complie additional libraries.
 
 To implement Jarvis API just paste the next code to your app:
 ```java
+...
+private String appSignatureHash = "YOUR_APP_SIGNATURE_HASH";
+// You can use getters to get this value
+// It's strongly recommended do not declare value of this variable directly
+// To protect your app from piracy please obfuscate this code
+
+/******************************************************************************************************************************
+ * To get your app's signature hash use this code:
+ * import android.content.pm.PackageInfo;
+ * import android.content.pm.PackageManager;
+ * import android.content.pm.PackageManager.NameNotFoundException;
+ * import android.content.pm.Signature;
+ * 
+ * ...
+ * 
+ * Signature sig = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_SIGNATURES).signatures[0];
+ * String signatureHash = Integer.toString(sig.hashCode());
+ * 
+ * Note: To protect your app from piracy remove this code before release.
+ ******************************************************************************************************************************/
+...
 try {
 	int REQUIRED_RESPONSE = 1;
 	Intent intent = new Intent();
 	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.licence.PiracyCheckActivity"));
 	Bundle extras = new Bundle();
 	extras.putString("appId", this.getPackageName());
+	extras.putString("appSign", appSignatureHash); // It's strongly reccomended to set value directly without variables. It can improve safety of your app.
 	extras.putString("isNotif", "false"); // IMPORTANT: this walue is a STRING; If walue is "true" the unlicence notification will be shown
 	intent.putExtras(extras);
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
@@ -106,6 +128,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// // Do something if API connected is not correctly
 		// Extra key "appId" is required
 		// Extra key "isNotif" is required
+		// Extra key "appSign" is required
 	} else if (resultCode == 3) {
 		// Application not found
 	} else if (resultCode == 4) {
