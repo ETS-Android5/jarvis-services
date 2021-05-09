@@ -1,3 +1,15 @@
+# Teslasoft Core 1.21.202104072045.3.649
+
+- Otimized for Google Play Store
+- Signature changed
+- Licence check added
+- Beta testing closed. It is a stable version
+- Application renamed to Teslasoft Core
+- Added SmartCard service
+
+Release date: ***05/09/2021***.
+NOTE: Github release date may be different.
+
 # Jarvis Services 1.19.202011011345.4.565
 
 - Antivirus issues fixed

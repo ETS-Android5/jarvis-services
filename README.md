@@ -1,21 +1,21 @@
-# Jarvis Services
-### Jarvis service is application, that contains most of Jarvis and CoreX frameworks and libraries.
+# Teslasoft Core (previously Jarvis Services)
+### Teslasoft Core is an application, that contains most of Jarvis and CoreX frameworks and libraries.
 
 ## Info for developers
 
-- WARNING: This is alpha version of Jarvis Services. It may be unstable.
 - Used editor: ***AIDE***
 - Used api: download file ***adnroid-sdk.jar***
 
-## Latest update (1.19.202011011345.4.565) changelog
+## Latest update (1.21.202104072045.3.649) changelog
 
-- Antivirus issues fixed
-- Removed deprecated components
-- Temporarily removed Jarvis ADs
-- Package size optimized
-- android.support.v4 library completely changed to AndroidX
+- Otimized for Google Play Store
+- Signature changed
+- Licence check added
+- Beta testing closed. It is a stable version
+- Application renamed to Teslasoft Core
+- Added SmartCard service
 
-\>\>\>\>\> [DOWNLOAD HERE](https://download.jarvis.studio/jarvis/JCS-1.19.202011011345.4.565) <<<<<
+\>\>\>\>\> [DOWNLOAD HERE](https://play.google.com/store/apps/details?id=com.teslasoft.libraries.support) <<<<<
 
 You can see other changelogs in file ***CHANGELOG.md***.
 
