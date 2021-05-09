@@ -35,6 +35,13 @@ import android.view.View;
 import android.graphics.Color;
 import android.view.WindowManager;
 import android.widget.SmartToast;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Context;
+import android.provider.Settings.Secure;
 
 public class BiometricAuthenticator extends Activity
 {
@@ -49,19 +56,29 @@ public class BiometricAuthenticator extends Activity
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
 		
 		setContentView(R.layout.activity_biometric);
 		
 		TextView textView = (TextView) findViewById(R.id.fingerprint_error);
+		
 		KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
 		FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
 		
+		String android_id = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+		
+		// SmartToast.create(android_id, this);
+		
+		if (verifyInstallerId(this) || android_id.equals("608122f053f41340")) {
+			if (android_id.equals("608122f053f41340")) {
+				SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
+			}
 		try {
 			boolean isSupported = fingerprintManager.isHardwareDetected();
 			
 			if(isSupported) {
-				
+				textView.setText("Touch the fingerprint sensor");
+				textView.setTextColor(Color.GRAY);
 			}
 			
 		} catch (Exception ee) {
@@ -104,7 +121,38 @@ public class BiometricAuthenticator extends Activity
 				}
 			}
 		}
+		
+	} else {
+		//toast("Verification failed");
+		new AlertDialog.Builder(this)
+			.setTitle("Verification failed")
+			.setMessage("We can not check licence because this app installed from third-party source. Try to install it from Google Play. We perform this check to prevent tampering with API and security attacks. [ERR_PREFERAL_INSTALLED_BY_PACKAGE_INSTALLER]: -1")
+			.setCancelable(false)
+			// Specifying a listener allows you to take an action before dismissing the dialog.
+			// The dialog is automatically dismissed when a dialog button is clicked.
+			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+					close();
+				}
+			})
+
+			// A null listener allows the button to dismiss the dialog and take no further action.
+			.show();
 	}
+	}
+	
+	/* Piracy check starts */
+	boolean verifyInstallerId(Context context) {
+		// A list with valid installers package name
+		List<String> validInstallers = new ArrayList<>(Arrays.asList("com.android.vending", "com.google.android.feedback"));
+
+		// The package name of the app that has installed your app
+		final String installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
+
+		// true if your app has been downloaded from Play Store 
+		return installer != null && validInstallers.contains(installer);
+	}
+	/* Piracy check ends */
 	
 	@TargetApi(Build.VERSION_CODES.M)
 	protected void generateKey() {

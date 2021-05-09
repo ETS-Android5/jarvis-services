@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.SmartToast;
 import android.content.ComponentName;
 import android.content.Context;
 import com.teslasoft.libraries.support.R;
@@ -85,19 +86,6 @@ public class AutoRunActivity extends Activity
 			}
 		}
 	}
-	
-	final Handler mHandler = new Handler();
-	
-	void toast(final CharSequence text)
-	{
-        mHandler.post(new Runnable()
-		{
-			@Override public void run()
-			{
-				Toast.makeText(com.teslasoft.jarvis.core.AutoRunActivity.this, text, Toast.LENGTH_SHORT).show();
-			}
-		});
-    }
 	
 	private boolean isMyServiceRunning(Class<?> serviceClass)
 	{

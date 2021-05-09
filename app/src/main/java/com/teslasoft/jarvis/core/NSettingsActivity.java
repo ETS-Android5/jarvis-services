@@ -41,7 +41,7 @@ public class NSettingsActivity extends Activity
 		notetx = (TextView) findViewById(R.id.notetx);
 
 		notetx.setVisibility(View.GONE);
-		desc.setText("Служба Notification Stats Service принимает и показывает уведомления (например при входящих сообщениях). Если ее омтановить, уведомления не будут приходить");
+		desc.setText("Служба Notification Stats Service принимает и показывает уведомления (например при входящих сообщениях). Если ее остановить, уведомления не будут приходить");
 		statement();
 	}
 

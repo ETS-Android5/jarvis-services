@@ -12,8 +12,8 @@ import android.widget.TextView;
 import android.content.Context;
 import com.teslasoft.libraries.support.R;
 import android.graphics.Color;
-import android.view.View.*;
 import android.view.View;
+import android.view.View.*;
 import android.content.pm.PackageInfo;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -119,7 +119,7 @@ public class JarvisPlatLogo extends Activity
 		try {
 			PackageInfo pInfo = context.getPackageManager().getPackageInfo(getPackageName(), 0);
 			String vs = pInfo.versionName;
-			showToast(JarvisPlatLogo.this, "💎 Jarvis Services " + vs + " 💎");
+			showToast(JarvisPlatLogo.this, "💎 Teslasoft Core " + vs + " 💎");
 		}
 		catch (Exception e)
 		{

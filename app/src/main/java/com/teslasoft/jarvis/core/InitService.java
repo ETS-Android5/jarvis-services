@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
+import android.widget.SmartToast;
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
 import com.teslasoft.jarvis.core.SystemLibrary;
@@ -80,7 +81,7 @@ public class InitService extends Service
 				Notification notification = new Notification.Builder(context)
 					.setContentTitle("Debug")
 					.setVisibility(Notification.VISIBILITY_PUBLIC)
-					.setContentText("Jarvis Core has started")
+					.setContentText("Teslasoft Core is running...")
 					.setSmallIcon(R.drawable.app_icon)
 					.setColor(ContextCompat.getColor(context, R.color.dGreen))
 					.addAction(R.drawable.app_icon, "All services", serv)
@@ -113,7 +114,7 @@ public class InitService extends Service
 					new NotificationCompat.Builder(this)
 					.setContentTitle("Debug")
 					.setVisibility(Notification.VISIBILITY_PUBLIC)
-					.setContentText("Jarvis Core has started")
+					.setContentText("Teslasoft Core is running...")
 					.setSmallIcon(R.drawable.app_icon)
 					.setColor(ContextCompat.getColor(context, R.color.dGreen))
 					.addAction(R.drawable.app_icon, "All services", serv)
@@ -247,23 +248,4 @@ public class InitService extends Service
 		}
 		return false;
 	}
-
-	public Handler mHandler = new Handler();
-
-	public void toast(final CharSequence text, final Context context)
-	{
-        mHandler.post(new Runnable()
-		{
-			@Override public void run()
-			{
-				try {
-					Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
-				}
-				catch (Exception e)
-				{
-					
-				}
-			}
-		});
-    }
 }

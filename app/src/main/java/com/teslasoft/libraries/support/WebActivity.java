@@ -85,9 +85,19 @@ public class WebActivity extends Activity
 			{
 					
 			}
+			
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				Intent intent = new Intent();
+				intent.setAction(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse(url));
+				startActivity(intent);
+				return true;
+			}
 		});
 
-        content.loadUrl("https://clients.jarvis.studio/webapp");
+        content.loadUrl("https://cs.jarvis.studio/smartcard/open");
+		
     }
 
 	/*@Override

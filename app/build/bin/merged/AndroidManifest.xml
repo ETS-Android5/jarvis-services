@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
     package="com.teslasoft.libraries.support"
-    android:versionCode="194565"
-    android:versionName="1.19.202011011345.4.565" >
+    android:versionCode="213649"
+    android:versionName="1.21.202104072045.3.649" >
 
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
 
+    <permission-group
+        android:name="android.permission-group.TESLASOFT_CORE"
+        android:description="@string/permissions_description"
+        android:icon="@drawable/jarvis2"
+        android:label="Teslasoft Core permissions group"
+        android:priority="900" />
+
+    <permission
+        android:name="com.teslasoft.core.permission.ACCESS_CORE"
+        android:description="@string/permission_access_core_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="access Teslasoft Core"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="dangerous" />
+
     <uses-permission android:name="com.teslasoft.jarvis.SYSTEM" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.INSTALL_PACKAGES" >
     </uses-permission>
     <uses-permission android:name="com.android.vending.BILLING" >
     </uses-permission>
@@ -22,43 +35,17 @@
     </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
     </uses-permission>
-    <uses-permission android:name="android.permission.CAMERA" >
-    </uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
     </uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_CONTACTS" >
     </uses-permission>
     <uses-permission android:name="android.permission.USE_FINGERPRINT" >
     </uses-permission>
     <uses-permission android:name="android.permission.USE_BIOMETRICS" >
     </uses-permission>
-    <uses-permission android:name="android.permission.FLASHLIGHT" >
-    </uses-permission>
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" >
     </uses-permission>
-    <uses-permission android:name="android.permission.READ_CALENDAR" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.LOCATION_HARDWARE" >
-    </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.BLUETOOTH" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.SET_TIME_ZONE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.GET_TASKS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_PROFILE" >
     </uses-permission>
     <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS" >
     </uses-permission>
@@ -66,53 +53,19 @@
     </uses-permission>
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" >
     </uses-permission>
-    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.USER_ACTIVITY" >
-    </uses-permission>
-    <uses-permission android:name="com.google.android.permission.ACCESSIBILITY_SCAN_SERVICE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" >
-    </uses-permission>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" >
     </uses-permission>
-    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.VIBRATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_DREAM_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" >
-    </uses-permission>
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" >
     </uses-permission>
     <uses-permission android:name="android.permission.NFC" >
     </uses-permission>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" >
     </uses-permission>
-    <uses-permission android:name="android.permission.PROVIDE_TRUST_AGENT" >
-    </uses-permission>
     <uses-permission android:name="android.permission.WAKE_LOCK" >
     </uses-permission>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" >
     </uses-permission>
 
     <application
@@ -151,6 +104,14 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.WarningActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:process=":system"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.NoAnim" >
         </activity>
         <activity
             android:name="android.security.BiometricAuthenticator"
@@ -201,9 +162,34 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.teslasoft.jarvis.licence.ApplicationHealthActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_round"
+            android:label="Jarvis Services"
+            android:launchMode="singleTask"
+            android:process=":system"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.android.phone.GSMDriverRestartActivity"
             android:icon="@drawable/ic_launcher_round"
             android:label="Phone Services"
+            android:launchMode="singleTask"
+            android:process=":system"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.server.RestartActivity"
+            android:icon="@drawable/ic_launcher_round"
+            android:label="Restart system server"
             android:launchMode="singleTask"
             android:process=":system"
             android:stateNotNeeded="true"
@@ -224,9 +210,45 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.teslasoft.jarvis.core.CoreUpdateActivity"
+            android:icon="@drawable/app_jarvis"
+            android:label="Core Updater"
+            android:launchMode="singleTask"
+            android:process=":core"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.SmartCardLoader"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:process=":smcserver"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.teslasoft.jarvis.core.CoreServiceSettingsActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:process=":core"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.SmartCardSettingsActivity"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":core"
             android:stateNotNeeded="true"
@@ -249,7 +271,7 @@
         <activity
             android:name="com.teslasoft.jarvis.core.DPSSettingsActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":core"
             android:stateNotNeeded="true"
@@ -261,7 +283,7 @@
         <activity
             android:name="com.teslasoft.jarvis.core.LCSSettingsActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":core"
             android:stateNotNeeded="true"
@@ -273,7 +295,7 @@
         <activity
             android:name="com.teslasoft.jarvis.core.NSettingsActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":exec"
             android:stateNotNeeded="true"
@@ -285,7 +307,7 @@
         <activity
             android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":core"
             android:stateNotNeeded="true"
@@ -297,7 +319,7 @@
         <activity
             android:name="com.teslasoft.jarvis.core.ServicesActivity"
             android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:process=":core"
             android:stateNotNeeded="true"
@@ -329,6 +351,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.teslasoft.jarvis.updater.InstallUpdateActivity"
+            android:label="System Update"
+            android:launchMode="singleTask"
+            android:process=":updater"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+        </activity>
+        <activity
             android:name="com.teslasoft.jarvis.corex.Corex"
             android:label="libjarcorex"
             android:launchMode="singleTask"
@@ -357,6 +387,7 @@
         </activity>
         <activity
             android:name="com.teslasoft.jarvis.BootAnimation"
+            android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:process=":fsboot"
@@ -535,6 +566,11 @@
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:process=":core" />
         <service
+            android:name="com.teslasoft.jarvis.core.SmartCardService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
             android:name="com.teslasoft.jarvis.easter.TuxService"
             android:icon="@drawable/tux_logo"
             android:label="Easter Egg"
@@ -548,7 +584,7 @@
             android:name="com.teslasoft.libraries.support.AdminReceiver"
             android:description="@string/device_admin_desc"
             android:icon="@drawable/app_icon"
-            android:label="Jarvis Services"
+            android:label="@string/app_name"
             android:permission="android.permission.BIND_DEVICE_ADMIN" >
             <meta-data
                 android:name="android.app.device_admin"
@@ -563,7 +599,8 @@
             android:name="com.teslasoft.libraries.support.BootCompletedReceiver"
             android:enabled="true"
             android:exported="true"
-            android:label="BootCompletedReceiver" >
+            android:label="BootCompletedReceiver"
+            android:priority="2147483647" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
