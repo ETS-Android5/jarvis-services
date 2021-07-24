@@ -129,7 +129,7 @@ public class NfcAuthenticator extends Activity{
 			token=user_fwid.trim();
 			token=token.toUpperCase();
 			nfc_message.setText("SmartCard Info\n\nSerial Number: ".concat(serial.concat("\nSmartCard ID: ".concat(user_fwid.concat("\nUser ID: ".concat(user_id))))));
-			url="https://cs.jarvis.studio/smartcard/auth?cbs=".concat(token).concat("&sid=").concat(serial).concat("&pwtoken=").concat(pincode_encrypted).concat("&uid=").concat(user_id);
+			url="https://id.teslasoft.org/smartcard/auth?cbs=".concat(token).concat("&sid=").concat(serial).concat("&pwtoken=").concat(pincode_encrypted).concat("&uid=").concat(user_id);
 			loadbar.setVisibility(View.GONE);
 			actions.setVisibility(View.VISIBLE);
 		}catch(Exception e){throw new RuntimeException("An error occured while data deserializing. Please make sure that you used correct SmartCard (Ndef)");}
