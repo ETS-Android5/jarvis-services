@@ -3,28 +3,12 @@ package com.teslasoft.libraries.support;
 import android.os.*;
 import android.app.*;
 import android.content.*;
-import android.view.*;
-import android.widget.*;
-import java.util.*;
-import android.content.*;
-import android.util.*;
 import android.net.*;
-import android.support.v7.appcompat.*;
-import android.graphics.*;
 import android.webkit.WebView;
-import android.webkit.WebSettings;
-import android.webkit.JavascriptInterface;
-import android.view.LayoutInflater;
 import java.lang.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 import android.app.Activity;
-import android.transition.Scene;
-import android.app.Instrumentation;
 import android.webkit.*;
 import android.annotation.*;
-import android.content.pm.*;
-import java.text.*;
 
 public class WebActivity extends Activity
 {
@@ -96,7 +80,7 @@ public class WebActivity extends Activity
 			}
 		});
 
-        content.loadUrl("https://cs.jarvis.studio/smartcard/open");
+        content.loadUrl("https://id.teslasoft.org/smartcard/open");
 		
     }
 

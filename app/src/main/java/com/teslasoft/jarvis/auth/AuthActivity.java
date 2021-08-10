@@ -4,35 +4,21 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Toast;
 import com.teslasoft.libraries.support.R;
-import android.content.ComponentName;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
-import android.webkit.JavascriptInterface;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceError;
-import android.webkit.WebChromeClient;
-import android.webkit.JsResult;
-import android.annotation.TargetApi;
-import android.view.LayoutInflater;
 import android.os.Build;
 import android.content.Context;
 import android.app.ActivityManager;
-import android.widget.SmartToast;
 import java.net.URL;
 import java.net.URLConnection;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import android.os.AsyncTask;
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import android.util.Log;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.FileProvider;
 import android.content.pm.PackageManager;
 import android.Manifest;
 import java.io.File;
@@ -128,13 +114,13 @@ public class AuthActivity extends Activity
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				// SmartToast.create("Debug: Loaded", AuthActivity.this);
-				if (content.getUrl().equals("https://jarvis.studio/antiflood/validation")) {
+				if (content.getUrl().equals("https://teslasoft.org/antiflood/validation")) {
 					content.setVisibility(View.GONE);
-					// content.loadUrl("https://jarvis.studio/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
-				} else if (content.getUrl().equals("https://jarvis.studio/?pli=1")) {
+					// content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+				} else if (content.getUrl().equals("https://teslasoft.org/?pli=1")) {
 					content.setVisibility(View.GONE);
-					content.loadUrl("https://jarvis.studio/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
-				} else if (content.getUrl().contains("https://jarvis.studio/ServiceLoginComplete?")) {
+					content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+				} else if (content.getUrl().contains("https://teslasoft.org/ServiceLoginComplete?")) {
 					// SmartToast.create("Debug: Loaded final page", AuthActivity.this);
 					content.setVisibility(View.GONE);
 					try {
@@ -162,7 +148,7 @@ public class AuthActivity extends Activity
 		});
 		
 		// SmartToast.create("Debug: OK", this);
-        content.loadUrl("https://jarvis.studio/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+        content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
 	}
 	
 	class DownloadAccountInfo extends AsyncTask<String, String, String> {

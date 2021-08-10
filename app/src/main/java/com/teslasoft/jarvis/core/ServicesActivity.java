@@ -21,11 +21,6 @@ import android.widget.SmartToast;
 
 public class ServicesActivity extends Activity
 {
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
-
 	TextView csstate;
 	TextView dpsstate;
 	TextView lcsstate;
@@ -46,9 +41,11 @@ public class ServicesActivity extends Activity
 		smstate = (TextView) findViewById(R.id.smstate);
 		
 		String android_id = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-		
-		if (verifyInstallerId(this) || android_id.equals("608122f053f41340")) {
-			if (android_id.equals("608122f053f41340")) {
+
+		// SmartToast.create(android_id, this);
+
+		if (verifyInstallerId(this) || android_id.equals("d15c94372be47f06")) {
+			if (android_id.equals("d15c94372be47f06")) {
 				SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
 			}
 			statement();

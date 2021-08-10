@@ -3,14 +3,19 @@
     <string name="app_name">Teslasoft Core</string>
 	<string name="activity_main_name">Teslasoft Core</string>
 	<string name="activity_settings_name">Settings</string>
-	<string name="activity_init_name">Jarvis Services</string>
+	<string name="activity_init_name">Teslasoft Core</string>
 	<string name="activity_load_name">Jarvis</string>
 	<string name="activity_auth_name">Sign In</string>
 	<string name="activity_account_name">Account</string>
-	<string name="activity_rate_name">Rate Jarvis Services</string>
+	<string name="activity_rate_name">Rate Teslasoft Core</string>
 	<string name="device_admin">Teslasoft Core</string>
 	<string name="permissions_description">Teslasoft Core permissions group</string>
-	<string name="permission_access_core_desc">access Teslasoft Services with administrative rights</string>
+	<string name="permission_access_core_desc">access Teslasoft Core with administrative rights</string>
+	<string name="permission_access_root_desc">request root access on this device. Apps with root access may harm your device</string>
+	<string name="permission_access_smartcard_desc">use SmartCard API to authenticate users</string>
+	<string name="permission_access_bio_desc">use biometric authentication on this device</string>
+	<string name="permission_access_corex_desc">use CoreX shared library and load system-protected binaries</string>
+	<string name="permission_access_auth_desc">call Jarvis Account API to authenticate users</string>
 	<string name="device_admin_desc">Needs for security services such as biometric authentication or app lock</string>
 	<string name="lib_name">Jarvis Library Provider</string>
 	<string name="hold_smartcard" translatable="true">To continue please hold your SmartCard to the back of your phone.</string>

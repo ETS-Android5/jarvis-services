@@ -9,7 +9,7 @@ import java.util.*;
 import android.content.*;
 import android.util.*;
 import android.net.*;
-import android.support.v7.appcompat.*;
+import androidx.appcompat.*;
 
 public class RateActivity extends Activity
 {	

@@ -4,18 +4,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import com.teslasoft.libraries.support.R;
 import android.hardware.fingerprint.FingerprintManager;
-import android.hardware.biometrics.BiometricManager;
-import android.hardware.biometrics.BiometricPrompt;
 import android.annotation.TargetApi;
 import android.app.KeyguardManager;
 import android.content.pm.PackageManager;
-import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -41,7 +37,6 @@ import java.util.Arrays;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Context;
-import android.provider.Settings.Secure;
 
 public class BiometricAuthenticator extends Activity
 {
@@ -69,8 +64,8 @@ public class BiometricAuthenticator extends Activity
 		
 		// SmartToast.create(android_id, this);
 		
-		if (verifyInstallerId(this) || android_id.equals("608122f053f41340")) {
-			if (android_id.equals("608122f053f41340")) {
+		if (verifyInstallerId(this) || android_id.equals("d15c94372be47f06")) {
+			if (android_id.equals("d15c94372be47f06")) {
 				SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
 			}
 		try {
