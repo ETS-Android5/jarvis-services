@@ -8,12 +8,17 @@
 
 ## Latest update (1.21.202104072045.3.649) changelog
 
-- Otimized for Google Play Store
-- Signature changed
-- Licence check added
-- Beta testing closed. It is a stable version
-- Application renamed to Teslasoft Core
-- Added SmartCard service
+* Removed all deprecated code and APIs
+* Pure AndroidX (removed deprecated android support libraries)
+* Removed unused code
+* Implemented new Permission manager for third-party developers
+* Removed SmartCard implementation (Now SmartCard is a separated module)
+* Removed resources that violates Google Play Publishing Terms
+* Optimized for Android 12
+* Used newer version of Java and Gradle
+* Updated billing system
+* Enchanced licence checking
+* Changed server names to *.teslasoft.org/*
 
 \>\>\>\>\> [DOWNLOAD HERE](https://play.google.com/store/apps/details?id=com.teslasoft.libraries.support) <<<<<
 
