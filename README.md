@@ -1,24 +1,10 @@
 # Teslasoft Core (previously Jarvis Services)
 ### Teslasoft Core is an application, that contains most of Jarvis and CoreX frameworks and libraries.
 
-## Info for developers
+## Latest update (1.24.202108131400.1.331) changelog
 
-- Used editor: ***AIDE***
-- Used api: download file ***adnroid-sdk.jar***
-
-## Latest update (1.21.202104072045.3.649) changelog
-
-* Removed all deprecated code and APIs
-* Pure AndroidX (removed deprecated android support libraries)
-* Removed unused code
-* Implemented new Permission manager for third-party developers
-* Removed SmartCard implementation (Now SmartCard is a separated module)
-* Removed resources that violates Google Play Publishing Terms
-* Optimized for Android 12
-* Used newer version of Java and Gradle
-* Updated billing system
-* Enchanced licence checking
-* Changed server names to *.teslasoft.org/*
+* Removed storage permission
+* Changed login method
 
 \>\>\>\>\> [DOWNLOAD HERE](https://play.google.com/store/apps/details?id=com.teslasoft.libraries.support) <<<<<
 
@@ -45,7 +31,11 @@ And add function ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
-		// Get credentials, stored in /mnt/sdcard/jarvis/auth/com.your.app/credentials.json
+		AccountManager am =  (AccountManager)context.getSystemService(Context.ACCOUNT_SERVICE);
+		Account[] accountsFromFirstApp = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
+		for(Account acct: accountsFromFirstApp){
+			// TODO
+		}
 	} else if (resultCode == 3) {
 		// Do something if no Internet connection
 	} else if (resultCode == 4) {
@@ -146,23 +136,6 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 - NOTE: For licence check Internet connection is not required (but it may required in future releases).
 
-## How to show fullscreen advertisement
-
-***This component temporarily removed due antivirus activity. It will be reworked on future releases.***
-
-```java
-try {
-	Intent intent = new Intent();
-	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.ads.InterstitialAdActivity"));
-	Bundle extras = new Bundle();
-	extras.putString("adId", "j-ad-XXXXXXXXXXXXXXX"); // Your ad ID
-	intent.putExtras(extras);
-	this.startActivity(intent);
-} catch (Exception e) {
-	// Do something if Jarvis Services is unavaliable
-}
-```
-
 ## How to use crash handler
 
 ```java
@@ -177,15 +150,3 @@ try {
 	// Do something if Jarvis Services is unavaliable
 }
 ```
-
-## These libraries are required for implement Jarvis API:
-
-```java
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.ComponentName;
-import android.content.Context;
-```
-
-- These imports don't required third-party components or frameworks.

@@ -8,8 +8,8 @@ android {
         applicationId "com.teslasoft.libraries.support"
         minSdkVersion 26
         targetSdkVersion 31
-        versionCode 237781
-        versionName "1.23.202108101230.7.781"
+        versionCode 241331
+        versionName "1.24.202108131400.1.331"
     }
 	
     buildTypes {

@@ -1,5 +1,7 @@
 package com.teslasoft.jarvis.auth;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,19 +13,13 @@ import android.webkit.WebViewClient;
 import android.os.Build;
 import android.content.Context;
 import android.app.ActivityManager;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import android.os.AsyncTask;
-import java.io.BufferedInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import androidx.core.app.ActivityCompat;
-import android.content.pm.PackageManager;
-import android.Manifest;
-import java.io.File;
-import java.io.FileWriter;
-import android.os.Environment;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class AuthActivity extends Activity
 {
@@ -31,21 +27,7 @@ public class AuthActivity extends Activity
 	private String lang;
 	private String did;
 	private String appId;
-	
-	private static final int REQUEST_EXTERNAL_STORAGE = 1;
-	private static String[] PERMISSIONS_STORAGE = {
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE
-	};
-	
-	public static void verifyStoragePermissions(Activity activity) {
-		int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-		if (permission != PackageManager.PERMISSION_GRANTED) {
-			ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
-		}
-	}
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -61,28 +43,7 @@ public class AuthActivity extends Activity
 			AuthActivity.this.setResult(5);
 			finishAndRemoveTask();
 		}
-		
-		verifyStoragePermissions(this);
-		
-		String config = "/mnt/sdcard/jarvis/auth/" + appId + "/credentials.json";
-		String folder = "jarvis/auth/" + appId;
-		
-		File root = new File(Environment.getExternalStorageDirectory(), folder);
-		if (!root.exists()) {
-			root.mkdirs();
-		}
 
-		try {
-			File filepath = new File(root, "credentials.json");
-			FileWriter writer = new FileWriter(filepath);
-			writer.append("");
-			writer.flush();
-			writer.close();
-		} catch (Exception e) {
-			AuthActivity.this.setResult(4);
-			finishAndRemoveTask();
-		}
-		
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
 		{
             String processName = getProcessName(this);
@@ -166,22 +127,13 @@ public class AuthActivity extends Activity
 				URL url = new URL(urls[0]);
 				URLConnection conexion = url.openConnection();
 				conexion.connect();
-				
-				InputStream input = new BufferedInputStream(url.openStream());
-				OutputStream output = new FileOutputStream("/mnt/sdcard/jarvis/auth/" + appId + "/credentials.json");
 
-				byte data[] = new byte[1024];
-				
-				long total = 0;
-				
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					output.write(data, 0, count);
-				}
+				BufferedReader bufferedReader = null;
+				bufferedReader = new BufferedReader(new
+						InputStreamReader(conexion.getInputStream()));
 
-				output.flush();
-				output.close();
-				input.close();
+				String result = bufferedReader.readLine();
+				return result;
 			} catch (Exception e) {
 				AuthActivity.this.setResult(4);
 				finishAndRemoveTask();
@@ -191,8 +143,38 @@ public class AuthActivity extends Activity
 		}
 
 		protected void onPostExecute(String data) {
-			AuthActivity.this.setResult(Activity.RESULT_OK);
-			finishAndRemoveTask();
+			// SmartToast.create(data, AuthActivity.this);
+			try {
+				JSONObject response = new JSONObject(data);
+				String email = response.getString("user_email");
+				String uid = response.getString("user_id");
+				String token = response.getString("auth_token");
+				String username = response.getString("user_name");
+				AccountManager accountManager = AccountManager.get(AuthActivity.this);
+				Account account = new Account(email,"org.teslasoft.id.JARVIS_ACCOUNT");
+				accountManager.addAccountExplicitly(account,null,null);
+				accountManager.setAuthToken(account, "org.teslasoft.id.AUTH_TOKEN", token);
+				accountManager.setPassword(account, token);
+				accountManager.setUserData(account, "auth_token", token);
+				accountManager.setUserData(account, "user_id", uid);
+				accountManager.setUserData(account, "user_email", email);
+				accountManager.setUserData(account, "user_name", username);
+
+				AccountManager am =  (AccountManager)AuthActivity.this.getSystemService(Context.ACCOUNT_SERVICE);
+				Account[] accounts = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
+				String verifyAccount = am.getUserData(account, "auth_token");
+				if (token.equals(verifyAccount)) {
+					// SmartToast.create("Authentication completed", AuthActivity.this);
+					AuthActivity.this.setResult(Activity.RESULT_OK);
+					finishAndRemoveTask();
+				} else {
+					AuthActivity.this.setResult(4);
+					finishAndRemoveTask();
+				}
+			} catch (JSONException e) {
+				AuthActivity.this.setResult(4);
+				finishAndRemoveTask();
+			}
 		}
 	}
 	

@@ -19,6 +19,7 @@ public class AuthEntryActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		setContentView(R.layout.add_accound_complete);
 		
 		try {
 			Intent intent = getIntent();

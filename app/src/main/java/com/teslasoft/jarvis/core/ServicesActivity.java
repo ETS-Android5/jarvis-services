@@ -46,7 +46,7 @@ public class ServicesActivity extends Activity
 
 		if (verifyInstallerId(this) || android_id.equals("d15c94372be47f06")) {
 			if (android_id.equals("d15c94372be47f06")) {
-				SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
+				//SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
 			}
 			statement();
 		} else {

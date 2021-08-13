@@ -27,7 +27,7 @@
 
 	<permission-group
 		android:label="use biometric authentication on this device"
-		android:icon="@drawable/jarvis2"
+		android:icon="@drawable/ic_fingerprint"
 		android:name="com.teslasoft.permission-group.USE_BIOMETRICS"
 		android:priority="900"
 		android:description="@string/permission_access_bio_desc"/>
@@ -76,7 +76,7 @@
 	<permission
 		android:name="com.teslasoft.core.permission.USE_BIOMETRICS"
 		android:label="use biometric authentication on this device"
-		android:icon="@drawable/app_icon"
+		android:icon="@drawable/ic_fingerprint"
 		android:description="@string/permission_access_bio_desc"
 		android:permissionGroup="com.teslasoft.permission-group.USE_BIOMETRICS"
 		android:permissionFlags="hardRestricted"
@@ -119,14 +119,6 @@
 	<uses-permission
 		android:name="android.permission.ACCESS_NETWORK_STATE"/>
 	<uses-permission
-		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-		tools:ignore="ScopedStorage" />
-	<uses-permission
-		android:name="android.permission.READ_EXTERNAL_STORAGE"
-		tools:ignore="ScopedStorage" />
-	<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-		tools:ignore="ScopedStorage" />
-	<uses-permission
 		android:name="android.permission.USE_FINGERPRINT"/>
 	<uses-permission
 		android:name="android.permission.USE_BIOMETRICS"/>
@@ -141,6 +133,10 @@
 		android:name="android.permission.FOREGROUND_SERVICE"/>
 	<uses-permission
 		android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+	<uses-permission
+		android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission
+		android:name="android.permission.MANAGE_ACCOUNTS"/>
 	<uses-permission
 		android:name="android.permission.NFC"/>
 	<uses-permission
@@ -505,7 +501,7 @@
 			android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
-			android:theme="@style/Theme.Transparent.Float"
+			android:theme="@android:style/Theme.Material.NoActionBar"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
 			android:exported="true">
@@ -519,7 +515,7 @@
 			android:name="com.teslasoft.jarvis.auth.PreAuthActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
-			android:theme="@style/Theme.Transparent.S"
+			android:theme="@android:style/Theme.Material.NoActionBar"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 		</activity>
@@ -528,7 +524,7 @@
 			android:name="com.teslasoft.jarvis.auth.AuthActivity"
 			android:label="@string/activity_auth_name"
 			android:process=":auth"
-			android:theme="@style/Theme.Transparent.Slide"
+			android:theme="@android:style/Theme.Material.NoActionBar"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 		</activity>
@@ -642,13 +638,23 @@
 			</intent-filter>
 		</activity>
 
-		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.AutoRunService" android:process=":core"/>
-		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.AutoRunForegroundService" android:process=":core"/>
-		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.InitService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
-		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.DataProtectorService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.AutoRunService" android:process=":core"/>
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.AutoRunForegroundService" android:process=":core"/>
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.InitService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.DataProtectorService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
 		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.LicenceCheckService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
 		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.NotificationStatService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
 		<service android:enabled="true" android:name="com.teslasoft.jarvis.core.SmartCardService" android:process=":core" android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+		<service android:name="com.teslasoft.jarvis.auth.AccountService" android:enabled="true"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.accounts.AccountAuthenticator"/>
+			</intent-filter>
+			<meta-data
+				android:name="android.accounts.AccountAuthenticator"
+				android:resource="@xml/authenticator"/>
+		</service>
 
 		<service
 			android:name="com.teslasoft.jarvis.easter.TuxService"

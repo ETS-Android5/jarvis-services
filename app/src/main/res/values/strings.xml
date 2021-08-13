@@ -4,6 +4,7 @@
 	<string name="activity_main_name">Teslasoft Core</string>
 	<string name="activity_settings_name">Settings</string>
 	<string name="activity_init_name">Teslasoft Core</string>
+	<string name="teslasoft_id" translatable="false">Teslasoft ID</string>
 	<string name="activity_load_name">Jarvis</string>
 	<string name="activity_auth_name">Sign In</string>
 	<string name="activity_account_name">Account</string>

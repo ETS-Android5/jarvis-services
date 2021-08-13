@@ -1,3 +1,22 @@
+# Teslasoft Core 1.24.202108131400.1.331
+
+* Removed storage permission
+* Changed login method
+
+# Teslasoft Core 1.23.202108101230.7.781
+
+* Removed all deprecated code and APIs
+* Pure AndroidX (removed deprecated android support libraries)
+* Removed unused code
+* Implemented new Permission manager for third-party developers
+* Removed SmartCard implementation (Now SmartCard is a separated module)
+* Removed resources that violates Google Play Publishing Terms
+* Optimized for Android 12
+* Used newer version of Java and Gradle
+* Updated billing system
+* Enchanced licence checking
+* Changed server names to *.teslasoft.org/*
+
 # Teslasoft Core 1.21.202104072045.3.649
 
 - Otimized for Google Play Store

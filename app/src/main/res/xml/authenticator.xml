@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="org.teslasoft.id.JARVIS_ACCOUNT"
+    android:icon="@drawable/jarvis2"
+    android:smallIcon="@drawable/jarvis2"
+    android:label="@string/teslasoft_id"/>
