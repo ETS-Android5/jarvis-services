@@ -2,11 +2,11 @@
 <resources>
     <string name="app_name">Teslasoft Core</string>
 	<string name="activity_main_name">Teslasoft Core</string>
-	<string name="activity_settings_name">Settings</string>
+	<string name="activity_settings_name">Настройки</string>
 	<string name="activity_init_name">Teslasoft Core</string>
 	<string name="activity_load_name">Jarvis</string>
-	<string name="activity_auth_name">Sign In</string>
-	<string name="activity_account_name">Account</string>
+	<string name="activity_auth_name">Войти</string>
+	<string name="activity_account_name">Мой аккаунт</string>
 	<string name="activity_rate_name">Rate Teslasoft Core</string>
 	<string name="device_admin">Teslasoft Core</string>
 	<string name="permissions_description">Teslasoft Core permissions group</string>
@@ -18,7 +18,38 @@
 	<string name="permission_access_auth_desc">использовать Jarvis Account API для авторизации пользователей</string>
 	<string name="device_admin_desc">Необходимо для нормальной работы таких функций как биометрическая авторизация и блокировка приложений</string>
 	<string name="lib_name">Jarvis Library Provider</string>
-	<string name="hold_smartcard" translatable="true">To continue please hold your SmartCard to the back of your phone.</string>
-	<string name="btn_cancel" translatable="true">Cancel</string>
-	<string name="btn_auth" translatable="true">Authenticate</string>
+	<string name="hold_smartcard">Для продолжения приложите смарт-карту к задней части вашего телефона.</string>
+	<string name="btn_cancel">Отмена</string>
+	<string name="btn_auth">Войти</string>
+    <string name="select_account_title">Выберите аккаунт</string>
+    <string name="verify_account_title">Проверка</string>
+    <string name="account_settings_title">Настройки аккаунта</string>
+    <string name="notification_note">Если вы не хотите видеть уведомления вы можете выключить их в настройках, однако это может повлиять на работу приложения.</string>
+	<string name="crash_service_note">Данная служба может быть запущенна другим приложением. Если в данной службе происходять ошибки вы можете выключить ее, однако приложение, использующее данную службу может работать неправильно.</string>
+	<string name="button_cancel">Отмена</string>
+	<string name="force_stop">Остановить</string>
+	<string name="button_disable">Отключить</string>
+	<string name="all_services">Все службы</string>
+	<string name="core_desc">Служба Init Service является основным процессом приложения. Она отвечает за базовую работу приложения.</string>
+	<string name="state_running">Состояние: Запущенна</string>
+	<string name="state_stopped">Состояние: Остановлена</string>
+	<string name="force_start">Запустить</string>
+	<string name="state_disabled">Состояние: Отключена</string>
+	<string name="button_enable">Включить</string>
+	<string name="state_stopped_s">Остановлена</string>
+	<string name="state_running_s">Запущенна</string>
+	<string name="state_disabled_s">Отключена</string>
+	<string name="lc_desc">Служба Licence Check Service проверяет наличие лицензии на программное обеспечение.</string>
+	<string name="ns_desc">Служба Notification Stats Service управляет уведомлениями для этого приложения.</string>
+	<string name="sc_desc">Служба Teslasoft SmartCard отвечает за работу аутентификации с помощью смарт-карт.</string>
+	<string name="dp_desc">Служба Data Protector Service отвечает за защиту пользовательских данных и аккаунтов.</string>
+	<string name="security_title">Безопасность</string>
+	<string name="licence_manager_title">Licence Manager</string>
+    <string name="error_title">Произошла ошибка</string>
+	<string name="error_copy">Копировать</string>
+	<string name="error_detail">Инфо</string>
+	<string name="error_close">Закрыть</string>
+	<string name="stacktrace_copied">Текст скопирован</string>
+	<string name="collect_crash_info">Сбор информации об ошибке ...</string>
+
 </resources>

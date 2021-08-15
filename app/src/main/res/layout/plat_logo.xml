@@ -5,7 +5,6 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".JarvisPlatLogo"
 	android:gravity="center"
 	android:id="@+id/ui"
 	android:background="#18DB4437">
@@ -63,7 +62,7 @@
 								android:layout_height="300dp"
 								android:orientation="vertical"
 								android:gravity="center"
-								android:id="@+id/shadow">
+								android:id="@+id/shadow1">
 
 								<LinearLayout
 									android:layout_width="match_parent"

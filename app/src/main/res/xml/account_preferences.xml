@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="samsung_hax">
+    <androidx.preference.PreferenceScreen android:title="@string/preferences"
+        android:key="teslasoft_core">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.teslasoft.jarvis.auth.AccountSettings"
+            android:targetPackage="com.teslasoft.libraries.support" />
+    </androidx.preference.PreferenceScreen>
+</androidx.preference.PreferenceScreen>

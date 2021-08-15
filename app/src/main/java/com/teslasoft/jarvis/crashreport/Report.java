@@ -37,8 +37,6 @@ public class Report extends Activity
 		catch (Exception e)
 		{
 			errt = "-676767";
-			Toast toast = Toast.makeText(getApplicationContext(), "Value \"null\" is not applicable to method extras.getString()", Toast.LENGTH_SHORT); 
-			toast.show();
 			finish();
 			overridePendingTransition(0, 0);
 		}
@@ -87,7 +85,7 @@ public class Report extends Activity
 							}
 						}
 					}
-				}, 800);
+				}, 200);
 			}
 		}
 		
@@ -127,7 +125,7 @@ public class Report extends Activity
 						}
 					}
 				}
-			}, 800);
+			}, 200);
 		}
 	}
 
@@ -139,14 +137,13 @@ public class Report extends Activity
 
 	public void Ignore(View v)
 	{
-		//Do nothing
+		// Do nothing
 	}
 
 	@Override
 	public void onBackPressed()
 	{
-		finish();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		// Do nothing
 	}
 	
 	@Override

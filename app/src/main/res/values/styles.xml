@@ -6,36 +6,36 @@
 	<style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.NoActionBar">
 		<item name="windowActionBar">false</item>
 		<item name="windowNoTitle">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 	</style>
 	<style name="Theme.DarkFull" parent="@style/Theme.AppCompat">
 		<item name="android:windowIsTranslucent">true</item>
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#FF111111</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#FF111111</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Abc</item>
 		<item name="android:windowContentTransitions">true</item>
 	</style>
 	<style name="Theme.NoPreviewWindow" parent="@style/Theme.AppCompat">
 		<item name="android:windowDisablePreview">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#220066</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:actionBarStyle">@style/ThemeActionBar</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
 		<item name="android:windowContentTransitions">true</item>
 	</style>
 	<style name="Theme.Home" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#66000000</item>
 		<item name="colorPrimary">#101016</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowContentOverlay">@null</item>
 	</style>
@@ -45,10 +45,10 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#121212</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
@@ -60,11 +60,11 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#AA0027</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#66000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlNormal">#AA0027</item>
-		<item name="colorControlHighlight">#FF0037</item>
+		<item name="colorControlNormal">#DB4437</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#99000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
@@ -76,11 +76,11 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#AA0027</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlNormal">#AA0027</item>
-		<item name="colorControlHighlight">#FF0037</item>
+		<item name="colorControlNormal">#DB4437</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#000000</item>
 		<item name="android:windowAnimationStyle">@null</item>
@@ -92,10 +92,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#99000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#99000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Abc</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -105,10 +105,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.SlideIn</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -118,10 +118,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#B20021</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#99000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#B20021</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#99000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Slide</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -131,10 +131,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#B20021</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#B20021</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Slide</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -144,10 +144,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#B20021</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#121212</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#B20021</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#121212</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Slide</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -157,10 +157,10 @@
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#99000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:statusBarColor">#99000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.SlideOut</item>
 		<item name="android:windowContentTransitions">true</item>
@@ -171,10 +171,10 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
@@ -190,7 +190,7 @@
 		<item name="colorAccent">#4285F4</item>
 		<item name="colorPrimaryDark">#66000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#99000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Null</item>
@@ -251,7 +251,7 @@
 		<item name="colorAccent">#2E8B57</item>
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
@@ -264,11 +264,11 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#AA0027</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlNormal">#AA0027</item>
-		<item name="colorControlHighlight">#FF0037</item>
+		<item name="colorControlNormal">#DB4437</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">false</item>
         <item name="android:statusBarColor">#000000</item>
 		<item name="android:windowAnimationStyle">@null</item>
@@ -281,10 +281,10 @@
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:backgroundDimEnabled">false</item>
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#FF000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#FF000000</item>
 		<item name="android:windowAnimationStyle">@style/Theme.Anim.Fade.Material</item>
@@ -293,10 +293,10 @@
 		<item name="android:windowFullscreen">true</item>
 	</style>
 	<style name="Theme.Transparent.Logo" parent="@android:style/Theme.Material.Wallpaper">
-		<item name="colorAccent">#BE0217</item>
+		<item name="colorAccent">#DB4437</item>
 		<item name="colorPrimaryDark">#00000000</item>
 		<item name="colorPrimary">#121212</item>
-		<item name="colorControlHighlight">#BE0217</item>
+		<item name="colorControlHighlight">#DB4437</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#00000000</item>

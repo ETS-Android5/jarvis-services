@@ -1,7 +1,6 @@
 package com.teslasoft.jarvis.crashreport;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Toast;
@@ -9,12 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import com.teslasoft.libraries.support.R;
 import android.widget.TextView;
-import android.widget.Button;
 
 public class BugReport extends Activity
 {
 	private String texterr;
-	private Intent intent;
 	private TextView tem;
 	
 	public void onPointerCaptureChanged(boolean hasCapture)
@@ -42,8 +39,6 @@ public class BugReport extends Activity
 		
 		catch (Exception e)
 		{
-			Toast toast = Toast.makeText(getApplicationContext(), "Value \"null\" is not applicable to method extras.getString()", Toast.LENGTH_SHORT); 
-			toast.show();
 			finishAndRemoveTask();
 			overridePendingTransition(0, 0);
 		}
@@ -61,7 +56,7 @@ public class BugReport extends Activity
 		android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE); 
         android.content.ClipData clip = android.content.ClipData.newPlainText("Error", tem.getText().toString());
         clipboard.setPrimaryClip(clip);
-        Toast.makeText(getApplicationContext(), "Error message copied to clipboard", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), getResources().getString(R.string.stacktrace_copied), Toast.LENGTH_SHORT).show();
 	}
 	
 	public void Detail(View v)
@@ -77,8 +72,8 @@ public class BugReport extends Activity
 
 		catch (Exception e)
 		{
-			Toast toast = Toast.makeText(getApplicationContext(), "Service not avaliable", Toast.LENGTH_SHORT); 
-			toast.show();
+			// Toast toast = Toast.makeText(getApplicationContext(), "Service not avaliable", Toast.LENGTH_SHORT);
+			// toast.show();
 		}
 	}
 	

@@ -1,6 +1,6 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Process;
+import android.annotation.SuppressLint;
 import android.os.IBinder;
 import android.os.Handler;
 import android.content.Context;
@@ -13,16 +13,15 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.app.ActivityManager;
 import android.content.pm.PackageManager;
-import android.widget.Toast;
+
 import java.util.Timer;
 import java.util.TimerTask;
-import android.widget.SmartToast;
+
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
-import com.teslasoft.jarvis.core.SystemLibrary;
+
 import androidx.core.content.ContextCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationCompat.Builder;
 // import android.support.v4.content.ContextCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat.Builder; /* DEPRECATED API */
@@ -73,7 +72,7 @@ public class SmartCardService extends Service
 				CharSequence name = "SmartCard"; // The user-visible name of the channel.
 				int importance = NotificationManager.IMPORTANCE_HIGH;
 				NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
-				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.SmartCardSettingsActivity.class);
+				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.ServiceSettingActivity.class).putExtra("serviceId", 4);
 				Intent alls = new Intent(this, com.teslasoft.jarvis.core.ServicesActivity.class);
 
 				PendingIntent serv = PendingIntent.getActivity(this, 0, alls, 0);
@@ -104,13 +103,13 @@ public class SmartCardService extends Service
 				// Notification for Android 7 and lower
 
 				int notifyID = 2; 
-				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.SmartCardSettingsActivity.class);
+				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.ServiceSettingActivity.class).putExtra("serviceId", 4);
 				Intent alls = new Intent(this, com.teslasoft.jarvis.core.ServicesActivity.class);
 
 				PendingIntent serv = PendingIntent.getActivity(this, 0, alls, 0);
         		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
-				NotificationCompat.Builder builder =
+				@SuppressLint("WrongConstant") NotificationCompat.Builder builder =
 					new NotificationCompat.Builder(this)
 					.setContentTitle("Debug")
 					.setVisibility(Notification.VISIBILITY_PUBLIC)
@@ -186,7 +185,7 @@ public class SmartCardService extends Service
 								// If Data Protector Service stopped show error
 								PackageManager pm = getPackageManager();
 
-								if (pm.getComponentEnabledSetting(new ComponentName(com.teslasoft.jarvis.core.SmartCardService.this, com.teslasoft.jarvis.core.DataProtectorService.class)) == 1)
+								if (pm.getComponentEnabledSetting(new ComponentName(com.teslasoft.jarvis.core.SmartCardService.this, com.teslasoft.jarvis.core.DataProtectorService.class)) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED)
 								{
 									if (isMyServiceRunning(com.teslasoft.jarvis.core.DataProtectorService.class))
 									{

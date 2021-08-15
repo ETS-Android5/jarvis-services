@@ -2,13 +2,9 @@ package com.teslasoft.jarvis.auth;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.os.Handler;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Toast;
-import android.widget.TextView;
 import com.teslasoft.libraries.support.R;
-import android.content.ComponentName;
 
 public class AuthEntryActivity extends Activity
 {
@@ -18,7 +14,6 @@ public class AuthEntryActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
 		setContentView(R.layout.add_accound_complete);
 		
 		try {
@@ -31,12 +26,12 @@ public class AuthEntryActivity extends Activity
 		}
 		
 		try {
-			if (appId.equals("null")) {
+			if (appId.equals("")) {
 				this.setResult(5);
 				finishAndRemoveTask();
 			} else {
 				try {
-					Intent intent = new Intent(this, PreAuthActivity.class);
+					Intent intent = new Intent(this, AuthActivity.class);
 					Bundle extras = new Bundle();
 					extras.putString("appId", appId);
 					intent.putExtras(extras);
@@ -56,7 +51,13 @@ public class AuthEntryActivity extends Activity
 	{
 		
 	}
-	
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		setContentView(R.layout.add_accound_complete);
+	}
+
 	public void onActivityResult(int requestCode, int resultCode, Intent data)
 	{
 		if (resultCode == RESULT_OK) {

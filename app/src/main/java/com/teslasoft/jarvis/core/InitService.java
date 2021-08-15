@@ -1,6 +1,6 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Process;
+import android.annotation.SuppressLint;
 import android.os.IBinder;
 import android.os.Handler;
 import android.content.Context;
@@ -13,16 +13,15 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.app.ActivityManager;
 import android.content.pm.PackageManager;
-import android.widget.Toast;
+
 import java.util.Timer;
 import java.util.TimerTask;
-import android.widget.SmartToast;
+
 import android.util.Log;
 import com.teslasoft.libraries.support.R;
-import com.teslasoft.jarvis.core.SystemLibrary;
+
 import androidx.core.content.ContextCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationCompat.Builder;
 // import android.support.v4.content.ContextCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat.Builder; /* DEPRECATED API */
@@ -62,20 +61,20 @@ public class InitService extends Service
 		{
 			
 		}
-		
+
 		if (android.os.Build.VERSION.SDK_INT >= 21)
 		{
 			if (android.os.Build.VERSION.SDK_INT >= 26)
 			{
 				// Notification for Android 8 and higer
-				int notifyID = 1; 
-				String CHANNEL_ID = "CoreDebugServices"; // The id of the channel. 
+				int notifyID = 1;
+				String CHANNEL_ID = "CoreDebugServices"; // The id of the channel.
 				CharSequence name = "Services"; // The user-visible name of the channel.
 				int importance = NotificationManager.IMPORTANCE_HIGH;
 				NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
-				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.CoreServiceSettingsActivity.class);
+				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.ServiceSettingActivity.class).putExtra("serviceId", 0);
 				Intent alls = new Intent(this, com.teslasoft.jarvis.core.ServicesActivity.class);
-		
+
 				PendingIntent serv = PendingIntent.getActivity(this, 0, alls, 0);
         		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 				Notification notification = new Notification.Builder(context)
@@ -98,19 +97,19 @@ public class InitService extends Service
 				mNotificationManager.createNotificationChannel(mChannel);
 				startForeground(notifyID, notification);
 			}
-		
+
 			else
 			{
 				// Notification for Android 7 and lower
-				
-				int notifyID = 1; 
-				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.CoreServiceSettingsActivity.class);
+
+				int notifyID = 1;
+				Intent notificationIntent = new Intent(this, com.teslasoft.jarvis.core.ServiceSettingActivity.class).putExtra("serviceId", 0);
 				Intent alls = new Intent(this, com.teslasoft.jarvis.core.ServicesActivity.class);
 
 				PendingIntent serv = PendingIntent.getActivity(this, 0, alls, 0);
         		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-				
-				NotificationCompat.Builder builder =
+
+				@SuppressLint("WrongConstant") NotificationCompat.Builder builder =
 					new NotificationCompat.Builder(this)
 					.setContentTitle("Debug")
 					.setVisibility(Notification.VISIBILITY_PUBLIC)
@@ -123,22 +122,22 @@ public class InitService extends Service
 					.setWhen(System.currentTimeMillis())
 					.setOngoing(true)
 					.setVibrate(new long[] {0});
-					
+
 				Notification notification = builder.build();
 
 				NotificationManager notificationManager =
 					(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 				// mNotificationManager.createNotificationChannel(mChannel);
 				startForeground(notifyID, notification);
-				
+
 				stopService(new Intent(this, com.teslasoft.jarvis.core.InitService.class));
 				startService(new Intent(this, com.teslasoft.jarvis.core.InitService.class));
 			}
 		}
-		
+
 		else {
 			// Detect unsupported devices and stopSelf
-			Log.e(TAG, "Sorry, but your Android version is not supported. Minimal version android is Android 6.0 (Lolipop) SDK 21. Jarvis Services closed with exit code -1");
+			Log.e(TAG, "Sorry, but your Android version is not supported. Minimal version android is Android 6.0 (Lolipop) SDK 21. InitService closed with exit code -1");
 			stopSelf();
 			System.exit(-1);
 		}

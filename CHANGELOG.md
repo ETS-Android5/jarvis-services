@@ -1,3 +1,9 @@
+# Teslasoft Core 1.25.202108151500.7.921
+
+* Implemented account manager
+* Reduced app size
+* Removed CoreX
+
 # Teslasoft Core 1.24.202108131400.1.331
 
 * Removed storage permission

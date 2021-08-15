@@ -49,14 +49,14 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="If you don't want to see the notification, you can disable this notification in android settings. The notification required for correct app's working"
+							android:text="@string/notification_note"
 							android:layout_marginTop="10dp"
 							android:id="@+id/notetx"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="Please be note that service can be started by another app again. If the service keeps stopping, you can disable it, but if you disable it, another app may keeps stopping"
+							android:text="@string/crash_service_note"
 							android:layout_marginTop="10dp"
 							android:textColor="#B21121"/>
 
@@ -90,7 +90,7 @@
 					<Button
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
-						android:text="Cancel"
+						android:text="@string/button_cancel"
 						android:gravity="center"
 						android:background="@drawable/button_rpp"
 						android:singleLine="true"
@@ -110,7 +110,7 @@
 					<Button
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
-						android:text="Force stop"
+						android:text="@string/force_stop"
 						android:gravity="center"
 						android:background="@drawable/button_rpp"
 						android:singleLine="true"
@@ -131,7 +131,7 @@
 					<Button
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
-						android:text="Disable"
+						android:text="@string/button_disable"
 						android:gravity="center"
 						android:background="@drawable/button_rpp"
 						android:singleLine="true"
@@ -160,7 +160,7 @@
 			<Button
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
-				android:text="All services"
+				android:text="@string/all_services"
 				android:singleLine="true"
 				android:background="@drawable/rippple"
 				android:onClick="AllServices"/>

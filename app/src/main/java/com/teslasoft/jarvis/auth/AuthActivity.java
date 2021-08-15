@@ -18,6 +18,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import android.os.AsyncTask;
+import android.widget.LinearLayout;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -27,6 +28,8 @@ public class AuthActivity extends Activity
 	private String lang;
 	private String did;
 	private String appId;
+	public LinearLayout loadingScreen;
+	public LinearLayout loginScreen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -41,7 +44,7 @@ public class AuthActivity extends Activity
 			appId = extras.getString("appId");
 		} catch (Exception e) {
 			AuthActivity.this.setResult(5);
-			finishAndRemoveTask();
+			finish();
 		}
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
@@ -60,6 +63,8 @@ public class AuthActivity extends Activity
 		}
 		
 		content = (WebView) findViewById(R.id.auth_web);
+		loadingScreen = (LinearLayout) findViewById(R.id.loading_page);
+		loginScreen = (LinearLayout) findViewById(R.id.login_page);
 
 		content.setBackgroundColor(0x00000000);
 		content.setVisibility(View.VISIBLE);
@@ -67,48 +72,44 @@ public class AuthActivity extends Activity
         content.getSettings().setLoadWithOverviewMode(true);
         content.getSettings().setUseWideViewPort(true);
 		content.getSettings().setCacheMode(WebSettings.LOAD_NORMAL);
-		
-		final Activity activity = this;
-
-        content.setWebViewClient(new WebViewClient()
-		{
+        content.setWebViewClient(new WebViewClient() {
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				// SmartToast.create("Debug: Loaded", AuthActivity.this);
 				if (content.getUrl().equals("https://teslasoft.org/antiflood/validation")) {
 					content.setVisibility(View.GONE);
-					// content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+					loginScreen.setVisibility(View.GONE);
+					loadingScreen.setVisibility(View.VISIBLE);
 				} else if (content.getUrl().equals("https://teslasoft.org/?pli=1")) {
 					content.setVisibility(View.GONE);
+					loginScreen.setVisibility(View.GONE);
+					loadingScreen.setVisibility(View.VISIBLE);
 					content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
 				} else if (content.getUrl().contains("https://teslasoft.org/ServiceLoginComplete?")) {
-					// SmartToast.create("Debug: Loaded final page", AuthActivity.this);
+					loadingScreen.setVisibility(View.VISIBLE);
+					loginScreen.setVisibility(View.GONE);
 					content.setVisibility(View.GONE);
 					try {
 						String xurl = content.getUrl();
 						new DownloadAccountInfo().execute(url);
-						
 					} catch (Exception e) {
-						// SmartToast.create(e.toString(), com.teslasoft.jarvis.auth.AuthActivity.this);
 						com.teslasoft.jarvis.auth.AuthActivity.this.setResult(4);
-						finishAndRemoveTask();
+						finish();
 					}
 				} else {
+					loadingScreen.setVisibility(View.GONE);
+					loginScreen.setVisibility(View.VISIBLE);
 					content.setVisibility(View.VISIBLE);
 				}
-				
-				// SmartToast.create(content.getUrl(), AuthActivity.this);
 			}
 			
 			@Override
 			public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 				com.teslasoft.jarvis.auth.AuthActivity.this.setResult(3);
-				finishAndRemoveTask();
+				finish();
 				super.onReceivedError(view, errorCode, description, failingUrl);
 			}
 		});
-		
-		// SmartToast.create("Debug: OK", this);
+
         content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
 	}
 	
@@ -122,28 +123,23 @@ public class AuthActivity extends Activity
 
 		protected String doInBackground(String... urls)
 		{
-			int count;
 			try {
 				URL url = new URL(urls[0]);
 				URLConnection conexion = url.openConnection();
 				conexion.connect();
-
 				BufferedReader bufferedReader = null;
-				bufferedReader = new BufferedReader(new
-						InputStreamReader(conexion.getInputStream()));
-
+				bufferedReader = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
 				String result = bufferedReader.readLine();
 				return result;
 			} catch (Exception e) {
 				AuthActivity.this.setResult(4);
-				finishAndRemoveTask();
+				finish();
 			}
 			
 			return null;
 		}
 
 		protected void onPostExecute(String data) {
-			// SmartToast.create(data, AuthActivity.this);
 			try {
 				JSONObject response = new JSONObject(data);
 				String email = response.getString("user_email");
@@ -151,7 +147,7 @@ public class AuthActivity extends Activity
 				String token = response.getString("auth_token");
 				String username = response.getString("user_name");
 				AccountManager accountManager = AccountManager.get(AuthActivity.this);
-				Account account = new Account(email,"org.teslasoft.id.JARVIS_ACCOUNT");
+				Account account = new Account(username,"org.teslasoft.id.JARVIS_ACCOUNT");
 				accountManager.addAccountExplicitly(account,null,null);
 				accountManager.setAuthToken(account, "org.teslasoft.id.AUTH_TOKEN", token);
 				accountManager.setPassword(account, token);
@@ -159,21 +155,18 @@ public class AuthActivity extends Activity
 				accountManager.setUserData(account, "user_id", uid);
 				accountManager.setUserData(account, "user_email", email);
 				accountManager.setUserData(account, "user_name", username);
-
 				AccountManager am =  (AccountManager)AuthActivity.this.getSystemService(Context.ACCOUNT_SERVICE);
-				Account[] accounts = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
 				String verifyAccount = am.getUserData(account, "auth_token");
 				if (token.equals(verifyAccount)) {
-					// SmartToast.create("Authentication completed", AuthActivity.this);
 					AuthActivity.this.setResult(Activity.RESULT_OK);
-					finishAndRemoveTask();
+					finish();
 				} else {
 					AuthActivity.this.setResult(4);
-					finishAndRemoveTask();
+					finish();
 				}
 			} catch (JSONException e) {
 				AuthActivity.this.setResult(4);
-				finishAndRemoveTask();
+				finish();
 			}
 		}
 	}

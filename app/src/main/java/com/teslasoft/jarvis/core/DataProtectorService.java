@@ -1,31 +1,20 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Process;
 import android.os.IBinder;
 import android.os.Handler;
 import android.content.Context;
 import android.app.Service;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.NotificationChannel;
-import android.app.Notification;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.app.ActivityManager;
 import android.content.pm.PackageManager;
 import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
-import android.util.Log;
-import com.teslasoft.libraries.support.R;
-import com.teslasoft.jarvis.core.SystemLibrary;
-import androidx.core.content.ContextCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationCompat.Builder;
+
 // import android.support.v4.content.ContextCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat; /* DEPRECATED API */
 // import android.support.v4.app.NotificationCompat.Builder; /* DEPRECATED API */
-import android.graphics.BitmapFactory;
+
 
 public class DataProtectorService extends Service
 {

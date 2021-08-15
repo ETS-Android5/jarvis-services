@@ -34,8 +34,6 @@ public class Detail extends Activity
 
 		catch (Exception e)
 		{
-			Toast toast = Toast.makeText(getApplicationContext(), "Value \"null\" is not applicable to method extras.getString()", Toast.LENGTH_SHORT); 
-			toast.show();
 			finish();
 			overridePendingTransition(0, 0);
 		}

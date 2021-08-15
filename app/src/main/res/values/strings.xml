@@ -22,4 +22,35 @@
 	<string name="hold_smartcard" translatable="true">To continue please hold your SmartCard to the back of your phone.</string>
 	<string name="btn_cancel" translatable="true">Cancel</string>
 	<string name="btn_auth" translatable="true">Authenticate</string>
+    <string name="preferences" translatable="false">Account Settings</string>
+    <string name="select_account_title">Select an account</string>
+    <string name="verify_account_title">Verify account</string>
+    <string name="account_settings_title">Account Settings</string>
+    <string name="notification_note">If you don\'t want to see notification, you can disable it in android settings. The notification helps to keep app in background.</string>
+	<string name="crash_service_note">Please be note that service can be started by another app again. If the service keeps stopping, you can disable it, but if you disable it, another app may not work properly.</string>
+	<string name="button_cancel">Cancel</string>
+	<string name="force_stop">Force stop</string>
+	<string name="button_disable">Disable</string>
+	<string name="all_services">All services</string>
+	<string name="core_desc">Init Service is the main process of this app.</string>
+	<string name="state_running">State: Running</string>
+	<string name="state_stopped">State: Stopped</string>
+	<string name="state_stopped_s">Stopped</string>
+	<string name="state_running_s">Running</string>
+	<string name="state_disabled_s">Disabled</string>
+	<string name="force_start">Force start</string>
+	<string name="state_disabled">State: Disabled</string>
+	<string name="button_enable">Enable</string>
+	<string name="lc_desc">Licence Checks Service checks if you have a licence to use apps.</string>
+	<string name="ns_desc">Notification Stats Service is managing notifications of this app.</string>
+	<string name="sc_desc">SmartCard Service works with SmartCards.</string>
+	<string name="dp_desc">Data Protector Service is protecting your data and accounts in this app.</string>
+	<string name="security_title">Security</string>
+	<string name="licence_manager_title">Licence Manager</string>
+    <string name="error_title">An error occurred</string>
+	<string name="error_copy">Copy</string>
+	<string name="error_detail">Detail</string>
+	<string name="error_close">Close</string>
+	<string name="stacktrace_copied">Error message copied to clipboard</string>
+	<string name="collect_crash_info">Collecting crash info ...</string>
 </resources>

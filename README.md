@@ -1,10 +1,11 @@
-# Teslasoft Core (previously Jarvis Services)
-### Teslasoft Core is an application, that contains most of Jarvis and CoreX frameworks and libraries.
+# Teslasoft Core
+### Teslasoft Core is an application, that contains most of Teslasoft APIs and libraries.
 
-## Latest update (1.24.202108131400.1.331) changelog
+## Latest update (1.25.202108151500.7.921) changelog
 
-* Removed storage permission
-* Changed login method
+* Implemented account manager
+* Reduced app size
+* Removed CoreX
 
 \>\>\>\>\> [DOWNLOAD HERE](https://play.google.com/store/apps/details?id=com.teslasoft.libraries.support) <<<<<
 
@@ -24,16 +25,16 @@ try {
 	intent.putExtras(extras);
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
 } catch (Exception e) {
-	// Do something if Jarvis Services is unavaliable
+	// Do something if Teslasoft Core is unavaliable
 }
 ```
-And add function ***onActivityResult***:
+And add method ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
 		AccountManager am =  (AccountManager)context.getSystemService(Context.ACCOUNT_SERVICE);
-		Account[] accountsFromFirstApp = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
-		for(Account acct: accountsFromFirstApp){
+		Account[] accountsList = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
+		for(Account acct: accountsList){
 			// TODO
 		}
 	} else if (resultCode == 3) {
@@ -49,6 +50,27 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
+## Start Account picker
+```java
+try {
+	int REQUIRED_RESPONSE = 1;
+	Intent intent = new Intent();
+	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "com.teslasoft.jarvis.auth.AccountPickerActivity"));
+	this.startActivityForResult(intent, REQUIRED_RESPONSE);
+} catch (Exception e) {
+	// Do something if Teslasoft Core is unavaliable
+}
+```
+And add method ***onActivityResult***:
+```java
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	AccountManager am =  (AccountManager)context.getSystemService(Context.ACCOUNT_SERVICE);
+	Account[] accountsList = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
+	Account account = accountsList[resultCode - 20];
+	// Get user data or do something else
+}
+```
+
 ## How to implement Biometric Authentication
 To implement you don't need to complie additional libraries.
 
@@ -60,10 +82,10 @@ try {
 	intent.setComponent(new ComponentName("com.teslasoft.libraries.support", "android.security.BiometricAuthenticatorCallback"));
 	this.startActivityForResult(intent, REQUIRED_RESPONSE);
 } catch (Exception e) {
-	// Do something if Jarvis Services is unavaliable
+	// Do something if Teslasoft Core is unavaliable
 }
 ```
-And add function ***onActivityResult***:
+And add method ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
@@ -114,7 +136,7 @@ try {
 	// Do something if Jarvis Services is unavaliable
 }
 ```
-And add function ***onActivityResult***:
+And add method ***onActivityResult***:
 ```java
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	if (resultCode == Activity.RESULT_OK) {
@@ -147,6 +169,6 @@ try {
 	intent.putExtras(extras);
 	this.startActivity(intent);
 } catch (Exception e) {
-	// Do something if Jarvis Services is unavaliable
+	// Do something if Teslasoft Core is unavaliable
 }
 ```

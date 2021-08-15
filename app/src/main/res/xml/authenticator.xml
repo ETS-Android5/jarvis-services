@@ -3,4 +3,5 @@
     android:accountType="org.teslasoft.id.JARVIS_ACCOUNT"
     android:icon="@drawable/jarvis2"
     android:smallIcon="@drawable/jarvis2"
-    android:label="@string/teslasoft_id"/>
+    android:label="@string/teslasoft_id"
+    android:accountPreferences="@xml/account_preferences"/>

@@ -30,7 +30,6 @@ public class ServicesActivity extends Activity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
-		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.services_list);
 		
@@ -89,20 +88,20 @@ public class ServicesActivity extends Activity
 		{
 			if (isMyServiceRunning(com.teslasoft.jarvis.core.InitService.class))
 			{
-				csstate.setText("Running");
+				csstate.setText(R.string.state_running_s);
 				csstate.setTextColor(0xFF2E8B57);
 			}
 
 			else 
 			{
-				csstate.setText("Stopped");
+				csstate.setText(R.string.state_stopped_s);
 				csstate.setTextColor(0xFFFFFF00);
 			}
 		}
 
 		else
 		{
-			csstate.setText("Disabled");
+			csstate.setText(R.string.state_disabled_s);
 			csstate.setTextColor(0xFFB20021);
 		}
 		
@@ -110,20 +109,20 @@ public class ServicesActivity extends Activity
 		{
 			if (isMyServiceRunning(com.teslasoft.jarvis.core.DataProtectorService.class))
 			{
-				dpsstate.setText("Running");
+				dpsstate.setText(R.string.state_running_s);
 				dpsstate.setTextColor(0xFF2E8B57);
 			}
 
 			else 
 			{
-				dpsstate.setText("Stopped");
+				dpsstate.setText(R.string.state_stopped_s);
 				dpsstate.setTextColor(0xFFFFFF00);
 			}
 		}
 
 		else
 		{
-			dpsstate.setText("Disabled");
+			dpsstate.setText(R.string.state_disabled_s);
 			dpsstate.setTextColor(0xFFB20021);
 		}
 		
@@ -131,20 +130,20 @@ public class ServicesActivity extends Activity
 		{
 			if (isMyServiceRunning(com.teslasoft.jarvis.core.LicenceCheckService.class))
 			{
-				lcsstate.setText("Running");
+				lcsstate.setText(R.string.state_running_s);
 				lcsstate.setTextColor(0xFF2E8B57);
 			}
 
 			else 
 			{
-				lcsstate.setText("Stopped");
+				lcsstate.setText(R.string.state_stopped_s);
 				lcsstate.setTextColor(0xFFFFFF00);
 			}
 		}
 
 		else
 		{
-			lcsstate.setText("Disabled");
+			lcsstate.setText(R.string.state_disabled_s);
 			lcsstate.setTextColor(0xFFB20021);
 		}
 		
@@ -152,20 +151,20 @@ public class ServicesActivity extends Activity
 		{
 			if (isMyServiceRunning(com.teslasoft.jarvis.core.NotificationStatService.class))
 			{
-				nsstate.setText("Running");
+				nsstate.setText(R.string.state_running_s);
 				nsstate.setTextColor(0xFF2E8B57);
 			}
 
 			else 
 			{
-				nsstate.setText("Stopped");
+				nsstate.setText(R.string.state_stopped_s);
 				nsstate.setTextColor(0xFFFFFF00);
 			}
 		}
 
 		else
 		{
-			nsstate.setText("Disabled");
+			nsstate.setText(R.string.state_disabled_s);
 			nsstate.setTextColor(0xFFB20021);
 		}
 		
@@ -173,20 +172,20 @@ public class ServicesActivity extends Activity
 		{
 			if (isMyServiceRunning(com.teslasoft.jarvis.core.SmartCardService.class))
 			{
-				smstate.setText("Running");
+				smstate.setText(R.string.state_running_s);
 				smstate.setTextColor(0xFF2E8B57);
 			}
 
 			else 
 			{
-				smstate.setText("Stopped");
+				smstate.setText(R.string.state_stopped_s);
 				smstate.setTextColor(0xFFFFFF00);
 			}
 		}
 
 		else
 		{
-			smstate.setText("Disabled");
+			smstate.setText(R.string.state_disabled_s);
 			smstate.setTextColor(0xFFB20021);
 		}
 
@@ -222,52 +221,37 @@ public class ServicesActivity extends Activity
 
 	public void CoreService(View v)
 	{
-		Intent intent = new Intent(Intent.ACTION_MAIN);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.CoreServiceSettingsActivity"));
-		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		Intent intent = new Intent(this, ServiceSettingActivity.class);
+		intent.putExtra("serviceId", 0);
 		startActivity(intent);
-		// finish();
 	}
 	
 	public void DPService(View v)
 	{
-		Intent intent = new Intent(Intent.ACTION_MAIN);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.DPSSettingsActivity"));
-		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		Intent intent = new Intent(this, ServiceSettingActivity.class);
+		intent.putExtra("serviceId", 1);
 		startActivity(intent);
-		// finish();
 	}
 	
 	public void LCService(View v)
 	{
-		Intent intent = new Intent(Intent.ACTION_MAIN);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.LCSSettingsActivity"));
-		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		Intent intent = new Intent(this, ServiceSettingActivity.class);
+		intent.putExtra("serviceId", 2);
 		startActivity(intent);
-		// finish();
 	}
 	
 	public void NSService(View v)
 	{
-		Intent intent = new Intent(Intent.ACTION_MAIN);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.NSettingsActivity"));
-		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		Intent intent = new Intent(this, ServiceSettingActivity.class);
+		intent.putExtra("serviceId", 3);
 		startActivity(intent);
-		// finish();
 	}
 	
 	public void SMService(View v)
 	{
-		Intent intent = new Intent(Intent.ACTION_MAIN);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.SmartCardSettingsActivity"));
-		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		Intent intent = new Intent(this, ServiceSettingActivity.class);
+		intent.putExtra("serviceId", 4);
 		startActivity(intent);
-		// finish();
 	}
 
 	public boolean isMyServiceRunning(Class<?> serviceClass)
