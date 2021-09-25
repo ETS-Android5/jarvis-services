@@ -339,7 +339,11 @@ public class PiracyCheckActivity extends Activity
 			if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)
 					== ConnectionResult.SUCCESS) {
 				// The SafetyNet Attestation API is available.
-				SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "AIzaSyA4IDzPfPT2BM-8Z1S_NcdW8u04fjAMG7A")
+				/*************************************************************************************************************
+				 *          !!!!! WARNING: TODO: DO NOT FORGET TO ADD GOOGLE API KEY BEFORE RELEASING THIS APP !!!!!
+				 *                        !!!!! API KEY HAVE BEEN OMITTED TO PREVENT API ABUSING !!!!!
+				 * **********************************************************************************************************/
+				SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "API_KEY")
 						.addOnSuccessListener(this,
 								new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
 									@Override
