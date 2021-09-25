@@ -2,6 +2,7 @@ package com.teslasoft.jarvis.auth;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -30,6 +31,8 @@ public class AuthActivity extends Activity
 	private String appId;
 	public LinearLayout loadingScreen;
 	public LinearLayout loginScreen;
+	public LinearLayout loadbg;
+	public String isDarkMode;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -37,6 +40,15 @@ public class AuthActivity extends Activity
 		super.onCreate(savedInstanceState);
 		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
 		setContentView(R.layout.login_webview);
+
+		try {
+			Intent licenseIntent = new Intent(this, com.teslasoft.jarvis.licence.PiracyCheckActivity.class);
+			startActivityForResult(licenseIntent, 1);
+		} catch (Exception e) {
+			// User tried to disable or bypass license checking service, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
 		
 		try {
 			Intent intent = getIntent();
@@ -65,6 +77,21 @@ public class AuthActivity extends Activity
 		content = (WebView) findViewById(R.id.auth_web);
 		loadingScreen = (LinearLayout) findViewById(R.id.loading_page);
 		loginScreen = (LinearLayout) findViewById(R.id.login_page);
+		loadbg = (LinearLayout) findViewById(R.id.load_bg);
+
+		SharedPreferences settings = this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+		try {
+			isDarkMode = settings.getString("dark_theme", null);
+			// SmartToast.create(isDarkTheme, this);
+			if (isDarkMode.equals("true")) {
+				loadbg.setBackgroundResource(R.drawable.dialog_rounded_dark_v2);
+			} else {
+				loadbg.setBackgroundResource(R.drawable.dialog_rounded_light);
+			}
+		} catch (Exception e) {
+			isDarkMode = "true";
+			loadbg.setBackgroundResource(R.drawable.dialog_rounded_dark_v2);
+		}
 
 		content.setBackgroundColor(0x00000000);
 		content.setVisibility(View.VISIBLE);
@@ -75,15 +102,19 @@ public class AuthActivity extends Activity
         content.setWebViewClient(new WebViewClient() {
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				if (content.getUrl().equals("https://teslasoft.org/antiflood/validation")) {
+				if (content.getUrl().contains("https://teslasoft.org/antiflood/validation")) {
 					content.setVisibility(View.GONE);
 					loginScreen.setVisibility(View.GONE);
 					loadingScreen.setVisibility(View.VISIBLE);
-				} else if (content.getUrl().equals("https://teslasoft.org/?pli=1")) {
+				} else if (content.getUrl().contains("https://teslasoft.org/?pli=1")) {
 					content.setVisibility(View.GONE);
 					loginScreen.setVisibility(View.GONE);
 					loadingScreen.setVisibility(View.VISIBLE);
-					content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+					if (isDarkMode.equals("true")) {
+						content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId + "&theme=dark");
+					} else {
+						content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId + "&theme=light");
+					}
 				} else if (content.getUrl().contains("https://teslasoft.org/ServiceLoginComplete?")) {
 					loadingScreen.setVisibility(View.VISIBLE);
 					loginScreen.setVisibility(View.GONE);
@@ -110,7 +141,11 @@ public class AuthActivity extends Activity
 			}
 		});
 
-        content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId);
+		if (isDarkMode.equals("true")) {
+			content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId + "&theme=dark");
+		} else {
+			content.loadUrl("https://teslasoft.org/ServiceLogin?did=" + did + "&lang=" + lang + "&c=" + appId + "&theme=light");
+		}
 	}
 	
 	class DownloadAccountInfo extends AsyncTask<String, String, String> {
@@ -191,6 +226,20 @@ public class AuthActivity extends Activity
 			finishAndRemoveTask();
 		}
 	}
+
+	/* Piracy check starts */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			// License check passed
+		} else {
+			// License check failed, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
+	}
+	/* Piracy check ends */
 	
 	public String getProcessName(Context context)
 	{

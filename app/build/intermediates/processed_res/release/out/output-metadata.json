@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "PROCESSED_RES",
+    "kind": "Directory"
+  },
+  "applicationId": "com.teslasoft.libraries.support",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 2276990,
+      "versionName": "1.27.20210831.6.990-stable",
+      "outputFile": "resources-release.ap_"
+    }
+  ],
+  "elementType": "File"
+}

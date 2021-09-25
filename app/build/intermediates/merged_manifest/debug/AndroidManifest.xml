@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.teslasoft.libraries.support"
+    android:versionCode="2276990"
+    android:versionName="1.27.20210831.6.990-stable" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="31" />
+
+    <permission-group
+        android:name="com.teslasoft.permission-group.TESLASOFT_CORE"
+        android:description="@string/permission_access_core_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="access Teslasoft Core"
+        android:priority="900" />
+    <permission-group
+        android:name="com.teslasoft.permission-group.ROOT"
+        android:description="@string/permission_access_root_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="access root on this device"
+        android:priority="900" />
+    <permission-group
+        android:name="com.teslasoft.permission-group.SMARTCARD"
+        android:description="@string/permission_access_smartcard_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="access Teslasoft SmartCard API on this device"
+        android:priority="900" />
+    <permission-group
+        android:name="com.teslasoft.permission-group.USE_BIOMETRICS"
+        android:description="@string/permission_access_bio_desc"
+        android:icon="@drawable/ic_fingerprint"
+        android:label="use biometric authentication on this device"
+        android:priority="900" />
+    <permission-group
+        android:name="com.teslasoft.permission-group.COREX"
+        android:description="@string/permission_access_corex_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="load CoreX library and binaries on this device"
+        android:priority="900" />
+    <permission-group
+        android:name="com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS"
+        android:description="@string/permission_access_auth_desc"
+        android:icon="@drawable/jarvis2"
+        android:label="use Jarvis Account API on this device"
+        android:priority="900" />
+
+    <permission
+        android:name="com.teslasoft.core.permission.ACCESS_CORE"
+        android:description="@string/permission_access_core_desc"
+        android:icon="@drawable/app_icon"
+        android:label="access Teslasoft Core"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.TESLASOFT_CORE"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.teslasoft.core.permission.ACCESS_ROOT"
+        android:description="@string/permission_access_root_desc"
+        android:icon="@drawable/app_icon"
+        android:label="access root on this device"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.ROOT"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK"
+        android:description="@string/permission_access_smartcard_desc"
+        android:icon="@drawable/app_icon"
+        android:label="access Teslasoft SmartCard API on this device"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.SMARTCARD"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.teslasoft.core.permission.USE_BIOMETRICS"
+        android:description="@string/permission_access_bio_desc"
+        android:icon="@drawable/ic_fingerprint"
+        android:label="use biometric authentication on this device"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.USE_BIOMETRICS"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.teslasoft.core.permission.COREX"
+        android:description="@string/permission_access_corex_desc"
+        android:icon="@drawable/app_icon"
+        android:label="load CoreX library and binaries on this device"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.COREX"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS"
+        android:description="@string/permission_access_auth_desc"
+        android:icon="@drawable/app_icon"
+        android:label="use Jarvis Account API on this device"
+        android:permissionFlags="hardRestricted"
+        android:permissionGroup="com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="com.teslasoft.core.permission.ACCESS_CORE" />
+    <uses-permission android:name="com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK" />
+    <uses-permission android:name="com.teslasoft.core.permission.USE_BIOMETRICS" />
+    <uses-permission android:name="com.teslasoft.core.permission.COREX" />
+    <uses-permission android:name="com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.teslasoft.jarvis.SYSTEM" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRICS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_OEM_UNLOCK_STATE" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:name="com.teslasoft.libraries.support.CrashHandler"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:persistent="false"
+        android:requestLegacyExternalStorage="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.teslasoft.libraries.support.InitActivity"
+            android:exported="true"
+            android:label="@string/activity_init_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.WarningActivity"
+			android:label="@string/app_name"
+			android:process=":system"
+			android:theme="@style/Theme.Transparent.NoAnim"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <activity
+            android:name="android.security.BiometricAuthenticator"
+            android:exported="false"
+            android:icon="@drawable/ic_fingerprint"
+            android:label="@string/security_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+        </activity>
+        <activity
+            android:name="android.security.BiometricAuthenticatorCallback"
+            android:exported="true"
+            android:icon="@drawable/ic_fingerprint"
+            android:label="@string/security_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
+            android:exported="true"
+            android:label="@string/licence_manager_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.security.ProtectActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_fingerprint"
+            android:label="@string/security_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.licence.ApplicationHealthActivity"
+            android:exported="true"
+            android:icon="@drawable/app_icon"
+            android:label="@string/licence_manager_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.AutoRunActivity"
+            android:exported="true"
+            android:icon="@drawable/app_jarvis"
+            android:label="Jarvis Core"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.EmulatedBoot"
+            android:exported="true"
+            android:label="Android System"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Boot" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.SmartCardLoader"
+            android:exported="true"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.ServiceSettingActivity"
+            android:exported="true"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
+            android:exported="true"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.core.ServicesActivity"
+            android:exported="true"
+            android:icon="@drawable/app_jarvis"
+            android:label="Teslasoft Core"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.crashreport.Report"
+            android:exported="true"
+            android:label="Jarvis Crash Handler"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.crashreport.BugReport"
+            android:label="Jarvis Crash Handler"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.crashreport.Detail"
+            android:label="Jarvis Crash Handler"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+        </activity>
+        <activity
+            android:name="com.teslasoft.libraries.support.LoadActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/activity_auth_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.auth.AccountSettings"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/account_settings_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Material.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.auth.AccountPickerActivity"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/select_account_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.libraries.support.SettingsActivity"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/settings_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.auth.VerifyAccountActivity"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/verify_account_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.auth.AuthActivity"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/activity_auth_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+        </activity>
+        <activity
+            android:name="com.teslasoft.libraries.support.WebActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.CoreActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.NoAnim" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.AppsList"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:label="@string/app_name"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.Jarvis"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:icon="@drawable/app_jarvis"
+			android:label="Jarvis"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <activity
+            android:name="com.teslasoft.jarvis.easter.JarvisPlatLogo"
+            android:exported="true"
+            android:icon="@drawable/ic_egg"
+            android:label="Jarvis Easter Egg"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Logo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.easter.EasterEgg"
+            android:icon="@drawable/ic_egg"
+            android:label="Jarvis Easter Egg"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Egg" >
+        </activity>
+        <activity
+            android:name="net.jarvis.engine.TaskCdhActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Float" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.teslasoft.jarvis.core.AutoRunService"
+            android:enabled="false"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.AutoRunForegroundService"
+            android:enabled="false"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.InitService"
+            android:enabled="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.DataProtectorService"
+            android:enabled="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.LicenceCheckService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.NotificationStatService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.core.SmartCardService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" />
+        <service
+            android:name="com.teslasoft.jarvis.auth.SyncService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service
+            android:name="com.teslasoft.jarvis.auth.AccountService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <receiver
+            android:name="com.teslasoft.libraries.support.AdminReceiver"
+            android:description="@string/device_admin_desc"
+            android:exported="false"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.teslasoft.libraries.support.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="BootCompletedReceiver"
+            android:priority="2147483647" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.teslasoft.jarvis.core.RestartServiceReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceReceiver" >
+            <intent-filter>
+                <action android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.teslasoft.libraries.support.SecretSettings"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+
+                <data
+                    android:host="348216"
+                    android:scheme="android_secret_code" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.teslasoft.libraries.support.EmulatedBootReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+
+                <data
+                    android:host="3378"
+                    android:scheme="android_secret_code" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.teslasoft.jarvis.auth.SyncProvider"
+            android:authorities="org.teslasoft.id.account_sync"
+            android:exported="true"
+            android:syncable="true" />
+
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="4.0.0" />
+
+        <activity
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

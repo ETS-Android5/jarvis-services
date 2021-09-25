@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="select_account_title">Select an account</string>
+    <string name="select_account_title">Select an account to continue</string>
     <string name="verify_account_title">Verify account</string>
     <string name="account_settings_title">Account Settings</string>
     <string name="notification_note">If you don\'t want to see notification, you can disable it in android settings. The notification helps to keep app in background.</string>
@@ -30,4 +30,5 @@
     <string name="error_close">Close</string>
     <string name="stacktrace_copied">Error message copied to clipboard</string>
     <string name="collect_crash_info">Collecting crash info ...</string>
+    <string name="settings_title">Settings</string>
 </resources>

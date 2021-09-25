@@ -19,6 +19,15 @@ public class WebActivity extends Activity
     {
         super.onCreate(savedInstanceState);
 		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+
+		try {
+			Intent licenseIntent = new Intent(this, com.teslasoft.jarvis.licence.PiracyCheckActivity.class);
+			startActivityForResult(licenseIntent, 1);
+		} catch (Exception e) {
+			// User tried to disable or bypass license checking service, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
 		
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
 		{
@@ -83,6 +92,20 @@ public class WebActivity extends Activity
         content.loadUrl("https://id.teslasoft.org/smartcard/open");
 		
     }
+
+	/* Piracy check starts */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			// License check passed
+		} else {
+			// License check failed, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
+	}
+	/* Piracy check ends */
 
 	/*@Override
 	public void onBackPressed()

@@ -1,9 +1,13 @@
 package com.teslasoft.jarvis.auth;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
+import android.widget.LinearLayout;
+
 import com.teslasoft.libraries.support.R;
 
 public class AuthEntryActivity extends Activity
@@ -21,8 +25,7 @@ public class AuthEntryActivity extends Activity
 			Bundle extras = intent.getExtras();
 			appId = extras.getString("appId");
 		} catch (Exception e) {
-			AuthEntryActivity.this.setResult(5);
-			finishAndRemoveTask();
+			appId = "com.teslasoft.libraries.support";
 		}
 		
 		try {

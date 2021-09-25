@@ -29,9 +29,9 @@
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="Application not licenced"
-					android:textAppearance="?android:attr/textAppearanceLarge"
-					android:layout_margin="16dp"/>
+					android:layout_margin="16dp"
+					android:text="License status"
+					android:textAppearance="?android:attr/textAppearanceLarge" />
 
 			</LinearLayout>
 
@@ -51,16 +51,16 @@
 						android:layout_height="match_parent">
 
 						<LinearLayout
-							android:orientation="vertical"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
+							android:orientation="vertical"
 							android:padding="16dp">
 
 							<TextView
+								android:id="@+id/message"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:textAppearance="?android:attr/textAppearanceMedium"
-								android:id="@+id/message"/>
+								android:textAppearance="?android:attr/textAppearanceMedium" />
 
 						</LinearLayout>
 
@@ -75,19 +75,19 @@
 					android:gravity="right|center_vertical">
 
 					<LinearLayout
-						android:orientation="horizontal"
 						android:layout_width="100dp"
 						android:layout_height="36dp"
 						android:layout_margin="8dp"
 						android:background="@drawable/rippple"
 						android:gravity="center"
-						android:onClick="return_response">
+						android:onClick="failLicense"
+						android:orientation="horizontal">
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="Close"
-							android:textAppearance="?android:attr/textAppearanceMedium"/>
+							android:textAppearance="?android:attr/textAppearanceMedium" />
 
 					</LinearLayout>
 

@@ -13,13 +13,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import com.teslasoft.libraries.support.R;
 
-public class ServiceSettingActivity extends Activity
-{
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
-	
+public class ServiceSettingActivity extends Activity {
 	TextView state;
 	TextView desc;
 	Button cstate;
@@ -44,6 +38,15 @@ public class ServiceSettingActivity extends Activity
 		cstate = (Button) findViewById(R.id.cstate);
 		estate = (Button) findViewById(R.id.estate);
 		desc = (TextView) findViewById(R.id.desc);
+
+		try {
+			Intent licenseIntent = new Intent(this, com.teslasoft.jarvis.licence.PiracyCheckActivity.class);
+			startActivityForResult(licenseIntent, 1);
+		} catch (Exception e) {
+			// User tried to disable or bypass license checking service, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
 
 		try {
 			Intent intent = getIntent();
@@ -122,6 +125,20 @@ public class ServiceSettingActivity extends Activity
 	{
 		finishAndRemoveTask();
 	}
+
+	/* Piracy check starts */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			// License check passed
+		} else {
+			// License check failed, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
+	}
+	/* Piracy check ends */
 	
 	public void AllServices(View v)
 	{
@@ -237,6 +254,5 @@ public class ServiceSettingActivity extends Activity
 	{
 		// TODO: Implement this method
 		super.onPause();
-		finishAndRemoveTask();
 	}
 }

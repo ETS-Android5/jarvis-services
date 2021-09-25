@@ -57,7 +57,7 @@ public class AutoRunActivity extends Activity
 				// toast("Служба Jarvis Core Init не была запущена: Сначала включите ее в настройках");
 				
 				alertDialog = new AlertDialog.Builder(com.teslasoft.jarvis.core.AutoRunActivity.this)
-				.setMessage("Jarvis Core Init doesn't started: Please enable it first")
+				.setMessage("Failed to start InitService. Please enable it in the settings.")
 				.setIcon(R.drawable.jarvis2)
 				.setCancelable(false)
 				.setNegativeButton("Cancel", new DialogInterface.OnClickListener()
@@ -68,14 +68,12 @@ public class AutoRunActivity extends Activity
 					}
 				})
 				
-				.setPositiveButton("Settings", new DialogInterface.OnClickListener()
+				.setPositiveButton("Open settings", new DialogInterface.OnClickListener()
 				{
 					public void onClick(DialogInterface dialog, int which)
 					{
-						Intent intent = new Intent(Intent.ACTION_MAIN);
-						intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-						intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.CoreServiceSettingsActivity"));
-						intent.addCategory(Intent.CATEGORY_LAUNCHER);
+						Intent intent = new Intent(com.teslasoft.jarvis.core.AutoRunActivity.this, com.teslasoft.jarvis.core.ServiceSettingActivity.class);
+						intent.putExtra("serviceId", 0);
 						startActivity(intent);
 						finish();
 					}

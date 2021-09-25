@@ -91,11 +91,11 @@ public class VerifyAccountActivity extends Activity {
                 // SmartToast.create(data, VerifyAccountActivity.this);
                 if (data.equals("true")) {
                     VerifyAccountActivity.this.setResult(Activity.RESULT_OK);
-                    SmartToast.create("Account has been verified successfully", VerifyAccountActivity.this);
+                    // SmartToast.create("Account has been verified successfully", VerifyAccountActivity.this);
                     finish();
                 } else {
                     VerifyAccountActivity.this.setResult(3);
-                    SmartToast.create("Error: this account has no auth token", VerifyAccountActivity.this);
+                    // SmartToast.create("Error: this account has no auth token", VerifyAccountActivity.this);
                     finish();
                 }
             } catch (Exception e) {

@@ -21,7 +21,7 @@
 	<string name="hold_smartcard">Для продолжения приложите смарт-карту к задней части вашего телефона.</string>
 	<string name="btn_cancel">Отмена</string>
 	<string name="btn_auth">Войти</string>
-    <string name="select_account_title">Выберите аккаунт</string>
+    <string name="select_account_title">Выберите аккаунт для продолжения</string>
     <string name="verify_account_title">Проверка</string>
     <string name="account_settings_title">Настройки аккаунта</string>
     <string name="notification_note">Если вы не хотите видеть уведомления вы можете выключить их в настройках, однако это может повлиять на работу приложения.</string>
@@ -51,5 +51,6 @@
 	<string name="error_close">Закрыть</string>
 	<string name="stacktrace_copied">Текст скопирован</string>
 	<string name="collect_crash_info">Сбор информации об ошибке ...</string>
+	<string name="settings_title">Settings</string>
 
 </resources>

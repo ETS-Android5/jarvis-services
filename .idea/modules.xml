@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jarvis-services.iml" filepath="$PROJECT_DIR$/.idea/modules/jarvis-services.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/jarvis-services.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/jarvis-services.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lvl-module/jarvis-services.lvl-module.iml" filepath="$PROJECT_DIR$/.idea/modules/lvl-module/jarvis-services.lvl-module.iml" />
     </modules>
   </component>
 </project>

@@ -145,6 +145,8 @@
 		android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission
 		android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<permission
+		android:name="android.permission.QUERY_ALL_PACKAGES" />
 
 	<application
 		android:label="@string/app_name"
@@ -161,7 +163,6 @@
 			android:name=".InitActivity"
 			android:exported="true"
 			android:label="@string/activity_init_name"
-			android:process=":ui"
 			android:theme="@style/Theme.Transparent"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
@@ -177,7 +178,6 @@
 		<activity
 			android:name="android.security.BiometricAuthenticator"
 			android:label="@string/security_title"
-			android:process=":security"
 			android:icon="@drawable/ic_fingerprint"
 			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
 			android:launchMode="singleTask"
@@ -187,7 +187,6 @@
 		<activity
 			android:name="android.security.BiometricAuthenticatorCallback"
 			android:label="@string/security_title"
-			android:process=":security"
 			android:icon="@drawable/ic_fingerprint"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
@@ -201,7 +200,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
 			android:label="@string/licence_manager_title"
-			android:process=":antipiracy"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -214,7 +212,6 @@
 		<activity
 			android:name="android.security.ProtectActivity"
 			android:label="@string/security_title"
-			android:process=":security"
 			android:icon="@drawable/ic_fingerprint"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
@@ -228,7 +225,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.licence.ApplicationHealthActivity"
 			android:label="@string/licence_manager_title"
-			android:process=":antipiracy"
 			android:icon="@drawable/app_icon"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
@@ -243,8 +239,19 @@
 			android:name="com.teslasoft.jarvis.core.AutoRunActivity"
 			android:label="Jarvis Core"
 			android:icon="@drawable/app_jarvis"
-			android:process=":core"
 			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.teslasoft.jarvis.EmulatedBoot"
+			android:label="Android System"
+			android:theme="@style/Theme.Boot"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
 			android:exported="true">
@@ -257,7 +264,6 @@
 			android:name="com.teslasoft.jarvis.core.SmartCardLoader"
 			android:label="Teslasoft Core"
 			android:icon="@drawable/app_jarvis"
-			android:process=":smcserver"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -271,7 +277,6 @@
 			android:name="com.teslasoft.jarvis.core.ServiceSettingActivity"
 			android:label="Teslasoft Core"
 			android:icon="@drawable/app_jarvis"
-			android:process=":core"
 			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -285,7 +290,6 @@
 			android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
 			android:label="Teslasoft Core"
 			android:icon="@drawable/app_jarvis"
-			android:process=":core"
 			android:theme="@style/Theme.Transparent.Slide.TransparentAB"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -299,7 +303,6 @@
 			android:name="com.teslasoft.jarvis.core.ServicesActivity"
 			android:label="Teslasoft Core"
 			android:icon="@drawable/app_jarvis"
-			android:process=":core"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -312,7 +315,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.crashreport.Report"
 			android:label="Jarvis Crash Handler"
-			android:process=":report"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -325,7 +327,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.crashreport.BugReport"
 			android:label="Jarvis Crash Handler"
-			android:process=":report"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
@@ -333,7 +334,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.crashreport.Detail"
 			android:label="Jarvis Crash Handler"
-			android:process=":report"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
@@ -354,7 +354,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
 			android:label="@string/activity_auth_name"
-			android:process=":auth"
 			android:theme="@style/Theme.Transparent.S"
 			android:icon="@drawable/jarvis2"
 			android:launchMode="singleTask"
@@ -368,7 +367,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.auth.AccountSettings"
 			android:label="@string/account_settings_title"
-			android:process=":auth"
 			android:icon="@drawable/jarvis2"
 			android:theme="@android:style/Theme.Material.NoActionBar"
 			android:launchMode="singleTask"
@@ -382,7 +380,19 @@
 		<activity
 			android:name="com.teslasoft.jarvis.auth.AccountPickerActivity"
 			android:label="@string/select_account_title"
-			android:process=":auth"
+			android:icon="@drawable/jarvis2"
+			android:theme="@style/Theme.Transparent.S"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true"
+			android:exported="true">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".SettingsActivity"
+			android:label="@string/settings_title"
 			android:icon="@drawable/jarvis2"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
@@ -396,7 +406,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.auth.VerifyAccountActivity"
 			android:label="@string/verify_account_title"
-			android:process=":auth"
 			android:icon="@drawable/jarvis2"
 			android:theme="@style/Theme.Transparent.S"
 			android:launchMode="singleTask"
@@ -410,7 +419,6 @@
 		<activity
 			android:name="com.teslasoft.jarvis.auth.AuthActivity"
 			android:label="@string/activity_auth_name"
-			android:process=":auth"
 			android:theme="@style/Theme.Transparent.S"
 			android:icon="@drawable/jarvis2"
 			android:launchMode="singleTask"
@@ -419,7 +427,6 @@
 		<activity
 			android:name=".WebActivity"
 			android:label="@string/app_name"
-			android:process=":web"
 			android:theme="@style/Theme.Transparent.Slide"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -431,7 +438,6 @@
 		</activity>
 		<activity android:name="com.teslasoft.jarvis.CoreActivity"
 			android:label="@string/app_name"
-			android:process=":exec"
 			android:theme="@style/Theme.Transparent.NoAnim"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true"
@@ -460,7 +466,6 @@
 		</activity>-->
 		<activity
 			android:name="com.teslasoft.jarvis.easter.JarvisPlatLogo"
-			android:process=":egg"
 			android:label="Jarvis Easter Egg"
 			android:theme="@style/Theme.Transparent.Logo"
 			android:launchMode="singleTask"
@@ -474,7 +479,6 @@
 		</activity>
 		<activity
 			android:name="com.teslasoft.jarvis.easter.EasterEgg"
-			android:process=":egg"
 			android:label="Jarvis Easter Egg"
 			android:theme="@style/Theme.Transparent.Egg"
 			android:launchMode="singleTask"
@@ -483,7 +487,6 @@
 		</activity>
 		<activity
 			android:name="net.jarvis.engine.TaskCdhActivity"
-			android:process=":exec"
 			android:label="@string/app_name"
 			android:theme="@style/Theme.Transparent.Float"
 			android:launchMode="singleTask"
@@ -562,6 +565,18 @@
 			<intent-filter>
 				<action android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE" />
 				<data android:scheme="package"/>
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".SecretSettings" android:exported="true">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE"/>
+				<data android:scheme="android_secret_code" android:host="348216"/>
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".EmulatedBootReceiver" android:exported="true">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE"/>
+				<data android:scheme="android_secret_code" android:host="3378"/>
 			</intent-filter>
 		</receiver>
 		<provider

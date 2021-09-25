@@ -1,5 +1,6 @@
 package android.security;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import com.teslasoft.libraries.support.R;
@@ -59,15 +60,16 @@ public class BiometricAuthenticator extends Activity
 		
 		KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
 		FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
-		
-		String android_id = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-		
-		// SmartToast.create(android_id, this);
-		
-		if (verifyInstallerId(this) || android_id.equals("d15c94372be47f06")) {
-			if (android_id.equals("d15c94372be47f06")) {
-				// SmartToast.create("WARNING! A test device detected. Licence check skipped.", this);
-			}
+
+		try {
+			Intent licenseIntent = new Intent(this, com.teslasoft.jarvis.licence.PiracyCheckActivity.class);
+			startActivityForResult(licenseIntent, 1);
+		} catch (Exception e) {
+			// User tried to disable or bypass license checking service, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
+
 		try {
 			boolean isSupported = fingerprintManager.isHardwareDetected();
 			
@@ -102,7 +104,7 @@ public class BiometricAuthenticator extends Activity
 				} else {
 					try {
 						generateKey();
-					
+
 						if (cipherInit()) {
 							FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 							FingerprintHandler helper = new FingerprintHandler(this);
@@ -116,36 +118,19 @@ public class BiometricAuthenticator extends Activity
 				}
 			}
 		}
-		
-	} else {
-		//toast("Verification failed");
-		new AlertDialog.Builder(this)
-			.setTitle("Verification failed")
-			.setMessage("We can not check licence because this app installed from third-party source. Try to install it from Google Play. We perform this check to prevent tampering with API and security attacks. [ERR_PREFERAL_INSTALLED_BY_PACKAGE_INSTALLER]: -1")
-			.setCancelable(false)
-			// Specifying a listener allows you to take an action before dismissing the dialog.
-			// The dialog is automatically dismissed when a dialog button is clicked.
-			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					close();
-				}
-			})
-
-			// A null listener allows the button to dismiss the dialog and take no further action.
-			.show();
-	}
 	}
 	
 	/* Piracy check starts */
-	boolean verifyInstallerId(Context context) {
-		// A list with valid installers package name
-		List<String> validInstallers = new ArrayList<>(Arrays.asList("com.android.vending", "com.google.android.feedback"));
-
-		// The package name of the app that has installed your app
-		final String installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
-
-		// true if your app has been downloaded from Play Store 
-		return installer != null && validInstallers.contains(installer);
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			// License check passed
+		} else {
+			// License check failed, exit
+			this.setResult(Activity.RESULT_CANCELED);
+			finishAndRemoveTask();
+		}
 	}
 	/* Piracy check ends */
 	
@@ -204,7 +189,6 @@ public class BiometricAuthenticator extends Activity
 	{
 		// TODO: Implement this method
 		super.onPause();
-		close();
 	}
 
 	@Override

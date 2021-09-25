@@ -5,6 +5,7 @@ import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,7 +31,20 @@ public class AccountPickerActivity<Accounts> extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.account_picker);
+        SharedPreferences settings = this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+        try {
+            String isDarkTheme = settings.getString("dark_theme", null);
+            // SmartToast.create(isDarkTheme, this);
+            if (isDarkTheme.equals("true")) {
+                setContentView(R.layout.account_picker);
+            } else {
+                setContentView(R.layout.account_picker_light);
+            }
+        } catch (Exception e) {
+            setContentView(R.layout.account_picker);
+        }
+
+        // setContentView(R.layout.account_picker);
         account_list = (RecyclerView) findViewById(R.id.account_list);
         loadAccounts();;
     }
@@ -93,11 +107,29 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
         @Override
         public AccountAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            Context context = parent.getContext();
-            LayoutInflater inflater = LayoutInflater.from(context);
-            View contactView = inflater.inflate(R.layout.account_item, parent, false);
-            ViewHolder viewHolder = new ViewHolder(contactView);
-            return viewHolder;
+            SharedPreferences settings = AccountPickerActivity.this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+            try {
+                String isDarkTheme = settings.getString("dark_theme", null);
+                if (isDarkTheme.equals("true")) {
+                    Context context = parent.getContext();
+                    LayoutInflater inflater = LayoutInflater.from(context);
+                    View contactView = inflater.inflate(R.layout.account_item, parent, false);
+                    ViewHolder viewHolder = new ViewHolder(contactView);
+                    return viewHolder;
+                } else {
+                    Context context = parent.getContext();
+                    LayoutInflater inflater = LayoutInflater.from(context);
+                    View contactView = inflater.inflate(R.layout.account_item_light, parent, false);
+                    ViewHolder viewHolder = new ViewHolder(contactView);
+                    return viewHolder;
+                }
+            } catch (Exception e) {
+                Context context = parent.getContext();
+                LayoutInflater inflater = LayoutInflater.from(context);
+                View contactView = inflater.inflate(R.layout.account_item, parent, false);
+                ViewHolder viewHolder = new ViewHolder(contactView);
+                return viewHolder;
+            }
         }
 
         @Override

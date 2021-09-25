@@ -7,6 +7,7 @@
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/button_ab_bg.xml" value="0.22135416666666666" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/chat_bubble_out.xml" value="0.25052083333333336" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/dialog_report.xml" value="0.25052083333333336" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/ic_adopt.xml" value="0.11458333333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/ic_close_r.xml" value="0.25052083333333336" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/neko.xml" value="0.14635416666666667" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/rippple2.xml" value="0.25052083333333336" />
@@ -14,19 +15,22 @@
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/rippplee.xml" value="0.25052083333333336" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/drawable-xxhdpi/rpb.xml" value="0.25052083333333336" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/account_item.xml" value="0.536" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/account_item_light.xml" value="0.6" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/account_picker.xml" value="0.536" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/account_picker_light.xml" value="0.6" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_apps_list.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_home.xml" value="0.136" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_jarvis.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_login.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_promote.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/activity_settings.xml" value="0.234375" />
-        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/add_accound_complete.xml" value="0.15208333333333332" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/add_accound_complete.xml" value="0.2" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/add_gsx.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/add_gsxi.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/admin.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/auth.xml" value="0.264" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/auth_webview.xml" value="0.234375" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/bootanimation.xml" value="0.51183970856102" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/chat_list.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/core_settings.xml" value="0.20989583333333334" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/dialog_loading.xml" value="0.234375" />
@@ -57,7 +61,7 @@
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/report_info.xml" value="0.4" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/sandbox.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/services_list.xml" value="0.20520833333333333" />
-        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/settings.xml" value="0.20520833333333333" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/settings.xml" value="0.536" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/shadow.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/warning.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/warning_fullscreen.xml" value="0.536" />

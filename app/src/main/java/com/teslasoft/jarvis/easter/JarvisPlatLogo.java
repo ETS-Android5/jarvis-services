@@ -17,7 +17,7 @@ import android.view.View.*;
 import android.content.pm.PackageInfo;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.Animation.AnimationListener;
+import android.widget.SmartToast;
 
 public class JarvisPlatLogo extends Activity 
 {
@@ -119,7 +119,8 @@ public class JarvisPlatLogo extends Activity
 		try {
 			PackageInfo pInfo = context.getPackageManager().getPackageInfo(getPackageName(), 0);
 			String vs = pInfo.versionName;
-			showToast(JarvisPlatLogo.this, "💎 Teslasoft Core " + vs + " 💎");
+			SmartToast.create("💎 Teslasoft Core " + vs + " 💎", context);
+			// showToast(JarvisPlatLogo.this, "💎 Teslasoft Core " + vs + " 💎");
 		}
 		catch (Exception e)
 		{

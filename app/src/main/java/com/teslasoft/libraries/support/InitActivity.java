@@ -30,6 +30,7 @@ public class InitActivity extends Activity
 			/* Don not send superuser requests
 			Runtime.getRuntime().exec();
 			*/
+
 			
 			try
 			{

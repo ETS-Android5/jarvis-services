@@ -23,6 +23,7 @@
 			android:translationZ="3dp">
 
 			<LinearLayout
+				android:id="@+id/load_bg"
 				android:layout_width="320dp"
 				android:layout_height="180dp"
 				android:background="@drawable/dialog_rounded_dark_v2"
