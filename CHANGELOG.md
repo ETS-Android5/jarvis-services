@@ -1,3 +1,11 @@
+# Teslasoft Core 1.28.20211029.3.886-stable
+
+* Users must accept Privacy Policy to continue using this app.
+
+# Teslasoft Core 1.27.20210831.6.990-stable
+
+* Strict safety and license check added
+
 # Teslasoft Core 1.25.202108151500.7.921
 
 * Implemented account manager

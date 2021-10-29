@@ -1,9 +1,9 @@
 # Teslasoft Core
 ### Teslasoft Core is an application, that contains most of Teslasoft APIs and libraries.
 
-## Latest update (1.27.20210831.6.990-stable) changelog
+## Latest update (1.28.20211029.3.886-stable) changelog
 
-* Strict safety and license check added
+* Users must accept Privacy Policy to continue using this app.
 
 \>\>\>\>\> [DOWNLOAD HERE](https://play.google.com/store/apps/details?id=com.teslasoft.libraries.support) <<<<<
 
