@@ -27,10 +27,32 @@ public class AccountPickerActivity<Accounts> extends Activity {
     public RecyclerView account_list;
     public List<UserModel> accounts;
 
+    public boolean initialized = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences privacy = this.getSharedPreferences("privacy_accepted", Context.MODE_PRIVATE);
+        try {
+            String privacy_is_accepted = privacy.getString("privacy", null);
+            // SmartToast.create(privacy_is_accepted, this);
+            if (privacy_is_accepted.equals("yes")) {
+                Start();
+            } else {
+                finishAndRemoveTask();
+            }
+        } catch (Exception e) {
+            try {
+                Intent i = new Intent(this, com.teslasoft.jarvis.Privacy.class);
+                startActivityForResult(i, 1);
+            } catch (Exception _e) {
+                finishAndRemoveTask();
+            }
+        }
+    }
 
+    public void Start() {
+        initialized = true;
         SharedPreferences settings = this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
         try {
             String isDarkTheme = settings.getString("dark_theme", null);
@@ -89,10 +111,14 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if (resultCode == RESULT_OK) {
+        if (resultCode == RESULT_OK && initialized == true) {
             loadAccounts();
+        } else if (resultCode == RESULT_OK && initialized == false) {
+            Start();
         } else {
-
+            if (initialized == false) {
+                finishAndRemoveTask();
+            }
         }
     }
 

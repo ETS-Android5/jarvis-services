@@ -8,6 +8,10 @@
         "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_rounded_dark_v2.xml"
     },
     {
+        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_consent.xml.flat",
+        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\consent.xml"
+    },
+    {
         "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_app_icon.png.flat",
         "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\app_icon.png"
     },

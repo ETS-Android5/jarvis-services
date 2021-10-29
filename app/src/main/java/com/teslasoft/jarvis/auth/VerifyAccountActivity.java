@@ -5,9 +5,12 @@ import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.SmartToast;
+import android.widget.TextView;
+
 import com.teslasoft.libraries.support.R;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -19,7 +22,10 @@ public class VerifyAccountActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_loading);
+        Start();
+    }
 
+    public void Start() {
         try {
             Intent intent = getIntent();
             Bundle extras = intent.getExtras();

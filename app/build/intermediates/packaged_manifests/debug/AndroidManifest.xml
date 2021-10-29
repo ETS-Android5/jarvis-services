@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
     package="com.teslasoft.libraries.support"
-    android:versionCode="2276990"
-    android:versionName="1.27.20210831.6.990-stable" >
+    android:versionCode="2283886"
+    android:versionName="1.28.20211029.3.886-stable" >
 
     <uses-sdk
         android:minSdkVersion="26"
@@ -321,6 +321,18 @@
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.Privacy"
+            android:exported="true"
+            android:icon="@drawable/jarvis2"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Material.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

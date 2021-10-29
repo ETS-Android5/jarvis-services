@@ -32,12 +32,12 @@
         "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\arrow_left.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_home.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\button_home.png"
-    },
-    {
         "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\drawable_title_bar_black_blue.png.flat",
         "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_black_blue.png"
+    },
+    {
+        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_home.png.flat",
+        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\button_home.png"
     },
     {
         "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\layout_login_webview.xml.flat",
@@ -286,6 +286,10 @@
     {
         "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\layout_add_gsx.xml.flat",
         "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\add_gsx.xml"
+    },
+    {
+        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\layout_consent.xml.flat",
+        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\consent.xml"
     },
     {
         "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\debug\\layout_ui_dialog_confirm.xml.flat",

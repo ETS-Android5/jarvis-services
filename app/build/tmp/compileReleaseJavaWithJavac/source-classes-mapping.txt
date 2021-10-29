@@ -1,16 +1,14 @@
+com/teslasoft/jarvis/Privacy.java
+ com.teslasoft.jarvis.Privacy
 com/teslasoft/jarvis/vip/VipPurchaseActivity.java
  com.teslasoft.jarvis.vip.VipPurchaseActivity
 com/teslasoft/jarvis/core/SmartCardService.java
  com.teslasoft.jarvis.core.SmartCardService
  com.teslasoft.jarvis.core.SmartCardService$1
  com.teslasoft.jarvis.core.SmartCardService$1$1
-com/google/android/vending/licensing/util/Base64DecoderException.java
- com.google.android.vending.licensing.util.Base64DecoderException
 android/widget/SmartToast.java
  android.widget.SmartToast
  android.widget.SmartToast$1
-com/google/android/vending/licensing/PreferenceObfuscator.java
- com.google.android.vending.licensing.PreferenceObfuscator
 com/teslasoft/libraries/support/SettingsActivity.java
  com.teslasoft.libraries.support.SettingsActivity
  com.teslasoft.libraries.support.SettingsActivity$1
@@ -52,8 +50,6 @@ net/jarvis/engine/TaskCdhActivity.java
  net.jarvis.engine.TaskCdhActivity
 com/teslasoft/libraries/support/RateActivity.java
  com.teslasoft.libraries.support.RateActivity
-com/google/android/vending/licensing/ResponseData.java
- com.google.android.vending.licensing.ResponseData
 com/teslasoft/jarvis/AppDetail.java
  com.teslasoft.jarvis.AppDetail
 com/teslasoft/jarvis/easter/JarvisPlatLogo.java
@@ -80,11 +76,6 @@ com/teslasoft/jarvis/AppsList.java
 com/teslasoft/libraries/support/CrashHandler.java
  com.teslasoft.libraries.support.CrashHandler
  com.teslasoft.libraries.support.CrashHandler$1
-com/google/android/vending/licensing/LicenseChecker.java
- com.google.android.vending.licensing.LicenseChecker
- com.google.android.vending.licensing.LicenseChecker$ResultListener
- com.google.android.vending.licensing.LicenseChecker$ResultListener$1
- com.google.android.vending.licensing.LicenseChecker$ResultListener$2
 android/security/ProtectActivity.java
  android.security.ProtectActivity
 com/teslasoft/jarvis/easter/EasterEgg.java
@@ -110,12 +101,8 @@ com/teslasoft/jarvis/auth/AccountPickerActivity.java
  com.teslasoft.jarvis.auth.AccountPickerActivity$AccountAdapter$ViewHolder
 com/teslasoft/jarvis/auth/CustomAuthenticator.java
  com.teslasoft.jarvis.auth.CustomAuthenticator
-com/google/android/vending/licensing/util/Base64.java
- com.google.android.vending.licensing.util.Base64
 com/teslasoft/jarvis/auth/UserModel.java
  com.teslasoft.jarvis.auth.UserModel
-com/google/android/vending/licensing/DeviceLimiter.java
- com.google.android.vending.licensing.DeviceLimiter
 com/teslasoft/jarvis/core/LicenceCheckService.java
  com.teslasoft.jarvis.core.LicenceCheckService
 com/teslasoft/jarvis/CoreActivity.java
@@ -131,15 +118,8 @@ com/teslasoft/jarvis/licence/PiracyCheckActivity.java
  com.teslasoft.jarvis.licence.PiracyCheckActivity
  com.teslasoft.jarvis.licence.PiracyCheckActivity$1
  com.teslasoft.jarvis.licence.PiracyCheckActivity$2
- com.teslasoft.jarvis.licence.PiracyCheckActivity$3
- com.teslasoft.jarvis.licence.PiracyCheckActivity$4
- com.teslasoft.jarvis.licence.PiracyCheckActivity$5
- com.teslasoft.jarvis.licence.PiracyCheckActivity$6
- com.teslasoft.jarvis.licence.PiracyCheckActivity$PiracyCheckerCallback
 com/teslasoft/jarvis/auth/AccountSettings.java
  com.teslasoft.jarvis.auth.AccountSettings
-com/google/android/vending/licensing/StrictPolicy.java
- com.google.android.vending.licensing.StrictPolicy
 com/teslasoft/jarvis/core/AutoRunActivity.java
  com.teslasoft.jarvis.core.AutoRunActivity
  com.teslasoft.jarvis.core.AutoRunActivity$1
@@ -152,23 +132,17 @@ android/security/BiometricAuthenticatorCallback.java
 com/teslasoft/jarvis/auth/VerifyAccountActivity.java
  com.teslasoft.jarvis.auth.VerifyAccountActivity
  com.teslasoft.jarvis.auth.VerifyAccountActivity$DownloadAccountInfo
-com/google/android/vending/licensing/Obfuscator.java
- com.google.android.vending.licensing.Obfuscator
 com/teslasoft/jarvis/core/SmartCardLoader.java
  com.teslasoft.jarvis.core.SmartCardLoader
  com.teslasoft.jarvis.core.SmartCardLoader$1
  com.teslasoft.jarvis.core.SmartCardLoader$1$1
  com.teslasoft.jarvis.core.SmartCardLoader$1$2
-com/google/android/vending/licensing/NullDeviceLimiter.java
- com.google.android.vending.licensing.NullDeviceLimiter
 com/teslasoft/jarvis/core/AutoRunForegroundService.java
  com.teslasoft.jarvis.core.AutoRunForegroundService
 android/security/FingerprintHandler.java
  android.security.FingerprintHandler
 com/teslasoft/jarvis/WarningActivity.java
  com.teslasoft.jarvis.WarningActivity
-com/google/android/vending/licensing/util/URIQueryDecoder.java
- com.google.android.vending.licensing.util.URIQueryDecoder
 com/teslasoft/libraries/support/BuildConfig.java
  com.teslasoft.libraries.support.BuildConfig
 com/teslasoft/jarvis/core/NotificationService.java
@@ -181,38 +155,26 @@ com/teslasoft/jarvis/Jarvis.java
  com.teslasoft.jarvis.Jarvis$3
 com/teslasoft/libraries/support/AppsActivity.java
  com.teslasoft.libraries.support.AppsActivity
-com/google/android/vending/licensing/LicenseCheckerCallback.java
- com.google.android.vending.licensing.LicenseCheckerCallback
-com/google/android/vending/licensing/ValidationException.java
- com.google.android.vending.licensing.ValidationException
 com/teslasoft/libraries/support/SecretSettings.java
  com.teslasoft.libraries.support.SecretSettings
-com/google/android/vending/licensing/ServerManagedPolicy.java
- com.google.android.vending.licensing.ServerManagedPolicy
-com/google/android/vending/licensing/Policy.java
- com.google.android.vending.licensing.Policy
 com/teslasoft/jarvis/core/NotificationActivity.java
  com.teslasoft.jarvis.core.NotificationActivity
 com/teslasoft/jarvis/core/ServicesActivity.java
  com.teslasoft.jarvis.core.ServicesActivity
  com.teslasoft.jarvis.core.ServicesActivity$1
  com.teslasoft.jarvis.core.ServicesActivity$2
-com/google/android/vending/licensing/LicenseValidator.java
- com.google.android.vending.licensing.LicenseValidator
 com/teslasoft/jarvis/core/ServiceSettingActivity.java
  com.teslasoft.jarvis.core.ServiceSettingActivity
  com.teslasoft.jarvis.core.ServiceSettingActivity$1
-com/teslasoft/jarvis/crashreport/BugReport.java
- com.teslasoft.jarvis.crashreport.BugReport
 com/android/vending/licensing/ILicensingService.java
  com.android.vending.licensing.ILicensingService
  com.android.vending.licensing.ILicensingService$Default
  com.android.vending.licensing.ILicensingService$Stub
  com.android.vending.licensing.ILicensingService$Stub$Proxy
+com/teslasoft/jarvis/crashreport/BugReport.java
+ com.teslasoft.jarvis.crashreport.BugReport
 com/teslasoft/jarvis/auth/SyncService.java
  com.teslasoft.jarvis.auth.SyncService
-com/google/android/vending/licensing/AESObfuscator.java
- com.google.android.vending.licensing.AESObfuscator
 com/teslasoft/jarvis/vip/VipActivity.java
  com.teslasoft.jarvis.vip.VipActivity
 com/teslasoft/jarvis/core/DialogUIShadowActivity.java
@@ -223,8 +185,6 @@ com/teslasoft/jarvis/core/RestartServiceReceiver.java
  com.teslasoft.jarvis.core.RestartServiceReceiver
 com/teslasoft/jarvis/JarvisMessages.java
  com.teslasoft.jarvis.JarvisMessages
-com/google/android/vending/licensing/APKExpansionPolicy.java
- com.google.android.vending.licensing.APKExpansionPolicy
 com/teslasoft/jarvis/licence/ApplicationHealthActivity.java
  com.teslasoft.jarvis.licence.ApplicationHealthActivity
 com/teslasoft/jarvis/auth/AuthEntryActivity.java

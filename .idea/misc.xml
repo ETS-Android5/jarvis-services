@@ -32,6 +32,7 @@
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/auth_webview.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/bootanimation.xml" value="0.51183970856102" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/chat_list.xml" value="0.234375" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/consent.xml" value="0.33" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/core_settings.xml" value="0.20989583333333334" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/dialog_loading.xml" value="0.234375" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/dialog_loading_transparent.xml" value="0.13020833333333334" />
@@ -43,7 +44,7 @@
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/init.xml" value="0.264" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/item_message_received.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/item_message_sent.xml" value="0.20520833333333333" />
-        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/licence_check.xml" value="0.536" />
+        <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/licence_check.xml" value="0.3780369290573372" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/load.xml" value="0.20520833333333333" />
         <entry key="..\:/Github/jarvis-services/app/src/main/res/layout/load_f.xml" value="0.20520833333333333" />

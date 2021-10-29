@@ -11,9 +11,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.widget.SmartToast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -25,6 +22,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.gson.Gson;
 import com.nimbusds.jose.JWSObject;
 import com.teslasoft.libraries.support.R;
+
+import android.widget.SmartToast;
 import android.widget.TextView;
 import android.view.View;
 import android.content.Context;
@@ -52,8 +51,6 @@ import java.util.Map;
 import java.util.Objects;
 import android.content.SharedPreferences;
 
-import com.google.android.vending.licensing.*;
-import com.android.vending.licensing.*;
 
 import net.minidev.json.JSONObject;
 
@@ -61,6 +58,7 @@ public class PiracyCheckActivity extends Activity
 {
 	private String appId;
 	private TextView message;
+	private TextView lTitle;
 	public int RESPONSE_CODE;
 	private static final int SELF_SIGNATURE = -635477034;
 	private static final int DEFAULT_SIGNATURE = -672009692;
@@ -69,11 +67,11 @@ public class PiracyCheckActivity extends Activity
 	private String appSignature;
 	private String signatureHash;
 	private String isNotification;
-	private static final String BASE64_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxbBPICgYEeAL52zfqzmALqbqA80zImnBaWjhYPwL+ZmlTymSyBQT6Vwp1WuJlVGP5tBm3HR3FZCaf7DmBPH4uYRQsrmj9bLrrQgGbp0OC14BtNHBOsGHzEGM2yJPAbutjE93HB1/anxUi4o1oUyWbf73M5u6cW/ltO88muiu4NPElcywZZdlHR41cpPc8kE6q5P4c0mqfK/Ry8im8GN0hsAF6K582N6BDc3hVKITleX5O/XGBjy5wCUvsPoV4c6n/ZEDCanx1dLuNKbBhkv2ykWeysCafJH95g+Yfef6mKn689LhYjdbmoOyDtQk4xjxyhh9dllROooOdOqOXhxzEwIDAQAB";
-	private static final byte[] SALT = new byte[] {20, 117, -56, 82, 49, -3, 0, 13, 56, 74, -42, 89, -101, 120, 96, 66, 82, -11, 9, 112};
+	private static final String BASE64_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+	private static final byte[] SALT = new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	private Handler mHandler;
-	private LicenseChecker mChecker;
-	private LicenseCheckerCallback mLicenseCheckerCallback;
+	// private LicenseChecker mChecker;
+	// private LicenseCheckerCallback mLicenseCheckerCallback;
 	boolean licensed;
 	boolean checkingLicense;
 	boolean didCheck;
@@ -127,7 +125,49 @@ public class PiracyCheckActivity extends Activity
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dialog_loading);
+		SharedPreferences privacy = this.getSharedPreferences("privacy_accepted", Context.MODE_PRIVATE);
+		try {
+			String privacy_is_accepted = privacy.getString("privacy", null);
+			// SmartToast.create(privacy_is_accepted, this);
+			if (privacy_is_accepted.equals("yes")) {
+				startLic();
+			} else {
+				RESPONSE_CODE = 3;
+				setContentView(R.layout.licence_check);
+				message = (TextView) findViewById(R.id.message);
+				lTitle = (TextView) findViewById(R.id.license_title);
+				lTitle.setText("Error");
+				message.setText("Please accept Privacy policy in order to use this app.");
+			}
+		} catch (Exception e) {
+			try {
+				Intent i = new Intent(this, com.teslasoft.jarvis.Privacy.class);
+				startActivityForResult(i, 1);
+			} catch (Exception _e) {
+				RESPONSE_CODE = 3;
+				setContentView(R.layout.licence_check);
+				message = (TextView) findViewById(R.id.message);
+				message.setText("Something is preventing this app to show Privacy Policy. Try to reinstall app.");
+			}
+		}
+	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			startLic();
+		} else {
+			RESPONSE_CODE = 3;
+			setContentView(R.layout.licence_check);
+			message = (TextView) findViewById(R.id.message);
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Error");
+			message.setText("Please accept Privacy policy in order to use this app.");
+		}
+	}
+
+	public void startLic() {
 		if (isDeviceRooted()) {
 			// Firstly check root to prevent API abuse and repeated requests
 			RESPONSE_CODE = 7;
@@ -343,7 +383,7 @@ public class PiracyCheckActivity extends Activity
 				 *          !!!!! WARNING: TODO: DO NOT FORGET TO ADD GOOGLE API KEY BEFORE RELEASING THIS APP !!!!!
 				 *                        !!!!! API KEY HAVE BEEN OMITTED TO PREVENT API ABUSING !!!!!
 				 * **********************************************************************************************************/
-				SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "API_KEY")
+				SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "YOUR_API_KEY") // !!!!!!!!!!!!!!!!!!!!!! REPLACE !!!!!!!!!!!!!!!!!!!!!!!
 						.addOnSuccessListener(this,
 								new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
 									@Override
@@ -570,16 +610,16 @@ public class PiracyCheckActivity extends Activity
 		}
 	}
 
-	private void doCheck() {
+	/*private void doCheck() {
 
 		didCheck = false;
 		checkingLicense = true;
 		setProgressBarIndeterminateVisibility(true);
 
 		mChecker.checkAccess(mLicenseCheckerCallback);
-	}
+	}*/
 
-	private class PiracyCheckerCallback implements LicenseCheckerCallback {
+	/*private class PiracyCheckerCallback implements LicenseCheckerCallback {
 
 		public Context context;
 		public PackageManager packageManager;
@@ -679,5 +719,5 @@ public class PiracyCheckActivity extends Activity
 				})
 				.create();
 
-	}
+	}*/
 }
