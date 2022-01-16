@@ -42,6 +42,11 @@ public class Privacy extends Activity {
         startActivity(intent);
     }
 
+    public void openGPolicy(View v) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://policies.google.com/privacy"));
+        startActivity(intent);
+    }
+
     public void mailMe(View v) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:contact.teslasoft@gmail.com"));
         startActivity(intent);

@@ -197,6 +197,16 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="16dp"
+                android:text="WARNING: We may share this info with Google to perform Android SafetyNet check to prevent cracking this app."
+                android:textColor="#DB4437"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -415,6 +425,28 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="openSite"
                 android:text="https://teslasoft.org/privacy"
+                android:textColor="#093EFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:text="Please also read Google Privacy Policy (This app uses Google Services to work. Google may collect additional data that is not listed in this consent):"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="openGPolicy"
+                android:text="https://policies.google.com/privacy"
                 android:textColor="#093EFF"
                 android:textSize="16sp" />
 

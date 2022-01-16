@@ -14,38 +14,40 @@
 		android:background="#99000000">
 
 		<LinearLayout
-			android:orientation="vertical"
 			android:layout_width="320dp"
 			android:layout_height="wrap_content"
 			android:layout_margin="24dp"
-			android:background="@drawable/ui_rect_round_dark_grey">
+			android:background="@drawable/dialog_report"
+			android:orientation="vertical">
 
 			<LinearLayout
-				android:orientation="horizontal"
 				android:layout_width="match_parent"
 				android:layout_height="56dp"
-				android:gravity="left|center_vertical">
+				android:gravity="left|center_vertical"
+				android:orientation="horizontal">
 
 				<TextView
 					android:id="@+id/license_title"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_margin="16dp"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
 					android:text="License status"
-					android:textAppearance="?android:attr/textAppearanceLarge" />
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#DB4437" />
 
 			</LinearLayout>
 
 			<LinearLayout
-				android:orientation="vertical"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:gravity="bottom">
+				android:gravity="bottom"
+				android:orientation="vertical">
 
 				<LinearLayout
-					android:orientation="vertical"
 					android:layout_width="match_parent"
-					android:layout_height="match_parent">
+					android:layout_height="match_parent"
+					android:orientation="vertical">
 
 					<ScrollView
 						android:layout_width="match_parent"
@@ -70,10 +72,10 @@
 				</LinearLayout>
 
 				<LinearLayout
-					android:orientation="horizontal"
 					android:layout_width="match_parent"
 					android:layout_height="56dp"
-					android:gravity="right|center_vertical">
+					android:gravity="right|center_vertical"
+					android:orientation="horizontal">
 
 					<LinearLayout
 						android:layout_width="100dp"

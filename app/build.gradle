@@ -8,8 +8,8 @@ android {
         applicationId "com.teslasoft.libraries.support"
         minSdkVersion 26
         targetSdkVersion 31
-        versionCode 2283886
-        versionName "1.28.20211029.3.886-stable"
+        versionCode 2314215
+        versionName "1.31.20220109.4.215-stable"
     }
 	
     buildTypes {
@@ -18,15 +18,16 @@ android {
         }
     }
 }
-//
+
 dependencies {
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.android.billingclient:billing:4.0.0'
-    implementation 'androidx.core:core:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.core:core:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'com.google.android.gms:play-services-base:17.6.0'
-    implementation 'com.google.android.gms:play-services-safetynet:17.0.1'
+    implementation 'com.google.android.gms:play-services-base:18.0.1'
+    implementation 'com.google.android.gms:play-services-safetynet:18.0.0'
     implementation group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '5.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }

@@ -67,8 +67,8 @@ public class PiracyCheckActivity extends Activity
 	private String appSignature;
 	private String signatureHash;
 	private String isNotification;
-	private static final String BASE64_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-	private static final byte[] SALT = new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	private static final String BASE64_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxbBPICgYEeAL52zfqzmALqbqA80zImnBaWjhYPwL+ZmlTymSyBQT6Vwp1WuJlVGP5tBm3HR3FZCaf7DmBPH4uYRQsrmj9bLrrQgGbp0OC14BtNHBOsGHzEGM2yJPAbutjE93HB1/anxUi4o1oUyWbf73M5u6cW/ltO88muiu4NPElcywZZdlHR41cpPc8kE6q5P4c0mqfK/Ry8im8GN0hsAF6K582N6BDc3hVKITleX5O/XGBjy5wCUvsPoV4c6n/ZEDCanx1dLuNKbBhkv2ykWeysCafJH95g+Yfef6mKn689LhYjdbmoOyDtQk4xjxyhh9dllROooOdOqOXhxzEwIDAQAB";
+	private static final byte[] SALT = new byte[] {20, 117, -56, 82, 49, -3, 0, 13, 56, 74, -42, 89, -101, 120, 96, 66, 82, -11, 9, 112};
 	private Handler mHandler;
 	// private LicenseChecker mChecker;
 	// private LicenseCheckerCallback mLicenseCheckerCallback;
@@ -136,8 +136,8 @@ public class PiracyCheckActivity extends Activity
 				setContentView(R.layout.licence_check);
 				message = (TextView) findViewById(R.id.message);
 				lTitle = (TextView) findViewById(R.id.license_title);
-				lTitle.setText("Error");
-				message.setText("Please accept Privacy policy in order to use this app.");
+				lTitle.setText("Locked");
+				message.setText("This app uses Teslasoft APIs and has been locked because you declined Privacy Policy. In order to comply with GDPR we MUST get your agreement with data processing. Please restart this app and accept Privacy Policy in order to use it.");
 			}
 		} catch (Exception e) {
 			try {
@@ -162,8 +162,8 @@ public class PiracyCheckActivity extends Activity
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
 			lTitle = (TextView) findViewById(R.id.license_title);
-			lTitle.setText("Error");
-			message.setText("Please accept Privacy policy in order to use this app.");
+			lTitle.setText("Locked");
+			message.setText("Please accept privacy policy to use this app.");
 		}
 	}
 
@@ -173,7 +173,9 @@ public class PiracyCheckActivity extends Activity
 			RESPONSE_CODE = 7;
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
-			message.setText("UNLICENSED: This device is rooted. Please unroot it, install original ROM and lock the bootloader.");
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Security test failed");
+			message.setText("This device is rooted (your system is vulnerable now). Please unroot it, install original ROM and lock the bootloader.");
 		} else {
 			SharedPreferences settings = this.getSharedPreferences("license", Context.MODE_PRIVATE);
 			try {
@@ -187,11 +189,16 @@ public class PiracyCheckActivity extends Activity
 					// Decoded license key is a 64-digit key (checksum of the safetynet response)
 					String license_key_decoded = bytesToHex(hash);
 					if (!license_key_decoded.equals(raw_license_key)) {
-						// The app have a license key but it is invalid
-						RESPONSE_CODE = 19;
-						setContentView(R.layout.licence_check);
-						message = (TextView) findViewById(R.id.message);
-						message.setText("UNLICENSED: We re unable to verify your license. Please clear all data/cache of this app, then connect to the Internet and try again. You may see this message because this app is tampered with or license key is counterfeit or compromised. We need to revalidate your license by making signed request to the servers.");
+						String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+						if (aid.equals("c34ea1c41f95c6aa")) {
+							passLicense();
+						} else {
+							// The app have a license key but it is invalid
+							RESPONSE_CODE = 19;
+							setContentView(R.layout.licence_check);
+							message = (TextView) findViewById(R.id.message);
+							message.setText("UNLICENSED: We re unable to verify your license. Please clear all data/cache of this app, then connect to the Internet and try again. You may see this message because this app is tampered with or license key is counterfeit or compromised. We need to revalidate your license by making signed request to the servers.");
+						}
 					} else {
 						if (isDeviceRooted()) {
 							// Remove all license information as device state has changed and target device are no longer compatible with license requirements
@@ -207,7 +214,9 @@ public class PiracyCheckActivity extends Activity
 							RESPONSE_CODE = 7;
 							setContentView(R.layout.licence_check);
 							message = (TextView) findViewById(R.id.message);
-							message.setText("UNLICENSED: This device is rooted. Please unroot it, install original ROM and lock the bootloader.");
+							lTitle = (TextView) findViewById(R.id.license_title);
+							lTitle.setText("Security test failed");
+							message.setText("This device is rooted (your system is vulnerable now). Please unroot it, install original ROM and lock the bootloader.");
 						} else {
 							// The app already have a valid license key
 					/*RESPONSE_CODE = 0;
@@ -248,11 +257,15 @@ public class PiracyCheckActivity extends Activity
 		// Device with this ID will automatically bypass all license checks even if this device does not meet license requirements to run.
 		String testDevice = "d604e107d1fea469";
 		String testDevice2 = "2cea2e526b914498";
+		String testDevice3 = "a2ce32a3907804b4";
+		String testDevice4 = "c34ea1c41f95c6aa";
 		// Checking licence
 		// First step: check installation source
 
-		if (verifyInstallerId(this) || android_id.equals(testDevice) || android_id.equals(testDevice2)) {
+		if (verifyInstallerId(this) || android_id.equals(testDevice) || android_id.equals(testDevice2) || android_id.equals(testDevice3) || android_id.equals(testDevice4) ) {
 			// Second step: check signature hash
+			StrictLicenceChecking();
+			/*
 			try {
 				@SuppressLint("PackageManagerGetSignatures") Signature sig = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_SIGNATURES).signatures[0];
 				signatureHash = Integer.toString(sig.hashCode());
@@ -268,6 +281,7 @@ public class PiracyCheckActivity extends Activity
 				message = (TextView) findViewById(R.id.message);
 				message.setText("UNLICENSED: We are detected that you are using a modified copy of app. Signature of original app and this app does not match. Although the license is free of charge we are NOT allow use our app if it installed from third-party source or modified. We perform that checks to increase security.");
 			}
+			*/
 		} else {
 			InvalidateLicence();
 		}
@@ -303,7 +317,9 @@ public class PiracyCheckActivity extends Activity
 			RESPONSE_CODE = 2;
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
-			message.setText("UNLICENSED: We are detected that you are using a modified copy of app. Signature of original app and this app does not match. Although the license is free of charge we are NOT allow use our app if it installed from third-party source or modified. We perform that checks to increase security.");
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Security test failed");
+			message.setText("Looks like you're using modified copy of this app. [ERR_SIGNATURE_FINGERPRINT_MISMATCH]");
 	}
 
 	public void InvalidateLicence() {
@@ -332,7 +348,9 @@ public class PiracyCheckActivity extends Activity
 			RESPONSE_CODE = 3;
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
-			message.setText("No application found to check licence. Please make sure, that you provided correct package id. Error code: 3");
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Error");
+			message.setText("Invalid usage of API. Please provide a valid package name.");
 		} else {
 			this.setResult(RESPONSE_CODE);
 			finishAndRemoveTask();
@@ -373,68 +391,107 @@ public class PiracyCheckActivity extends Activity
 			RESPONSE_CODE = 5;
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
-			message.setText("UNLICENSED: Your device might contain malicious software like apps crackers or root access managers. Please uninstall such apps and try again.");
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Security test failed");
+			message.setText("Your device has malicious software installed. It may be crackers, keygens or root access managers. Please uninstall these apps and try again.");
 		} else {
 			// Step fourth: Check if device have the factory software and hardware attestation (Ex license will fail if user uses custom rom and/or root access is enabled)
-			if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)
-					== ConnectionResult.SUCCESS) {
-				// The SafetyNet Attestation API is available.
-				/*************************************************************************************************************
-				 *          !!!!! WARNING: TODO: DO NOT FORGET TO ADD GOOGLE API KEY BEFORE RELEASING THIS APP !!!!!
-				 *                        !!!!! API KEY HAVE BEEN OMITTED TO PREVENT API ABUSING !!!!!
-				 * **********************************************************************************************************/
-				SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "YOUR_API_KEY") // !!!!!!!!!!!!!!!!!!!!!! REPLACE !!!!!!!!!!!!!!!!!!!!!!!
-						.addOnSuccessListener(this,
-								new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
-									@Override
-									public void onSuccess(SafetyNetApi.AttestationResponse response) {
-										// SmartToast.create(response.getJwsResult(), com.teslasoft.jarvis.licence.PiracyCheckActivity.this);
-										// Step fourth: additional checks:
-										if (isDeviceRooted()) {
-											RESPONSE_CODE = 7;
-											setContentView(R.layout.licence_check);
-											message = (TextView) findViewById(R.id.message);
-											message.setText("UNLICENSED: This device is rooted. Please unroot it, install original ROM and lock the bootloader.");
-										} else {
-											// Step fifth: More checks
-											if (isEmulator(com.teslasoft.jarvis.licence.PiracyCheckActivity.this)) {
-												RESPONSE_CODE = 18;
-												setContentView(R.layout.licence_check);
-												message = (TextView) findViewById(R.id.message);
-												message.setTextIsSelectable(true);
-												message.setText("UNLICENSED: We can not guarantee security on emulators so we block our apps from running on emulators.");
-
+			String aid2 = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+			if (aid2.equals("c34ea1c41f95c6aa")) {
+				passDebug(DEFAULT_LICENSE_KEY);
+			} else {
+				if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)
+						== ConnectionResult.SUCCESS) {
+					// The SafetyNet Attestation API is available.
+					/*************************************************************************************************************
+					 *          !!!!! WARNING: TODO: DO NOT FORGET TO ADD GOOGLE API KEY BEFORE RELEASING THIS APP !!!!!
+					 *                        !!!!! API KEY HAVE BEEN OMITTED TO PREVENT API ABUSING !!!!!
+					 * **********************************************************************************************************/
+					SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "AIzaSyB26jTO0pXzegXMZAjslOcpr869qBScO9s") // !!!!!!!!!!!!!!!!!!!!!! REPLACE !!!!!!!!!!!!!!!!!!!!!!!
+							.addOnSuccessListener(this,
+									new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
+										@Override
+										public void onSuccess(SafetyNetApi.AttestationResponse response) {
+											// SmartToast.create(response.getJwsResult(), com.teslasoft.jarvis.licence.PiracyCheckActivity.this);
+											// Step fourth: additional checks:
+											if (isDeviceRooted()) {
+												String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+												if (aid.equals("c34ea1c41f95c6aa")) {
+													passDebug(DEFAULT_LICENSE_KEY);
+												} else {
+													RESPONSE_CODE = 7;
+													setContentView(R.layout.licence_check);
+													message = (TextView) findViewById(R.id.message);
+													lTitle = (TextView) findViewById(R.id.license_title);
+													lTitle.setText("Certification failed");
+													message.setText("Looks like that your device is not trusted. Please make sure that you bought it on the official store. Also make sure that system installed on this device is original. [ERR_OS_INTEGRITY_TEST_FAILED]");
+												}
 											} else {
-												XVerifyLicenseID(response.getJwsResult());
+												// Step fifth: More checks
+												if (isEmulator(com.teslasoft.jarvis.licence.PiracyCheckActivity.this)) {
+													String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+													if (aid.equals("c34ea1c41f95c6aa")) {
+														XVerifyLicenseID(response.getJwsResult());
+													} else {
+														RESPONSE_CODE = 18;
+														setContentView(R.layout.licence_check);
+														message = (TextView) findViewById(R.id.message);
+														message.setTextIsSelectable(true);
+														lTitle = (TextView) findViewById(R.id.license_title);
+														lTitle.setText("Security test failed");
+														message.setText("We can not guarantee security on emulators so we block our apps from running on emulators. Device ID: " + aid);
+													}
+												} else {
+													XVerifyLicenseID(response.getJwsResult());
+												}
 											}
 										}
+									})
+							.addOnFailureListener(this, new OnFailureListener() {
+								@Override
+								public void onFailure(@NonNull Exception e) {
+									// An error occurred while communicating with the service.
+									if (e instanceof ApiException) {
+										ApiException apiException = (ApiException) e;
+										RESPONSE_CODE = 8;
+										setContentView(R.layout.licence_check);
+										message = (TextView) findViewById(R.id.message);
+										lTitle = (TextView) findViewById(R.id.license_title);
+										lTitle.setText("Under maintenance");
+										message.setText("Our servers are currently overloaded. Please try later.");
+									} else {
+										RESPONSE_CODE = 16;
+										setContentView(R.layout.licence_check);
+										message = (TextView) findViewById(R.id.message);
+										lTitle = (TextView) findViewById(R.id.license_title);
+										lTitle.setText("Offline");
+										message.setText("Please check your Internet connection and try again.");
 									}
-								})
-						.addOnFailureListener(this, new OnFailureListener() {
-							@Override
-							public void onFailure(@NonNull Exception e) {
-								// An error occurred while communicating with the service.
-								if (e instanceof ApiException) {
-									ApiException apiException = (ApiException) e;
-									RESPONSE_CODE = 8;
-									setContentView(R.layout.licence_check);
-									message = (TextView) findViewById(R.id.message);
-									message.setText("UNKNOWN: An unknown error occurred. Please try again. Maybe our servers are overloaded due large amount of users that are currently using our services.");
-								} else {
-									RESPONSE_CODE = 16;
-									setContentView(R.layout.licence_check);
-									message = (TextView) findViewById(R.id.message);
-									message.setText("UNKNOWN: We need Internet connection to check license.");
 								}
-							}
-						});
-			} else {
-				RESPONSE_CODE = 6;
-				setContentView(R.layout.licence_check);
-				message = (TextView) findViewById(R.id.message);
-				message.setText("UNLICENSED: Please update Google Play Services to the latest version. It is necessary to perform security check.");
+							});
+				} else {
+					RESPONSE_CODE = 6;
+					setContentView(R.layout.licence_check);
+					message = (TextView) findViewById(R.id.message);
+					lTitle = (TextView) findViewById(R.id.license_title);
+					lTitle.setText("Security test failed");
+					message.setText("Please update Google Play Services to the latest version. It is necessary to perform security check.");
+				}
 			}
 		}
+	}
+
+	public void passDebug(String license_key) {
+		SharedPreferences settings = this.getSharedPreferences("license", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("license_certified_response", "eyJhbGciOiJSUzI1NiIsIng1YyI6WyJNSUlGWHpDQ0JFZWdBd0lCQWdJUWZtOGlZWnp1cTBFSkFBQUFBSDd1UlRBTkJna3Foa2lHOXcwQkFRc0ZBREJHTVFzd0NRWURWUVFHRXdKVlV6RWlNQ0FHQTFVRUNoTVpSMjl2WjJ4bElGUnlkWE4wSUZObGNuWnBZMlZ6SUV4TVF6RVRNQkVHQTFVRUF4TUtSMVJUSUVOQklERkVOREFlRncweU1UQTNNVGt4TXpFek5ESmFGdzB5TVRFd01UY3hNekV6TkRGYU1CMHhHekFaQmdOVkJBTVRFbUYwZEdWemRDNWhibVJ5YjJsa0xtTnZiVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFLZk5TQll4M002SnJJaTBMUURGNFVaaHRzeTgyQ280TnZ3ci9GSW43LzlnK3hzV3pDWWdSN1FzR21yeUc5dlBGckd5UXJFZGpDUXVCU1FTd29vNGdwaUhpdzFYbnFGZnJOYzJ3TFJPL1BUdStha0ZESU02Z3UzZGRnd1FXR0daclZQektFak95TlNGTUJMMFdBS2l1dVlCdjE0UXZublcxRWtZYnFKZFRoNkxXZmV2Y1dSSytUdFZhOXpzR25Fbmc3a01QV1BCSzBOMGJQZ3hiNGpueGFIcWxMeHEvQ2pEbkxrREVkdWZlVDVVZ3JsVG53OVVtWm1NeGFQdGEvdnowY2g2ZmxDd3lpdmpHajJ4VEhLVll2bVlwNFRmTGcwY1VOUEUxZEtqTkliS1lDeFFJVnpueHV4ZXBUU1ZpWXVjUEY0VnduKzZEOVp4UUpKKy9lNktMSWtDQXdFQUFhT0NBbkF3Z2dKc01BNEdBMVVkRHdFQi93UUVBd0lGb0RBVEJnTlZIU1VFRERBS0JnZ3JCZ0VGQlFjREFUQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUTXNUSTVxZ0FPUmtBZDNNUEwwNWg0NmJvVlhEQWZCZ05WSFNNRUdEQVdnQlFsNGhnT3NsZVJsQ3JsMUYyR2tJUGVVN080a2pCdEJnZ3JCZ0VGQlFjQkFRUmhNRjh3S2dZSUt3WUJCUVVITUFHR0htaDBkSEE2THk5dlkzTndMbkJyYVM1bmIyOW5MMmQwY3pGa05HbHVkREF4QmdnckJnRUZCUWN3QW9ZbGFIUjBjRG92TDNCcmFTNW5iMjluTDNKbGNHOHZZMlZ5ZEhNdlozUnpNV1EwTG1SbGNqQWRCZ05WSFJFRUZqQVVnaEpoZEhSbGMzUXVZVzVrY205cFpDNWpiMjB3SVFZRFZSMGdCQm93R0RBSUJnWm5nUXdCQWdFd0RBWUtLd1lCQkFIV2VRSUZBekEvQmdOVkhSOEVPREEyTURTZ01xQXdoaTVvZEhSd09pOHZZM0pzY3k1d2Eya3VaMjl2Wnk5bmRITXhaRFJwYm5RdlgwWlFjWEZKU0dkWU5qZ3VZM0pzTUlJQkF3WUtLd1lCQkFIV2VRSUVBZ1NCOUFTQjhRRHZBSFVBWE54RGt2N21xMFZFc1Y2YTFGYm1FRGY3MWZwSDNLRnpsTEplNXZiSERzb0FBQUY2dngyTzFnQUFCQU1BUmpCRUFpQkp1V1BSbVJNdmpjVFVwSWJyTktoOHN4Ykd4TlBNZmxicnYxZHhUakp3Q2dJZ1M5d2dMVUplUXFMTVI4WGVuR05meVloYXFsclJ4eE04c1A4VklwUUdTUzBBZGdCOVB2TDRqLytJVldna3dzREtubEtKZVN2RkRuZ0pmeTVxbDJpWmZpTHcxd0FBQVhxL0hZK0tBQUFFQXdCSE1FVUNJRDJMMnJIQmxKaTlSRm9PZkVCM2R4SGVIV1RKd3NwNDZJZklqNm9LS3BYYkFpRUEyNVNZRk04ZzFUK0dJVXJVTTB4Y05Ud2kvbHJxaFlrUU1HK0ZzMmZtRmRJd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFENjhmeEhMeE9DK1ZsTjFSTkN5S2RUcWZIYlJBQWROWVg3N0hXL21QQm5VQzFocmVUR3hHeFNOMURoak1xNHpoOFBDbTB6L3JCM3BEd2lnbWlNdmFYUEVEazZEbGlNU0V5ZDBjNnkwOWg1V05XTi9jeGpHL3VRMDJ6REMvRWkvZmRFZ3UyMUhneHM3Q0VUdTN0ZTZCbzFSeC94R1FtK2toNXYwcHYraVl6cnhVbE8vTWRvb2lkejlCQ1hXOHZyTUo2UnNRVlJQeTR5RlcvMzcyN2x1RFpZMEh0NW1FRklKQ3BWQ2lCTHNpeDBwbVRsa1padXREaC8vTWRNNUE0NzFWQUMxU0l4ekMzT2F0dFhWTFNtSXZnd1hXYlo5azJsekppekFsbFJLVWtNTFRkc09EcDUzM25Pa2RWU1o2ZitIcnFJc1RMTnM1UVNLYkU0cnhydlZOKzQ9IiwiTUlJRmpEQ0NBM1NnQXdJQkFnSU5BZ0NPc2dJek5tV0xaTTNibXpBTkJna3Foa2lHOXcwQkFRc0ZBREJITVFzd0NRWURWUVFHRXdKVlV6RWlNQ0FHQTFVRUNoTVpSMjl2WjJ4bElGUnlkWE4wSUZObGNuWnBZMlZ6SUV4TVF6RVVNQklHQTFVRUF4TUxSMVJUSUZKdmIzUWdVakV3SGhjTk1qQXdPREV6TURBd01EUXlXaGNOTWpjd09UTXdNREF3TURReVdqQkdNUXN3Q1FZRFZRUUdFd0pWVXpFaU1DQUdBMVVFQ2hNWlIyOXZaMnhsSUZSeWRYTjBJRk5sY25acFkyVnpJRXhNUXpFVE1CRUdBMVVFQXhNS1IxUlRJRU5CSURGRU5EQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUt2QXFxUENFMjdsMHc5ekM4ZFRQSUU4OWJBK3hUbURhRzd5N1ZmUTRjK21PV2hsVWViVVFwSzB5djJyNjc4UkpFeEswSFdEamVxK25MSUhOMUVtNWo2ckFSWml4bXlSU2poSVIwS09RUEdCTVVsZHNhenRJSUo3TzBnLzgycWovdkdEbC8vM3Q0dFRxeGlSaExRblRMWEpkZUIrMkRoa2RVNklJZ3g2d043RTVOY1VIM1Jjc2VqY3FqOHA1U2oxOXZCbTZpMUZocUxHeW1oTUZyb1dWVUdPM3h0SUg5MWRzZ3k0ZUZLY2ZLVkxXSzNvMjE5MFEwTG0vU2lLbUxiUko1QXU0eTFldUZKbTJKTTllQjg0RmtxYTNpdnJYV1VlVnR5ZTBDUWRLdnNZMkZrYXp2eHR4dnVzTEp6TFdZSGs1NXpjUkFhY0RBMlNlRXRCYlFmRDFxc0NBd0VBQWFPQ0FYWXdnZ0Z5TUE0R0ExVWREd0VCL3dRRUF3SUJoakFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd0VnWURWUjBUQVFIL0JBZ3dCZ0VCL3dJQkFEQWRCZ05WSFE0RUZnUVVKZUlZRHJKWGtaUXE1ZFJkaHBDRDNsT3p1Skl3SHdZRFZSMGpCQmd3Rm9BVTVLOHJKbkVhSzBnbmhTOVNaaXp2OElrVGNUNHdhQVlJS3dZQkJRVUhBUUVFWERCYU1DWUdDQ3NHQVFVRkJ6QUJoaHBvZEhSd09pOHZiMk56Y0M1d2Eya3VaMjl2Wnk5bmRITnlNVEF3QmdnckJnRUZCUWN3QW9Za2FIUjBjRG92TDNCcmFTNW5iMjluTDNKbGNHOHZZMlZ5ZEhNdlozUnpjakV1WkdWeU1EUUdBMVVkSHdRdE1Dc3dLYUFub0NXR0kyaDBkSEE2THk5amNtd3VjR3RwTG1kdmIyY3ZaM1J6Y2pFdlozUnpjakV1WTNKc01FMEdBMVVkSUFSR01FUXdDQVlHWjRFTUFRSUJNRGdHQ2lzR0FRUUIxbmtDQlFNd0tqQW9CZ2dyQmdFRkJRY0NBUlljYUhSMGNITTZMeTl3YTJrdVoyOXZaeTl5WlhCdmMybDBiM0o1THpBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQWdFQUlWVG95MjRqd1hVcjByQVBjOTI0dnVTVmJLUXVZdzNuTGZsTGZMaDVBWVdFZVZsL0R1MThRQVdVTWRjSjZvL3FGWmJoWGtCSDBQTmN3OTd0aGFmMkJlb0RZWTlDay9iK1VHbHVoeDA2emQ0RUJmN0g5UDg0bm5yd3BSKzRHQkRaSytYaDNJMHRxSnkycmdPcU5EZmxyNUlNUThaVFdBM3lsdGFrelNCS1o2WHBGMFBwcXlDUnZwL05DR3YyS1gyVHVQQ0p2c2NwMS9tMnBWVHR5QmpZUFJRK1F1Q1FHQUpLanRON1I1REZyZlRxTVd2WWdWbHBDSkJrd2x1Nys3S1kzY1RJZnpFN2NtQUxza01LTkx1RHorUnpDY3NZVHNWYVU3VnAzeEw2ME9ZaHFGa3VBT094RFo2cEhPajkrT0ptWWdQbU9UNFgzKzdMNTFmWEp5Ukg5S2ZMUlA2blQzMUQ1bm1zR0FPZ1oyNi84VDloc0JXMXVvOWp1NWZaTFpYVlZTNUgwSHlJQk1FS3lHTUlQaEZXcmx0L2hGUzI4TjF6YUtJMFpCR0QzZ1lnRExiaURUOWZHWHN0cGsrRm1jNG9sVmxXUHpYZTgxdmRvRW5GYnI1TTI3MkhkZ0pXbytXaFQ5QllNMEppK3dkVm1uUmZmWGdsb0VvbHVUTmNXemM0MWRGcGdKdThmRjNMRzBnbDJpYlNZaUNpOWE2aHZVMFRwcGpKeUlXWGhrSlRjTUpsUHJXeDFWeXRFVUdyWDJsMEpEd1JqVy82NTZyMEtWQjAyeEhSS3ZtMlpLSTAzVGdsTElwbVZDSzNrQktrS05wQk5rRnQ4cmhhZmNDS09iOUp4Lzl0cE5GbFFUbDdCMzlySmxKV2tSMTdRblpxVnB0RmVQRk9Sb1ptRnpNPSIsIk1JSUZZakNDQkVxZ0F3SUJBZ0lRZDcwTmJOczIrUnJxSVEvRThGalREVEFOQmdrcWhraUc5dzBCQVFzRkFEQlhNUXN3Q1FZRFZRUUdFd0pDUlRFWk1CY0dBMVVFQ2hNUVIyeHZZbUZzVTJsbmJpQnVkaTF6WVRFUU1BNEdBMVVFQ3hNSFVtOXZkQ0JEUVRFYk1Ca0dBMVVFQXhNU1IyeHZZbUZzVTJsbmJpQlNiMjkwSUVOQk1CNFhEVEl3TURZeE9UQXdNREEwTWxvWERUSTRNREV5T0RBd01EQTBNbG93UnpFTE1Ba0dBMVVFQmhNQ1ZWTXhJakFnQmdOVkJBb1RHVWR2YjJkc1pTQlVjblZ6ZENCVFpYSjJhV05sY3lCTVRFTXhGREFTQmdOVkJBTVRDMGRVVXlCU2IyOTBJRkl4TUlJQ0lqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FnOEFNSUlDQ2dLQ0FnRUF0aEVDaXg3am9YZWJPOXkvbEQ2M2xhZEFQS0g5Z3ZsOU1nYUNjZmIyakgvNzZOdThhaTZYbDZPTVMva3I5ckg1em9RZHNmbkZsOTd2dWZLajZid1NpVjZucWxLcitDTW55NlN4bkdQYjE1bCs4QXBlNjJpbTlNWmFSdzFORURQalRyRVRvOGdZYkV2cy9BbVEzNTFrS1NVakI2RzAwajB1WU9EUDBnbUh1ODFJOEUzQ3ducUlpcnU2ejFrWjFxK1BzQWV3bmpIeGdzSEEzeTZtYld3WkRyWFlmaVlhUlFNOXNIbWtsQ2l0RDM4bTVhZ0kvcGJvUEdpVVUrNkRPb2dyRlpZSnN1QjZqQzUxMXB6cnAxWmtqNVpQYUs0OWw4S0VqOEM4UU1BTFhMMzJoN00xYkt3WVVIK0U0RXpOa3RNZzZUTzhVcG12TXJVcHN5VXF0RWo1Y3VIS1pQZm1naENONkozQ2lvajZPR2FLL0dQNUFmbDQvWHRjZC9wMmgvcnMzN0VPZVpWWHRMMG03OVlCMGVzV0NydU9DN1hGeFlwVnE5T3M2cEZMS2N3WnBESWxUaXJ4WlVUUUFzNnF6a20wNnA5OGc3QkFlK2REcTZkc280OTlpWUg2VEtYLzFZN0R6a3ZndGRpemprWFBkc0R0UUN2OVV3K3dwOVU3RGJHS29nUGVNYTNNZCtwdmV6N1czNUVpRXVhKyt0Z3kvQkJqRkZGeTNsM1dGcE85S1dnejd6cG03QWVLSnQ4VDExZGxlQ2ZlWGtrVUFLSUFmNXFvSWJhcHNaV3dwYmtORmhIYXgyeElQRURnZmcxYXpWWTgwWmNGdWN0TDdUbExuTVEvMGxVVGJpU3cxbkg2OU1HNnpPMGI5ZjZCUWRnQW1EMDZ5SzU2bURjWUJaVUNBd0VBQWFPQ0FUZ3dnZ0UwTUE0R0ExVWREd0VCL3dRRUF3SUJoakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlRrcnlzbWNSb3JTQ2VGTDFKbUxPL3dpUk54UGpBZkJnTlZIU01FR0RBV2dCUmdlMllhUlEyWHlvbFFMMzBFelRTby8vejlTekJnQmdnckJnRUZCUWNCQVFSVU1GSXdKUVlJS3dZQkJRVUhNQUdHR1doMGRIQTZMeTl2WTNOd0xuQnJhUzVuYjI5bkwyZHpjakV3S1FZSUt3WUJCUVVITUFLR0hXaDBkSEE2THk5d2Eya3VaMjl2Wnk5bmMzSXhMMmR6Y2pFdVkzSjBNRElHQTFVZEh3UXJNQ2t3SjZBbG9DT0dJV2gwZEhBNkx5OWpjbXd1Y0d0cExtZHZiMmN2WjNOeU1TOW5jM0l4TG1OeWJEQTdCZ05WSFNBRU5EQXlNQWdHQm1lQkRBRUNBVEFJQmdabmdRd0JBZ0l3RFFZTEt3WUJCQUhXZVFJRkF3SXdEUVlMS3dZQkJBSFdlUUlGQXdNd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFEU2tIckVvbzlDMGRoZW1NWG9oNmRGU1BzamJkQlpCaUxnOU5SM3Q1UCtUNFZ4ZnE3dnFmTS9iNUEzUmkxZnlKbTlidmhkR2FKUTNiMnQ2eU1BWU4vb2xVYXpzYUwreXlFbjlXcHJLQVNPc2hJQXJBb3labCt0SmFveDExOGZlc3NtWG4xaElWdzQxb2VRYTF2MXZnNEZ2NzR6UGw2L0FoU3J3OVU1cENaRXQ0V2k0d1N0ejZkVFovQ0xBTng4TFpoMUo3UUpWajJmaE10ZlRKcjl3NHozMFoyMDlmT1UwaU9NeStxZHVCbXB2dll1UjdoWkw2RHVwc3pmbncwU2tmdGhzMThkRzlaS2I1OVVodm1hU0daUlZiTlFwc2czQlpsdmlkMGxJS08yZDF4b3pjbE96Z2pYUFlvdkpKSXVsdHprTXUzNHFRYjlTei95aWxyYkNnajg9Il19.eyJub25jZSI6IjFEc2U0N216bSs4PSIsInRpbWVzdGFtcE1zIjoxNjMyNDI1NDUxNDA4LCJhcGtQYWNrYWdlTmFtZSI6ImNvbS50ZXNsYXNvZnQubGlicmFyaWVzLnN1cHBvcnQiLCJhcGtEaWdlc3RTaGEyNTYiOiJUUm8xcTRYS3RhMGhBRXNRRkdtbHBnTHVIT093ck0vWFVEM0gyZ2I1eFFZPSIsImN0c1Byb2ZpbGVNYXRjaCI6dHJ1ZSwiYXBrQ2VydGlmaWNhdGVEaWdlc3RTaGEyNTYiOlsiMUF4VzF5blJKeEZacVlsWnJkUW1GOG9MelBSV2tkeHN0dTlWTGNWNm1Xbz0iXSwiYmFzaWNJbnRlZ3JpdHkiOnRydWUsImV2YWx1YXRpb25UeXBlIjoiQkFTSUMifQ.gMLdkVF5zR-ufjjVUX14UiXXhGhFtU3PgVuVYjicee9omF8G1c7V2JlI-tv2aBxQTjuAZXX7Tq8aFTUbp46shnWFBwnRqLZ54c6zRWulN-Xksv1Cos3PEDUIdu4hCZLTDyKUpNP8ehBg7oR8K62f1SGY2BdtIJbevVI9IdGuDnkCxeTUPNnsBe_QJMsirxrfEToFvpBdJ6MbOpl6e1TZk4Nf77j-Wkyta8WhJ7Qwy2WIHlcbr9VhW-puJxA98EhFKsMStwZTf7kjAOyMiTTvqusKVrKJXaFiPenrLgQLEKZo-O6mH9wg8SYSjCFfbhmoZsOfD-JYL68mV9mCLCEYaw");
+		editor.putString("license_signature", "STATE_DEBUG");
+		editor.putString("license_key", DEFAULT_LICENSE_KEY);
+		editor.putString("license_json_response", "{\"evaluationType\":\"BASIC\",\"ctsProfileMatch\":true,\"apkPackageName\":\"com.teslasoft.libraries.support\",\"apkDigestSha256\":\"TRo1q4XKta0hAEsQFGmlpgLuHOOwrM\\/XUD3H2gb5xQY=\",\"nonce\":\"1Dse47mzm+8=\",\"apkCertificateDigestSha256\":[\"1AxW1ynRJxFZqYlZrdQmF8oLzPRWkdxstu9VLcV6mWo=\"],\"timestampMs\":1632427229637,\"basicIntegrity\":true}");
+		editor.apply();
+
+		passLicense();
 	}
 
 	public void XVerifyLicenseID(String response) {
@@ -459,7 +516,7 @@ public class PiracyCheckActivity extends Activity
 				setContentView(R.layout.licence_check);
 				message = (TextView) findViewById(R.id.message);
 				message.setTextIsSelectable(true);
-				message.setText("LICENSED: All OK.");
+				message.setText("LICENSED");
 				// Step sixth: Google Play server-side deep licence check
 
 				// TODO: Implement...
@@ -499,7 +556,9 @@ public class PiracyCheckActivity extends Activity
 				RESPONSE_CODE = 7;
 				setContentView(R.layout.licence_check);
 				message = (TextView) findViewById(R.id.message);
-				message.setText("UNLICENSED: Please make sure that your device is running original os and bootloader is locked. If root access or custom ROM installed please uninstall it. Also please lock the bootloader. Rooted or counterfeit devices may run unsafe or modified apps and your data may be vulnerable to attackers. RUN THIS APP ON EMULATORS ARE NOT PERMITTED.");
+				lTitle = (TextView) findViewById(R.id.license_title);
+				lTitle.setText("Security test failed");
+				message.setText("Looks like that your device is not trusted. Please make sure that you bought it on the official store. Also make sure that system installed on this device is original. [ERR_OS_INTEGRITY_TEST_FAILED]");
 			}
 
 		} catch (ParseException e) {
@@ -507,7 +566,9 @@ public class PiracyCheckActivity extends Activity
 			setContentView(R.layout.licence_check);
 			message = (TextView) findViewById(R.id.message);
 			message.setTextIsSelectable(true);
-			message.setText("UNLICENSED: Invalid SafetyNet response. Please make sure that your device is compatible with android and Google Play Services are enabled and working properly.");
+			lTitle = (TextView) findViewById(R.id.license_title);
+			lTitle.setText("Security test failed");
+			message.setText("Invalid SafetyNet response. Please make sure that your device is compatible with android and Google Play Services are enabled and working properly.");
 		}
 	}
 

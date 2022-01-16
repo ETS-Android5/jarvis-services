@@ -1,0 +1,181 @@
+com/teslasoft/jarvis/Privacy.java
+ com.teslasoft.jarvis.Privacy
+com/teslasoft/jarvis/vip/VipPurchaseActivity.java
+ com.teslasoft.jarvis.vip.VipPurchaseActivity
+com/teslasoft/jarvis/core/SmartCardService.java
+ com.teslasoft.jarvis.core.SmartCardService
+ com.teslasoft.jarvis.core.SmartCardService$1
+ com.teslasoft.jarvis.core.SmartCardService$1$1
+android/widget/SmartToast.java
+ android.widget.SmartToast
+ android.widget.SmartToast$1
+com/teslasoft/libraries/support/SettingsActivity.java
+ com.teslasoft.libraries.support.SettingsActivity
+ com.teslasoft.libraries.support.SettingsActivity$1
+com/teslasoft/jarvis/crashreport/Report.java
+ com.teslasoft.jarvis.crashreport.Report
+ com.teslasoft.jarvis.crashreport.Report$1
+ com.teslasoft.jarvis.crashreport.Report$2
+android/security/BiometricAuthenticator.java
+ android.security.BiometricAuthenticator
+com/teslasoft/jarvis/crashreport/Detail.java
+ com.teslasoft.jarvis.crashreport.Detail
+com/teslasoft/jarvis/auth/SyncProvider.java
+ com.teslasoft.jarvis.auth.SyncProvider
+com/teslasoft/libraries/support/LoadActivity.java
+ com.teslasoft.libraries.support.LoadActivity
+ com.teslasoft.libraries.support.LoadActivity$1
+ com.teslasoft.libraries.support.LoadActivity$1$1
+com/teslasoft/libraries/support/AdminReceiver.java
+ com.teslasoft.libraries.support.AdminReceiver
+com/teslasoft/jarvis/core/DataProtectorService.java
+ com.teslasoft.jarvis.core.DataProtectorService
+ com.teslasoft.jarvis.core.DataProtectorService$1
+ com.teslasoft.jarvis.core.DataProtectorService$2
+com/teslasoft/jarvis/core/InitService.java
+ com.teslasoft.jarvis.core.InitService
+ com.teslasoft.jarvis.core.InitService$1
+ com.teslasoft.jarvis.core.InitService$1$1
+com/teslasoft/jarvis/core/NotificationStatService.java
+ com.teslasoft.jarvis.core.NotificationStatService
+ com.teslasoft.jarvis.core.NotificationStatService$1
+ com.teslasoft.jarvis.core.NotificationStatService$2
+com/teslasoft/jarvis/auth/SyncAdapter.java
+ com.teslasoft.jarvis.auth.SyncAdapter
+com/teslasoft/jarvis/auth/AccountService.java
+ com.teslasoft.jarvis.auth.AccountService
+com/teslasoft/libraries/support/BootCompletedReceiver.java
+ com.teslasoft.libraries.support.BootCompletedReceiver
+net/jarvis/engine/TaskCdhActivity.java
+ net.jarvis.engine.TaskCdhActivity
+com/teslasoft/libraries/support/RateActivity.java
+ com.teslasoft.libraries.support.RateActivity
+com/teslasoft/jarvis/AppDetail.java
+ com.teslasoft.jarvis.AppDetail
+com/teslasoft/jarvis/easter/JarvisPlatLogo.java
+ com.teslasoft.jarvis.easter.JarvisPlatLogo
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$1
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$1$1
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$1$1$1
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$2
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$3
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$4
+ com.teslasoft.jarvis.easter.JarvisPlatLogo$5
+com/teslasoft/jarvis/core/AutoRunService.java
+ com.teslasoft.jarvis.core.AutoRunService
+ com.teslasoft.jarvis.core.AutoRunService$1
+com/teslasoft/jarvis/AppsList.java
+ com.teslasoft.jarvis.AppsList
+ com.teslasoft.jarvis.AppsList$1
+ com.teslasoft.jarvis.AppsList$2
+com/teslasoft/libraries/support/CrashHandler.java
+ com.teslasoft.libraries.support.CrashHandler
+ com.teslasoft.libraries.support.CrashHandler$1
+android/security/ProtectActivity.java
+ android.security.ProtectActivity
+com/teslasoft/jarvis/easter/EasterEgg.java
+ com.teslasoft.jarvis.easter.EasterEgg
+ com.teslasoft.jarvis.easter.EasterEgg$1
+ com.teslasoft.jarvis.easter.EasterEgg$1$1
+ com.teslasoft.jarvis.easter.EasterEgg$2
+ com.teslasoft.jarvis.easter.EasterEgg$3
+ com.teslasoft.jarvis.easter.EasterEgg$4
+com/teslasoft/libraries/support/WebActivity.java
+ com.teslasoft.libraries.support.WebActivity
+ com.teslasoft.libraries.support.WebActivity$1
+com/teslasoft/jarvis/EmulatedBoot.java
+ com.teslasoft.jarvis.EmulatedBoot
+ com.teslasoft.jarvis.EmulatedBoot$1
+ com.teslasoft.jarvis.EmulatedBoot$2
+com/teslasoft/libraries/support/EmulatedBootReceiver.java
+ com.teslasoft.libraries.support.EmulatedBootReceiver
+com/teslasoft/jarvis/auth/AccountPickerActivity.java
+ com.teslasoft.jarvis.auth.AccountPickerActivity
+ com.teslasoft.jarvis.auth.AccountPickerActivity$AccountAdapter
+ com.teslasoft.jarvis.auth.AccountPickerActivity$AccountAdapter$1
+ com.teslasoft.jarvis.auth.AccountPickerActivity$AccountAdapter$ViewHolder
+com/teslasoft/jarvis/auth/CustomAuthenticator.java
+ com.teslasoft.jarvis.auth.CustomAuthenticator
+com/teslasoft/jarvis/auth/UserModel.java
+ com.teslasoft.jarvis.auth.UserModel
+com/teslasoft/jarvis/core/LicenceCheckService.java
+ com.teslasoft.jarvis.core.LicenceCheckService
+com/teslasoft/jarvis/CoreActivity.java
+ com.teslasoft.jarvis.CoreActivity
+ com.teslasoft.jarvis.CoreActivity$1
+com/teslasoft/jarvis/auth/AuthActivity.java
+ com.teslasoft.jarvis.auth.AuthActivity
+ com.teslasoft.jarvis.auth.AuthActivity$1
+ com.teslasoft.jarvis.auth.AuthActivity$DownloadAccountInfo
+com/teslasoft/jarvis/core/ErrorServiceActivity.java
+ com.teslasoft.jarvis.core.ErrorServiceActivity
+com/teslasoft/jarvis/licence/PiracyCheckActivity.java
+ com.teslasoft.jarvis.licence.PiracyCheckActivity
+ com.teslasoft.jarvis.licence.PiracyCheckActivity$1
+ com.teslasoft.jarvis.licence.PiracyCheckActivity$2
+com/teslasoft/jarvis/auth/AccountSettings.java
+ com.teslasoft.jarvis.auth.AccountSettings
+com/teslasoft/jarvis/core/AutoRunActivity.java
+ com.teslasoft.jarvis.core.AutoRunActivity
+ com.teslasoft.jarvis.core.AutoRunActivity$1
+ com.teslasoft.jarvis.core.AutoRunActivity$2
+android/security/BiometricAuthenticatorCallback.java
+ android.security.BiometricAuthenticatorCallback
+ android.security.BiometricAuthenticatorCallback$1
+ android.security.BiometricAuthenticatorCallback$2
+ android.security.BiometricAuthenticatorCallback$3
+com/teslasoft/jarvis/auth/VerifyAccountActivity.java
+ com.teslasoft.jarvis.auth.VerifyAccountActivity
+ com.teslasoft.jarvis.auth.VerifyAccountActivity$DownloadAccountInfo
+com/teslasoft/jarvis/core/SmartCardLoader.java
+ com.teslasoft.jarvis.core.SmartCardLoader
+ com.teslasoft.jarvis.core.SmartCardLoader$1
+ com.teslasoft.jarvis.core.SmartCardLoader$1$1
+ com.teslasoft.jarvis.core.SmartCardLoader$1$2
+com/teslasoft/jarvis/core/AutoRunForegroundService.java
+ com.teslasoft.jarvis.core.AutoRunForegroundService
+android/security/FingerprintHandler.java
+ android.security.FingerprintHandler
+com/teslasoft/jarvis/WarningActivity.java
+ com.teslasoft.jarvis.WarningActivity
+com/teslasoft/libraries/support/BuildConfig.java
+ com.teslasoft.libraries.support.BuildConfig
+com/teslasoft/jarvis/core/NotificationService.java
+ com.teslasoft.jarvis.core.NotificationService
+com/teslasoft/jarvis/Jarvis.java
+ com.teslasoft.jarvis.Jarvis
+ com.teslasoft.jarvis.Jarvis$1
+ com.teslasoft.jarvis.Jarvis$1$1
+ com.teslasoft.jarvis.Jarvis$2
+ com.teslasoft.jarvis.Jarvis$3
+com/teslasoft/libraries/support/AppsActivity.java
+ com.teslasoft.libraries.support.AppsActivity
+com/teslasoft/libraries/support/SecretSettings.java
+ com.teslasoft.libraries.support.SecretSettings
+com/teslasoft/jarvis/core/NotificationActivity.java
+ com.teslasoft.jarvis.core.NotificationActivity
+com/teslasoft/jarvis/core/ServicesActivity.java
+ com.teslasoft.jarvis.core.ServicesActivity
+ com.teslasoft.jarvis.core.ServicesActivity$1
+ com.teslasoft.jarvis.core.ServicesActivity$2
+com/teslasoft/jarvis/core/ServiceSettingActivity.java
+ com.teslasoft.jarvis.core.ServiceSettingActivity
+ com.teslasoft.jarvis.core.ServiceSettingActivity$1
+com/teslasoft/jarvis/crashreport/BugReport.java
+ com.teslasoft.jarvis.crashreport.BugReport
+com/teslasoft/jarvis/auth/SyncService.java
+ com.teslasoft.jarvis.auth.SyncService
+com/teslasoft/jarvis/vip/VipActivity.java
+ com.teslasoft.jarvis.vip.VipActivity
+com/teslasoft/jarvis/core/DialogUIShadowActivity.java
+ com.teslasoft.jarvis.core.DialogUIShadowActivity
+com/teslasoft/libraries/support/InitActivity.java
+ com.teslasoft.libraries.support.InitActivity
+com/teslasoft/jarvis/core/RestartServiceReceiver.java
+ com.teslasoft.jarvis.core.RestartServiceReceiver
+com/teslasoft/jarvis/JarvisMessages.java
+ com.teslasoft.jarvis.JarvisMessages
+com/teslasoft/jarvis/licence/ApplicationHealthActivity.java
+ com.teslasoft.jarvis.licence.ApplicationHealthActivity
+com/teslasoft/jarvis/auth/AuthEntryActivity.java
+ com.teslasoft.jarvis.auth.AuthEntryActivity

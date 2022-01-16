@@ -1,0 +1,1194 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    coreApp="true"
+4    package="com.teslasoft.libraries.support"
+5    android:versionCode="2314215"
+6    android:versionName="1.31.20220109.4.215-stable" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="26"
+9-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="31" />
+10-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
+11
+12    <permission-group
+12-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:7:2-12:62
+13        android:name="com.teslasoft.permission-group.TESLASOFT_CORE"
+13-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:10:3-63
+14        android:description="@string/permission_access_core_desc"
+14-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:12:3-60
+15        android:icon="@drawable/jarvis2"
+15-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:9:3-35
+16        android:label="access Teslasoft Core"
+16-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:8:3-40
+17        android:priority="900" />
+17-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:11:3-25
+18    <permission-group
+18-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:14:2-19:62
+19        android:name="com.teslasoft.permission-group.ROOT"
+19-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:17:3-53
+20        android:description="@string/permission_access_root_desc"
+20-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:19:3-60
+21        android:icon="@drawable/jarvis2"
+21-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:16:3-35
+22        android:label="access root on this device"
+22-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:15:3-45
+23        android:priority="900" />
+23-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:18:3-25
+24    <permission-group
+24-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:21:2-26:67
+25        android:name="com.teslasoft.permission-group.SMARTCARD"
+25-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:24:3-58
+26        android:description="@string/permission_access_smartcard_desc"
+26-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:26:3-65
+27        android:icon="@drawable/jarvis2"
+27-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:23:3-35
+28        android:label="access Teslasoft SmartCard API on this device"
+28-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:22:3-64
+29        android:priority="900" />
+29-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:25:3-25
+30    <permission-group
+30-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:28:2-33:61
+31        android:name="com.teslasoft.permission-group.USE_BIOMETRICS"
+31-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:31:3-63
+32        android:description="@string/permission_access_bio_desc"
+32-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:33:3-59
+33        android:icon="@drawable/ic_fingerprint"
+33-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:30:3-42
+34        android:label="use biometric authentication on this device"
+34-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:29:3-62
+35        android:priority="900" />
+35-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:32:3-25
+36    <permission-group
+36-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:35:2-40:63
+37        android:name="com.teslasoft.permission-group.COREX"
+37-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:38:3-54
+38        android:description="@string/permission_access_corex_desc"
+38-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:40:3-61
+39        android:icon="@drawable/jarvis2"
+39-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:37:3-35
+40        android:label="load CoreX library and binaries on this device"
+40-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:36:3-65
+41        android:priority="900" />
+41-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:39:3-25
+42    <permission-group
+42-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:42:2-47:62
+43        android:name="com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS"
+43-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:45:3-70
+44        android:description="@string/permission_access_auth_desc"
+44-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:47:3-60
+45        android:icon="@drawable/jarvis2"
+45-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:44:3-35
+46        android:label="use Jarvis Account API on this device"
+46-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:43:3-56
+47        android:priority="900" />
+47-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:46:3-25
+48
+49    <permission
+49-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:49:2-56:41
+50        android:name="com.teslasoft.core.permission.ACCESS_CORE"
+50-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:50:3-59
+51        android:description="@string/permission_access_core_desc"
+51-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:53:3-60
+52        android:icon="@drawable/app_icon"
+52-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:52:3-36
+53        android:label="access Teslasoft Core"
+53-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:51:3-40
+54        android:permissionFlags="hardRestricted"
+54-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:55:3-43
+55        android:permissionGroup="com.teslasoft.permission-group.TESLASOFT_CORE"
+55-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:54:3-74
+56        android:protectionLevel="dangerous" />
+56-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:56:3-38
+57    <permission
+57-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:58:2-65:41
+58        android:name="com.teslasoft.core.permission.ACCESS_ROOT"
+58-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:59:3-59
+59        android:description="@string/permission_access_root_desc"
+59-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:62:3-60
+60        android:icon="@drawable/app_icon"
+60-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:61:3-36
+61        android:label="access root on this device"
+61-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:60:3-45
+62        android:permissionFlags="hardRestricted"
+62-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:64:3-43
+63        android:permissionGroup="com.teslasoft.permission-group.ROOT"
+63-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:63:3-64
+64        android:protectionLevel="dangerous" />
+64-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:65:3-38
+65    <permission
+65-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:67:2-74:41
+66        android:name="com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK"
+66-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:68:3-74
+67        android:description="@string/permission_access_smartcard_desc"
+67-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:71:3-65
+68        android:icon="@drawable/app_icon"
+68-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:70:3-36
+69        android:label="access Teslasoft SmartCard API on this device"
+69-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:69:3-64
+70        android:permissionFlags="hardRestricted"
+70-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:73:3-43
+71        android:permissionGroup="com.teslasoft.permission-group.SMARTCARD"
+71-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:72:3-69
+72        android:protectionLevel="dangerous" />
+72-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:74:3-38
+73    <permission
+73-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:76:2-83:41
+74        android:name="com.teslasoft.core.permission.USE_BIOMETRICS"
+74-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:77:3-62
+75        android:description="@string/permission_access_bio_desc"
+75-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:80:3-59
+76        android:icon="@drawable/ic_fingerprint"
+76-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:79:3-42
+77        android:label="use biometric authentication on this device"
+77-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:78:3-62
+78        android:permissionFlags="hardRestricted"
+78-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:82:3-43
+79        android:permissionGroup="com.teslasoft.permission-group.USE_BIOMETRICS"
+79-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:81:3-74
+80        android:protectionLevel="dangerous" />
+80-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:83:3-38
+81    <permission
+81-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:85:2-92:41
+82        android:name="com.teslasoft.core.permission.COREX"
+82-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:86:3-53
+83        android:description="@string/permission_access_corex_desc"
+83-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:89:3-61
+84        android:icon="@drawable/app_icon"
+84-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:88:3-36
+85        android:label="load CoreX library and binaries on this device"
+85-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:87:3-65
+86        android:permissionFlags="hardRestricted"
+86-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:91:3-43
+87        android:permissionGroup="com.teslasoft.permission-group.COREX"
+87-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:90:3-65
+88        android:protectionLevel="dangerous" />
+88-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:92:3-38
+89    <permission
+89-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:94:2-101:41
+90        android:name="com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS"
+90-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:95:3-69
+91        android:description="@string/permission_access_auth_desc"
+91-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:98:3-60
+92        android:icon="@drawable/app_icon"
+92-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:97:3-36
+93        android:label="use Jarvis Account API on this device"
+93-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:96:3-56
+94        android:permissionFlags="hardRestricted"
+94-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:100:3-43
+95        android:permissionGroup="com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS"
+95-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:99:3-81
+96        android:protectionLevel="dangerous" />
+96-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:101:3-38
+97
+98    <uses-permission android:name="com.teslasoft.core.permission.ACCESS_CORE" />
+98-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:103:2-104:61
+98-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:104:3-59
+99    <uses-permission android:name="com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK" />
+99-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:105:2-106:76
+99-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:106:3-74
+100    <uses-permission android:name="com.teslasoft.core.permission.USE_BIOMETRICS" />
+100-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:107:2-108:64
+100-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:108:3-62
+101    <uses-permission android:name="com.teslasoft.core.permission.COREX" />
+101-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:109:2-110:55
+101-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:110:3-53
+102    <uses-permission android:name="com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS" />
+102-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:111:2-112:71
+102-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:112:3-69
+103    <uses-permission android:name="com.teslasoft.jarvis.SYSTEM" />
+103-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:113:2-114:47
+103-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:114:3-45
+104    <uses-permission android:name="com.android.vending.BILLING" />
+104-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:115:2-116:47
+104-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:116:3-45
+105    <uses-permission android:name="android.permission.INTERNET" />
+105-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:117:2-118:47
+105-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:118:3-45
+106    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+106-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:119:2-120:59
+106-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:120:3-57
+107    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+107-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:121:2-122:54
+107-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:122:3-52
+108    <uses-permission android:name="android.permission.USE_BIOMETRICS" />
+108-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:123:2-124:53
+108-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:124:3-51
+109    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+109-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:125:2-126:56
+109-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:126:3-54
+110    <uses-permission android:name="android.permission.READ_OEM_UNLOCK_STATE" />
+110-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:127:2-129:40
+110-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:128:3-58
+111    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+111-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:130:2-131:53
+111-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:131:3-51
+112    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+112-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:132:2-133:57
+112-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:133:3-55
+113    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+113-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:134:2-135:60
+113-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:135:3-58
+114    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+114-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:136:2-137:51
+114-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:137:3-49
+115    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+115-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:138:2-139:54
+115-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:139:3-52
+116    <uses-permission android:name="android.permission.NFC" />
+116-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:140:2-141:42
+116-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:141:3-40
+117    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+117-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:142:2-143:55
+117-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:143:3-53
+118    <uses-permission android:name="android.permission.WAKE_LOCK" />
+118-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:144:2-145:48
+118-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:145:3-46
+119    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+119-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:146:2-147:61
+119-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:147:3-59
+120
+121    <application
+121-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:149:2-598:16
+122        android:name="com.teslasoft.libraries.support.CrashHandler"
+122-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:153:3-31
+123        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+123-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:154:3-71
+124        android:extractNativeLibs="false"
+125        android:icon="@drawable/app_icon"
+125-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:156:3-36
+126        android:label="@string/app_name"
+126-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:150:3-35
+127        android:persistent="false"
+127-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:158:3-29
+128        android:requestLegacyExternalStorage="true"
+128-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:157:3-46
+129        android:theme="@style/AppTheme"
+129-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:151:3-34
+130        android:usesCleartextTraffic="true" >
+130-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:152:3-38
+131        <activity
+131-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:160:3-167:14
+132            android:name="com.teslasoft.libraries.support.InitActivity"
+132-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:161:4-32
+133            android:exported="true"
+133-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:162:4-27
+134            android:label="@string/activity_init_name"
+134-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:163:4-46
+135            android:launchMode="singleTask"
+135-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:165:4-35
+136            android:stateNotNeeded="true"
+136-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:166:4-33
+137            android:theme="@style/Theme.Transparent" >
+137-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:164:4-44
+138        </activity>
+139        <!--
+140        <activity
+141			android:name="com.teslasoft.jarvis.WarningActivity"
+142			android:label="@string/app_name"
+143			android:process=":system"
+144			android:theme="@style/Theme.Transparent.NoAnim"
+145			android:launchMode="singleTask"
+146			android:stateNotNeeded="true">
+147		</activity>
+148        -->
+149        <activity
+149-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:176:3-184:14
+150            android:name="android.security.BiometricAuthenticator"
+150-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:177:4-58
+151            android:exported="false"
+151-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:183:4-28
+152            android:icon="@drawable/ic_fingerprint"
+152-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:179:4-43
+153            android:label="@string/security_title"
+153-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:178:4-42
+154            android:launchMode="singleTask"
+154-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:181:4-35
+155            android:stateNotNeeded="true"
+155-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:182:4-33
+156            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+156-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:180:4-64
+157        </activity>
+158        <activity
+158-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:185:3-197:14
+159            android:name="android.security.BiometricAuthenticatorCallback"
+159-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:186:4-66
+160            android:exported="true"
+160-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:192:4-27
+161            android:icon="@drawable/ic_fingerprint"
+161-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:188:4-43
+162            android:label="@string/security_title"
+162-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:187:4-42
+163            android:launchMode="singleTask"
+163-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:190:4-35
+164            android:stateNotNeeded="true"
+164-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:191:4-33
+165            android:theme="@style/Theme.Transparent.S" >
+165-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:189:4-46
+166            <intent-filter>
+166-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+167                <action android:name="android.intent.action.MAIN" />
+167-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+167-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+168            </intent-filter>
+169        </activity>
+170        <activity
+170-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:198:3-209:14
+171            android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
+171-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:199:4-67
+172            android:exported="true"
+172-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:204:4-27
+173            android:label="@string/licence_manager_title"
+173-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:200:4-49
+174            android:launchMode="singleTask"
+174-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:202:4-35
+175            android:stateNotNeeded="true"
+175-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:203:4-33
+176            android:theme="@style/Theme.Transparent.S" >
+176-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:201:4-46
+177            <intent-filter>
+177-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+178                <action android:name="android.intent.action.MAIN" />
+178-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+178-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+179            </intent-filter>
+180        </activity>
+181        <activity
+181-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:210:3-222:14
+182            android:name="android.security.ProtectActivity"
+182-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:211:4-51
+183            android:exported="true"
+183-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:217:4-27
+184            android:icon="@drawable/ic_fingerprint"
+184-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:213:4-43
+185            android:label="@string/security_title"
+185-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:212:4-42
+186            android:launchMode="singleTask"
+186-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:215:4-35
+187            android:stateNotNeeded="true"
+187-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:216:4-33
+188            android:theme="@style/Theme.Transparent.S" >
+188-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:214:4-46
+189            <intent-filter>
+189-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+190                <action android:name="android.intent.action.MAIN" />
+190-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+190-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+191            </intent-filter>
+192        </activity>
+193        <activity
+193-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:223:3-235:14
+194            android:name="com.teslasoft.jarvis.licence.ApplicationHealthActivity"
+194-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:224:4-73
+195            android:exported="true"
+195-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:230:4-27
+196            android:icon="@drawable/app_icon"
+196-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:226:4-37
+197            android:label="@string/licence_manager_title"
+197-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:225:4-49
+198            android:launchMode="singleTask"
+198-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:228:4-35
+199            android:stateNotNeeded="true"
+199-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:229:4-33
+200            android:theme="@style/Theme.Transparent.S" >
+200-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:227:4-46
+201            <intent-filter>
+201-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+202                <action android:name="android.intent.action.MAIN" />
+202-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+202-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+203            </intent-filter>
+204        </activity>
+205        <activity
+205-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:236:3-248:14
+206            android:name="com.teslasoft.jarvis.core.AutoRunActivity"
+206-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:237:4-60
+207            android:exported="true"
+207-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:243:4-27
+208            android:icon="@drawable/app_jarvis"
+208-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:239:4-39
+209            android:label="Jarvis Core"
+209-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:238:4-31
+210            android:launchMode="singleTask"
+210-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:241:4-35
+211            android:stateNotNeeded="true"
+211-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:242:4-33
+212            android:theme="@style/Theme.Transparent.S" >
+212-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:240:4-46
+213            <intent-filter>
+213-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+214                <action android:name="android.intent.action.MAIN" />
+214-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+214-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+215            </intent-filter>
+216        </activity>
+217        <activity
+217-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:249:3-260:14
+218            android:name="com.teslasoft.jarvis.EmulatedBoot"
+218-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:250:4-52
+219            android:exported="true"
+219-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:255:4-27
+220            android:label="Android System"
+220-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:251:4-34
+221            android:launchMode="singleTask"
+221-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:253:4-35
+222            android:stateNotNeeded="true"
+222-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:254:4-33
+223            android:theme="@style/Theme.Boot" >
+223-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:252:4-37
+224            <intent-filter>
+224-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+225                <action android:name="android.intent.action.MAIN" />
+225-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+225-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+226            </intent-filter>
+227        </activity>
+228        <activity
+228-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:261:3-273:14
+229            android:name="com.teslasoft.jarvis.core.SmartCardLoader"
+229-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:262:4-60
+230            android:exported="true"
+230-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:268:4-27
+231            android:icon="@drawable/app_jarvis"
+231-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:264:4-39
+232            android:label="Teslasoft Core"
+232-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:263:4-34
+233            android:launchMode="singleTask"
+233-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:266:4-35
+234            android:stateNotNeeded="true"
+234-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:267:4-33
+235            android:theme="@style/Theme.Transparent.S" >
+235-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:265:4-46
+236            <intent-filter>
+236-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+237                <action android:name="android.intent.action.MAIN" />
+237-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+237-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+238            </intent-filter>
+239        </activity>
+240        <activity
+240-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:274:3-286:14
+241            android:name="com.teslasoft.jarvis.core.ServiceSettingActivity"
+241-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:275:4-67
+242            android:exported="true"
+242-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:281:4-27
+243            android:icon="@drawable/app_jarvis"
+243-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:277:4-39
+244            android:label="Teslasoft Core"
+244-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:276:4-34
+245            android:launchMode="singleTask"
+245-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:279:4-35
+246            android:stateNotNeeded="true"
+246-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:280:4-33
+247            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+247-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:278:4-64
+248            <intent-filter>
+248-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+249                <action android:name="android.intent.action.MAIN" />
+249-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+249-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+250            </intent-filter>
+251        </activity>
+252        <activity
+252-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:287:3-299:14
+253            android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
+253-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:288:4-65
+254            android:exported="true"
+254-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:294:4-27
+255            android:icon="@drawable/app_jarvis"
+255-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:290:4-39
+256            android:label="Teslasoft Core"
+256-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:289:4-34
+257            android:launchMode="singleTask"
+257-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:292:4-35
+258            android:stateNotNeeded="true"
+258-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:293:4-33
+259            android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
+259-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:291:4-64
+260            <intent-filter>
+260-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+261                <action android:name="android.intent.action.MAIN" />
+261-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+261-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+262            </intent-filter>
+263        </activity>
+264        <activity
+264-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:300:3-312:14
+265            android:name="com.teslasoft.jarvis.core.ServicesActivity"
+265-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:301:4-61
+266            android:exported="true"
+266-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:307:4-27
+267            android:icon="@drawable/app_jarvis"
+267-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:303:4-39
+268            android:label="Teslasoft Core"
+268-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:302:4-34
+269            android:launchMode="singleTask"
+269-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:305:4-35
+270            android:stateNotNeeded="true"
+270-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:306:4-33
+271            android:theme="@style/Theme.Transparent.S" >
+271-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:304:4-46
+272            <intent-filter>
+272-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+273                <action android:name="android.intent.action.MAIN" />
+273-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+273-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+274            </intent-filter>
+275        </activity>
+276        <activity
+276-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:313:3-324:14
+277            android:name="com.teslasoft.jarvis.crashreport.Report"
+277-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:314:4-58
+278            android:exported="true"
+278-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:319:4-27
+279            android:label="Jarvis Crash Handler"
+279-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:315:4-40
+280            android:launchMode="singleTask"
+280-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:317:4-35
+281            android:stateNotNeeded="true"
+281-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:318:4-33
+282            android:theme="@style/Theme.Transparent.S" >
+282-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:316:4-46
+283            <intent-filter>
+283-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+284                <action android:name="android.intent.action.MAIN" />
+284-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+284-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+285            </intent-filter>
+286        </activity>
+287        <activity
+287-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:325:3-331:14
+288            android:name="com.teslasoft.jarvis.crashreport.BugReport"
+288-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:326:4-61
+289            android:label="Jarvis Crash Handler"
+289-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:327:4-40
+290            android:launchMode="singleTask"
+290-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:329:4-35
+291            android:stateNotNeeded="true"
+291-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:330:4-33
+292            android:theme="@style/Theme.Transparent.S" >
+292-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:328:4-46
+293        </activity>
+294        <activity
+294-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:332:3-338:14
+295            android:name="com.teslasoft.jarvis.crashreport.Detail"
+295-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:333:4-58
+296            android:label="Jarvis Crash Handler"
+296-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:334:4-40
+297            android:launchMode="singleTask"
+297-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:336:4-35
+298            android:stateNotNeeded="true"
+298-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:337:4-33
+299            android:theme="@style/Theme.Transparent.S" >
+299-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:335:4-46
+300        </activity>
+301        <activity
+301-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:339:3-351:14
+302            android:name="com.teslasoft.libraries.support.LoadActivity"
+302-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:340:4-32
+303            android:exported="true"
+303-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:345:4-27
+304            android:label="@string/app_name"
+304-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:341:4-36
+305            android:launchMode="singleTask"
+305-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:343:4-35
+306            android:stateNotNeeded="true"
+306-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:344:4-33
+307            android:theme="@style/Theme.Transparent" >
+307-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:342:4-44
+308            <intent-filter>
+308-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+309                <action android:name="android.intent.action.MAIN" />
+309-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+309-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+310            </intent-filter>
+311        </activity>
+312        <activity
+312-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:352:3-364:14
+313            android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
+313-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:353:4-62
+314            android:exported="true"
+314-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:359:4-27
+315            android:icon="@drawable/jarvis2"
+315-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:356:4-36
+316            android:label="@string/activity_auth_name"
+316-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:354:4-46
+317            android:launchMode="singleTask"
+317-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:357:4-35
+318            android:stateNotNeeded="true"
+318-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:358:4-33
+319            android:theme="@style/Theme.Transparent.S" >
+319-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:355:4-46
+320            <intent-filter>
+320-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+321                <action android:name="android.intent.action.MAIN" />
+321-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+321-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+322            </intent-filter>
+323        </activity>
+324        <activity
+324-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:365:3-377:14
+325            android:name="com.teslasoft.jarvis.Privacy"
+325-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:366:4-47
+326            android:exported="true"
+326-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:372:4-27
+327            android:icon="@drawable/jarvis2"
+327-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:369:4-36
+328            android:label="@string/app_name"
+328-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:367:4-36
+329            android:launchMode="singleTask"
+329-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:370:4-35
+330            android:stateNotNeeded="true"
+330-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:371:4-33
+331            android:theme="@android:style/Theme.Material.NoActionBar" >
+331-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:368:4-61
+332            <intent-filter>
+332-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+333                <action android:name="android.intent.action.MAIN" />
+333-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+333-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+334            </intent-filter>
+335        </activity>
+336        <activity
+336-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:378:3-390:14
+337            android:name="com.teslasoft.jarvis.auth.AccountSettings"
+337-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:379:4-60
+338            android:exported="true"
+338-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:385:4-27
+339            android:icon="@drawable/jarvis2"
+339-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:381:4-36
+340            android:label="@string/account_settings_title"
+340-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:380:4-50
+341            android:launchMode="singleTask"
+341-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:383:4-35
+342            android:stateNotNeeded="true"
+342-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:384:4-33
+343            android:theme="@android:style/Theme.Material.NoActionBar" >
+343-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:382:4-61
+344            <intent-filter>
+344-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+345                <action android:name="android.intent.action.MAIN" />
+345-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+345-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+346            </intent-filter>
+347        </activity>
+348        <activity
+348-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:391:3-403:14
+349            android:name="com.teslasoft.jarvis.auth.AccountPickerActivity"
+349-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:392:4-66
+350            android:exported="true"
+350-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:398:4-27
+351            android:icon="@drawable/jarvis2"
+351-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:394:4-36
+352            android:label="@string/select_account_title"
+352-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:393:4-48
+353            android:launchMode="singleTask"
+353-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:396:4-35
+354            android:stateNotNeeded="true"
+354-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:397:4-33
+355            android:theme="@style/Theme.Transparent.S" >
+355-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:395:4-46
+356            <intent-filter>
+356-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+357                <action android:name="android.intent.action.MAIN" />
+357-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+357-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+358            </intent-filter>
+359        </activity>
+360        <activity
+360-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:404:3-416:14
+361            android:name="com.teslasoft.libraries.support.SettingsActivity"
+361-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:405:4-36
+362            android:exported="true"
+362-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:411:4-27
+363            android:icon="@drawable/jarvis2"
+363-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:407:4-36
+364            android:label="@string/settings_title"
+364-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:406:4-42
+365            android:launchMode="singleTask"
+365-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:409:4-35
+366            android:stateNotNeeded="true"
+366-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:410:4-33
+367            android:theme="@style/Theme.Transparent.S" >
+367-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:408:4-46
+368            <intent-filter>
+368-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+369                <action android:name="android.intent.action.MAIN" />
+369-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+369-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+370            </intent-filter>
+371        </activity>
+372        <activity
+372-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:417:3-429:14
+373            android:name="com.teslasoft.jarvis.auth.VerifyAccountActivity"
+373-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:418:4-66
+374            android:exported="true"
+374-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:424:4-27
+375            android:icon="@drawable/jarvis2"
+375-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:420:4-36
+376            android:label="@string/verify_account_title"
+376-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:419:4-48
+377            android:launchMode="singleTask"
+377-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:422:4-35
+378            android:stateNotNeeded="true"
+378-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:423:4-33
+379            android:theme="@style/Theme.Transparent.S" >
+379-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:421:4-46
+380            <intent-filter>
+380-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+381                <action android:name="android.intent.action.MAIN" />
+381-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+381-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+382            </intent-filter>
+383        </activity>
+384        <activity
+384-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:430:3-437:14
+385            android:name="com.teslasoft.jarvis.auth.AuthActivity"
+385-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:431:4-57
+386            android:icon="@drawable/jarvis2"
+386-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:434:4-36
+387            android:label="@string/activity_auth_name"
+387-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:432:4-46
+388            android:launchMode="singleTask"
+388-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:435:4-35
+389            android:stateNotNeeded="true"
+389-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:436:4-33
+390            android:theme="@style/Theme.Transparent.S" >
+390-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:433:4-46
+391        </activity>
+392        <activity
+392-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:438:3-449:14
+393            android:name="com.teslasoft.libraries.support.WebActivity"
+393-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:439:4-31
+394            android:exported="true"
+394-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:444:4-27
+395            android:label="@string/app_name"
+395-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:440:4-36
+396            android:launchMode="singleTask"
+396-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:442:4-35
+397            android:stateNotNeeded="true"
+397-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:443:4-33
+398            android:theme="@style/Theme.Transparent.Slide" >
+398-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:441:4-50
+399            <intent-filter>
+399-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+400                <action android:name="android.intent.action.MAIN" />
+400-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+400-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+401            </intent-filter>
+402        </activity>
+403        <activity
+403-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:450:3-460:14
+404            android:name="com.teslasoft.jarvis.CoreActivity"
+404-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:450:13-61
+405            android:exported="true"
+405-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:455:4-27
+406            android:label="@string/app_name"
+406-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:451:4-36
+407            android:launchMode="singleTask"
+407-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:453:4-35
+408            android:stateNotNeeded="true"
+408-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:454:4-33
+409            android:theme="@style/Theme.Transparent.NoAnim" >
+409-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:452:4-51
+410            <intent-filter>
+410-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+411                <action android:name="android.intent.action.MAIN" />
+411-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+411-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+412            </intent-filter>
+413        </activity>
+414        <!--
+415        <activity
+416			android:name="com.teslasoft.jarvis.AppsList"
+417			android:theme="@android:style/Theme.Material.Wallpaper"
+418			android:label="@string/app_name"
+419			android:process=":main"
+420			android:launchMode="singleTask"
+421			android:stateNotNeeded="true">
+422		</activity>
+423        -->
+424        <!--
+425        <activity
+426			android:name="com.teslasoft.jarvis.Jarvis"
+427			android:theme="@android:style/Theme.Material.Wallpaper"
+428			android:icon="@drawable/app_jarvis"
+429			android:label="Jarvis"
+430			android:process=":main"
+431			android:launchMode="singleTask"
+432			android:stateNotNeeded="true">
+433		</activity>
+434        -->
+435        <activity
+435-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:478:3-490:14
+436            android:name="com.teslasoft.jarvis.easter.JarvisPlatLogo"
+436-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:479:4-61
+437            android:exported="true"
+437-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:485:4-27
+438            android:icon="@drawable/ic_egg"
+438-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:484:4-35
+439            android:label="Jarvis Easter Egg"
+439-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:480:4-37
+440            android:launchMode="singleTask"
+440-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:482:4-35
+441            android:stateNotNeeded="true"
+441-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:483:4-33
+442            android:theme="@style/Theme.Transparent.Logo" >
+442-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:481:4-49
+443            <intent-filter>
+443-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+444                <action android:name="android.intent.action.MAIN" />
+444-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+444-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+445            </intent-filter>
+446        </activity>
+447        <activity
+447-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:491:3-498:14
+448            android:name="com.teslasoft.jarvis.easter.EasterEgg"
+448-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:492:4-56
+449            android:icon="@drawable/ic_egg"
+449-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:497:4-35
+450            android:label="Jarvis Easter Egg"
+450-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:493:4-37
+451            android:launchMode="singleTask"
+451-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:495:4-35
+452            android:stateNotNeeded="true"
+452-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:496:4-33
+453            android:theme="@style/Theme.Transparent.Egg" >
+453-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:494:4-48
+454        </activity>
+455        <activity
+455-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:499:3-510:14
+456            android:name="net.jarvis.engine.TaskCdhActivity"
+456-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:500:4-52
+457            android:exported="true"
+457-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:505:4-27
+458            android:label="@string/app_name"
+458-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:501:4-36
+459            android:launchMode="singleTask"
+459-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:503:4-35
+460            android:stateNotNeeded="true"
+460-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:504:4-33
+461            android:theme="@style/Theme.Transparent.Float" >
+461-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:502:4-50
+462            <intent-filter>
+462-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+463                <action android:name="android.intent.action.MAIN" />
+463-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+463-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
+464            </intent-filter>
+465        </activity>
+466
+467        <service
+467-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:3-117
+468            android:name="com.teslasoft.jarvis.core.AutoRunService"
+468-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:36-91
+469            android:enabled="false"
+469-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:12-35
+470            android:process=":core" />
+470-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:92-115
+471        <service
+471-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:3-127
+472            android:name="com.teslasoft.jarvis.core.AutoRunForegroundService"
+472-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:36-101
+473            android:enabled="false"
+473-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:12-35
+474            android:process=":core" />
+474-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:102-125
+475        <service
+475-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:3-171
+476            android:name="com.teslasoft.jarvis.core.InitService"
+476-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:36-88
+477            android:enabled="false"
+477-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:12-35
+478            android:permission="android.permission.BIND_JOB_SERVICE"
+478-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:113-169
+479            android:process=":core" />
+479-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:89-112
+480        <service
+480-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:3-180
+481            android:name="com.teslasoft.jarvis.core.DataProtectorService"
+481-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:36-97
+482            android:enabled="false"
+482-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:12-35
+483            android:permission="android.permission.BIND_JOB_SERVICE"
+483-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:122-178
+484            android:process=":core" />
+484-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:98-121
+485        <service
+485-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:3-178
+486            android:name="com.teslasoft.jarvis.core.LicenceCheckService"
+486-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:35-95
+487            android:enabled="true"
+487-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:12-34
+488            android:permission="android.permission.BIND_JOB_SERVICE"
+488-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:120-176
+489            android:process=":core" />
+489-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:96-119
+490        <service
+490-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:3-182
+491            android:name="com.teslasoft.jarvis.core.NotificationStatService"
+491-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:35-99
+492            android:enabled="true"
+492-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:12-34
+493            android:permission="android.permission.BIND_JOB_SERVICE"
+493-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:124-180
+494            android:process=":core" />
+494-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:100-123
+495        <service
+495-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:3-175
+496            android:name="com.teslasoft.jarvis.core.SmartCardService"
+496-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:35-92
+497            android:enabled="true"
+497-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:12-34
+498            android:permission="android.permission.BIND_JOB_SERVICE"
+498-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:117-173
+499            android:process=":core" />
+499-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:93-116
+500        <service
+500-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:3-526:13
+501            android:name="com.teslasoft.jarvis.auth.SyncService"
+501-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:35-87
+502            android:enabled="true"
+502-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:12-34
+503            android:exported="true" >
+503-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:519:4-27
+504            <intent-filter>
+504-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:520:4-522:20
+505                <action android:name="android.content.SyncAdapter" />
+505-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:521:5-58
+505-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:521:13-55
+506            </intent-filter>
+507
+508            <meta-data
+508-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:523:4-525:43
+509                android:name="android.content.SyncAdapter"
+509-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:524:5-47
+510                android:resource="@xml/syncadapter" />
+510-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:525:5-40
+511        </service>
+512        <service
+512-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:3-535:13
+513            android:name="com.teslasoft.jarvis.auth.AccountService"
+513-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:12-67
+514            android:enabled="true"
+514-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:68-90
+515            android:exported="true" >
+515-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:528:4-27
+516            <intent-filter>
+516-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:529:4-531:20
+517                <action android:name="android.accounts.AccountAuthenticator" />
+517-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:530:5-67
+517-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:530:13-65
+518            </intent-filter>
+519
+520            <meta-data
+520-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:532:4-534:44
+521                android:name="android.accounts.AccountAuthenticator"
+521-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:533:5-57
+522                android:resource="@xml/authenticator" />
+522-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:534:5-42
+523        </service>
+524
+525        <receiver
+525-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:536:3-550:14
+526            android:name="com.teslasoft.libraries.support.AdminReceiver"
+526-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:536:13-42
+527            android:description="@string/device_admin_desc"
+527-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:538:4-51
+528            android:exported="false"
+528-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:541:4-28
+529            android:icon="@drawable/app_icon"
+529-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:540:4-37
+530            android:label="@string/app_name"
+530-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:537:4-36
+531            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+531-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:539:4-61
+532            <meta-data
+532-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:543:4-544:37
+533                android:name="android.app.device_admin"
+533-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:543:15-54
+534                android:resource="@xml/admin" />
+534-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:544:5-34
+535
+536            <intent-filter>
+536-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:4-549:20
+537                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+537-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:5-70
+537-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:13-67
+538                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE" />
+538-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:5-78
+538-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:13-76
+539            </intent-filter>
+540        </receiver>
+541        <receiver
+541-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:551:3-570:14
+542            android:name="com.teslasoft.libraries.support.BootCompletedReceiver"
+542-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:551:13-50
+543            android:enabled="true"
+543-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:552:4-26
+544            android:exported="true"
+544-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:553:4-27
+545            android:label="BootCompletedReceiver"
+545-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:555:4-41
+546            android:priority="2147483647" >
+546-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:554:4-33
+547            <intent-filter>
+547-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:557:4-561:20
+548                <action android:name="android.intent.action.BOOT_COMPLETED" />
+548-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:558:5-67
+548-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:558:13-64
+549                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+549-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:559:5-70
+549-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:559:13-67
+550                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+550-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:560:5-74
+550-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:560:13-71
+551            </intent-filter>
+552            <intent-filter>
+552-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:563:4-566:20
+553                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+553-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:5-69
+553-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:13-66
+554
+555                <data android:scheme="package" />
+555-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:5-37
+555-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:11-35
+556            </intent-filter>
+557            <intent-filter>
+557-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:567:4-569:20
+558                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+558-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:5-72
+558-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:13-69
+559            </intent-filter>
+560        </receiver>
+561        <receiver
+561-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:571:3-580:14
+562            android:name="com.teslasoft.jarvis.core.RestartServiceReceiver"
+562-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:571:13-76
+563            android:enabled="true"
+563-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:572:4-26
+564            android:exported="true"
+564-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:573:4-27
+565            android:label="RestartServiceReceiver" >
+565-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:574:4-42
+566            <intent-filter>
+566-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:576:4-579:20
+567                <action android:name="com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE" />
+567-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:577:5-77
+567-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:577:13-74
+568
+569                <data android:scheme="package" />
+569-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:5-37
+569-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:11-35
+570            </intent-filter>
+571        </receiver>
+572        <receiver
+572-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:3-586:14
+573            android:name="com.teslasoft.libraries.support.SecretSettings"
+573-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:13-43
+574            android:exported="true" >
+574-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:44-67
+575            <intent-filter>
+575-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:582:4-585:20
+576                <action android:name="android.provider.Telephony.SECRET_CODE" />
+576-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:5-68
+576-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:13-66
+577
+578                <data
+578-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:5-37
+579                    android:host="348216"
+579-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:584:48-69
+580                    android:scheme="android_secret_code" />
+580-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:11-35
+581            </intent-filter>
+582        </receiver>
+583        <receiver
+583-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:3-592:14
+584            android:name="com.teslasoft.libraries.support.EmulatedBootReceiver"
+584-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:13-49
+585            android:exported="true" >
+585-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:50-73
+586            <intent-filter>
+586-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:588:4-591:20
+587                <action android:name="android.provider.Telephony.SECRET_CODE" />
+587-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:5-68
+587-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:13-66
+588
+589                <data
+589-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:5-37
+590                    android:host="3378"
+590-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:584:48-69
+591                    android:scheme="android_secret_code" />
+591-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:11-35
+592            </intent-filter>
+593        </receiver>
+594
+595        <provider
+595-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:593:3-597:29
+596            android:name="com.teslasoft.jarvis.auth.SyncProvider"
+596-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:594:4-57
+597            android:authorities="org.teslasoft.id.account_sync"
+597-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:595:4-55
+598            android:exported="true"
+598-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:596:4-27
+599            android:syncable="true" />
+599-->D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:597:4-27
+600
+601        <meta-data
+601-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:13:9-15:37
+602            android:name="com.google.android.play.billingclient.version"
+602-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:14:13-73
+603            android:value="4.0.0" />
+603-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:15:13-34
+604
+605        <activity
+605-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:17:9-21:75
+606            android:name="com.android.billingclient.api.ProxyBillingActivity"
+606-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:18:13-78
+607            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+607-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:19:13-96
+608            android:exported="false"
+608-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:20:13-37
+609            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+609-->[com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:21:13-72
+610        <activity
+610-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+611            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+611-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+612            android:exported="false"
+612-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+613            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+613-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+614
+615        <meta-data
+615-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+616            android:name="com.google.android.gms.version"
+616-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+617            android:value="@integer/google_play_services_version" />
+617-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+618
+619        <provider
+619-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+620            android:name="androidx.startup.InitializationProvider"
+620-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+621            android:authorities="com.teslasoft.libraries.support.androidx-startup"
+621-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+622            android:exported="false" >
+622-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+623            <meta-data
+623-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+624                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+624-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+625                android:value="androidx.startup" />
+625-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+626            <meta-data
+626-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+627                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+627-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+628                android:value="androidx.startup" />
+628-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+629        </provider>
+630    </application>
+631
+632</manifest>

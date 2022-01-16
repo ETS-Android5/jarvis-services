@@ -26,8 +26,8 @@ import org.json.JSONObject;
 public class AuthActivity extends Activity
 {
 	private WebView content;
-	private String lang;
-	private String did;
+	private String lang = "en-US";
+	private String did = "0x005";
 	private String appId;
 	public LinearLayout loadingScreen;
 	public LinearLayout loginScreen;
