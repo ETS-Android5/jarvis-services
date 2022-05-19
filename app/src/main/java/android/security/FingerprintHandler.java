@@ -1,23 +1,21 @@
 package android.security;
 
-import android.Manifest;
 import android.app.Activity;
+import android.os.CancellationSignal;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
-import android.os.CancellationSignal;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import android.widget.TextView;
-import com.teslasoft.libraries.support.R;
 import android.graphics.Color;
-import android.widget.SmartToast;
+import android.Manifest;
 
-public class FingerprintHandler extends FingerprintManager.AuthenticationCallback
-{
-	private Context context;
+import androidx.core.app.ActivityCompat;
 
-	// Constructor
+import com.teslasoft.libraries.support.R;
+
+public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+	private final Context context;
+
 	public FingerprintHandler(Context mContext) {
 		context = mContext;
 	}
@@ -36,38 +34,32 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 		this.update(errString.toString(), false);
 	}
 
-
 	@Override
 	public void onAuthenticationHelp(int helpMsgId, CharSequence helpString) {
 		this.update(helpString.toString(), false);
 	}
 
-
 	@Override
 	public void onAuthenticationFailed() {
-		this.update("Not recognized", false);
+		this.update(context.getResources().getString(R.string.fingerprint_not_recognized), false);
 	}
 	
 	@Override
 	public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
-		this.update("Authentication completed", true);
+		this.update(context.getResources().getString(R.string.fingerprint_completed), true);
 	}
-
 
 	public int update(String e, Boolean success){
 		TextView textView = (TextView) ((Activity)context).findViewById(R.id.fingerprint_error);
 		textView.setText(e);
-		
-		
+
 		if(success) {
 			textView.setTextColor(Color.GREEN);
 			((Activity)context).setResult(Activity.RESULT_OK);
 			((Activity)context).finishAndRemoveTask();
-			// SmartToast.create("Success", context);
 			return 1;
 		} else {
 			textView.setTextColor(Color.RED);
-			// SmartToast.create("Fail", context);
 			return 2;
 		}
 	}

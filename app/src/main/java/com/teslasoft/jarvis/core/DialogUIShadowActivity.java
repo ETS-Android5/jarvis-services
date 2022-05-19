@@ -1,38 +1,19 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.pm.PackageManager;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Button;
-import android.content.Intent;
-import android.content.ComponentName;
-import android.content.Context;
+import android.os.Bundle;
+
 import com.teslasoft.libraries.support.R;
 
-public class DialogUIShadowActivity extends Activity
-{
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
-
+public class DialogUIShadowActivity extends Activity {
 	@Override
-	public void onCreate(Bundle savedInstanceState)
-	{
-		// TODO: Implement this method
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.shadow);
+		setContentView(R.layout.fragment_shadow);
 	}
 
 	@Override
-	public void onBackPressed()
-	{
-		// TODO: Implement this method
+	public void onBackPressed() {
 		super.onBackPressed();
 		finishAndRemoveTask();
 	}

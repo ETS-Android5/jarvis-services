@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "com.teslasoft.libraries.support.app-mergeDebugResources-19:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\46d15f5c58a469270eeba15db4463d05\\transformed\\appcompat-1.4.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

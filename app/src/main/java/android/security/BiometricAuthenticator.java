@@ -1,18 +1,24 @@
 package android.security;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.app.Activity;
-import com.teslasoft.libraries.support.R;
-import android.hardware.fingerprint.FingerprintManager;
-import android.annotation.TargetApi;
 import android.app.KeyguardManager;
+import android.hardware.fingerprint.FingerprintManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
+import android.widget.SmartToast;
+import android.widget.TextView;
+import android.view.View;
+import android.view.WindowManager;
+import android.graphics.Color;
+import android.Manifest;
+
 import androidx.core.app.ActivityCompat;
+
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -22,33 +28,23 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
-import android.Manifest;
-import android.widget.TextView;
-import android.view.View;
-import android.graphics.Color;
-import android.view.WindowManager;
-import android.widget.SmartToast;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Context;
 
-public class BiometricAuthenticator extends Activity
-{
+import com.teslasoft.libraries.support.R;
+
+public class BiometricAuthenticator extends Activity {
 	private KeyStore keyStore;
+
 	// Variable used for storing the key in the Android Keystore container
 	private static final String KEY_NAME = "androidHive";
 	private Cipher cipher;
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		// TODO: Implement this method
 		super.onCreate(savedInstanceState);
 		
@@ -74,31 +70,28 @@ public class BiometricAuthenticator extends Activity
 			boolean isSupported = fingerprintManager.isHardwareDetected();
 			
 			if(isSupported) {
-				textView.setText("Touch the fingerprint sensor");
+				textView.setText(R.string.fingerprint_touch_message);
 				textView.setTextColor(Color.GRAY);
 			}
-			
 		} catch (Exception ee) {
-			SmartToast.create("Canceled: Your device does not support fingerprint. Please select other authentication method", this);
+			SmartToast.create(this.getResources().getString(R.string.fingerprint_unsupported_device), this);
 			this.setResult(Activity.RESULT_CANCELED);
 			finishAndRemoveTask();
 		}
 		
 		if(!fingerprintManager.isHardwareDetected()) {
 			textView.setTextColor(Color.RED);
-			textView.setText("Fingerprint is not supported on your device");
+			textView.setText(R.string.fingerprint_unsupported_device);
 		} else {
 			if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 				textView.setTextColor(Color.RED);
-				textView.setText("The authenticator does not have permissions to use fingerprint");
-				SmartToast.create("Canceled: First please enable screen lock", this);
+				textView.setText(R.string.fingerprint_permission_denied);
 				this.setResult(Activity.RESULT_CANCELED);
 				finishAndRemoveTask();
 			} else {
 				if (!keyguardManager.isKeyguardSecure()) {
 					textView.setTextColor(Color.RED);
-					textView.setText("ERROR: Unsafe authentication method: The device does not have screenlock");
-					SmartToast.create("Canceled: The app does not have permission to use fingerprint hardware", this);
+					textView.setText(R.string.fingerprint_err_unsafe_operation);
 					this.setResult(Activity.RESULT_CANCELED);
 					finishAndRemoveTask();
 				} else {
@@ -111,7 +104,7 @@ public class BiometricAuthenticator extends Activity
 							helper.startAuth(fingerprintManager, cryptoObject);
 						}
 					} catch (Exception e) {
-						SmartToast.create("Canceled: No fingerprints found. Please add at least 1 fingerprint", this);
+						SmartToast.create(this.getResources().getString(R.string.fingerprint_not_prints), this);
 						this.setResult(Activity.RESULT_CANCELED);
 						finishAndRemoveTask();
 					}
@@ -119,22 +112,16 @@ public class BiometricAuthenticator extends Activity
 			}
 		}
 	}
-	
-	/* Piracy check starts */
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == Activity.RESULT_OK) {
-			// License check passed
-		} else {
-			// License check failed, exit
+		if (resultCode != Activity.RESULT_OK) {
 			this.setResult(Activity.RESULT_CANCELED);
 			finishAndRemoveTask();
 		}
 	}
-	/* Piracy check ends */
-	
-	@TargetApi(Build.VERSION_CODES.M)
+
 	protected void generateKey() {
 		try {
 			keyStore = KeyStore.getInstance("AndroidKeyStore");
@@ -162,8 +149,7 @@ public class BiometricAuthenticator extends Activity
 			throw new RuntimeException(e);
 		}
 	}
-	
-	@TargetApi(Build.VERSION_CODES.M)
+
 	public boolean cipherInit() {
 		try {
 			cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
@@ -185,16 +171,12 @@ public class BiometricAuthenticator extends Activity
 	}
 
 	@Override
-	protected void onPause()
-	{
-		// TODO: Implement this method
+	protected void onPause() {
 		super.onPause();
 	}
 
 	@Override
-	public void onBackPressed()
-	{
-		// TODO: Implement this method
+	public void onBackPressed() {
 		close();
 	}
 	
@@ -207,9 +189,7 @@ public class BiometricAuthenticator extends Activity
 		finishAndRemoveTask();
 	}
 	
-	public void Empty(View v) {
-		
-	}
+	public void Empty(View v) {}
 	
 	public void close() {
 		this.setResult(Activity.RESULT_CANCELED);

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom|center_horizontal"
+		android:onClick="Close"
+		android:background="#00000000">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/dialog"
+			android:layout_margin="10dp"
+			android:padding="15dp"
+			android:background="@drawable/ui_dialog_rounded_dark_v1"
+			android:onClick="Ignore">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<ScrollView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Jarvis Services keeps stopping"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Closing app may cause errors in other apps"
+							android:layout_marginTop="10dp"
+							android:textColor="#B20021"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="If this alert appears very often, you can disable service which keeps stopping without closing app"
+							android:layout_marginTop="10dp"/>
+
+					</LinearLayout>
+
+				</ScrollView>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:id="@+id/close"
+			android:layout_marginRight="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="10dp"
+			android:translationZ="5dp"
+			android:elevation="10dp"
+			android:gravity="center"
+			android:background="@drawable/ui_dialog_rounded_dark_v1">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="Close app"
+				android:background="@drawable/ripple_accent_v1"
+				android:onClick="stopTask"
+				android:textColor="#B20021"
+				android:id="@+id/kill"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:id="@+id/alls"
+			android:layout_marginRight="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="10dp"
+			android:translationZ="5dp"
+			android:elevation="10dp"
+			android:gravity="center"
+			android:background="@drawable/ui_dialog_rounded_dark_v1">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="All services"
+				android:background="@drawable/ripple_accent_v1"
+				android:onClick="AllServices"
+				android:textColor="#2E8B57"
+				android:id="@+id/kill"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:id="@+id/settings"
+			android:layout_marginRight="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="10dp"
+			android:elevation="10dp"
+			android:translationZ="5dp"
+			android:background="@drawable/ui_dialog_rounded_dark_v1"
+			android:gravity="center">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="Cancel"
+				android:background="@drawable/ripple_accent_v1"
+				android:onClick="Close"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

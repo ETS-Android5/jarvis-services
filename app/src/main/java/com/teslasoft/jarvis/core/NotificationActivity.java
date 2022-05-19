@@ -1,27 +1,11 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.view.View;
-import android.widget.Toast;
-import android.content.Intent;
-import android.content.ComponentName;
-import android.content.Context;
-import com.teslasoft.libraries.support.R;
+import android.os.Bundle;
 
-public class NotificationActivity extends Activity
-{
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
-
+public class NotificationActivity extends Activity {
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		// TODO: Implement this method
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 	}
 }

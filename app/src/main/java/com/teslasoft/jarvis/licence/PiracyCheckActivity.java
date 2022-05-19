@@ -1,46 +1,26 @@
 package com.teslasoft.jarvis.licence;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.net.Uri;
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Handler;
-import android.provider.Settings;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.safetynet.SafetyNet;
-import com.google.android.gms.safetynet.SafetyNetApi;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.gson.Gson;
-import com.nimbusds.jose.JWSObject;
-import com.teslasoft.libraries.support.R;
-
-import android.widget.SmartToast;
-import android.widget.TextView;
-import android.view.View;
+import android.content.Intent;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
-
-import androidx.annotation.NonNull;
+import android.provider.Settings;
+import android.widget.TextView;
+import android.view.View;
 
 import java.nio.charset.StandardCharsets;
-import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,14 +29,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import android.content.SharedPreferences;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.safetynet.SafetyNet;
+import com.google.gson.Gson;
 
+import com.nimbusds.jose.JWSObject;
 import net.minidev.json.JSONObject;
 
-public class PiracyCheckActivity extends Activity
-{
-	private String appId;
+import com.teslasoft.libraries.support.R;
+
+public class PiracyCheckActivity extends Activity {
+	public String appId;
 	private TextView message;
 	private TextView lTitle;
 	public int RESPONSE_CODE;
@@ -100,6 +86,8 @@ public class PiracyCheckActivity extends Activity
 	public static int UNLICENSED_EMULATOR_DETECTED = 18; // The product is running in the emulator/sandbox
 	public static int UNLICENSED_INVALID_LICENSE_KEY = 19; // The license key that saved to the app info and calculated (based on the SafetyNet response) license key don't match
 	public static int UNLICENSED_CACHED_RESPONSE_MISMATCH = 20; // SafetyNet cached response have (or not have) fields with invalid values
+	public static int ERR_PRIVACY_NOT_ACCEPTED = 21; // Privacy Policy is not accepted
+	public static int ERR_INVALID_API = 22; // An illegal call of API was performed
 
 	public static String DEFAULT_LICENSE_KEY = "e7bd492511f6defdc65d6565d522d2e6f35a2bf273d28503c1def3256021c7ad";
 
@@ -120,20 +108,17 @@ public class PiracyCheckActivity extends Activity
 	 * *************************************/
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		// TODO: Implement this method
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dialog_loading);
 		SharedPreferences privacy = this.getSharedPreferences("privacy_accepted", Context.MODE_PRIVATE);
 		try {
 			String privacy_is_accepted = privacy.getString("privacy", null);
-			// SmartToast.create(privacy_is_accepted, this);
 			if (privacy_is_accepted.equals("yes")) {
 				startLic();
 			} else {
-				RESPONSE_CODE = 3;
-				setContentView(R.layout.licence_check);
+				RESPONSE_CODE = ERR_PRIVACY_NOT_ACCEPTED;
+				setContentView(R.layout.activity_licence_check);
 				message = (TextView) findViewById(R.id.message);
 				lTitle = (TextView) findViewById(R.id.license_title);
 				lTitle.setText("Locked");
@@ -144,8 +129,8 @@ public class PiracyCheckActivity extends Activity
 				Intent i = new Intent(this, com.teslasoft.jarvis.Privacy.class);
 				startActivityForResult(i, 1);
 			} catch (Exception _e) {
-				RESPONSE_CODE = 3;
-				setContentView(R.layout.licence_check);
+				RESPONSE_CODE = ERR_PRIVACY_NOT_ACCEPTED;
+				setContentView(R.layout.activity_licence_check);
 				message = (TextView) findViewById(R.id.message);
 				message.setText("Something is preventing this app to show Privacy Policy. Try to reinstall app.");
 			}
@@ -159,7 +144,7 @@ public class PiracyCheckActivity extends Activity
 			startLic();
 		} else {
 			RESPONSE_CODE = 3;
-			setContentView(R.layout.licence_check);
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			lTitle = (TextView) findViewById(R.id.license_title);
 			lTitle.setText("Locked");
@@ -170,8 +155,8 @@ public class PiracyCheckActivity extends Activity
 	public void startLic() {
 		if (isDeviceRooted()) {
 			// Firstly check root to prevent API abuse and repeated requests
-			RESPONSE_CODE = 7;
-			setContentView(R.layout.licence_check);
+			RESPONSE_CODE = UNLICENSED_SAFETYNET_ATTESTATION_FAILED_NOT_CERTIFIED;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			lTitle = (TextView) findViewById(R.id.license_title);
 			lTitle.setText("Security test failed");
@@ -186,16 +171,18 @@ public class PiracyCheckActivity extends Activity
 				if (!have_license_key.equals("") && !license_key_signature.equals("") && !raw_license_key.equals("") && !license_response.equals("")) {
 					MessageDigest digest = MessageDigest.getInstance("SHA-256");
 					byte[] hash = digest.digest(have_license_key.getBytes(StandardCharsets.UTF_8));
+
 					// Decoded license key is a 64-digit key (checksum of the safetynet response)
 					String license_key_decoded = bytesToHex(hash);
 					if (!license_key_decoded.equals(raw_license_key)) {
 						String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-						if (aid.equals("c34ea1c41f95c6aa")) {
+						if (aid.equals("2fe1c2fcc419dc05")) {
+							// SmartToast.create("WARNING: License check were skipped because this app is running on the test device.", this);
 							passLicense();
 						} else {
 							// The app have a license key but it is invalid
-							RESPONSE_CODE = 19;
-							setContentView(R.layout.licence_check);
+							RESPONSE_CODE = UNLICENSED_INVALID_LICENSE_KEY;
+							setContentView(R.layout.activity_licence_check);
 							message = (TextView) findViewById(R.id.message);
 							message.setText("UNLICENSED: We re unable to verify your license. Please clear all data/cache of this app, then connect to the Internet and try again. You may see this message because this app is tampered with or license key is counterfeit or compromised. We need to revalidate your license by making signed request to the servers.");
 						}
@@ -211,19 +198,13 @@ public class PiracyCheckActivity extends Activity
 							editor.remove("license_key");
 							editor.remove("license_json_response");
 							editor.apply();
-							RESPONSE_CODE = 7;
-							setContentView(R.layout.licence_check);
+							RESPONSE_CODE = UNLICENSED_SAFETYNET_ATTESTATION_FAILED_NOT_CERTIFIED;
+							setContentView(R.layout.activity_licence_check);
 							message = (TextView) findViewById(R.id.message);
 							lTitle = (TextView) findViewById(R.id.license_title);
 							lTitle.setText("Security test failed");
 							message.setText("This device is rooted (your system is vulnerable now). Please unroot it, install original ROM and lock the bootloader.");
 						} else {
-							// The app already have a valid license key
-					/*RESPONSE_CODE = 0;
-					setContentView(R.layout.licence_check);
-					message = (TextView) findViewById(R.id.message);
-					message.setText("LICENSED: This product is licensed. This is a debug message. Please remove it before releasing. DEBUG: ".concat(raw_license_key).concat("  ").concat(license_key_decoded));
-					*/
 							Gson gson = new Gson();
 							Map<String,Object> map = new HashMap<>();
 							map = (Map<String,Object>) gson.fromJson(license_response ,map.getClass());
@@ -233,8 +214,8 @@ public class PiracyCheckActivity extends Activity
 							if (basicIntegrity.equals("true") && ctsProfileMatch.equals("true")) {
 								passLicense();
 							} else {
-								RESPONSE_CODE = 20;
-								setContentView(R.layout.licence_check);
+								RESPONSE_CODE = UNLICENSED_CACHED_RESPONSE_MISMATCH;
+								setContentView(R.layout.activity_licence_check);
 								message = (TextView) findViewById(R.id.message);
 								message.setText("UNLICENSED: Invalid license information. Please clear cache/data then connect to the Internet and try again.");
 							}
@@ -255,33 +236,16 @@ public class PiracyCheckActivity extends Activity
 		String android_id = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
 
 		// Device with this ID will automatically bypass all license checks even if this device does not meet license requirements to run.
-		String testDevice = "d604e107d1fea469";
-		String testDevice2 = "2cea2e526b914498";
-		String testDevice3 = "a2ce32a3907804b4";
-		String testDevice4 = "c34ea1c41f95c6aa";
+		String testDevice = "2fe1c2fcc419dc05";
+		String testDevice2 = "2fe1c2fcc419dc05";
+		String testDevice3 = "2fe1c2fcc419dc05";
+		String testDevice4 = "2fe1c2fcc419dc05";
 		// Checking licence
 		// First step: check installation source
 
 		if (verifyInstallerId(this) || android_id.equals(testDevice) || android_id.equals(testDevice2) || android_id.equals(testDevice3) || android_id.equals(testDevice4) ) {
 			// Second step: check signature hash
 			StrictLicenceChecking();
-			/*
-			try {
-				@SuppressLint("PackageManagerGetSignatures") Signature sig = this.getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_SIGNATURES).signatures[0];
-				signatureHash = Integer.toString(sig.hashCode());
-				// SmartToast.create(signatureHash + Integer.toString(SELF_SIGNATURE), this);
-				if (signatureHash.equals(Integer.toString(DEFAULT_SIGNATURE)) || signatureHash.equals(Integer.toString(SELF_SIGNATURE)) || android_id.equals(testDevice) || android_id.equals(testDevice2)) {
-					StrictLicenceChecking();
-				} else {
-					InvalidateAntiPiracyProvider();
-				}
-			} catch (Exception e) {
-				RESPONSE_CODE = 2;
-				setContentView(R.layout.licence_check);
-				message = (TextView) findViewById(R.id.message);
-				message.setText("UNLICENSED: We are detected that you are using a modified copy of app. Signature of original app and this app does not match. Although the license is free of charge we are NOT allow use our app if it installed from third-party source or modified. We perform that checks to increase security.");
-			}
-			*/
 		} else {
 			InvalidateLicence();
 		}
@@ -296,10 +260,7 @@ public class PiracyCheckActivity extends Activity
 		String testDevice4 = "";
 		String testDevice5 = "";
 
-		if (android_id.equals(testDevice1) || android_id.equals(testDevice2) || android_id.equals(testDevice3) || android_id.equals(testDevice4) || android_id.equals(testDevice5)) return true;
-		else {
-			return false;
-		}
+		return android_id.equals(testDevice1) || android_id.equals(testDevice2) || android_id.equals(testDevice3) || android_id.equals(testDevice4) || android_id.equals(testDevice5);
 	}
 
 	boolean verifyInstallerId(Context context) {
@@ -314,27 +275,27 @@ public class PiracyCheckActivity extends Activity
 	}
 
 	public void InvalidateApplicationId() {
-			RESPONSE_CODE = 2;
-			setContentView(R.layout.licence_check);
-			message = (TextView) findViewById(R.id.message);
-			lTitle = (TextView) findViewById(R.id.license_title);
-			lTitle.setText("Security test failed");
-			message.setText("Looks like you're using modified copy of this app. [ERR_SIGNATURE_FINGERPRINT_MISMATCH]");
+		RESPONSE_CODE = UNLICENSED_SIGNATURE_VERIFICATION_SYSTEM_TAMPERED_WITH;
+		setContentView(R.layout.activity_licence_check);
+		message = (TextView) findViewById(R.id.message);
+		lTitle = (TextView) findViewById(R.id.license_title);
+		lTitle.setText("Security test failed");
+		message.setText("Looks like you're using modified copy of this app. [ERR_SIGNATURE_FINGERPRINT_MISMATCH]");
 	}
 
 	public void InvalidateLicence() {
 		String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
 
-		RESPONSE_CODE = 1;
-			setContentView(R.layout.licence_check);
+		RESPONSE_CODE = UNLICENSED_INVALID_INSTALLER_ID;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			message.setText("UNLICENSED: Looks like you are using unlicensed copy of this app. Although the license is free of charge we are NOT allow use our app if it installed from third-party source or modified. We perform that checks to increase security. ".concat(aid));
 	}
 	
 	public void InvalidateAntiPiracyProvider() {
 		if (isNotification.equals("true")) {
-			RESPONSE_CODE = 4;
-			setContentView(R.layout.licence_check);
+			RESPONSE_CODE = UNLICENSED_INVALID_SIGNATURE;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			message.setText("UNLICENSED: This app has invalid signature. It may be cracked.");
 		} else {
@@ -345,8 +306,8 @@ public class PiracyCheckActivity extends Activity
 	
 	public void InvalidateExtras() {
 		if (isNotification.equals("true")) {
-			RESPONSE_CODE = 3;
-			setContentView(R.layout.licence_check);
+			RESPONSE_CODE = UNLICENSED_INVALID_PACKAGE_NAME;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			lTitle = (TextView) findViewById(R.id.license_title);
 			lTitle.setText("Error");
@@ -388,8 +349,8 @@ public class PiracyCheckActivity extends Activity
 				|| isPackageInstalled("com.android.vending.billing.InAppBillingService.LACK", packageManager)
 				|| isPackageInstalled("com.android.vending.billing.InAppBillingService.COIN", packageManager)
 				|| isPackageInstalled("com.android.vending.billing.InAppBillingService.BINN", packageManager)) {
-			RESPONSE_CODE = 5;
-			setContentView(R.layout.licence_check);
+			RESPONSE_CODE = UNLICENSED_MALICIOUS_SOFTWARE_FOUND;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			lTitle = (TextView) findViewById(R.id.license_title);
 			lTitle.setText("Security test failed");
@@ -397,7 +358,7 @@ public class PiracyCheckActivity extends Activity
 		} else {
 			// Step fourth: Check if device have the factory software and hardware attestation (Ex license will fail if user uses custom rom and/or root access is enabled)
 			String aid2 = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-			if (aid2.equals("c34ea1c41f95c6aa")) {
+			if (aid2.equals("2fe1c2fcc419dc05")) {
 				passDebug(DEFAULT_LICENSE_KEY);
 			} else {
 				if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)
@@ -408,70 +369,64 @@ public class PiracyCheckActivity extends Activity
 					 *                        !!!!! API KEY HAVE BEEN OMITTED TO PREVENT API ABUSING !!!!!
 					 * **********************************************************************************************************/
 					SafetyNet.getClient(this).attest(hexStringToByteArray("d43b1ee3b9b39bef"), "AIzaSyB26jTO0pXzegXMZAjslOcpr869qBScO9s") // !!!!!!!!!!!!!!!!!!!!!! REPLACE !!!!!!!!!!!!!!!!!!!!!!!
-							.addOnSuccessListener(this,
-									new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
-										@Override
-										public void onSuccess(SafetyNetApi.AttestationResponse response) {
-											// SmartToast.create(response.getJwsResult(), com.teslasoft.jarvis.licence.PiracyCheckActivity.this);
-											// Step fourth: additional checks:
-											if (isDeviceRooted()) {
-												String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-												if (aid.equals("c34ea1c41f95c6aa")) {
-													passDebug(DEFAULT_LICENSE_KEY);
-												} else {
-													RESPONSE_CODE = 7;
-													setContentView(R.layout.licence_check);
-													message = (TextView) findViewById(R.id.message);
-													lTitle = (TextView) findViewById(R.id.license_title);
-													lTitle.setText("Certification failed");
-													message.setText("Looks like that your device is not trusted. Please make sure that you bought it on the official store. Also make sure that system installed on this device is original. [ERR_OS_INTEGRITY_TEST_FAILED]");
-												}
-											} else {
-												// Step fifth: More checks
-												if (isEmulator(com.teslasoft.jarvis.licence.PiracyCheckActivity.this)) {
-													String aid = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-													if (aid.equals("c34ea1c41f95c6aa")) {
-														XVerifyLicenseID(response.getJwsResult());
-													} else {
-														RESPONSE_CODE = 18;
-														setContentView(R.layout.licence_check);
-														message = (TextView) findViewById(R.id.message);
-														message.setTextIsSelectable(true);
-														lTitle = (TextView) findViewById(R.id.license_title);
-														lTitle.setText("Security test failed");
-														message.setText("We can not guarantee security on emulators so we block our apps from running on emulators. Device ID: " + aid);
-													}
-												} else {
-													XVerifyLicenseID(response.getJwsResult());
-												}
-											}
-										}
-									})
-							.addOnFailureListener(this, new OnFailureListener() {
-								@Override
-								public void onFailure(@NonNull Exception e) {
-									// An error occurred while communicating with the service.
-									if (e instanceof ApiException) {
-										ApiException apiException = (ApiException) e;
-										RESPONSE_CODE = 8;
-										setContentView(R.layout.licence_check);
-										message = (TextView) findViewById(R.id.message);
-										lTitle = (TextView) findViewById(R.id.license_title);
-										lTitle.setText("Under maintenance");
-										message.setText("Our servers are currently overloaded. Please try later.");
-									} else {
-										RESPONSE_CODE = 16;
-										setContentView(R.layout.licence_check);
-										message = (TextView) findViewById(R.id.message);
-										lTitle = (TextView) findViewById(R.id.license_title);
-										lTitle.setText("Offline");
-										message.setText("Please check your Internet connection and try again.");
-									}
+						.addOnSuccessListener(this, response -> {
+							// SmartToast.create(response.getJwsResult(), com.teslasoft.jarvis.licence.PiracyCheckActivity.this);
+							// Step fourth: additional checks:
+							if (isDeviceRooted()) {
+								String aid = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+								if (aid.equals("2fe1c2fcc419dc05")) {
+									passDebug(DEFAULT_LICENSE_KEY);
+								} else {
+									RESPONSE_CODE = UNLICENSED_SAFETYNET_ATTESTATION_FAILED_NOT_CERTIFIED;
+									setContentView(R.layout.activity_licence_check);
+									message = (TextView) findViewById(R.id.message);
+									lTitle = (TextView) findViewById(R.id.license_title);
+									lTitle.setText("Certification failed");
+									message.setText("Looks like that your device is not trusted. Please make sure that you bought it on the official store. Also make sure that system installed on this device is original. [ERR_OS_INTEGRITY_TEST_FAILED]");
 								}
-							});
+							} else {
+								// Step fifth: More checks
+								if (isEmulator(PiracyCheckActivity.this)) {
+									String aid = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+									if (aid.equals("2fe1c2fcc419dc05")) {
+										XVerifyLicenseID(response.getJwsResult());
+									} else {
+										RESPONSE_CODE = UNLICENSED_EMULATOR_DETECTED;
+										setContentView(R.layout.activity_licence_check);
+										message = (TextView) findViewById(R.id.message);
+										message.setTextIsSelectable(true);
+										lTitle = (TextView) findViewById(R.id.license_title);
+										lTitle.setText("Security test failed");
+										message.setText("We can not guarantee security on emulators so we block our apps from running on emulators. Device ID: " + aid);
+									}
+								} else {
+									XVerifyLicenseID(response.getJwsResult());
+								}
+							}
+						}
+					).addOnFailureListener(this, e -> {
+							// An error occurred while communicating with the service.
+							if (e instanceof ApiException) {
+								ApiException apiException = (ApiException) e;
+								RESPONSE_CODE = UNLICENSED_SAFETYNET_ATTESTATION_FAILED_API_ERROR;
+								setContentView(R.layout.activity_licence_check);
+								message = (TextView) findViewById(R.id.message);
+								lTitle = (TextView) findViewById(R.id.license_title);
+								lTitle.setText("Under maintenance");
+								message.setText("Our servers are currently overloaded. Please try later.");
+							} else {
+								RESPONSE_CODE = ERR_NO_INTERNET_CONNECTION;
+								setContentView(R.layout.activity_licence_check);
+								message = (TextView) findViewById(R.id.message);
+								lTitle = (TextView) findViewById(R.id.license_title);
+								lTitle.setText("Offline");
+								message.setText("Please check your Internet connection and try again.");
+							}
+						}
+					);
 				} else {
-					RESPONSE_CODE = 6;
-					setContentView(R.layout.licence_check);
+					RESPONSE_CODE = UNLICENSED_GMS_CORE_OUTDATED;
+					setContentView(R.layout.activity_licence_check);
 					message = (TextView) findViewById(R.id.message);
 					lTitle = (TextView) findViewById(R.id.license_title);
 					lTitle.setText("Security test failed");
@@ -512,8 +467,8 @@ public class PiracyCheckActivity extends Activity
 			String ctsProfileMatch = Objects.requireNonNull(map.get("ctsProfileMatch")).toString();
 
 			if (basicIntegrity.equals("true") && ctsProfileMatch.equals("true")) {
-				RESPONSE_CODE = 0;
-				setContentView(R.layout.licence_check);
+				RESPONSE_CODE = LICENSED;
+				setContentView(R.layout.activity_licence_check);
 				message = (TextView) findViewById(R.id.message);
 				message.setTextIsSelectable(true);
 				message.setText("LICENSED");
@@ -553,8 +508,8 @@ public class PiracyCheckActivity extends Activity
 					passLicense();
 				}
 			} else {
-				RESPONSE_CODE = 7;
-				setContentView(R.layout.licence_check);
+				RESPONSE_CODE = UNLICENSED_SAFETYNET_ATTESTATION_FAILED_NOT_CERTIFIED;
+				setContentView(R.layout.activity_licence_check);
 				message = (TextView) findViewById(R.id.message);
 				lTitle = (TextView) findViewById(R.id.license_title);
 				lTitle.setText("Security test failed");
@@ -562,8 +517,8 @@ public class PiracyCheckActivity extends Activity
 			}
 
 		} catch (ParseException e) {
-			RESPONSE_CODE = 17;
-			setContentView(R.layout.licence_check);
+			RESPONSE_CODE = UNLICENSED_INVALID_SAFETYNET_RESPONSE;
+			setContentView(R.layout.activity_licence_check);
 			message = (TextView) findViewById(R.id.message);
 			message.setTextIsSelectable(true);
 			lTitle = (TextView) findViewById(R.id.license_title);
@@ -619,8 +574,7 @@ public class PiracyCheckActivity extends Activity
 	}
 
 	@Override
-	public void onBackPressed()
-	{
+	public void onBackPressed() {
 		this.setResult(Activity.RESULT_CANCELED);
 		finishAndRemoveTask();
 	}

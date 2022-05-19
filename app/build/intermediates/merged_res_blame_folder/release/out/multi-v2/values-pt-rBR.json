@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
+            "outputFile": "com.teslasoft.libraries.support.app-mergeReleaseResources-19:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\9339927e08badd09bc5459e4ba900d5f\\transformed\\core-1.7.0\\res\\values-pt-rBR\\values-pt-rBR.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5191",
-                        "endColumns": "100",
-                        "endOffsets": "5287"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\46d15f5c58a469270eeba15db4463d05\\transformed\\appcompat-1.4.0\\res\\values-pt-rBR\\values-pt-rBR.xml",
+                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\bae1d6d19b4561ae25afe8e3a943ab2f\\transformed\\play-services-base-18.0.1\\res\\values-pt-rBR\\values.xml",
+                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\554e56b7ca3c23393183273258feb399\\transformed\\play-services-base-18.0.1\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\e6d400ba5c8d05501ff6f03a459292e6\\transformed\\play-services-basement-18.0.0\\res\\values-pt-rBR\\values.xml",
+                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\f4edb30f12a4233ffb8ce3032d6469ff\\transformed\\play-services-basement-18.0.0\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -69,6 +52,23 @@
                         "startOffsets": "3855",
                         "endColumns": "144",
                         "endOffsets": "3995"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Teslasoft\\.gradle\\caches\\transforms-3\\d8338c189490aee58604e111af57865f\\transformed\\core-1.7.0\\res\\values-pt-rBR\\values-pt-rBR.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5191",
+                        "endColumns": "100",
+                        "endOffsets": "5287"
                     }
                 }
             ]

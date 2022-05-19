@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Перейти вверх"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Ещё"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Показать все"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Выберите приложение"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ВЫКЛ"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ВКЛ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Ввод"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"Пробел"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Меню +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Введите запрос"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Удалить запрос"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Поисковый запрос"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Поиск"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Отправить запрос"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Голосовой поиск"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Поделиться с помощью"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Поделиться с помощью <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Свернуть"</string>
+    <string name="account_settings_title">Настройки аккаунта</string>
+    <string name="activity_auth_name">Войти</string>
+    <string name="all_services">Все службы</string>
+    <string name="authentication_message">Для продолжения подтвердите свою личность</string>
+    <string name="authentication_title">Аутентификация</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_disable">Отключить</string>
+    <string name="button_enable">Включить</string>
+    <string name="collect_crash_info">Сбор информации об ошибке ...</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Включить</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Для работы приложения \"%1$s\" требуется включить сервисы Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Включите сервисы Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Установить</string>
+    <string name="common_google_play_services_install_text">Для работы приложения \"%1$s\" требуется установить сервисы Google Play.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Установите сервисы Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Доступность сервисов Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Ошибка сервисов Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Приложению \"%1$s\" не удается подключиться к сервисам Google Play. Повторите попытку.</string>
+    <string name="common_google_play_services_unsupported_text">Для работы с приложением \"%1$s\" требуются сервисы Google Play. Они не поддерживаются на вашем устройстве.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Обновить</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Чтобы запустить приложение \"%1$s\", обновите сервисы Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Обновите сервисы Google Play</string>
+    <string name="common_google_play_services_updating_text">Сервисы Google Play, необходимые для работы приложения \"%1$s\", в настоящий момент обновляются.</string>
+    <string name="common_google_play_services_wear_update_text">Версия сервисов Google Play устарела. Они автоматически обновятся в ближайшее время.</string>
+    <string name="common_open_on_phone">Открыть на телефоне</string>
+    <string name="common_signin_button_text">Войти</string>
+    <string name="common_signin_button_text_long">Войти через аккаунт Google</string>
+    <string name="core_desc">Служба Init Service является основным процессом приложения. Она отвечает за базовую работу приложения.</string>
+    <string name="crash_service_note">Данная служба может быть запущенна другим приложением. Если в данной службе происходять ошибки вы можете выключить ее, однако приложение, использующее данную службу может работать неправильно.</string>
+    <string name="device_admin_desc">Необходимо для нормальной работы таких функций как биометрическая аутентификация и блокировка приложений</string>
+    <string name="dp_desc">Служба Data Protector Service отвечает за защиту пользовательских данных и аккаунтов.</string>
+    <string name="error_close">Закрыть</string>
+    <string name="error_copy">Копировать</string>
+    <string name="error_detail">Инфо</string>
+    <string name="error_title">Произошла ошибка</string>
+    <string name="fingerprint_completed">Аутентификация завершена</string>
+    <string name="fingerprint_err_unsafe_operation">ОШИБКА: Небезопасный метот аутентификации. Убедитесь что у вас настроена блокировка экрана.</string>
+    <string name="fingerprint_not_prints">Для использования этой функции необходимо добавить как минимум 1 отпечаток пальца.</string>
+    <string name="fingerprint_not_recognized">Не распознано</string>
+    <string name="fingerprint_permission_denied">У приложения нет разрешения на использование сенсора отпечатка пальца.</string>
+    <string name="fingerprint_touch_message">Коснитесь сенсора отпечатка пальца</string>
+    <string name="fingerprint_unsupported_device">Сенсор отпечатка пальца не поддерживается вашим устройством.</string>
+    <string name="force_start">Запустить</string>
+    <string name="force_stop">Остановить</string>
+    <string name="lc_desc">Служба Licence Check Service проверяет наличие лицензии на программное обеспечение.</string>
+    <string name="licence_manager_title">Проверка лицензии</string>
+    <string name="notification_note">Если вы не хотите видеть уведомления вы можете выключить их в настройках, однако это может повлиять на работу приложения.</string>
+    <string name="ns_desc">Служба Notification Stats Service управляет уведомлениями для этого приложения.</string>
+    <string name="permission_access_auth_desc">использовать Jarvis Account API для авторизации пользователей</string>
+    <string name="permission_access_bio_desc">использовать сенсор отпечатка пальца на этом устройстве</string>
+    <string name="permission_access_core_desc">использовать Teslasoft Core с правами администратора</string>
+    <string name="permission_access_corex_desc">использовать системную библиотеку CoreX и загружать файлы защищенные системой</string>
+    <string name="permission_access_root_desc">запрашивать root привилегии на этом устройстве. Приложения с этим разрешением могут навредить устройству</string>
+    <string name="permission_access_smartcard_desc">использовать API смарт-карт для авторизации пользователей</string>
+    <string name="preferences">Настройки аккаунта</string>
+    <string name="sc_desc">Служба Teslasoft SmartCard отвечает за работу аутентификации с помощью смарт-карт.</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Поиск"</string>
+    <string name="security_title">Безопасность</string>
+    <string name="select_account_title">Выберите аккаунт для продолжения</string>
+    <string name="settings_title">Настройки</string>
+    <string name="stacktrace_copied">Текст скопирован</string>
+    <string name="state_disabled">Состояние: Отключена</string>
+    <string name="state_disabled_s">Отключена</string>
+    <string name="state_running">Состояние: Запущенна</string>
+    <string name="state_running_s">Запущенна</string>
+    <string name="state_stopped">Состояние: Остановлена</string>
+    <string name="state_stopped_s">Остановлена</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="verify_account_title">Проверка</string>
+</resources>

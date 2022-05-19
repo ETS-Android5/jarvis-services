@@ -1,73 +1,54 @@
 package com.teslasoft.jarvis.crashreport;
 
-import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 import android.content.Intent;
+
 import com.teslasoft.libraries.support.R;
 
-public class Detail extends Activity
-{
-	private Intent intent;
-	private String textdet;
-	
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
+public class Detail extends Activity {
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.report_detail);
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		setContentView(R.layout.activity_bugreport_detail);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		
-		try
-		{
+		try {
 			Intent intent = getIntent();
 			Bundle extras = intent.getExtras();
-			textdet = extras.getString("detail");
-		}
+			String textdet = extras.getString("detail");
 
-		catch (Exception e)
-		{
+			// TODO: Implement ...
+		} catch (Exception e) {
 			finish();
 			overridePendingTransition(0, 0);
 		}
 	}
 
-	public void DismissDialogActivity(View v)
-	{
+	public void DismissDialogActivity(View v) {
 		finish();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 
-	public void Ignore(View v)
-	{
-		//Do nothing
-	}
+	public void Ignore(View v) {}
 
 	@Override
-	public void onBackPressed()
-	{
+	public void onBackPressed() {
 		finish();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 	
 	@Override
-	protected void onPause()
-	{
+	protected void onPause() {
 		super.onPause();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 
 	@Override
-	protected void onResume()
-	{
+	protected void onResume() {
 		super.onResume();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 }

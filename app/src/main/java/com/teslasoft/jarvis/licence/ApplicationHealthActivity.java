@@ -8,9 +8,7 @@ import android.content.ComponentName;
 public class ApplicationHealthActivity extends Activity
 {
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		// TODO: Implement this method
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ForcePersistentComponentsIntegrity();
 	}

@@ -1,12 +1,10 @@
 package com.teslasoft.jarvis;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.content.SharedPreferences;
 
@@ -14,9 +12,9 @@ import com.teslasoft.libraries.support.R;
 
 public class Privacy extends Activity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.consent);
+        setContentView(R.layout.activity_privacy_policy);
     }
 
     public void dismissWindow(View v) {

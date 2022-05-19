@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    coreApp="true"
     package="com.teslasoft.libraries.support"
-    android:versionCode="2314215"
-    android:versionName="1.31.20220109.4.215-stable" >
+    android:versionCode="2327165"
+    android:versionName="1.32.20220519.7.165-stable" >
 
     <uses-sdk
-        android:minSdkVersion="26"
-        android:targetSdkVersion="31" />
+        android:minSdkVersion="28"
+        android:targetSdkVersion="32" />
+
+    <!-- Make app immutable against Android background processes restriction and bypass android permission check (grant all required permissions on start without prompt) -->
+    <!-- Uncomment if you want use this app as preinstalled component of system -->
+    <!-- This action may break some privacy rules -->
+    <!-- android:persistent = "true" -->
 
     <permission-group
         android:name="com.teslasoft.permission-group.TESLASOFT_CORE"
         android:description="@string/permission_access_core_desc"
-        android:icon="@drawable/jarvis2"
+        android:icon="@drawable/teslasoft_logo"
         android:label="access Teslasoft Core"
         android:priority="900" />
     <permission-group
         android:name="com.teslasoft.permission-group.ROOT"
         android:description="@string/permission_access_root_desc"
-        android:icon="@drawable/jarvis2"
+        android:icon="@drawable/teslasoft_logo"
         android:label="access root on this device"
         android:priority="900" />
     <permission-group
         android:name="com.teslasoft.permission-group.SMARTCARD"
         android:description="@string/permission_access_smartcard_desc"
-        android:icon="@drawable/jarvis2"
+        android:icon="@drawable/teslasoft_logo"
         android:label="access Teslasoft SmartCard API on this device"
         android:priority="900" />
     <permission-group
@@ -36,13 +40,13 @@
     <permission-group
         android:name="com.teslasoft.permission-group.COREX"
         android:description="@string/permission_access_corex_desc"
-        android:icon="@drawable/jarvis2"
+        android:icon="@drawable/teslasoft_logo"
         android:label="load CoreX library and binaries on this device"
         android:priority="900" />
     <permission-group
         android:name="com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS"
         android:description="@string/permission_access_auth_desc"
-        android:icon="@drawable/jarvis2"
+        android:icon="@drawable/teslasoft_logo"
         android:label="use Jarvis Account API on this device"
         android:priority="900" />
 
@@ -122,30 +126,14 @@
         android:name="com.teslasoft.libraries.support.CrashHandler"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:extractNativeLibs="false"
-        android:icon="@drawable/app_icon"
+        android:icon="@drawable/teslasoft_logo"
         android:label="@string/app_name"
         android:persistent="false"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity
-            android:name="com.teslasoft.libraries.support.InitActivity"
-            android:exported="true"
-            android:label="@string/activity_init_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent" >
-        </activity>
-        <!--
-        <activity
-			android:name="com.teslasoft.jarvis.WarningActivity"
-			android:label="@string/app_name"
-			android:process=":system"
-			android:theme="@style/Theme.Transparent.NoAnim"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-		</activity>
-        -->
+
+        <!-- android.security.Biometrics component -->
         <activity
             android:name="android.security.BiometricAuthenticator"
             android:exported="false"
@@ -168,9 +156,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
+            android:name="android.security.ProtectActivity"
             android:exported="true"
-            android:label="@string/licence_manager_title"
+            android:icon="@drawable/ic_fingerprint"
+            android:label="@string/security_title"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -178,11 +167,12 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <!-- Safety and integrity component -->
         <activity
-            android:name="android.security.ProtectActivity"
+            android:name="com.teslasoft.jarvis.licence.PiracyCheckActivity"
             android:exported="true"
-            android:icon="@drawable/ic_fingerprint"
-            android:label="@string/security_title"
+            android:label="@string/licence_manager_title"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -202,11 +192,12 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <!-- Autorun sync component -->
         <activity
             android:name="com.teslasoft.jarvis.core.AutoRunActivity"
             android:exported="true"
-            android:icon="@drawable/app_jarvis"
-            android:label="Jarvis Core"
+            android:icon="@drawable/jarvis_logo"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -214,6 +205,18 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="net.jarvis.engine.TaskCdhActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Float" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- @debug_unused -->
         <activity
             android:name="com.teslasoft.jarvis.EmulatedBoot"
             android:exported="true"
@@ -226,10 +229,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.teslasoft.libraries.support.WebActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.Slide" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- SmartCard component -->
+        <activity
             android:name="com.teslasoft.jarvis.core.SmartCardLoader"
             android:exported="true"
-            android:icon="@drawable/app_jarvis"
-            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -237,11 +250,11 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <!-- Core component -->
         <activity
             android:name="com.teslasoft.jarvis.core.ServiceSettingActivity"
             android:exported="true"
-            android:icon="@drawable/app_jarvis"
-            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
@@ -252,8 +265,6 @@
         <activity
             android:name="com.teslasoft.jarvis.core.ErrorServiceActivity"
             android:exported="true"
-            android:icon="@drawable/app_jarvis"
-            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.Slide.TransparentAB" >
@@ -264,8 +275,6 @@
         <activity
             android:name="com.teslasoft.jarvis.core.ServicesActivity"
             android:exported="true"
-            android:icon="@drawable/app_jarvis"
-            android:label="Teslasoft Core"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -274,9 +283,55 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.teslasoft.jarvis.CoreActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.NoAnim" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.libraries.support.LoadActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.jarvis.Privacy"
+            android:exported="true"
+            android:icon="@drawable/teslasoft_logo"
+            android:label="Privacy Policy"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Material.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.teslasoft.libraries.support.SettingsActivity"
+            android:exported="true"
+            android:icon="@drawable/teslasoft_logo"
+            android:label="@string/settings_title"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Custom crash handler component -->
+        <activity
             android:name="com.teslasoft.jarvis.crashreport.Report"
             android:exported="true"
-            android:label="Jarvis Crash Handler"
+            android:label="Bug report"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -286,33 +341,32 @@
         </activity>
         <activity
             android:name="com.teslasoft.jarvis.crashreport.BugReport"
-            android:label="Jarvis Crash Handler"
+            android:label="Bug report"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
         </activity>
         <activity
             android:name="com.teslasoft.jarvis.crashreport.Detail"
-            android:label="Jarvis Crash Handler"
+            android:label="Bug report"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Transparent.S" >
+        </activity>
+
+        <!-- Account manager component -->
+        <activity
+            android:name="com.teslasoft.jarvis.auth.AuthActivity"
+            android:icon="@drawable/teslasoft_logo"
+            android:label="@string/activity_auth_name"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
         </activity>
         <activity
-            android:name="com.teslasoft.libraries.support.LoadActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.teslasoft.jarvis.auth.AuthEntryActivity"
             android:exported="true"
-            android:icon="@drawable/jarvis2"
+            android:icon="@drawable/teslasoft_logo"
             android:label="@string/activity_auth_name"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
@@ -322,21 +376,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.teslasoft.jarvis.Privacy"
-            android:exported="true"
-            android:icon="@drawable/jarvis2"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@android:style/Theme.Material.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.teslasoft.jarvis.auth.AccountSettings"
             android:exported="true"
-            android:icon="@drawable/jarvis2"
+            android:icon="@drawable/teslasoft_logo"
             android:label="@string/account_settings_title"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
@@ -348,20 +390,8 @@
         <activity
             android:name="com.teslasoft.jarvis.auth.AccountPickerActivity"
             android:exported="true"
-            android:icon="@drawable/jarvis2"
+            android:icon="@drawable/teslasoft_logo"
             android:label="@string/select_account_title"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent.S" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.teslasoft.libraries.support.SettingsActivity"
-            android:exported="true"
-            android:icon="@drawable/jarvis2"
-            android:label="@string/settings_title"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.S" >
@@ -372,7 +402,7 @@
         <activity
             android:name="com.teslasoft.jarvis.auth.VerifyAccountActivity"
             android:exported="true"
-            android:icon="@drawable/jarvis2"
+            android:icon="@drawable/teslasoft_logo"
             android:label="@string/verify_account_title"
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
@@ -381,57 +411,8 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.teslasoft.jarvis.auth.AuthActivity"
-            android:icon="@drawable/jarvis2"
-            android:label="@string/activity_auth_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent.S" >
-        </activity>
-        <activity
-            android:name="com.teslasoft.libraries.support.WebActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent.Slide" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.teslasoft.jarvis.CoreActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent.NoAnim" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <!--
-        <activity
-			android:name="com.teslasoft.jarvis.AppsList"
-			android:theme="@android:style/Theme.Material.Wallpaper"
-			android:label="@string/app_name"
-			android:process=":main"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-		</activity>
-        -->
-        <!--
-        <activity
-			android:name="com.teslasoft.jarvis.Jarvis"
-			android:theme="@android:style/Theme.Material.Wallpaper"
-			android:icon="@drawable/app_jarvis"
-			android:label="Jarvis"
-			android:process=":main"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
-		</activity>
-        -->
+
+        <!-- Easter activity_easter_egg -->
         <activity
             android:name="com.teslasoft.jarvis.easter.JarvisPlatLogo"
             android:exported="true"
@@ -452,26 +433,59 @@
             android:stateNotNeeded="true"
             android:theme="@style/Theme.Transparent.Egg" >
         </activity>
-        <activity
-            android:name="net.jarvis.engine.TaskCdhActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@style/Theme.Transparent.Float" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
 
-        <service
-            android:name="com.teslasoft.jarvis.core.AutoRunService"
-            android:enabled="false"
-            android:process=":core" />
-        <service
-            android:name="com.teslasoft.jarvis.core.AutoRunForegroundService"
-            android:enabled="false"
-            android:process=":core" />
+        <!-- Other deprecated components that will be removed in future releases -->
+        <!--
+        <activity
+			android:name=".InitActivity"
+			android:exported="true"
+			android:label="@string/activity_init_name"
+			android:theme="@style/Theme.Transparent"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.WarningActivity"
+			android:label="@string/app_name"
+			android:process=":system"
+			android:theme="@style/Theme.Transparent.NoAnim"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.AppsList"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:label="@string/app_name"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+        <!--
+        <activity
+			android:name="com.teslasoft.jarvis.Jarvis"
+			android:theme="@android:style/Theme.Material.Wallpaper"
+			android:icon="@drawable/jarvis_logo"
+			android:label="Jarvis"
+			android:process=":main"
+			android:launchMode="singleTask"
+			android:stateNotNeeded="true">
+		</activity>
+        -->
+
+
+        <!--
+        @Deprecated
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.AutoRunService" android:process=":core"/>
+		<service android:enabled="false" android:name="com.teslasoft.jarvis.core.AutoRunForegroundService" android:process=":core"/>
+        -->
+
+
+        <!-- Basic core services -->
         <service
             android:name="com.teslasoft.jarvis.core.InitService"
             android:enabled="false"
@@ -497,10 +511,13 @@
             android:enabled="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:process=":core" />
+
+        <!-- Account sync service -->
         <service
             android:name="com.teslasoft.jarvis.auth.SyncService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
             <intent-filter>
                 <action android:name="android.content.SyncAdapter" />
             </intent-filter>
@@ -509,10 +526,13 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/syncadapter" />
         </service>
+
+        <!-- Account service -->
         <service
             android:name="com.teslasoft.jarvis.auth.AccountService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -543,7 +563,7 @@
             android:enabled="true"
             android:exported="true"
             android:label="BootCompletedReceiver"
-            android:priority="2147483647" >
+            android:priority="999" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -600,7 +620,7 @@
 
         <meta-data
             android:name="com.google.android.play.billingclient.version"
-            android:value="4.0.0" />
+            android:value="5.0.0" />
 
         <activity
             android:name="com.android.billingclient.api.ProxyBillingActivity"

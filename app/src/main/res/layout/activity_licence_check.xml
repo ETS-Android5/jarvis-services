@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:background="#99000000">
+
+		<LinearLayout
+			android:layout_width="320dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="24dp"
+			android:background="@drawable/ui_dialog_rounded_dark_v2"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="56dp"
+				android:gravity="left|center_vertical"
+				android:orientation="horizontal">
+
+				<TextView
+					android:id="@+id/license_title"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="16dp"
+					android:layout_marginRight="16dp"
+					android:text="License status"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#DB4437" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="bottom"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<ScrollView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:padding="16dp">
+
+							<TextView
+								android:id="@+id/message"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textAppearance="?android:attr/textAppearanceMedium" />
+
+						</LinearLayout>
+
+					</ScrollView>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="56dp"
+					android:gravity="right|center_vertical"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="100dp"
+						android:layout_height="36dp"
+						android:layout_margin="8dp"
+						android:background="@drawable/ripple_accent_v1"
+						android:gravity="center"
+						android:onClick="failLicense"
+						android:orientation="horizontal">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Close"
+							android:textAppearance="?android:attr/textAppearanceMedium" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

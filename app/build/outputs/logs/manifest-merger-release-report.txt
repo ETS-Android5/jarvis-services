@@ -1,1101 +1,1045 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ad81da7be50513429de8f6fb7633ca9e\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:2:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46d15f5c58a469270eeba15db4463d05\transformed\appcompat-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8e303aa94dfd93885ed8afd48730127b\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-safetynet:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\060ddf260a427d482de8cb1a8e3c9103\transformed\play-services-safetynet-18.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ffe1aa74e7511a64137147a44f2db927\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\3fa0452599eafa04f96460f5edb0e212\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\979d22e60a188fda7431e38d4f6f14e6\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70088de83757cd2e92dadb8b386e6adb\transformed\jetified-appcompat-resources-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f7821781e94f81fee824a3c8b7db309\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6cbed90352b213553df3539e2e7f22af\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70815d79092ecd9fc6461dffc8a2c5cb\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b2ba3d5ed78786779fe2371dcc849edb\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\26a7debbd02593a460c2da8b73b1a684\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bad80395f89f9c8d7e39c1b2b41b5525\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ec79f9c58b64c498772908f9ba77a8d1\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\eea6bf5c941666972978ea72d17fa715\transformed\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09dc527a7c28039450d9b99203d1a67c\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8a9cae927f9316cf7d269ce5dd3eaa14\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\fdf82ea01639be3b378e3d8ae26d9fb7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\481e173be89c72b2339cfb90a0d0dfe3\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2a57aba640d6987b70d76bbd37348ac4\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\dabda3dcb43df8ec4c551ac08ba381df\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\1cb4c19a0747461aa679ba30d4bab2d0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ebd7630bfb4c047fea30074c62d6420c\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bca1bb61c15ab5807e64593ca04debef\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3e108d352bff2b84e595703a9f580dc7\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf84e9f04a9c3b437080e86a107d0b9\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70be178243629fefb8ce9adf6a292e12\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b521f32a8ca2115704fce9eaa65230c1\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
-INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:2:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\85dac3263b9f8c68f48f0a21470c7376\transformed\play-services-safetynet-18.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\1f4e79b9364a9bbe2278ac0c0afb5cf3\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\08be5f2811952d88fdbd324236b15817\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\a505324edc890ee0575fb5853b4a2448\transformed\activity-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6288329dc9f81b44d707170357848660\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f5000f73130b69910a081e3326ad36cc\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\089f3a62207b4741a667b58aa013b8b6\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2123698e98f614592287cfca95ce0b65\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\99b67211caf75454d8db8cffaa4c204a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d595333dc203b9785b4ecc3f496364a8\transformed\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\952df043c2b002702540b3e9d500b498\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\a9acd0dedf18860c026beb7159aedafc\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e1a62715087a89352861ae3443fed18d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf4c5513de0aa3f2d491af792a3abb8\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\e988628139fdde72599a7fb0173533f5\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0dff1c662625ea984670c5782fc7d571\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ee659dbb9116c3e21ee1968a7dd70a8e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f01866c3eb0b5387e0f45d19136fe35\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0d304a484326baa263a900de069d66cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e86789e5c6a139d06b4904a4413042ef\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bea07825b7217081cc6ac437eb5d453f\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e36aaea95b1e10850d139e7025f21ff0\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
+INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
 	package
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:5:2-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:4:2-43
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:3:2-48
 	android:versionCode
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-599:12
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:1-643:12
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:2:11-69
-	coreApp
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:4:2-16
 permission-group#com.teslasoft.permission-group.TESLASOFT_CORE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:7:2-12:62
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:11:2-16:62
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:8:3-40
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:12:3-40
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:11:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:15:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:9:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:13:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:12:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:16:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:10:3-63
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:14:3-63
 permission-group#com.teslasoft.permission-group.ROOT
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:14:2-19:62
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:18:2-23:62
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:15:3-45
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:19:3-45
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:18:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:22:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:16:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:20:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:19:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:23:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:17:3-53
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:21:3-53
 permission-group#com.teslasoft.permission-group.SMARTCARD
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:21:2-26:67
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:25:2-30:67
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:22:3-64
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:26:3-64
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:25:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:29:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:23:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:27:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:26:3-65
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:30:3-65
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:24:3-58
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:28:3-58
 permission-group#com.teslasoft.permission-group.USE_BIOMETRICS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:28:2-33:61
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:32:2-37:61
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:29:3-62
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:33:3-62
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:32:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:36:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:30:3-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:34:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:33:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:37:3-59
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:31:3-63
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:35:3-63
 permission-group#com.teslasoft.permission-group.COREX
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:35:2-40:63
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:39:2-44:63
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:36:3-65
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:40:3-65
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:39:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:43:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:37:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:41:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:40:3-61
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:44:3-61
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:38:3-54
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:42:3-54
 permission-group#com.teslasoft.permission-group.AUTHENTICATE_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:42:2-47:62
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:46:2-51:62
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:43:3-56
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:47:3-56
 	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:46:3-25
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:50:3-25
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:44:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:48:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:47:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:51:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:45:3-70
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:49:3-70
 permission#com.teslasoft.core.permission.ACCESS_CORE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:49:2-56:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:53:2-60:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:55:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:59:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:51:3-40
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:55:3-40
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:56:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:60:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:54:3-74
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:58:3-74
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:52:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:56:3-36
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:53:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:57:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:50:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:54:3-59
 permission#com.teslasoft.core.permission.ACCESS_ROOT
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:58:2-65:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:62:2-69:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:64:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:68:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:60:3-45
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:64:3-45
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:65:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:69:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:63:3-64
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:67:3-64
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:61:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:65:3-36
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:62:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:66:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:59:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:63:3-59
 permission#com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:67:2-74:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:71:2-78:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:73:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:77:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:69:3-64
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:73:3-64
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:74:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:78:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:72:3-69
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:76:3-69
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:70:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:74:3-36
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:71:3-65
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:75:3-65
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:68:3-74
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:72:3-74
 permission#com.teslasoft.core.permission.USE_BIOMETRICS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:76:2-83:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:80:2-87:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:82:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:86:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:78:3-62
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:82:3-62
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:83:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:87:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:81:3-74
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:85:3-74
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:79:3-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:83:3-42
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:80:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:84:3-59
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:77:3-62
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:81:3-62
 permission#com.teslasoft.core.permission.COREX
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:85:2-92:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:89:2-96:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:91:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:95:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:87:3-65
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:91:3-65
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:92:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:96:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:90:3-65
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:94:3-65
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:88:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:92:3-36
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:89:3-61
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:93:3-61
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:86:3-53
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:90:3-53
 permission#com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:94:2-101:41
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:98:2-105:41
 	android:permissionFlags
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:100:3-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:104:3-43
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:96:3-56
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:100:3-56
 	android:protectionLevel
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:101:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:105:3-38
 	android:permissionGroup
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:99:3-81
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:103:3-81
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:97:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:101:3-36
 	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:98:3-60
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:102:3-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:95:3-69
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:99:3-69
 uses-permission#com.teslasoft.core.permission.ACCESS_CORE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:103:2-104:61
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:107:2-108:61
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:104:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:108:3-59
 uses-permission#com.teslasoft.core.permission.ACCESS_SMARTCARD_FRAMEWORK
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:105:2-106:76
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:109:2-110:76
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:106:3-74
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:110:3-74
 uses-permission#com.teslasoft.core.permission.USE_BIOMETRICS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:107:2-108:64
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:111:2-112:64
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:108:3-62
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:112:3-62
 uses-permission#com.teslasoft.core.permission.COREX
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:109:2-110:55
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:113:2-114:55
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:110:3-53
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:114:3-53
 uses-permission#com.teslasoft.core.permission.AUTHENTICATE_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:111:2-112:71
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:115:2-116:71
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:112:3-69
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:116:3-69
 uses-permission#com.teslasoft.jarvis.SYSTEM
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:113:2-114:47
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:114:3-45
-uses-permission#com.android.vending.BILLING
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:115:2-116:47
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:10:5-67
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:10:5-67
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:116:3-45
-uses-permission#android.permission.INTERNET
 ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:117:2-118:47
 	android:name
 		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:118:3-45
+uses-permission#com.android.vending.BILLING
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:119:2-120:47
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:10:5-67
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:120:3-45
+uses-permission#android.permission.INTERNET
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:121:2-122:47
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:122:3-45
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:119:2-120:59
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:123:2-124:59
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:120:3-57
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:124:3-57
 uses-permission#android.permission.USE_FINGERPRINT
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:121:2-122:54
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:125:2-126:54
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:122:3-52
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:126:3-52
 uses-permission#android.permission.USE_BIOMETRICS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:123:2-124:53
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:127:2-128:53
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:124:3-51
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:128:3-51
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:125:2-126:56
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:129:2-130:56
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:126:3-54
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:130:3-54
 uses-permission#android.permission.READ_OEM_UNLOCK_STATE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:127:2-129:40
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:131:2-133:40
 	tools:ignore
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:129:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:133:3-38
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:128:3-58
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:132:3-58
 uses-permission#com.android.vending.CHECK_LICENSE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:130:2-131:53
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:134:2-135:53
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:131:3-51
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:135:3-51
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:132:2-133:57
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:136:2-137:57
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:133:3-55
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:137:3-55
 uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:134:2-135:60
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:138:2-139:60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:135:3-58
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:139:3-58
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:136:2-137:51
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:140:2-141:51
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:137:3-49
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:141:3-49
 uses-permission#android.permission.MANAGE_ACCOUNTS
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:138:2-139:54
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:142:2-143:54
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:139:3-52
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:143:3-52
 uses-permission#android.permission.NFC
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:140:2-141:42
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:144:2-145:42
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:141:3-40
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:145:3-40
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:142:2-143:55
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:146:2-147:55
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:143:3-53
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:147:3-53
 uses-permission#android.permission.WAKE_LOCK
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:144:2-145:48
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:148:2-149:48
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:145:3-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:149:3-46
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:146:2-147:61
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:150:2-151:61
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:147:3-59
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:151:3-59
 application
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:149:2-598:16
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ad81da7be50513429de8f6fb7633ca9e\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ad81da7be50513429de8f6fb7633ca9e\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:12:5-22:19
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:12:5-22:19
-MERGED from [com.google.android.gms:play-services-safetynet:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\060ddf260a427d482de8cb1a8e3c9103\transformed\play-services-safetynet-18.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-safetynet:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\060ddf260a427d482de8cb1a8e3c9103\transformed\play-services-safetynet-18.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ffe1aa74e7511a64137147a44f2db927\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ffe1aa74e7511a64137147a44f2db927\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\eea6bf5c941666972978ea72d17fa715\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\eea6bf5c941666972978ea72d17fa715\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8a9cae927f9316cf7d269ce5dd3eaa14\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8a9cae927f9316cf7d269ce5dd3eaa14\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:153:2-642:16
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:12:5-22:19
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:12:5-22:19
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\85dac3263b9f8c68f48f0a21470c7376\transformed\play-services-safetynet-18.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\85dac3263b9f8c68f48f0a21470c7376\transformed\play-services-safetynet-18.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\1f4e79b9364a9bbe2278ac0c0afb5cf3\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\1f4e79b9364a9bbe2278ac0c0afb5cf3\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d595333dc203b9785b4ecc3f496364a8\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d595333dc203b9785b4ecc3f496364a8\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\a9acd0dedf18860c026beb7159aedafc\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\a9acd0dedf18860c026beb7159aedafc\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 	android:requestLegacyExternalStorage
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:157:3-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:161:3-46
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:150:3-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:154:3-35
 	android:appComponentFactory
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:154:3-71
-		REJECTED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-	tools:targetApi
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:159:3-22
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:158:3-71
+		REJECTED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:persistent
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:158:3-29
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:162:3-29
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:156:3-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:160:3-42
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:151:3-34
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:155:3-34
 	tools:replace
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:155:3-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:159:3-46
 	android:usesCleartextTraffic
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:152:3-38
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:156:3-38
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:153:3-31
-activity#com.teslasoft.libraries.support.InitActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:160:3-167:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:166:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:163:4-46
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:165:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:162:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:164:4-44
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:161:4-32
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:157:3-31
 activity#android.security.BiometricAuthenticator
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:176:3-184:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:165:3-173:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:182:4-33
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:171:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:178:4-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:167:4-42
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:181:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:170:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:183:4-28
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:172:4-28
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:179:4-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:168:4-43
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:180:4-64
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:169:4-64
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:177:4-58
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:166:4-58
 activity#android.security.BiometricAuthenticatorCallback
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:185:3-197:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:175:3-187:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:191:4-33
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:181:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:187:4-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:177:4-42
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:190:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:180:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:192:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:182:4-27
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:188:4-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:178:4-43
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:189:4-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:179:4-46
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:186:4-66
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:176:4-66
 intent-filter#action:name:android.intent.action.MAIN
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-196:20
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:184:4-186:20
 action#android.intent.action.MAIN
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:5-57
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:185:5-57
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:13-54
-activity#com.teslasoft.jarvis.licence.PiracyCheckActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:198:3-209:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:203:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:200:4-49
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:202:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:204:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:201:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:199:4-67
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:185:13-54
 activity#android.security.ProtectActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:210:3-222:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:189:3-201:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:216:4-33
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:195:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:212:4-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:191:4-42
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:215:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:194:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:217:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:196:4-27
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:213:4-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:192:4-43
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:214:4-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:193:4-46
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:211:4-51
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:190:4-51
+activity#com.teslasoft.jarvis.licence.PiracyCheckActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:204:3-215:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:209:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:206:4-49
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:208:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:210:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:207:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:205:4-67
 activity#com.teslasoft.jarvis.licence.ApplicationHealthActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:223:3-235:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:217:3-229:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:229:4-33
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:223:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:225:4-49
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:219:4-49
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:228:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:222:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:230:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:224:4-27
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:226:4-37
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:220:4-37
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:227:4-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:221:4-46
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:224:4-73
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:218:4-73
 activity#com.teslasoft.jarvis.core.AutoRunActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:236:3-248:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:232:3-243:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:242:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:238:4-31
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:237:4-33
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:241:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:236:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:243:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:238:4-27
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:239:4-39
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:234:4-40
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:240:4-46
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:235:4-46
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:237:4-60
-activity#com.teslasoft.jarvis.EmulatedBoot
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:249:3-260:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:254:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:251:4-34
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:253:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:255:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:252:4-37
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:250:4-52
-activity#com.teslasoft.jarvis.core.SmartCardLoader
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:261:3-273:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:267:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:263:4-34
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:266:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:268:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:264:4-39
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:265:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:262:4-60
-activity#com.teslasoft.jarvis.core.ServiceSettingActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:274:3-286:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:280:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:276:4-34
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:279:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:281:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:277:4-39
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:278:4-64
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:275:4-67
-activity#com.teslasoft.jarvis.core.ErrorServiceActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:287:3-299:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:293:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:289:4-34
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:292:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:294:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:290:4-39
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:291:4-64
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:288:4-65
-activity#com.teslasoft.jarvis.core.ServicesActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:300:3-312:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:306:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:302:4-34
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:305:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:307:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:303:4-39
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:304:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:301:4-61
-activity#com.teslasoft.jarvis.crashreport.Report
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:313:3-324:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:318:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:315:4-40
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:317:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:319:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:316:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:314:4-58
-activity#com.teslasoft.jarvis.crashreport.BugReport
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:325:3-331:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:330:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:327:4-40
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:329:4-35
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:328:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:326:4-61
-activity#com.teslasoft.jarvis.crashreport.Detail
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:332:3-338:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:337:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:334:4-40
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:336:4-35
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:335:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:333:4-58
-activity#com.teslasoft.libraries.support.LoadActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:339:3-351:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:344:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:341:4-36
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:343:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:345:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:342:4-44
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:340:4-32
-activity#com.teslasoft.jarvis.auth.AuthEntryActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:352:3-364:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:358:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:354:4-46
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:357:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:359:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:356:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:355:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:353:4-62
-activity#com.teslasoft.jarvis.Privacy
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:365:3-377:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:371:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:367:4-36
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:370:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:372:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:369:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:368:4-61
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:366:4-47
-activity#com.teslasoft.jarvis.auth.AccountSettings
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:378:3-390:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:384:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:380:4-50
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:383:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:385:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:381:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:382:4-61
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:379:4-60
-activity#com.teslasoft.jarvis.auth.AccountPickerActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:391:3-403:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:397:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:393:4-48
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:396:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:398:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:394:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:395:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:392:4-66
-activity#com.teslasoft.libraries.support.SettingsActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:404:3-416:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:410:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:406:4-42
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:409:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:411:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:407:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:408:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:405:4-36
-activity#com.teslasoft.jarvis.auth.VerifyAccountActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:417:3-429:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:423:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:419:4-48
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:422:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:424:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:420:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:421:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:418:4-66
-activity#com.teslasoft.jarvis.auth.AuthActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:430:3-437:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:436:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:432:4-46
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:435:4-35
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:434:4-36
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:433:4-46
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:431:4-57
-activity#com.teslasoft.libraries.support.WebActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:438:3-449:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:443:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:440:4-36
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:442:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:444:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:441:4-50
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:439:4-31
-activity#com.teslasoft.jarvis.CoreActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:450:3-460:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:454:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:451:4-36
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:453:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:455:4-27
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:452:4-51
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:450:13-61
-activity#com.teslasoft.jarvis.easter.JarvisPlatLogo
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:478:3-490:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:483:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:480:4-37
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:482:4-35
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:485:4-27
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:484:4-35
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:481:4-49
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:479:4-61
-activity#com.teslasoft.jarvis.easter.EasterEgg
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:491:3-498:14
-	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:496:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:493:4-37
-	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:495:4-35
-	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:497:4-35
-	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:494:4-48
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:492:4-56
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:233:4-60
 activity#net.jarvis.engine.TaskCdhActivity
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:499:3-510:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:245:3-255:14
 	android:stateNotNeeded
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:504:4-33
-	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:501:4-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:249:4-33
 	android:launchMode
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:503:4-35
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:248:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:505:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:250:4-27
 	android:theme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:502:4-50
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:247:4-50
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:500:4-52
-service#com.teslasoft.jarvis.core.AutoRunService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:3-117
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:92-115
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:12-35
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:511:36-91
-service#com.teslasoft.jarvis.core.AutoRunForegroundService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:3-127
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:102-125
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:12-35
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:512:36-101
-service#com.teslasoft.jarvis.core.InitService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:3-171
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:89-112
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:12-35
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:113-169
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:513:36-88
-service#com.teslasoft.jarvis.core.DataProtectorService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:3-180
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:98-121
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:12-35
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:122-178
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:514:36-97
-service#com.teslasoft.jarvis.core.LicenceCheckService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:3-178
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:96-119
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:12-34
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:120-176
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:515:35-95
-service#com.teslasoft.jarvis.core.NotificationStatService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:3-182
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:100-123
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:12-34
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:124-180
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:516:35-99
-service#com.teslasoft.jarvis.core.SmartCardService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:3-175
-	android:process
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:93-116
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:12-34
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:117-173
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:517:35-92
-service#com.teslasoft.jarvis.auth.SyncService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:3-526:13
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:12-34
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:519:4-27
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:518:35-87
-intent-filter#action:name:android.content.SyncAdapter
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:520:4-522:20
-action#android.content.SyncAdapter
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:521:5-58
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:521:13-55
-meta-data#android.content.SyncAdapter
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:523:4-525:43
-	android:resource
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:525:5-40
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:524:5-47
-service#com.teslasoft.jarvis.auth.AccountService
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:3-535:13
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:68-90
-	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:528:4-27
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:527:12-67
-intent-filter#action:name:android.accounts.AccountAuthenticator
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:529:4-531:20
-action#android.accounts.AccountAuthenticator
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:530:5-67
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:530:13-65
-meta-data#android.accounts.AccountAuthenticator
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:532:4-534:44
-	android:resource
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:534:5-42
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:533:5-57
-receiver#com.teslasoft.libraries.support.AdminReceiver
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:536:3-550:14
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:246:4-52
+activity#com.teslasoft.jarvis.EmulatedBoot
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:258:3-269:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:263:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:537:4-36
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:260:4-34
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:262:4-35
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:541:4-28
-	android:permission
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:539:4-61
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:264:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:261:4-37
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:259:4-52
+activity#com.teslasoft.libraries.support.WebActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:271:3-281:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:275:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:274:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:276:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:273:4-50
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:272:4-31
+activity#com.teslasoft.jarvis.core.SmartCardLoader
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:284:3-294:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:288:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:287:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:289:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:286:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:285:4-60
+activity#com.teslasoft.jarvis.core.ServiceSettingActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:297:3-307:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:301:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:300:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:302:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:299:4-64
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:298:4-67
+activity#com.teslasoft.jarvis.core.ErrorServiceActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:309:3-319:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:313:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:312:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:314:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:311:4-64
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:310:4-65
+activity#com.teslasoft.jarvis.core.ServicesActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:321:3-331:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:325:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:324:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:326:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:323:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:322:4-61
+activity#com.teslasoft.jarvis.CoreActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:333:3-342:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:336:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:335:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:337:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:334:4-51
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:333:13-61
+activity#com.teslasoft.libraries.support.LoadActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:344:3-354:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:348:4-33
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:347:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:349:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:346:4-44
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:345:4-32
+activity#com.teslasoft.jarvis.Privacy
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:356:3-368:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:362:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:358:4-34
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:361:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:363:4-27
 	android:icon
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:540:4-37
-	android:description
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:538:4-51
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:360:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:359:4-61
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:536:13-42
-meta-data#android.app.device_admin
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:543:4-544:37
-	android:resource
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:544:5-34
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:543:15-54
-intent-filter#action:name:android.app.action.DEVICE_ADMIN_ENABLED+action:name:android.app.action.PROFILE_PROVISIONING_COMPLETE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:4-549:20
-action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:5-70
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:13-67
-action#android.app.action.PROFILE_PROVISIONING_COMPLETE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:5-78
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:13-76
-receiver#com.teslasoft.libraries.support.BootCompletedReceiver
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:551:3-570:14
-	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:552:4-26
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:357:4-47
+activity#com.teslasoft.libraries.support.SettingsActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:370:3-382:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:376:4-33
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:555:4-41
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:372:4-42
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:375:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:377:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:373:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:374:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:371:4-36
+activity#com.teslasoft.jarvis.crashreport.Report
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:385:3-396:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:390:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:387:4-30
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:389:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:391:4-27
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:388:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:386:4-58
+activity#com.teslasoft.jarvis.crashreport.BugReport
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:398:3-404:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:403:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:400:4-30
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:402:4-35
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:401:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:399:4-61
+activity#com.teslasoft.jarvis.crashreport.Detail
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:406:3-412:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:411:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:408:4-30
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:410:4-35
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:409:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:407:4-58
+activity#com.teslasoft.jarvis.auth.AuthActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:415:3-422:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:421:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:417:4-46
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:420:4-35
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:419:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:418:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:416:4-57
+activity#com.teslasoft.jarvis.auth.AuthEntryActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:424:3-436:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:430:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:426:4-46
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:429:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:431:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:428:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:427:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:425:4-62
+activity#com.teslasoft.jarvis.auth.AccountSettings
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:438:3-450:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:444:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:440:4-50
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:443:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:445:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:441:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:442:4-61
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:439:4-60
+activity#com.teslasoft.jarvis.auth.AccountPickerActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:452:3-464:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:458:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:454:4-48
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:457:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:459:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:455:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:456:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:453:4-66
+activity#com.teslasoft.jarvis.auth.VerifyAccountActivity
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:466:3-478:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:472:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:468:4-48
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:471:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:473:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:469:4-43
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:470:4-46
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:467:4-66
+activity#com.teslasoft.jarvis.easter.JarvisPlatLogo
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:481:3-493:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:486:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:483:4-37
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:485:4-35
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:488:4-27
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:487:4-35
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:484:4-49
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:482:4-61
+activity#com.teslasoft.jarvis.easter.EasterEgg
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:495:3-502:14
+	android:stateNotNeeded
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:500:4-33
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:497:4-37
+	android:launchMode
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:499:4-35
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:501:4-35
+	android:theme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:498:4-48
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:496:4-56
+service#com.teslasoft.jarvis.core.InitService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:545:3-171
+	android:process
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:545:89-112
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:545:12-35
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:545:113-169
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:545:36-88
+service#com.teslasoft.jarvis.core.DataProtectorService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:3-180
+	android:process
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:98-121
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:12-35
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:122-178
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:546:36-97
+service#com.teslasoft.jarvis.core.LicenceCheckService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:3-178
+	android:process
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:96-119
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:12-34
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:120-176
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:547:35-95
+service#com.teslasoft.jarvis.core.NotificationStatService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:3-182
+	android:process
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:100-123
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:12-34
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:124-180
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:548:35-99
+service#com.teslasoft.jarvis.core.SmartCardService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:549:3-175
+	android:process
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:549:93-116
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:549:12-34
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:549:117-173
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:549:35-92
+service#com.teslasoft.jarvis.auth.SyncService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:552:3-561:13
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:552:12-34
 	android:exported
 		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:553:4-27
-	android:priority
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:554:4-33
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:554:4-60
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:551:13-50
-intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:557:4-561:20
-action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:558:5-67
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:552:35-87
+intent-filter#action:name:android.content.SyncAdapter
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:555:4-557:20
+action#android.content.SyncAdapter
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:556:5-58
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:558:13-64
-action#android.intent.action.QUICKBOOT_POWERON
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:559:5-70
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:556:13-55
+meta-data#android.content.SyncAdapter
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:558:4-560:43
+	android:resource
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:560:5-40
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:559:13-67
-action#android.intent.action.LOCKED_BOOT_COMPLETED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:560:5-74
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:560:13-71
-intent-filter#action:name:android.intent.action.PACKAGE_REPLACED+data:scheme:package
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:563:4-566:20
-action#android.intent.action.PACKAGE_REPLACED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:5-69
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:13-66
-data
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:5-37
-	android:host
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:584:48-69
-	android:scheme
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:11-35
-intent-filter#action:name:android.intent.action.MY_PACKAGE_REPLACED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:567:4-569:20
-action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:5-72
-	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:13-69
-receiver#com.teslasoft.jarvis.core.RestartServiceReceiver
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:571:3-580:14
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:559:5-47
+service#com.teslasoft.jarvis.auth.AccountService
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:3-573:13
 	android:enabled
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:572:4-26
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:68-90
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:565:4-27
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:566:4-60
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:564:12-67
+intent-filter#action:name:android.accounts.AccountAuthenticator
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:567:4-569:20
+action#android.accounts.AccountAuthenticator
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:5-67
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:568:13-65
+meta-data#android.accounts.AccountAuthenticator
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:570:4-572:44
+	android:resource
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:572:5-42
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:571:5-57
+receiver#com.teslasoft.libraries.support.AdminReceiver
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:575:3-589:14
 	android:label
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:574:4-42
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:576:4-36
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:573:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:580:4-28
+	android:permission
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:578:4-61
+	android:icon
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:579:4-37
+	android:description
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:577:4-51
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:571:13-76
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:575:13-42
+meta-data#android.app.device_admin
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:582:4-583:37
+	android:resource
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:5-34
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:582:15-54
+intent-filter#action:name:android.app.action.DEVICE_ADMIN_ENABLED+action:name:android.app.action.PROFILE_PROVISIONING_COMPLETE
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:585:4-588:20
+action#android.app.action.DEVICE_ADMIN_ENABLED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:586:5-70
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:586:13-67
+action#android.app.action.PROFILE_PROVISIONING_COMPLETE
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:5-78
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:13-76
+receiver#com.teslasoft.libraries.support.BootCompletedReceiver
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:591:3-610:14
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:592:4-26
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:595:4-41
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:593:4-27
+	android:priority
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:594:4-26
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:591:13-50
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:597:4-601:20
+action#android.intent.action.BOOT_COMPLETED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:598:5-67
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:598:13-64
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:599:5-70
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:599:13-67
+action#android.intent.action.LOCKED_BOOT_COMPLETED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:600:5-74
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:600:13-71
+intent-filter#action:name:android.intent.action.PACKAGE_REPLACED+data:scheme:package
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:603:4-606:20
+action#android.intent.action.PACKAGE_REPLACED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:604:5-69
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:604:13-66
+data
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:605:5-37
+	android:host
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:626:48-69
+	android:scheme
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:605:11-35
+intent-filter#action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:607:4-609:20
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:608:5-72
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:608:13-69
+receiver#com.teslasoft.jarvis.core.RestartServiceReceiver
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:612:3-621:14
+	android:enabled
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:613:4-26
+	android:label
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:615:4-42
+	android:exported
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:614:4-27
+	android:name
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:612:13-76
 intent-filter#action:name:com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE+data:scheme:package
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:576:4-579:20
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:617:4-620:20
 action#com.teslasoft.jarvis.RESTART_INIT_CORE_SERVICE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:577:5-77
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:618:5-77
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:577:13-74
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:618:13-74
 receiver#com.teslasoft.libraries.support.SecretSettings
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:3-586:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:623:3-628:14
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:44-67
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:623:44-67
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:581:13-43
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:623:13-43
 intent-filter#action:name:android.provider.Telephony.SECRET_CODE+data:host:348216+data:scheme:android_secret_code
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:582:4-585:20
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:624:4-627:20
 action#android.provider.Telephony.SECRET_CODE
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:5-68
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:625:5-68
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:583:13-66
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:625:13-66
 receiver#com.teslasoft.libraries.support.EmulatedBootReceiver
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:3-592:14
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:630:3-635:14
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:50-73
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:630:50-73
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:587:13-49
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:630:13-49
 intent-filter#action:name:android.provider.Telephony.SECRET_CODE+data:host:3378+data:scheme:android_secret_code
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:588:4-591:20
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:631:4-634:20
 provider#com.teslasoft.jarvis.auth.SyncProvider
-ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:593:3-597:29
+ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:637:3-641:29
 	android:authorities
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:595:4-55
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:639:4-55
 	android:syncable
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:597:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:641:4-27
 	android:exported
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:596:4-27
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:640:4-27
 	android:name
-		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:594:4-57
+		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml:638:4-57
 uses-sdk
 INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ad81da7be50513429de8f6fb7633ca9e\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ad81da7be50513429de8f6fb7633ca9e\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:6:5-8:41
-MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46d15f5c58a469270eeba15db4463d05\transformed\appcompat-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46d15f5c58a469270eeba15db4463d05\transformed\appcompat-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8e303aa94dfd93885ed8afd48730127b\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8e303aa94dfd93885ed8afd48730127b\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-safetynet:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\060ddf260a427d482de8cb1a8e3c9103\transformed\play-services-safetynet-18.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-safetynet:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\060ddf260a427d482de8cb1a8e3c9103\transformed\play-services-safetynet-18.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ffe1aa74e7511a64137147a44f2db927\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ffe1aa74e7511a64137147a44f2db927\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\3fa0452599eafa04f96460f5edb0e212\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\3fa0452599eafa04f96460f5edb0e212\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\979d22e60a188fda7431e38d4f6f14e6\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\979d22e60a188fda7431e38d4f6f14e6\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70088de83757cd2e92dadb8b386e6adb\transformed\jetified-appcompat-resources-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70088de83757cd2e92dadb8b386e6adb\transformed\jetified-appcompat-resources-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f7821781e94f81fee824a3c8b7db309\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f7821781e94f81fee824a3c8b7db309\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6cbed90352b213553df3539e2e7f22af\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6cbed90352b213553df3539e2e7f22af\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70815d79092ecd9fc6461dffc8a2c5cb\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70815d79092ecd9fc6461dffc8a2c5cb\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b2ba3d5ed78786779fe2371dcc849edb\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b2ba3d5ed78786779fe2371dcc849edb\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\26a7debbd02593a460c2da8b73b1a684\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\26a7debbd02593a460c2da8b73b1a684\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bad80395f89f9c8d7e39c1b2b41b5525\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bad80395f89f9c8d7e39c1b2b41b5525\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ec79f9c58b64c498772908f9ba77a8d1\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ec79f9c58b64c498772908f9ba77a8d1\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\eea6bf5c941666972978ea72d17fa715\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\eea6bf5c941666972978ea72d17fa715\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09dc527a7c28039450d9b99203d1a67c\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09dc527a7c28039450d9b99203d1a67c\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8a9cae927f9316cf7d269ce5dd3eaa14\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\8a9cae927f9316cf7d269ce5dd3eaa14\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\fdf82ea01639be3b378e3d8ae26d9fb7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\fdf82ea01639be3b378e3d8ae26d9fb7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\481e173be89c72b2339cfb90a0d0dfe3\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\481e173be89c72b2339cfb90a0d0dfe3\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2a57aba640d6987b70d76bbd37348ac4\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2a57aba640d6987b70d76bbd37348ac4\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\dabda3dcb43df8ec4c551ac08ba381df\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\dabda3dcb43df8ec4c551ac08ba381df\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\1cb4c19a0747461aa679ba30d4bab2d0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\1cb4c19a0747461aa679ba30d4bab2d0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ebd7630bfb4c047fea30074c62d6420c\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ebd7630bfb4c047fea30074c62d6420c\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bca1bb61c15ab5807e64593ca04debef\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bca1bb61c15ab5807e64593ca04debef\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3e108d352bff2b84e595703a9f580dc7\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3e108d352bff2b84e595703a9f580dc7\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf84e9f04a9c3b437080e86a107d0b9\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf84e9f04a9c3b437080e86a107d0b9\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70be178243629fefb8ce9adf6a292e12\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\70be178243629fefb8ce9adf6a292e12\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b521f32a8ca2115704fce9eaa65230c1\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\b521f32a8ca2115704fce9eaa65230c1\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\85dac3263b9f8c68f48f0a21470c7376\transformed\play-services-safetynet-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\85dac3263b9f8c68f48f0a21470c7376\transformed\play-services-safetynet-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\1f4e79b9364a9bbe2278ac0c0afb5cf3\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\1f4e79b9364a9bbe2278ac0c0afb5cf3\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\08be5f2811952d88fdbd324236b15817\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Teslasoft\.gradle\caches\transforms-3\08be5f2811952d88fdbd324236b15817\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\a505324edc890ee0575fb5853b4a2448\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\Teslasoft\.gradle\caches\transforms-3\a505324edc890ee0575fb5853b4a2448\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6288329dc9f81b44d707170357848660\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\6288329dc9f81b44d707170357848660\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f5000f73130b69910a081e3326ad36cc\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f5000f73130b69910a081e3326ad36cc\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\089f3a62207b4741a667b58aa013b8b6\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\089f3a62207b4741a667b58aa013b8b6\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2123698e98f614592287cfca95ce0b65\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\2123698e98f614592287cfca95ce0b65\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\99b67211caf75454d8db8cffaa4c204a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\99b67211caf75454d8db8cffaa4c204a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d595333dc203b9785b4ecc3f496364a8\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\d595333dc203b9785b4ecc3f496364a8\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\952df043c2b002702540b3e9d500b498\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\952df043c2b002702540b3e9d500b498\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\a9acd0dedf18860c026beb7159aedafc\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\a9acd0dedf18860c026beb7159aedafc\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e1a62715087a89352861ae3443fed18d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e1a62715087a89352861ae3443fed18d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf4c5513de0aa3f2d491af792a3abb8\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\faf4c5513de0aa3f2d491af792a3abb8\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\e988628139fdde72599a7fb0173533f5\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\e988628139fdde72599a7fb0173533f5\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0dff1c662625ea984670c5782fc7d571\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0dff1c662625ea984670c5782fc7d571\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ee659dbb9116c3e21ee1968a7dd70a8e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\ee659dbb9116c3e21ee1968a7dd70a8e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f01866c3eb0b5387e0f45d19136fe35\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\3f01866c3eb0b5387e0f45d19136fe35\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0d304a484326baa263a900de069d66cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0d304a484326baa263a900de069d66cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e86789e5c6a139d06b4904a4413042ef\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e86789e5c6a139d06b4904a4413042ef\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bea07825b7217081cc6ac437eb5d453f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\bea07825b7217081cc6ac437eb5d453f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e36aaea95b1e10850d139e7025f21ff0\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e36aaea95b1e10850d139e7025f21ff0\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -1107,58 +1051,58 @@ INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 		ADDED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Github\jarvis-services\app\src\main\AndroidManifest.xml
 meta-data#com.google.android.play.billingclient.version
-ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:13:9-15:37
+ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:13:9-15:37
 	android:value
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:15:13-34
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:15:13-34
 	android:name
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:14:13-73
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:14:13-73
 activity#com.android.billingclient.api.ProxyBillingActivity
-ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:17:9-21:75
+ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:17:9-21:75
 	android:exported
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:20:13-37
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:20:13-37
 	android:configChanges
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:19:13-96
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:19:13-96
 	android:theme
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:21:13-72
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:21:13-72
 	android:name
-		ADDED from [com.android.billingclient:billing:4.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\51571749757796f36bca10fddc5983e6\transformed\billing-4.0.0\AndroidManifest.xml:18:13-78
+		ADDED from [com.android.billingclient:billing:5.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\17be26fcec674869ccc359a119ad3396\transformed\billing-5.0.0\AndroidManifest.xml:18:13-78
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\bae1d6d19b4561ae25afe8e3a943ab2f\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Teslasoft\.gradle\caches\transforms-3\554e56b7ca3c23393183273258feb399\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\e6d400ba5c8d05501ff6f03a459292e6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\f4edb30f12a4233ffb8ce3032d6469ff\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\46500c3b5c1ccf84767a89139e7d74da\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:30:13-31
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:30:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Teslasoft\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78

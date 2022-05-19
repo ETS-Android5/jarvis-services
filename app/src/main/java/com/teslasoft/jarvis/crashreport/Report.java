@@ -1,162 +1,107 @@
 package com.teslasoft.jarvis.crashreport;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Activity;
 import android.view.View;
 import android.widget.Toast;
 import android.content.Intent;
+
 import com.teslasoft.libraries.support.R;
 
-public class Report extends Activity
-{
-	// private Intent intent;
+public class Report extends Activity {
+
 	private String errt;
-	
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.report_collect);
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		setContentView(R.layout.activity_bugreport_collect);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		
-		try
-		{
+		try {
 			Intent intent = getIntent();
 			Bundle extras = intent.getExtras();
 			errt = extras.getString("errz");
-		}
-		
-		/*android.app.RemoteServiceException: Context.startForegroundService() did not then call Service.startForeground():*/
-		
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			errt = "-676767";
 			finish();
 			overridePendingTransition(0, 0);
 		}
 		
-		try
-		{
-			if (errt.contains("android.app.RemoteServiceException: Context.startForegroundService() did not then call Service.startForeground():"))
-			{
+		try {
+			if (errt.contains("android.app.RemoteServiceException: Context.startForegroundService() did not then call Service.startForeground():")) {
 				finish();
 				overridePendingTransition(0, 0);
-			}
-
-			else
-			{
+			} else {
 				final Handler handler = new Handler();
-				handler.postDelayed(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						if (errt == "-676767")
-						{
-							finish();
-							overridePendingTransition(0, 0);
-						}
-						
-						else
-						{
-							try
-							{
-								Intent i = new Intent(com.teslasoft.jarvis.crashreport.Report.this, com.teslasoft.jarvis.crashreport.BugReport.class);
-								Bundle extras = new Bundle();
-								extras.putString("errtext", errt);
-								i.putExtras(extras);
-								startActivity(i);
-								finish();
-								overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-							}
-					
-							catch (Exception e)
-							{
-								finish();
-								overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-								Toast toast = Toast.makeText(getApplicationContext(), "Service not avaliable", Toast.LENGTH_SHORT); 
-								toast.show();
-							}
-						}
-					}
-				}, 200);
-			}
-		}
-		
-		catch (Exception errn)
-		{
-			final Handler handler = new Handler();
-			handler.postDelayed(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					if (errt == "-676767")
-					{
+				handler.postDelayed(() -> {
+					if (errt == "-676767") {
 						finish();
 						overridePendingTransition(0, 0);
-					}
-
-					else
-					{
-						try
-						{
-							Intent i = new Intent(com.teslasoft.jarvis.crashreport.Report.this, com.teslasoft.jarvis.crashreport.BugReport.class);
+					} else {
+						try {
+							Intent i = new Intent(Report.this, BugReport.class);
 							Bundle extras = new Bundle();
 							extras.putString("errtext", errt);
 							i.putExtras(extras);
 							startActivity(i);
 							finish();
-							overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-						}
-
-						catch (Exception e)
-						{
+							overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+						} catch (Exception e) {
 							finish();
-							overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-							Toast toast = Toast.makeText(getApplicationContext(), "Service not avaliable", Toast.LENGTH_SHORT); 
+							overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+							Toast toast = Toast.makeText(getApplicationContext(), "Service not available", Toast.LENGTH_SHORT);
 							toast.show();
 						}
+					}
+				}, 200);
+			}
+		} catch (Exception errn) {
+			final Handler handler = new Handler();
+			handler.postDelayed(() -> {
+				if (errt == "-676767") {
+					finish();
+					overridePendingTransition(0, 0);
+				} else {
+					try {
+						Intent i = new Intent(Report.this, BugReport.class);
+						Bundle extras = new Bundle();
+						extras.putString("errtext", errt);
+						i.putExtras(extras);
+						startActivity(i);
+						finish();
+						overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+					} catch (Exception e) {
+						finish();
+						overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+						Toast toast = Toast.makeText(getApplicationContext(), "Service not available", Toast.LENGTH_SHORT);
+						toast.show();
 					}
 				}
 			}, 200);
 		}
 	}
 
-	public void DismissDialogActivity(View v)
-	{
+	public void DismissDialogActivity(View v) {
 		finish();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 
-	public void Ignore(View v)
-	{
-		// Do nothing
-	}
+	public void Ignore(View v) {}
 
 	@Override
-	public void onBackPressed()
-	{
-		// Do nothing
-	}
+	public void onBackPressed() {}
 	
 	@Override
-	protected void onPause()
-	{
+	protected void onPause() {
 		super.onPause();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 
 	@Override
-	protected void onResume()
-	{
+	protected void onResume() {
 		super.onResume();
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 }

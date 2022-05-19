@@ -24,7 +24,7 @@
             <LinearLayout
                 android:layout_width="320dp"
                 android:layout_height="180dp"
-                android:background="@drawable/dialog_rounded_dark_v2"
+                android:background="@drawable/ui_dialog_rounded_dark_v3"
                 android:gravity="center"
                 android:orientation="vertical">
 

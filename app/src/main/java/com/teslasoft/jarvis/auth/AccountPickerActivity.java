@@ -1,27 +1,32 @@
 package com.teslasoft.jarvis.auth;
 
+import android.app.Activity;
+import android.os.Bundle;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
-import com.teslasoft.libraries.support.R;
-import android.view.ViewGroup;
-import android.widget.ImageView;
+
 import java.util.ArrayList;
 import java.util.List;
-import android.content.Intent;
-import android.widget.LinearLayout;
-import android.widget.SmartToast;
-import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import com.teslasoft.libraries.support.R;
+
 
 public class AccountPickerActivity<Accounts> extends Activity {
     public RecyclerView account_list;
@@ -35,7 +40,6 @@ public class AccountPickerActivity<Accounts> extends Activity {
         SharedPreferences privacy = this.getSharedPreferences("privacy_accepted", Context.MODE_PRIVATE);
         try {
             String privacy_is_accepted = privacy.getString("privacy", null);
-            // SmartToast.create(privacy_is_accepted, this);
             if (privacy_is_accepted.equals("yes")) {
                 Start();
             } else {
@@ -53,33 +57,29 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
     public void Start() {
         initialized = true;
-        SharedPreferences settings = this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+        SharedPreferences settings = this.getSharedPreferences("activity_core_settings", Context.MODE_PRIVATE);
         try {
             String isDarkTheme = settings.getString("dark_theme", null);
-            // SmartToast.create(isDarkTheme, this);
             if (isDarkTheme.equals("true")) {
-                setContentView(R.layout.account_picker);
+                setContentView(R.layout.activity_account_picker);
             } else {
-                setContentView(R.layout.account_picker_light);
+                setContentView(R.layout.activity_account_picker_light);
             }
         } catch (Exception e) {
-            setContentView(R.layout.account_picker);
+            setContentView(R.layout.activity_account_picker);
         }
 
-        // setContentView(R.layout.account_picker);
         account_list = (RecyclerView) findViewById(R.id.account_list);
         loadAccounts();;
     }
 
     public void loadAccounts() {
         accounts = new ArrayList<UserModel>();
-        try {
-            accounts.clear();
-        } catch (Exception e) {}
+
         AccountManager am =  (AccountManager)this.getSystemService(Context.ACCOUNT_SERVICE);
         Account[] accountsList = am.getAccountsByType("org.teslasoft.id.JARVIS_ACCOUNT");
-        for (int i = 0; i < accountsList.length; i++) {
-            accounts.add(new UserModel(accountsList[i].name, am.getUserData(accountsList[i], "user_email"), am.getUserData(accountsList[i], "user_id")));
+        for (Account account : accountsList) {
+            accounts.add(new UserModel(account.name, am.getUserData(account, "user_email"), am.getUserData(account, "user_id")));
         }
 
         AccountAdapter acadapter = new AccountAdapter(accounts);
@@ -87,9 +87,7 @@ public class AccountPickerActivity<Accounts> extends Activity {
         account_list.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void DoNothing(View v) {
-
-    }
+    public void DoNothing(View v) {}
 
     public void Dismiss(View v) {
         this.setResult(Activity.RESULT_CANCELED);
@@ -111,12 +109,14 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if (resultCode == RESULT_OK && initialized == true) {
-            loadAccounts();
-        } else if (resultCode == RESULT_OK && initialized == false) {
-            Start();
+        if (resultCode == RESULT_OK) {
+            if (initialized) {
+                loadAccounts();
+            } else {
+                Start();
+            }
         } else {
-            if (initialized == false) {
+            if (!initialized) {
                 finishAndRemoveTask();
             }
         }
@@ -124,37 +124,38 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
     public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHolder> {
 
-        private List<UserModel> UsersList;
+        private final List<UserModel> UsersList;
 
         public AccountAdapter(List<UserModel> userlist) {
             UsersList = userlist;
         }
 
-
+        @NonNull
         @Override
-        public AccountAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            SharedPreferences settings = AccountPickerActivity.this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+        public AccountAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            SharedPreferences settings = AccountPickerActivity.this.getSharedPreferences("activity_core_settings", Context.MODE_PRIVATE);
             try {
                 String isDarkTheme = settings.getString("dark_theme", null);
+
                 if (isDarkTheme.equals("true")) {
                     Context context = parent.getContext();
                     LayoutInflater inflater = LayoutInflater.from(context);
-                    View contactView = inflater.inflate(R.layout.account_item, parent, false);
-                    ViewHolder viewHolder = new ViewHolder(contactView);
-                    return viewHolder;
+                    View contactView = inflater.inflate(R.layout.fragment_account_item, parent, false);
+
+                    return new ViewHolder(contactView);
                 } else {
                     Context context = parent.getContext();
                     LayoutInflater inflater = LayoutInflater.from(context);
-                    View contactView = inflater.inflate(R.layout.account_item_light, parent, false);
-                    ViewHolder viewHolder = new ViewHolder(contactView);
-                    return viewHolder;
+                    View contactView = inflater.inflate(R.layout.fragment_account_item_light, parent, false);
+
+                    return new ViewHolder(contactView);
                 }
             } catch (Exception e) {
                 Context context = parent.getContext();
                 LayoutInflater inflater = LayoutInflater.from(context);
-                View contactView = inflater.inflate(R.layout.account_item, parent, false);
-                ViewHolder viewHolder = new ViewHolder(contactView);
-                return viewHolder;
+                View contactView = inflater.inflate(R.layout.fragment_account_item, parent, false);
+
+                return new ViewHolder(contactView);
             }
         }
 
@@ -164,18 +165,10 @@ public class AccountPickerActivity<Accounts> extends Activity {
             TextView textUsername = holder.textName;
             TextView textUseremail = holder.textEmail;
             ImageView userIcon = holder.userIcon;
-            LinearLayout rClickable = holder.r_clickable;
             textUsername.setText(users.getName());
             textUseremail.setText(users.getEmail());
             Glide.with(AccountPickerActivity.this).load(Uri.parse("https://usercontent.teslasoft.org/a/".concat(users.getUid()).concat("/icon.png"))).into(userIcon);
-
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    returnAccount(position);
-                }
-            });
-
+            holder.itemView.setOnClickListener(v -> returnAccount(position));
         }
 
         @Override
@@ -202,7 +195,6 @@ public class AccountPickerActivity<Accounts> extends Activity {
 
     public void returnAccount(int id) {
         this.setResult(id + 20);
-        // SmartToast.create(Integer.toString(id + 20), this);
         finish();
     }
 }

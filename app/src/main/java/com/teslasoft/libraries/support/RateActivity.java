@@ -1,35 +1,18 @@
 package com.teslasoft.libraries.support;
 
-import android.os.*;
-import android.app.*;
-import android.content.*;
-import android.view.*;
-import android.widget.*;
-import java.util.*;
-import android.content.*;
-import android.util.*;
-import android.net.*;
-import androidx.appcompat.*;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.View;
 
-public class RateActivity extends Activity
-{	
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		// TODO: Implement this method
-		return;
-	}
-	
+public class RateActivity extends Activity {
 	@Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rate);
+        setContentView(R.layout.activity_rate_view);
     }
 
 	@Override
-	public void onBackPressed()
-	{
-		// TODO: Implement this method
+	public void onBackPressed() {
 		super.onBackPressed();
 	}
 	

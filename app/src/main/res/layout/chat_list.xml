@@ -90,7 +90,7 @@
 				android:layout_alignParentLeft="true"
 				android:layout_centerVertical="true"
 				android:id="@+id/avatar_in"
-				android:src="@drawable/app_jarvis"/>
+				android:src="@drawable/jarvis_logo"/>
 
 		</LinearLayout>
 

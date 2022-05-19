@@ -1,51 +1,52 @@
 package com.teslasoft.jarvis.auth;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.os.Bundle;
+import android.os.AsyncTask;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
+import android.content.Context;
 import android.view.View;
-import com.teslasoft.libraries.support.R;
+import android.widget.LinearLayout;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
-import android.os.Build;
-import android.content.Context;
-import android.app.ActivityManager;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import android.os.AsyncTask;
-import android.widget.LinearLayout;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AuthActivity extends Activity
-{
+import com.teslasoft.libraries.support.R;
+
+public class AuthActivity extends Activity {
 	private WebView content;
-	private String lang = "en-US";
-	private String did = "0x005";
+	private final String lang = "en-US"; // Default lang
+	private final String did = "0x005"; // Tracking code
 	private String appId;
 	public LinearLayout loadingScreen;
 	public LinearLayout loginScreen;
 	public LinearLayout loadbg;
 	public String isDarkMode;
 
+	@SuppressLint("SetJavaScriptEnabled")
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
-		setContentView(R.layout.login_webview);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+		setContentView(R.layout.activity_login_checkin);
 
 		try {
 			Intent licenseIntent = new Intent(this, com.teslasoft.jarvis.licence.PiracyCheckActivity.class);
 			startActivityForResult(licenseIntent, 1);
 		} catch (Exception e) {
-			// User tried to disable or bypass license checking service, exit
 			this.setResult(Activity.RESULT_CANCELED);
 			finishAndRemoveTask();
 		}
@@ -59,38 +60,29 @@ public class AuthActivity extends Activity
 			finish();
 		}
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-		{
-            String processName = getProcessName(this);
-			
-			try {
-				content.setDataDirectorySuffix(processName);
-			}
+		// Android 6/7/8 is no longer supported
+		String processName = getProcessName(this);
 
-			catch (Exception e)
-			{
-				// com.teslasoft.jarvis.auth.AuthActivity.this.setResult(4);
-				// finishAndRemoveTask();
-			}
-		}
+		try {
+			WebView.setDataDirectorySuffix(processName);
+		} catch (Exception ignored) {}
 		
 		content = (WebView) findViewById(R.id.auth_web);
 		loadingScreen = (LinearLayout) findViewById(R.id.loading_page);
 		loginScreen = (LinearLayout) findViewById(R.id.login_page);
 		loadbg = (LinearLayout) findViewById(R.id.load_bg);
 
-		SharedPreferences settings = this.getSharedPreferences("core_settings", Context.MODE_PRIVATE);
+		SharedPreferences settings = this.getSharedPreferences("activity_core_settings", Context.MODE_PRIVATE);
 		try {
 			isDarkMode = settings.getString("dark_theme", null);
-			// SmartToast.create(isDarkTheme, this);
 			if (isDarkMode.equals("true")) {
-				loadbg.setBackgroundResource(R.drawable.dialog_rounded_dark_v2);
+				loadbg.setBackgroundResource(R.drawable.ui_dialog_rounded_dark_v3);
 			} else {
-				loadbg.setBackgroundResource(R.drawable.dialog_rounded_light);
+				loadbg.setBackgroundResource(R.drawable.ui_dialog_rounded_light);
 			}
 		} catch (Exception e) {
 			isDarkMode = "true";
-			loadbg.setBackgroundResource(R.drawable.dialog_rounded_dark_v2);
+			loadbg.setBackgroundResource(R.drawable.ui_dialog_rounded_dark_v3);
 		}
 
 		content.setBackgroundColor(0x00000000);
@@ -149,23 +141,19 @@ public class AuthActivity extends Activity
 	}
 	
 	class DownloadAccountInfo extends AsyncTask<String, String, String> {
-		private Exception exception;
-		
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 		}
 
-		protected String doInBackground(String... urls)
-		{
+		protected String doInBackground(String... urls) {
 			try {
 				URL url = new URL(urls[0]);
 				URLConnection conexion = url.openConnection();
 				conexion.connect();
-				BufferedReader bufferedReader = null;
+				BufferedReader bufferedReader;
 				bufferedReader = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
-				String result = bufferedReader.readLine();
-				return result;
+				return bufferedReader.readLine();
 			} catch (Exception e) {
 				AuthActivity.this.setResult(4);
 				finish();
@@ -192,13 +180,9 @@ public class AuthActivity extends Activity
 				accountManager.setUserData(account, "user_name", username);
 				AccountManager am =  (AccountManager)AuthActivity.this.getSystemService(Context.ACCOUNT_SERVICE);
 				String verifyAccount = am.getUserData(account, "auth_token");
-				if (token.equals(verifyAccount)) {
-					AuthActivity.this.setResult(Activity.RESULT_OK);
-					finish();
-				} else {
-					AuthActivity.this.setResult(4);
-					finish();
-				}
+
+				AuthActivity.this.setResult(token.equals(verifyAccount) ? Activity.RESULT_OK : 4);
+				finish();
 			} catch (JSONException e) {
 				AuthActivity.this.setResult(4);
 				finish();
@@ -206,19 +190,12 @@ public class AuthActivity extends Activity
 		}
 	}
 	
-	public void DismissDialogActivity(View v)
-	{
-		
-	}
+	public void DismissDialogActivity(View v) {}
 	
-	public void Ignore(View v)
-	{
-		// Do nothing
-	}
+	public void Ignore(View v) {}
 	
 	@Override
-	public void onBackPressed()
-	{
+	public void onBackPressed() {
 		if (content.canGoBack()) {
 			content.goBack();
 		} else {
@@ -227,30 +204,22 @@ public class AuthActivity extends Activity
 		}
 	}
 
-	/* Piracy check starts */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == Activity.RESULT_OK) {
-			// License check passed
-		} else {
-			// License check failed, exit
-			this.setResult(Activity.RESULT_CANCELED);
+
+		this.setResult(resultCode == Activity.RESULT_OK ? Activity.RESULT_OK : Activity.RESULT_CANCELED);
+
+		if (resultCode != Activity.RESULT_OK)
 			finishAndRemoveTask();
-		}
 	}
-	/* Piracy check ends */
 	
-	public String getProcessName(Context context)
-	{
+	public String getProcessName(Context context) {
         if (context == null) return null;
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses())
-		{
+        for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses()) {
             if (processInfo.pid == android.os.Process.myPid())
-			{
                 return processInfo.processName;
-            }
         }
 
 		return null;

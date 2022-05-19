@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Teslasoft Core</string>
-	<string name="activity_main_name">Teslasoft Core</string>
-	<string name="activity_settings_name">Настройки</string>
-	<string name="activity_init_name">Teslasoft Core</string>
-	<string name="activity_load_name">Jarvis</string>
 	<string name="activity_auth_name">Войти</string>
-	<string name="activity_account_name">Мой аккаунт</string>
-	<string name="activity_rate_name">Rate Teslasoft Core</string>
-	<string name="device_admin">Teslasoft Core</string>
-	<string name="permissions_description">Teslasoft Core permissions group</string>
-	<string name="permission_access_core_desc">использовать Teslasoft Core с правами администратора</string>
+    <string name="permission_access_core_desc">использовать Teslasoft Core с правами администратора</string>
 	<string name="permission_access_root_desc">запрашивать root привилегии на этом устройстве. Приложения с этим разрешением могут навредить устройству</string>
 	<string name="permission_access_smartcard_desc">использовать API смарт-карт для авторизации пользователей</string>
-	<string name="permission_access_bio_desc">использовать биометрическую авторизацию на этом устройстве</string>
+	<string name="permission_access_bio_desc">использовать сенсор отпечатка пальца на этом устройстве</string>
 	<string name="permission_access_corex_desc">использовать системную библиотеку CoreX и загружать файлы защищенные системой</string>
 	<string name="permission_access_auth_desc">использовать Jarvis Account API для авторизации пользователей</string>
-	<string name="device_admin_desc">Необходимо для нормальной работы таких функций как биометрическая авторизация и блокировка приложений</string>
-	<string name="lib_name">Jarvis Library Provider</string>
-	<string name="hold_smartcard">Для продолжения приложите смарт-карту к задней части вашего телефона.</string>
-	<string name="btn_cancel">Отмена</string>
-	<string name="btn_auth">Войти</string>
+	<string name="device_admin_desc">Необходимо для нормальной работы таких функций как биометрическая аутентификация и блокировка приложений</string>
     <string name="select_account_title">Выберите аккаунт для продолжения</string>
     <string name="verify_account_title">Проверка</string>
     <string name="account_settings_title">Настройки аккаунта</string>
@@ -44,13 +31,22 @@
 	<string name="sc_desc">Служба Teslasoft SmartCard отвечает за работу аутентификации с помощью смарт-карт.</string>
 	<string name="dp_desc">Служба Data Protector Service отвечает за защиту пользовательских данных и аккаунтов.</string>
 	<string name="security_title">Безопасность</string>
-	<string name="licence_manager_title">Licence Manager</string>
+	<string name="licence_manager_title">Проверка лицензии</string>
     <string name="error_title">Произошла ошибка</string>
 	<string name="error_copy">Копировать</string>
 	<string name="error_detail">Инфо</string>
 	<string name="error_close">Закрыть</string>
 	<string name="stacktrace_copied">Текст скопирован</string>
 	<string name="collect_crash_info">Сбор информации об ошибке ...</string>
-	<string name="settings_title">Settings</string>
-
+	<string name="settings_title">Настройки</string>
+    <string name="fingerprint_touch_message">Коснитесь сенсора отпечатка пальца</string>
+	<string name="fingerprint_permission_denied">У приложения нет разрешения на использование сенсора отпечатка пальца.</string>
+	<string name="fingerprint_unsupported_device">Сенсор отпечатка пальца не поддерживается вашим устройством.</string>
+	<string name="fingerprint_err_unsafe_operation">ОШИБКА: Небезопасный метот аутентификации. Убедитесь что у вас настроена блокировка экрана.</string>
+    <string name="fingerprint_not_recognized">Не распознано</string>
+	<string name="preferences">Настройки аккаунта</string>
+	<string name="fingerprint_completed">Аутентификация завершена</string>
+	<string name="fingerprint_not_prints">Для использования этой функции необходимо добавить как минимум 1 отпечаток пальца.</string>
+	<string name="authentication_title">Аутентификация</string>
+	<string name="authentication_message">Для продолжения подтвердите свою личность</string>
 </resources>

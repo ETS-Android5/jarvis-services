@@ -1,642 +1,366 @@
 [
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_rounded_dark_v2.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_rounded_dark_v2.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_rect_round_dark_grey.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_rect_round_dark_grey.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_activity_biometric.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\activity_biometric.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_toast_transparent_background.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/toast_transparent_background.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_consent.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\consent.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_list_item.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_list_item.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_app_icon.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\app_icon.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rbg.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rbg.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-anydpi_ic_add_dark.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-anydpi/ic_add_dark.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_toast_default.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\toast_default.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xhdpi_app_icon.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xhdpi/app_icon.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-v24_ic_egg.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-v24/ic_egg.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_activity_apps_list.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\activity_apps_list.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_account_picker_light.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_account_picker_light.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_add_dark.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_add_dark.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_chat_bubble_in.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/chat_bubble_in.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_dialog_rounded_dark_v3.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_dialog_rounded_dark_v3.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_shadow.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\shadow.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_verify_account.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_verify_account.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_arrow_right.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\arrow_right.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/anim_fade_in.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/anim/fade_in.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_android_logo_shine.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\android_logo_shine.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_bugreport_detail.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_bugreport_detail.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_close.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_close.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_privacy_policy.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_privacy_policy.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_apps_list.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_apps_list.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ggreen.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ggreen.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_btn_left.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_btn_left.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_app_icon_new.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\app_icon_new.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-mdpi_app_icon.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-mdpi/app_icon.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_app_bg.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_app_bg.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_teslasoft_logo.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/teslasoft_logo.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_fingerprint.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_fingerprint.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_ic_baseline_add_24.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/ic_baseline_add_24.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_app_icon_circle_bg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\app_icon_circle_bg.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_loading_screen.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_loading_screen.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_black_gren.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_black_gren.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_vip.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_vip.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_hashgen.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\hashgen.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_android_logo_mask.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/android_logo_mask.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\xml_admin.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\xml\\admin.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_btn_circle.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/btn_circle.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_jarvis2.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\jarvis2.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_warning.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_warning.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_ic_add_dark.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\ic_add_dark.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_easter_egg_background.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/easter_egg_background.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_load_f.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\load_f.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-mdpi_ic_add_dark.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-mdpi/ic_add_dark.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_plat_logo.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\plat_logo.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_core_settings.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_core_settings.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_ic_launcher_round.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher_round.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_easter_egg.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_easter_egg.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_add_gsxi.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\add_gsxi.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_btn_circle_ripple.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/btn_circle_ripple.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_activity_jarvis.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\activity_jarvis.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_ic_send.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/ic_send.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_black_red.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_black_red.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_cred.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\cred.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/xml_account_preferences.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/xml/account_preferences.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_list_item.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\list_item.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_dialog_rounded_dark_v1.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_dialog_rounded_dark_v1.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_dialog_loading.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/anim_slide_out.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/anim/slide_out.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_toast_warn.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\toast_warn.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xhdpi_ic_launcher_round.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xhdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\xml_account_preferences.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\xml\\account_preferences.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_biometric.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_biometric.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_settings.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/settings.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_gred.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\gred.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_auth_webview.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_auth_webview.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_ic_egg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\ic_egg.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_btn_circle_background.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/btn_circle_background.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_dialog_fade_in.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\dialog_fade_in.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_services_list.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_services_list.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_launcher_round.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher_round.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-hdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rippple3.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rippple3.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_bugreport_collect.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_bugreport_collect.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_egg.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\egg.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_account_item_light.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_account_item_light.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_chat_bubble_out.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\chat_bubble_out.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-mdpi_ic_egg.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-mdpi/ic_egg.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_chat_list.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\chat_list.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-hdpi_ic_egg.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-hdpi/ic_egg.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\transition_fade.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\transition\\fade.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/xml_authenticator.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/xml/authenticator.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_bootanimation.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\bootanimation.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ic_egg.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ic_egg.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_download_24dp.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_download_24dp.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_vip.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/vip.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_button_ab.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\button_ab.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-hdpi_ic_add_dark.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-hdpi/ic_add_dark.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_licence_check.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\licence_check.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_app_icon.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/app_icon.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_report_collect.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\report_collect.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_cred.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/cred.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_error_service.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\error_service.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_dialog_rounded_dark_v2.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_dialog_rounded_dark_v2.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_logo_psd.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\logo_psd.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_login_checkin.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_login_checkin.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_red_teal.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_red_teal.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_dialog_loading.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/dialog_loading.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_bg_round_dark.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\bg_round_dark.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_bootanimation.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/bootanimation.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ripple_s.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ripple_s.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_account_picker.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_account_picker.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_custom_toast.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\custom_toast.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_chat_bubble_out.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/chat_bubble_out.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_apo_fg.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_apo_fg.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_jarvis.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_jarvis.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_app_icon_new.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\app_icon_new.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_account_item.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_account_item.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_add_gsx.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\add_gsx.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/anim_fade_out.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/anim/fade_out.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ic_add_dark.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ic_add_dark.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_app_icon_new.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\app_icon_new.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_app_icon.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/app_icon.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xhdpi_ic_egg.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xhdpi/ic_egg.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_rounded_light.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_rounded_light.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ripple_accent_v1.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ripple_accent_v1.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\xml_authenticator.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\xml\\authenticator.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-hdpi_app_icon.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-hdpi/app_icon.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-anydpi_ic_add_dark.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-anydpi\\ic_add_dark.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_ic_fingerprint.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/ic_fingerprint.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_light.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_light.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/xml_syncadapter.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/xml/syncadapter.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_purchase_dialog.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\purchase_dialog.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_dialog_rounded_light.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_dialog_rounded_light.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_app_icon_new.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\app_icon_new.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ic_close_r.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ic_close_r.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_settings.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\settings.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_chat_list.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/chat_list.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_gyellow.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\gyellow.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/xml_admin.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/xml/admin.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_report_detail.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\report_detail.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ripple_green.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ripple_green.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_egg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_egg.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_rate_view.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_rate_view.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_rate.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\rate.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_easter_egg_foreground.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/easter_egg_foreground.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_app_icon.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\app_icon.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_loading_screen_transparent.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_loading_screen_transparent.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ui_btn_right.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ui_btn_right.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xxhdpi_ui_btn_right.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xxhdpi/ui_btn_right.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_stats.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\stats.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_plat_logo.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_plat_logo.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_app_icon_circle_bg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\app_icon_circle_bg.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_init.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/init.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_app_icon.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\app_icon.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_ic_warning.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/ic_warning.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_account_picker_light.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\account_picker_light.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-hdpi_jarvis_logo.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-hdpi/jarvis_logo.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_app_icon_new.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\app_icon_new.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_service_crashed.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_service_crashed.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_slide_in.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\slide_in.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_core_stats_service.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_core_stats_service.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-mdpi_ic_add_dark.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-mdpi\\ic_add_dark.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/anim_slide_in.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/anim/slide_in.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_account_item_light.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\account_item_light.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_vip_purchase.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_vip_purchase.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_load_transparent.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\load_transparent.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-mdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_app_icon.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_bugreport_info.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_bugreport_info.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_adopt.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_adopt.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_activity_licence_check.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/activity_licence_check.xml"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_app_icon_circle_bg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\app_icon_circle_bg.png"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable_android_logo_shine.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable/android_logo_shine.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ui_rect_round_dark_grey.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ui_rect_round_dark_grey.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/drawable-xhdpi_ic_add_dark.png.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/drawable-xhdpi/ic_add_dark.png"
     },
     {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_activity_promote.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\activity_promote.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_blue_pink.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_blue_pink.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_report.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_report.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_services_list.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\services_list.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_close_r.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_close_r.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_slide_out.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\slide_out.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_smartcard.jpg.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\smartcard.jpg"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_dark.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_dark.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_ic_launcher_round.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_dark_r.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_dark_r.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_fade_in.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\fade_in.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rippple2.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rippple2.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_init.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\init.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_vipmain.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\vipmain.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_black_blue.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_black_blue.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_light_v2.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_light_v2.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_account_picker.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\account_picker.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_easter.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\easter.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_arrow_left.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\arrow_left.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_gblue.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\gblue.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_app_jarvis.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\app_jarvis.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_core_settings.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\core_settings.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_green.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\green.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_account_item.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\account_item.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_button_home.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\button_home.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_login_webview.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\login_webview.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rippplee.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rippplee.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_app_icon_circle_bg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\app_icon_circle_bg.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_button_rpp.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\button_rpp.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_card_red.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\card_red.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_ic_egg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\ic_egg.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_app_icon.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\app_icon.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_ic_add_dark.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\ic_add_dark.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rippple.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rippple.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rippplep.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rippplep.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_send.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_send.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_ic_egg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\ic_egg.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_add_accound_complete.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\add_accound_complete.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_fade_out.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\fade_out.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_baseline_add_24.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_app_icon_circle_bg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\app_icon_circle_bg.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_auth_webview.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\auth_webview.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_warning.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_warning.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-hdpi_icon_jarvis.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-hdpi\\icon_jarvis.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_ui_dialog_confirm.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\ui_dialog_confirm.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_ic_egg.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-v24\\ic_egg.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_android_logo_mask.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\android_logo_mask.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_report_info.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\report_info.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_title_bar_blue_grey.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\title_bar_blue_grey.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xhdpi_ic_launcher_round.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_warning_fullscreen.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\warning_fullscreen.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\xml_syncadapter.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\xml\\syncadapter.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_button_ab_bg.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\button_ab_bg.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_chat_bubble_in.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\chat_bubble_in.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_load.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\load.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\layout_nfc_read.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\layout\\nfc_read.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_vip.png.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\vip.png"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_launcher_background.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\anim_dialog_fade_out.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\anim\\dialog_fade_out.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ui_btn_left.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ui_btn_left.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_rpb.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\rpb.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ripple4.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ripple4.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_ic_app.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\ic_app.xml"
-    },
-    {
-        "merged": "D:\\Github\\jarvis-services\\app\\build\\intermediates\\merged_res\\release\\drawable-xxhdpi_dialog_rounded_dark.xml.flat",
-        "source": "D:\\Github\\jarvis-services\\app\\src\\main\\res\\drawable-xxhdpi\\dialog_rounded_dark.xml"
+        "merged": "com.teslasoft.libraries.support.app-merged_res-21:/layout_fragment_shadow.xml.flat",
+        "source": "com.teslasoft.libraries.support.app-main-22:/layout/fragment_shadow.xml"
     }
 ]

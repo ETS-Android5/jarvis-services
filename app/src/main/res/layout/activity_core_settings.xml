@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom|center_horizontal"
+		android:onClick="Close"
+		android:background="#00000000">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/ui_dialog_rounded_dark_v1"
+			android:gravity="bottom"
+			android:id="@+id/dialog"
+			android:translationZ="3dp"
+			android:elevation="7dp"
+			android:layout_margin="10dp"
+			android:onClick="Ignore">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:padding="15dp">
+
+				<ScrollView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="%s_description"
+							android:id="@+id/desc"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/notification_note"
+							android:layout_marginTop="10dp"
+							android:id="@+id/notetx"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/crash_service_note"
+							android:layout_marginTop="10dp"
+							android:textColor="#B21121"/>
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:id="@+id/state"
+							android:text="State:"/>
+
+					</LinearLayout>
+
+				</ScrollView>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:weightSum="3">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1.0"
+					android:padding="5dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="@string/button_cancel"
+						android:gravity="center"
+						android:background="@drawable/btn_circle_ripple"
+						android:singleLine="true"
+						android:onClick="Close"
+						android:textColor="#B20021"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1.0"
+					android:padding="5dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="@string/force_stop"
+						android:gravity="center"
+						android:background="@drawable/btn_circle_ripple"
+						android:singleLine="true"
+						android:textColor="#FF3D00"
+						android:onClick="StopTask"
+						android:id="@+id/cstate"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1.0"
+					android:padding="5dp"
+					android:gravity="center">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="@string/button_disable"
+						android:gravity="center"
+						android:background="@drawable/btn_circle_ripple"
+						android:singleLine="true"
+						android:textColor="#FCFF00"
+						android:onClick="Disable"
+						android:id="@+id/estate"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:background="@drawable/ui_dialog_rounded_dark_v1"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:translationZ="5dp"
+			android:elevation="10dp"
+			android:layout_marginBottom="10dp">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:text="@string/all_services"
+				android:singleLine="true"
+				android:background="@drawable/ripple_accent_v1"
+				android:onClick="AllServices"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

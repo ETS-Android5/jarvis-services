@@ -1,13 +1,13 @@
 package com.teslasoft.jarvis.auth;
 
+import android.os.Bundle;
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorResponse;
 import android.accounts.AccountManager;
+import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.NetworkErrorException;
 import android.content.Intent;
-import android.os.Bundle;
 import android.content.Context;
-import android.accounts.AbstractAccountAuthenticator;
 
 public class CustomAuthenticator extends AbstractAccountAuthenticator {
     private final Context context;
@@ -28,31 +28,31 @@ public class CustomAuthenticator extends AbstractAccountAuthenticator {
 
     @Override
     public Bundle editProperties(AccountAuthenticatorResponse accountAuthenticatorResponse, String s) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Bundle confirmCredentials(AccountAuthenticatorResponse accountAuthenticatorResponse, Account account, Bundle bundle) throws NetworkErrorException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Bundle getAuthToken(AccountAuthenticatorResponse accountAuthenticatorResponse, Account account, String s, Bundle bundle) throws NetworkErrorException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public String getAuthTokenLabel(String s) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Bundle updateCredentials(AccountAuthenticatorResponse accountAuthenticatorResponse, Account account, String s, Bundle bundle) throws NetworkErrorException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Bundle hasFeatures(AccountAuthenticatorResponse accountAuthenticatorResponse, Account account, String[] strings) throws NetworkErrorException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 }

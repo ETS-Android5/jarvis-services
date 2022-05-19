@@ -1,35 +1,30 @@
 package com.teslasoft.jarvis;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
+
 import java.util.List;
 import java.util.ArrayList;
-import com.teslasoft.libraries.support.R;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 
-public class AppsList extends Activity
-{
+import com.teslasoft.libraries.support.R;
+
+
+public class AppsList extends Activity {
 	private PackageManager manager;
 	private List<AppDetail> apps;
 	private ListView list;
 	
-	public void onPointerCaptureChanged(boolean hasCapture)
-	{
-		
-	}
-	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{ 
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_apps_list);
 		
@@ -38,8 +33,7 @@ public class AppsList extends Activity
 		addClickListener();
 	}
 	
-	private void loadApps()
-	{
+	private void loadApps() {
 		manager = getPackageManager();
 		apps = new ArrayList<AppDetail>();
 
@@ -47,8 +41,7 @@ public class AppsList extends Activity
 		i.addCategory(Intent.CATEGORY_LAUNCHER);
 				
 		List<ResolveInfo> availableActivities = manager.queryIntentActivities(i, 0);
-		for(ResolveInfo ri:availableActivities)
-		{
+		for(ResolveInfo ri:availableActivities) {
 			AppDetail app = new AppDetail();
 			app.label = ri.loadLabel(manager);
 			app.name = ri.activityInfo.packageName;
@@ -57,23 +50,18 @@ public class AppsList extends Activity
 		}
 	}
 	
-	private void loadListView()
-	{
+	private void loadListView() {
 		list = (ListView) findViewById(R.id.apps_list);
 		list.setDivider(null);
 		list.setDividerHeight(0);
 		list.setSelector(android.R.color.transparent);
 		list.setVerticalScrollBarEnabled(false);
 
-		ArrayAdapter<AppDetail> adapter = new ArrayAdapter<AppDetail>(this, R.layout.list_item, apps)
-		{
+		ArrayAdapter<AppDetail> adapter = new ArrayAdapter<AppDetail>(this, R.layout.fragment_list_item, apps) {
 			@Override
-			public View getView(int position, View convertView, ViewGroup parent)
-			{
+			public View getView(int position, View convertView, ViewGroup parent) {
 				if(convertView == null)
-				{
-					convertView = getLayoutInflater().inflate(R.layout.list_item, null);
-				}
+					convertView = getLayoutInflater().inflate(R.layout.fragment_list_item, null);
 
 				ImageView appIcon = (ImageView)convertView.findViewById(R.id.item_app_icon);
 				appIcon.setImageDrawable(apps.get(position).icon);
@@ -91,16 +79,10 @@ public class AppsList extends Activity
 		list.setAdapter(adapter); 
 	}
 	
-	private void addClickListener()
-	{ 
-		list.setOnItemClickListener(new AdapterView.OnItemClickListener()
-		{
-			@Override
-			public void onItemClick(AdapterView<?> av, View v, int pos, long id)
-			{
-				Intent i = manager.getLaunchIntentForPackage(apps.get(pos).name.toString());
-				AppsList.this.startActivity(i);
-			}
+	private void addClickListener() {
+		list.setOnItemClickListener((av, v, pos, id) -> {
+			Intent i = manager.getLaunchIntentForPackage(apps.get(pos).name.toString());
+			AppsList.this.startActivity(i);
 		});
 	}
 }

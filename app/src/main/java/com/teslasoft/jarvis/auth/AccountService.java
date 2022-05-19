@@ -1,12 +1,12 @@
 package com.teslasoft.jarvis.auth;
 
 import android.app.Service;
-import android.content.Intent;
 import android.os.IBinder;
+import android.content.Intent;
 import android.accounts.AccountManager;
 
 public class AccountService extends Service {
-    private static CustomAuthenticator AUTHENTICATOR = null;
+    private CustomAuthenticator AUTHENTICATOR = null;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -14,8 +14,7 @@ public class AccountService extends Service {
     }
 
     private CustomAuthenticator getAuthenticator() {
-        if (AUTHENTICATOR == null)
-            AUTHENTICATOR = new CustomAuthenticator(this);
+        if (AUTHENTICATOR == null) AUTHENTICATOR = new CustomAuthenticator(this);
         return AUTHENTICATOR;
     }
 }

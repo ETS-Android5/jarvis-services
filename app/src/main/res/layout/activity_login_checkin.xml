@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:id="@+id/loading_page"
+		android:gravity="center">
+
+		<LinearLayout
+			android:id="@+id/shadow"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#00000000"
+			android:elevation="7dp"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:translationZ="3dp">
+
+			<LinearLayout
+				android:id="@+id/load_bg"
+				android:layout_width="320dp"
+				android:layout_height="180dp"
+				android:background="@drawable/ui_dialog_rounded_dark_v3"
+				android:gravity="center"
+				android:orientation="vertical">
+
+				<ProgressBar
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:id="@+id/login_page"
+		android:layout_height="match_parent">
+		
+		<android.webkit.WebView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/auth_web"/>
+		
+	</LinearLayout>
+</LinearLayout>
+

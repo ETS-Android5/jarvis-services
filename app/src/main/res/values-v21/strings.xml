@@ -31,4 +31,8 @@
     <string name="stacktrace_copied">Error message copied to clipboard</string>
     <string name="collect_crash_info">Collecting crash info ...</string>
     <string name="settings_title">Settings</string>
+    <string name="fingerprint_touch_message">Touch the fingerprint sensor</string>
+    <string name="fingerprint_permission_denied">The authenticator does not have permissions to use fingerprint</string>
+    <string name="fingerprint_unsupported_device">Fingerprint is not supported on your device</string>
+    <string name="fingerprint_err_unsafe_operation">ERROR: Unsafe authentication method: The device does not have screenlock</string>
 </resources>

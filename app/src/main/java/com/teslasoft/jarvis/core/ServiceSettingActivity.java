@@ -1,16 +1,17 @@
 package com.teslasoft.jarvis.core;
 
-import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.os.Bundle;
+import android.os.Handler;
 import android.content.pm.PackageManager;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Button;
 import android.content.Intent;
 import android.content.ComponentName;
 import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Button;
+
 import com.teslasoft.libraries.support.R;
 
 public class ServiceSettingActivity extends Activity {
@@ -28,11 +29,9 @@ public class ServiceSettingActivity extends Activity {
 	public Class selected_service;
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState)
-	{
-		// TODO: Implement this method
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.core_settings);
+		setContentView(R.layout.activity_core_settings);
 		
 		state = (TextView) findViewById(R.id.state);
 		cstate = (Button) findViewById(R.id.cstate);
@@ -76,33 +75,24 @@ public class ServiceSettingActivity extends Activity {
 		}
 	}
 
-	public void statement(Class service)
-	{
+	public void statement(Class service) {
 		PackageManager pm = getPackageManager();
 		
-		if (pm.getComponentEnabledSetting(new ComponentName(this, service)) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED)
-		{
-			if (isMyServiceRunning(service))
-			{
+		if (pm.getComponentEnabledSetting(new ComponentName(this, service)) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+			if (isMyServiceRunning(service)) {
 				estate.setText(R.string.button_disable);
 				state.setText(R.string.state_running);
 				cstate.setText(R.string.force_stop);
 				cstate.setTextColor(0xFFFF3D00);
 				cstate.setEnabled(true);
-			}
-
-			else 
-			{
+			} else {
 				estate.setText(R.string.button_disable);
 				state.setText(R.string.state_stopped);
 				cstate.setText(R.string.force_start);
 				cstate.setTextColor(0xFF2E8B57);
 				cstate.setEnabled(true);
 			}
-		}
-		
-		else
-		{
+		} else {
 			estate.setText(R.string.button_enable);
 			state.setText(R.string.state_disabled);
 			cstate.setText(R.string.force_start);
@@ -111,37 +101,23 @@ public class ServiceSettingActivity extends Activity {
 		}
 		
 		final Handler handler = new Handler();
-		handler.postDelayed(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				statement(service);
-			}
-		}, 20);
+		handler.postDelayed(() -> statement(service), 20);
 	}
 	
-	public void Close(View v)
-	{
+	public void Close(View v) {
 		finishAndRemoveTask();
 	}
 
-	/* Piracy check starts */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == Activity.RESULT_OK) {
-			// License check passed
-		} else {
-			// License check failed, exit
+		if (resultCode != Activity.RESULT_OK) {
 			this.setResult(Activity.RESULT_CANCELED);
 			finishAndRemoveTask();
 		}
 	}
-	/* Piracy check ends */
 	
-	public void AllServices(View v)
-	{
+	public void AllServices(View v) {
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		intent.setComponent(new ComponentName("com.teslasoft.libraries.support","com.teslasoft.jarvis.core.ServicesActivity"));
@@ -150,109 +126,55 @@ public class ServiceSettingActivity extends Activity {
 		finish();
 	}
 	
-	public void Disable(View v)
-	{
+	public void Disable(View v) {
 		PackageManager pm = getPackageManager();
 		
-		if (pm.getComponentEnabledSetting(new ComponentName(this, selected_service)) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED)
-		{
+		if (pm.getComponentEnabledSetting(new ComponentName(this, selected_service)) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
 			stopService(new Intent(this, selected_service));
-			pm.setComponentEnabledSetting(new ComponentName(this, selected_service),
-										  PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-			/*estate.setText("Включить");
-			state.setText("Состояние службы: Отключена");
-			cstate.setText("Запустить");
-			cstate.setTextColor(0xFF9E9E9E);
-			cstate.setEnabled(false);*/
+			pm.setComponentEnabledSetting(new ComponentName(this, selected_service), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+			statement(selected_service);
+		} else {
+			pm.setComponentEnabledSetting(new ComponentName(this, selected_service), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 			statement(selected_service);
 		}
-		
-		else
-		{
-			pm.setComponentEnabledSetting(new ComponentName(this, selected_service),
-										  PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-			/*estate.setText("Отключить");
-			state.setText("Состояние службы: Остановлена");
-			cstate.setText("Запустить");
-			cstate.setTextColor(0xFF2E8B57);
-			cstate.setEnabled(true);*/
-			statement(selected_service);
-		}
-		
 	}
 	
-	public void StopTask(View v)
-	{
-		if (isMyServiceRunning(selected_service))
-		{
+	public void StopTask(View v) {
+		if (isMyServiceRunning(selected_service)) {
 			stopService(new Intent(this, selected_service));
-			/*state.setText("Состояние службы: Остановлена");
-			cstate.setText("Запустить");
-			cstate.setTextColor(0xFF2E8B57);*/
 			statement(selected_service);
-		}
-
-		else 
-		{
+		} else {
 			startService(new Intent(this, selected_service));
-			/*estate.setText("Disable");
-			state.setText("State: Running");
-			cstate.setText("Force stop");
-			cstate.setTextColor(0xFFFF3D00);*/
 			statement(selected_service);
 		}
-		
-		/*pm.setComponentEnabledSetting(new ComponentName(this, com.teslasoft.jarvis.core.InitService.class),
-									  PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);*/
 	}
 
-	public boolean isMyServiceRunning(Class<?> serviceClass)
-	{
+	public boolean isMyServiceRunning(Class<?> serviceClass) {
 		ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
 
-		try
-		{
-			for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE))
-			{
+		try {
+			for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
 				if (serviceClass.getName().equals(service.service.getClassName()))
-				{
 					return true;
-				}
 			}
-		}
-		catch (Exception e)
-		{
-
-		}
+		} catch (Exception ignored) {}
 		return false;
 	}
 
 	@Override
-	public void onBackPressed()
-	{
-		// TODO: Implement this method
+	public void onBackPressed() {
 		super.onBackPressed();
 		finishAndRemoveTask();
 	}
 
-	public void Exec (View v)
-	{
-		return;
-	}
+	public void Exec (View v) {}
 
-	public void start (int serviceCode) {
-		return;
-	}
+	public void start (int serviceCode) {}
 	
-	public void Ignore(View v)
-	{
-
-	}
+	public void Ignore(View v) {}
 
 	@Override
-	protected void onPause()
-	{
-		// TODO: Implement this method
+	protected void onPause() {
 		super.onPause();
 	}
 }

@@ -1,8 +1,8 @@
 package com.teslasoft.jarvis.auth;
 
 import android.app.Service;
-import android.content.Intent;
 import android.os.IBinder;
+import android.content.Intent;
 
 public class SyncService extends Service {
     private static SyncAdapter sSyncAdapter = null;
